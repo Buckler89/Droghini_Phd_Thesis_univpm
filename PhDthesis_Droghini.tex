@@ -1,0 +1,177 @@
+\documentclass[a4print,english,lof,lot]{univpmphdthesis}
+\errorcontextlines=9
+
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+
+\usepackage{lmodern}
+\usepackage[cmex10]{amsmath}
+\usepackage{amssymb}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{framed}
+\usepackage{algorithm,algpseudocode}
+\usepackage{pgfplots,pgfplotstable}
+\usetikzlibrary{pgfplots.groupplots}
+\usepackage{tabularx}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+
+\usepackage{tkz-kiviat,numprint}
+\usetikzlibrary{decorations.pathreplacing, arrows, fit}
+\usepackage{hyperref}
+
+
+\usetikzlibrary{shadows,arrows,fit,shapes,positioning,calc,backgrounds,spy,decorations.markings}
+\usetikzlibrary{backgrounds}
+
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{background,main,foreground}
+
+\tikzstyle{bk} = [draw, fill=blue!30, text centered, minimum height=2em, text width=7em, minimum width=6em, minimum height=3em, rounded corners, drop shadow]
+\tikzstyle{bkFull} = [draw, fill=blue!30, text centered, minimum height=2em, text width=15em, minimum width=20em, minimum height=3em, rounded corners, drop shadow]
+\tikzstyle{bkDec} = [draw, fill=red!40, text centered, minimum height=2em, text width=15em, minimum width=15em, minimum height=3em, rounded corners, drop shadow]
+\tikzstyle{cy} = [draw, fill=gray!30, text centered, minimum height=3em, text width=7em, minimum width=2em, cylinder, shape border rotate=90, shape aspect=0.1, drop shadow]
+\tikzstyle{cyFull} = [draw, fill=gray!30, text centered, minimum height=3em, text width=7em, minimum width=20em, cylinder, shape border rotate=90, shape aspect=0.1, drop shadow, dashed]
+\tikzstyle{bg}=[rectangle,fill=gray!30,inner sep=0.2cm,rounded corners,draw=black!50, dashed]
+\tikzstyle{input} = [coordinate]
+
+\tikzset{
+	myarrow/.style={
+		draw,thick,
+		single arrow,
+		%text width=1cm,
+		minimum height=1cm,
+		%anchor=west,
+		%fill=white
+	},
+}
+
+\tikzstyle{vecArrow} = [thick, decoration={markings,mark=at position 1 with {\arrow[semithick]{open triangle 60}}},
+double distance=1.4pt, shorten >= 5.5pt, preaction = {decorate}, postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
+
+\tikzstyle{innerWhite} = [semithick, white,line width=1.6pt, shorten >= 4.5pt]
+
+
+
+
+\newcommand{\LegendBox}[3][]{%
+	\xdef\fitbox{}%
+	\coordinate[#1] (LegendBox_anchor) at (#2) ;
+	\foreach \col/\item [count=\hi from 0] in {#3} {
+		\node[color = \col,draw,thick,
+		fill  = \col,
+		minimum width  = 5 ex,
+		minimum height = 1 ex,
+		name=b\hi,
+		] at ([yshift=0 ex,xshift=\hi*40 ex]LegendBox_anchor) {};
+		\node[anchor=west,xshift=0.1 ex] at (b\hi.east) (c\hi) {\item};
+		\xdef\fitbox{\fitbox(c\hi)}
+	}%
+	\node [fit=\fitbox(LegendBox_anchor), minimum width = 0 ex] {};
+}
+
+
+\newcommand{\chref}[1]{Chapter~\ref{#1}}
+\newcommand{\secref}[1]{Section~\ref{#1}}
+\newcommand{\subsecref}[1]{Subsection~\ref{#1}}
+\newcommand{\apxref}[1]{Appendix~\ref{#1}}
+
+\newcommand{\figref}[1]{\figurename~\ref{#1}}
+\newcommand{\tableref}[1]{Table~\ref{#1}}
+
+\newcommand*\rfrac[2]{{}^{#1}\!/_{#2}}
+
+
+\def\N{{\mathbb{N}}}
+\def\Z{{\mathbb{Z}}}
+\def\R{{\mathbb{R}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Metadata
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\phdschool{Scuola di Dottorato di Ricerca in Scienze dell'Ingegneria}
+\phdfaculty{Facolt\`{a} di Ingegneria}
+\phdcurriculum{Curriculum in Ingegneria Elettronica, Elettrotecnica e delle Telecomunicazioni}
+\phdtitle{Ambient Intelligence: Computational Audio Processing For Human Fall Detection}
+%\phdsubtitle{con questa bellissima classe} % NON NECESSARIO
+\phdauthor{Diego Droghini}
+\phdadvisor{Prof.~Francesco Piazza}
+\phdcoadvisor{Prof.~Roberto Bedini} % IN TEORIA NON E' AMMESSO
+%\phdcoadvisor{Prof.~Michele Blu} % IN TEORIA NON E' AMMESSO
+\phdcurriculumadvisor{Prof.~Francesco Piazza}
+\phdcycle{17}
+\thesisdedication{alla mia famiglia}
+\phdlocation{Ancona}
+\phdtime{Ottobre 2018}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Solo per generare testo...
+\usepackage{lipsum}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Front matter contents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+
+\maketitle
+
+%\begin{thesisacknowledge}
+%\lipsum[1-2]
+%\end{thesisacknowledge}
+
+%\begin{thesisacknowledge}[italian]
+%\lipsum[1-2]
+%\end{thesisacknowledge}
+
+\begin{thesisabstract}
+\lipsum[1-3]
+\end{thesisabstract}
+
+\thesistoc
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main matter contents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+
+\graphicspath{{1_introduction/}}
+\input{1_introduction/introduction}
+
+\graphicspath{{2_background/}}
+\input{2_background/background}
+
+\graphicspath{{3_datasets/}}
+\input{3_datasets/3_datasets}
+
+\graphicspath{{4_Supervised_approaches/}}
+\input{4_Supervised_approaches/4_Supervised_approaches}
+
+\graphicspath{{5_Unsupervised_approaches/}}
+\input{5_Unsupervised_approaches/5_Unsupervised_approaches}
+
+\graphicspath{{6_Semi-Unsupervised_approaches/}}
+\input{6_Semi-Unsupervised_approaches/6_Semi-Unsupervised_approaches}
+
+\input{7_other_contributions/other}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Back matter contents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Publications}
+\input{8_backMatter/publications}
+
+\bibliographystyle{IEEEbib}
+\bibliography{IEEEabrv,8_backMatter/refs}
+
+\end{document}

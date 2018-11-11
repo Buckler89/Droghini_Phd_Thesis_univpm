@@ -1,0 +1,4454 @@
+ 
+IEEEabrv.bib
+V1.12 (2007/01/11)
+Copyright (c) 2002-2007 by Michael Shell
+See: http://www.michaelshell.org/
+for current contact information.
+
+BibTeX bibliography string definitions of the ABBREVIATED titles of
+IEEE journals and magazines and online publications.
+
+This file is designed for bibliography styles that require 
+abbreviated titles and is not for use in bibliographies that
+require full-length titles.
+
+Support sites:
+http://www.michaelshell.org/tex/ieeetran/
+http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/
+and/or
+http://www.ieee.org/
+
+Special thanks to Laura Hyslop and ken Rawson of IEEE for their help
+in obtaining the information needed to compile this file. Also,
+Volker Kuhlmann and Moritz Borgmann kindly provided some corrections
+and additions.
+
+*************************************************************************
+Legal Notice:
+This code is offered as-is without any warranty either expressed or
+implied; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE! 
+User assumes all risk.
+In no event shall IEEE or any contributor to this code be liable for
+any damages or losses, including, but not limited to, incidental,
+consequential, or any other damages, resulting from the use or misuse
+of any information contained here.
+
+All comments are the opinions of their respective authors and are not
+necessarily endorsed by the IEEE.
+
+This work is distributed under the LaTeX Project Public License (LPPL)
+( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+distributed and modified. A copy of the LPPL, version 1.3, is included
+in the base LaTeX documentation of all distributions of LaTeX released
+2003/12/01 or later.
+Retain all contribution notices and credits.
+** Modified files should be clearly indicated as such, including  **
+** renaming them and changing author support contact information. **
+
+File list of work: IEEEabrv.bib, IEEEfull.bib, IEEEexample.bib,
+IEEEtran.bst, IEEEtranS.bst, IEEEtranSA.bst,
+IEEEtranN.bst, IEEEtranSN.bst, IEEEtran_bst_HOWTO.pdf
+*************************************************************************
+
+
+USAGE:
+
+\bibliographystyle{mybstfile}
+\bibliography{IEEEabrv,mybibfile}
+
+where the IEEE titles in the .bib database entries use the strings
+defined here. e.g.,
+
+
+journal = IEEE_J_AC,
+
+
+to yield "{IEEE} Trans. Automat. Contr."
+
+
+IEEE uses abbreviated journal titles in their bibliographies -
+this file is suitable for work that is to be submitted to the IEEE.
+
+
+For work that requires full-length titles, you should use the full
+titles provided in the companion file, IEEEfull.bib.
+
+
+** NOTES **
+
+1. Journals have been grouped according to subject in order to make it
+easier to locate and extract the definitions for related journals - 
+as most works use references that are confined to a single topic.
+Magazines are listed in straight alphabetical order.
+
+2. String names are closely based on IEEE's own internal acronyms.
+
+3. Abbreviations follow IEEE's style.
+
+4. Older, out-of-print IEEE titles are included (but not including titles
+dating prior to IEEE's formation from the IRE and AIEE in 1963).
+
+5. The following NEW/current journal definitions have been disabled because
+their abbreviations have not yet been verified:
+
+STRING{IEEE_J_CBB        = "{IEEE/ACM} Trans. Comput. Biology Bioinformatics"}
+STRING{IEEE_J_CJECE      = "Canadian J. Elect. Comput. Eng."}
+STRING{IEEE_J_DSC        = "{IEEE} Trans. Dependable Secure Comput."}
+STRING{IEEE_O_DSO        = "{IEEE} Distrib. Syst. Online"}
+
+6. The following OLD journal definitions have been disabled because
+their abbreviations have not yet been found/verified:
+
+STRING{IEEE_J_BCTV       = "{IEEE} Trans. Broadcast Television Receivers"}
+STRING{IEEE_J_EWS        = "{IEEE} Trans. Eng. Writing Speech"}
+
+If you know what the proper abbreviation is for a string in #5 or #6 above,
+email me and I will correct them in the next release.
+
+
+
+
+
+IEEE Journals 
+
+
+
+aerospace and military
+@STRING{IEEE_J_AES        = "{IEEE} Trans. Aerosp. Electron. Syst."}
+@STRING{IEEE_J_ANE        = "{IEEE} Trans. Aerosp. Navig. Electron."}
+@STRING{IEEE_J_ANNE       = "{IEEE} Trans. Aeronaut. Navig. Electron."}
+@STRING{IEEE_J_AS         = "{IEEE} Trans. Aerosp."}
+@STRING{IEEE_J_AIRE       = "{IEEE} Trans. Airborne Electron."}
+@STRING{IEEE_J_MIL        = "{IEEE} Trans. Mil. Electron."}
+
+
+
+autos, transportation and vehicles (non-aerospace)
+@STRING{IEEE_J_ITS        = "{IEEE} Trans. Intell. Transp. Syst."}
+@STRING{IEEE_J_VT         = "{IEEE} Trans. Veh. Technol."}
+@STRING{IEEE_J_VC         = "{IEEE} Trans. Veh. Commun."}
+
+
+
+circuits, signals, systems, audio and controls
+@STRING{IEEE_J_SPL        = "{IEEE} Signal Process. Lett."}
+@STRING{IEEE_J_ASL        = "{IEEE} Trans. Audio, Speech, Language Process."}
+@STRING{IEEE_J_ASSP       = "{IEEE} Trans. Acoust., Speech, Signal Process."}
+@STRING{IEEE_J_AU         = "{IEEE} Trans. Audio"}
+@STRING{IEEE_J_AUEA       = "{IEEE} Trans. Audio Electroacoust."}
+@STRING{IEEE_J_AC         = "{IEEE} Trans. Autom. Control"}
+@STRING{IEEE_J_CAS        = "{IEEE} Trans. Circuits Syst."}
+@STRING{IEEE_J_CASVT      = "{IEEE} Trans. Circuits Syst. Video Technol."}
+@STRING{IEEE_J_CASI       = "{IEEE} Trans. Circuits Syst. {I}"}
+@STRING{IEEE_J_CASII      = "{IEEE} Trans. Circuits Syst. {II}"}
+in 2004 CASI and CASII renamed part title to CASI_RP and CASII_EB, respectively.
+@STRING{IEEE_J_CASI_RP    = "{IEEE} Trans. Circuits Syst. {I}"}
+@STRING{IEEE_J_CASII_EB   = "{IEEE} Trans. Circuits Syst. {II}"}
+@STRING{IEEE_J_CT         = "{IEEE} Trans. Circuit Theory"}
+@STRING{IEEE_J_CST        = "{IEEE} Trans. Control Syst. Technol."}
+@STRING{IEEE_J_SP         = "{IEEE} Trans. Signal Process."}
+@STRING{IEEE_J_SU         = "{IEEE} Trans. Sonics Ultrason."}
+@STRING{IEEE_J_SAP        = "{IEEE} Trans. Speech Audio Process."}
+@STRING{IEEE_J_UE         = "{IEEE} Trans. Ultrason. Eng."}
+@STRING{IEEE_J_UFFC       = "{IEEE} Trans. Ultrason., Ferroelectr., Freq. Control"}
+
+
+
+communications
+@STRING{IEEE_J_COML       = "{IEEE} Commun. Lett."}
+@STRING{IEEE_J_JSAC       = "{IEEE} J. Sel. Areas Commun."}
+@STRING{IEEE_J_COM        = "{IEEE} Trans. Commun."}
+@STRING{IEEE_J_COMT       = "{IEEE} Trans. Commun. Technol."}
+@STRING{IEEE_J_WCOM       = "{IEEE} Trans. Wireless Commun."}
+
+
+
+components, packaging and manufacturing
+@STRING{IEEE_J_ADVP       = "{IEEE} Trans. Adv. Packag."}
+@STRING{IEEE_J_CHMT       = "{IEEE} Trans. Compon., Hybrids, Manuf. Technol."}
+@STRING{IEEE_J_CPMTA      = "{IEEE} Trans. Compon., Packag., Manuf. Technol. {A}"}
+@STRING{IEEE_J_CPMTB      = "{IEEE} Trans. Compon., Packag., Manuf. Technol. {B}"}
+@STRING{IEEE_J_CPMTC      = "{IEEE} Trans. Compon., Packag., Manuf. Technol. {C}"}
+@STRING{IEEE_J_CAPT       = "{IEEE} Trans. Compon. Packag. Technol."}
+@STRING{IEEE_J_CAPTS      = "{IEEE} Trans. Compon. Packag. Technol."}
+@STRING{IEEE_J_CPART      = "{IEEE} Trans. Compon. Parts"}
+@STRING{IEEE_J_EPM        = "{IEEE} Trans. Electron. Packag. Manuf."}
+@STRING{IEEE_J_MFT        = "{IEEE} Trans. Manuf. Technol."}
+@STRING{IEEE_J_PHP        = "{IEEE} Trans. Parts, Hybrids, Packag."}
+@STRING{IEEE_J_PMP        = "{IEEE} Trans. Parts, Mater., Packag."}
+
+
+
+CAD
+@STRING{IEEE_J_TCAD       = "{IEEE} J. Technol. Comput. Aided Design"}
+@STRING{IEEE_J_CAD        = "{IEEE} Trans. Comput.-Aided Design Integr. Circuits Syst."}
+
+
+
+coding, data, information, knowledge
+@STRING{IEEE_J_IT         = "{IEEE} Trans. Inf. Theory"}
+@STRING{IEEE_J_KDE        = "{IEEE} Trans. Knowl. Data Eng."}
+
+
+
+computers, computation, networking and software
+@STRING{IEEE_J_C          = "{IEEE} Trans. Comput."}
+@STRING{IEEE_J_CAL        = "{IEEE} Comput. Archit. Lett."}
+disabled till definition is verified
+STRING{IEEE_J_DSC         = "{IEEE} Trans. Dependable Secure Comput."}
+@STRING{IEEE_J_ECOMP      = "{IEEE} Trans. Electron. Comput."}
+@STRING{IEEE_J_EVC        = "{IEEE} Trans. Evol. Comput."}
+@STRING{IEEE_J_FUZZ       = "{IEEE} Trans. Fuzzy Syst."}
+@STRING{IEEE_J_IFS        = "{IEEE} Trans. Inf. Forensics Security"}
+@STRING{IEEE_J_MC         = "{IEEE} Trans. Mobile Comput."}
+@STRING{IEEE_J_NET        = "{IEEE/ACM} Trans. Netw."}
+@STRING{IEEE_J_NN         = "{IEEE} Trans. Neural Netw."}
+@STRING{IEEE_J_PDS        = "{IEEE} Trans. Parallel Distrib. Syst."}
+@STRING{IEEE_J_SE         = "{IEEE} Trans. Softw. Eng."}
+
+
+
+computer graphics, imaging, and multimedia
+@STRING{IEEE_J_JDT        = "{IEEE/OSA} J. Display Technol."}
+@STRING{IEEE_J_IP         = "{IEEE} Trans. Image Process."}
+@STRING{IEEE_J_MM         = "{IEEE} Trans. Multimedia"}
+@STRING{IEEE_J_VCG        = "{IEEE} Trans. Vis. Comput. Graphics"}
+
+
+
+cybernetics, ergonomics, robots, man-machine, and automation
+@STRING{IEEE_J_ASE        = "{IEEE} Trans. Autom. Sci. Eng."}
+@STRING{IEEE_J_JRA        = "{IEEE} J. Robot. Autom."}
+@STRING{IEEE_J_HFE        = "{IEEE} Trans. Hum. Factors Electron."}
+@STRING{IEEE_J_MMS        = "{IEEE} Trans. Man-Mach. Syst."}
+@STRING{IEEE_J_PAMI       = "{IEEE} Trans. Pattern Anal. Mach. Intell."}
+in 1989 JRA became RA
+in August 2004, RA split into ASE and RO
+@STRING{IEEE_J_RA         = "{IEEE} Trans. Robot. Autom."}
+@STRING{IEEE_J_RO         = "{IEEE} Trans. Robot."}
+@STRING{IEEE_J_SMC        = "{IEEE} Trans. Syst., Man, Cybern."}
+@STRING{IEEE_J_SMCA       = "{IEEE} Trans. Syst., Man, Cybern. {A}"}
+@STRING{IEEE_J_SMCB       = "{IEEE} Trans. Syst., Man, Cybern. {B}"}
+@STRING{IEEE_J_SMCC       = "{IEEE} Trans. Syst., Man, Cybern. {C}"}
+@STRING{IEEE_J_SSC        = "{IEEE} Trans. Syst. Sci. Cybern."}
+
+
+
+earth, wind, fire and water
+@STRING{IEEE_J_GE         = "{IEEE} Trans. Geosci. Electron."}
+@STRING{IEEE_J_GRS        = "{IEEE} Trans. Geosci. Remote Sens."}
+@STRING{IEEE_J_GRSL       = "{IEEE} Geosci. Remote Sens. Lett."}
+@STRING{IEEE_J_OE         = "{IEEE} J. Ocean. Eng."}
+
+
+
+education, engineering, history, IEEE, professional
+disabled till definition is verified
+STRING{IEEE_J_CJECE       = "Canadian J. Elect. Comput. Eng."}
+@STRING{IEEE_J_PROC       = "Proc. {IEEE}"}
+@STRING{IEEE_J_EDU        = "{IEEE} Trans. Educ."}
+@STRING{IEEE_J_EM         = "{IEEE} Trans. Eng. Manag."}
+disabled till definition is verified
+STRING{IEEE_J_EWS         = "{IEEE} Trans. Eng. Writing Speech"}
+@STRING{IEEE_J_PC         = "{IEEE} Trans. Prof. Commun."}
+
+
+
+electromagnetics, antennas, EMI, magnetics and microwave
+@STRING{IEEE_J_AWPL       = "{IEEE} Antennas Wireless Propag. Lett."}
+@STRING{IEEE_J_MGWL       = "{IEEE} Microw. Guided Wave Lett."}
+IEEE seems to want "Compon." here, not "Comp."
+@STRING{IEEE_J_MWCL       = "{IEEE} Microw. Wireless Compon. Lett."}
+@STRING{IEEE_J_AP         = "{IEEE} Trans. Antennas Propag."}
+@STRING{IEEE_J_EMC        = "{IEEE} Trans. Electromagn. Compat."}
+@STRING{IEEE_J_MAG        = "{IEEE} Trans. Magn."}
+@STRING{IEEE_J_MTT        = "{IEEE} Trans. Microw. Theory Tech."}
+@STRING{IEEE_J_RFI        = "{IEEE} Trans. Radio Freq. Interference"}
+@STRING{IEEE_J_TJMJ       = "{IEEE} Transl. J. Magn. Jpn."}
+
+
+
+energy and power
+@STRING{IEEE_J_EC         = "{IEEE} Trans. Energy Convers."}
+@STRING{IEEE_J_PEL        = "{IEEE} Power Electron. Lett."}
+@STRING{IEEE_J_PWRAS      = "{IEEE} Trans. Power App. Syst."}
+@STRING{IEEE_J_PWRD       = "{IEEE} Trans. Power Del."}
+@STRING{IEEE_J_PWRE       = "{IEEE} Trans. Power Electron."}
+@STRING{IEEE_J_PWRS       = "{IEEE} Trans. Power Syst."}
+
+
+
+industrial, commercial and consumer
+@STRING{IEEE_J_APPIND     = "{IEEE} Trans. Appl. Ind."}
+@STRING{IEEE_J_BC         = "{IEEE} Trans. Broadcast."}
+disabled till definition is verified
+STRING{IEEE_J_BCTV        = "{IEEE} Trans. Broadcast Television Receivers"}
+@STRING{IEEE_J_CE         = "{IEEE} Trans. Consum. Electron."}
+@STRING{IEEE_J_IE         = "{IEEE} Trans. Ind. Electron."}
+@STRING{IEEE_J_IECI       = "{IEEE} Trans. Ind. Electron. Contr. Instrum."}
+@STRING{IEEE_J_IA         = "{IEEE} Trans. Ind. Appl."}
+@STRING{IEEE_J_IGA        = "{IEEE} Trans. Ind. Gen. Appl."}
+@STRING{IEEE_J_IINF       = "{IEEE} Trans. Ind. Informat."}
+@STRING{IEEE_J_PSE        = "{IEEE} J. Product Safety Eng."}
+
+
+
+instrumentation and measurement
+@STRING{IEEE_J_IM         = "{IEEE} Trans. Instrum. Meas."}
+
+
+
+insulation and materials
+@STRING{IEEE_J_JEM        = "{IEEE/TMS} J. Electron. Mater."}
+@STRING{IEEE_J_DEI        = "{IEEE} Trans. Dielectr. Electr. Insul."}
+@STRING{IEEE_J_EI         = "{IEEE} Trans. Electr. Insul."}
+
+
+
+mechanical
+@STRING{IEEE_J_MECH       = "{IEEE/ASME} Trans. Mechatronics"}
+@STRING{IEEE_J_MEMS       = "J. Microelectromech. Syst."}
+
+
+
+medical and biological
+@STRING{IEEE_J_BME        = "{IEEE} Trans. Biomed. Eng."}
+Note: The B-ME journal later dropped the hyphen and became the BME.
+@STRING{IEEE_J_B-ME       = "{IEEE} Trans. Bio-Med. Eng."}
+@STRING{IEEE_J_BMELC      = "{IEEE} Trans. Bio-Med. Electron."}
+disabled till definition is verified
+STRING{IEEE_J_CBB         = "{IEEE/ACM} Trans. Comput. Biology Bioinformatics"}
+@STRING{IEEE_J_ITBM       = "{IEEE} Trans. Inf. Technol. Biomed."}
+@STRING{IEEE_J_ME         = "{IEEE} Trans. Med. Electron."}
+@STRING{IEEE_J_MI         = "{IEEE} Trans. Med. Imag."}
+@STRING{IEEE_J_NB         = "{IEEE} Trans. Nanobiosci."}
+@STRING{IEEE_J_NSRE       = "{IEEE} Trans. Neural Syst. Rehabil. Eng."}
+@STRING{IEEE_J_RE         = "{IEEE} Trans. Rehabil. Eng."}
+
+
+
+optics, lightwave and photonics
+@STRING{IEEE_J_PTL        = "{IEEE} Photon. Technol. Lett."}
+@STRING{IEEE_J_JLT        = "J. Lightw. Technol."}
+
+
+
+physics, electrons, nanotechnology, nuclear and quantum electronics
+@STRING{IEEE_J_EDL        = "{IEEE} Electron Device Lett."}
+@STRING{IEEE_J_JQE        = "{IEEE} J. Quantum Electron."}
+@STRING{IEEE_J_JSTQE      = "{IEEE} J. Sel. Topics Quantum Electron."}
+@STRING{IEEE_J_ED         = "{IEEE} Trans. Electron Devices"}
+@STRING{IEEE_J_NANO       = "{IEEE} Trans. Nanotechnol."}
+@STRING{IEEE_J_NS         = "{IEEE} Trans. Nucl. Sci."}
+@STRING{IEEE_J_PS         = "{IEEE} Trans. Plasma Sci."}
+
+
+
+reliability
+IEEE seems to want "Mat." here, not "Mater."
+@STRING{IEEE_J_DMR        = "{IEEE} Trans. Device Mater. Rel."}
+@STRING{IEEE_J_R          = "{IEEE} Trans. Rel."}
+
+
+
+semiconductors, superconductors, electrochemical and solid state
+@STRING{IEEE_J_ESSL       = "{IEEE/ECS} Electrochem. Solid-State Lett."}
+@STRING{IEEE_J_JSSC       = "{IEEE} J. Solid-State Circuits"}
+@STRING{IEEE_J_ASC        = "{IEEE} Trans. Appl. Supercond."}
+@STRING{IEEE_J_SM         = "{IEEE} Trans. Semicond. Manuf."}
+
+
+
+sensors
+@STRING{IEEE_J_SENSOR     = "{IEEE} Sensors J."}
+
+
+
+VLSI
+@STRING{IEEE_J_VLSI       = "{IEEE} Trans. {VLSI} Syst."}
+
+
+
+
+
+
+IEEE Magazines 
+
+
+
+@STRING{IEEE_M_AES        = "{IEEE} Aerosp. Electron. Syst. Mag."}
+@STRING{IEEE_M_HIST       = "{IEEE} Ann. Hist. Comput."}
+@STRING{IEEE_M_AP         = "{IEEE} Antennas Propag. Mag."}
+@STRING{IEEE_M_ASSP       = "{IEEE} {ASSP} Mag."}
+@STRING{IEEE_M_CD         = "{IEEE} Circuits Devices Mag."}
+@STRING{IEEE_M_CAS        = "{IEEE} Circuits Syst. Mag."}
+@STRING{IEEE_M_COM        = "{IEEE} Commun. Mag."}
+@STRING{IEEE_M_COMSOC     = "{IEEE} Commun. Soc. Mag."}
+@STRING{IEEE_M_CIM        = "{IEEE} Comput. Intell. Mag."}
+CSEM changed to CSE in 1999
+@STRING{IEEE_M_CSE        = "{IEEE} Comput. Sci. Eng."}
+@STRING{IEEE_M_CSEM       = "{IEEE} Comput. Sci. Eng. Mag."}
+@STRING{IEEE_M_C          = "{IEEE} Computer"}
+@STRING{IEEE_M_CAP        = "{IEEE} Comput. Appl. Power"}
+@STRING{IEEE_M_CGA        = "{IEEE} Comput. Graph. Appl."}
+@STRING{IEEE_M_CONC       = "{IEEE} Concurrency"}
+@STRING{IEEE_M_CS         = "{IEEE} Control Syst. Mag."}
+@STRING{IEEE_M_DTC        = "{IEEE} Des. Test. Comput."}
+@STRING{IEEE_M_EI         = "{IEEE} Electr. Insul. Mag."}
+@STRING{IEEE_M_ETR        = "{IEEE} ElectroTechnol. Rev."}
+@STRING{IEEE_M_EMB        = "{IEEE} Eng. Med. Biol. Mag."}
+@STRING{IEEE_M_EMR        = "{IEEE} Eng. Manag. Rev."}
+@STRING{IEEE_M_EXP        = "{IEEE} Expert"}
+@STRING{IEEE_M_IA         = "{IEEE} Ind. Appl. Mag."}
+@STRING{IEEE_M_IM         = "{IEEE} Instrum. Meas. Mag."}
+@STRING{IEEE_M_IS         = "{IEEE} Intell. Syst."}
+@STRING{IEEE_M_IC         = "{IEEE} Internet Comput."}
+@STRING{IEEE_M_ITP        = "{IEEE} {IT} Prof."}
+@STRING{IEEE_M_MICRO      = "{IEEE} Micro"}
+@STRING{IEEE_M_MW         = "{IEEE} Microw. Mag."}
+@STRING{IEEE_M_MM         = "{IEEE} Multimedia"}
+@STRING{IEEE_M_NET        = "{IEEE} Netw."}
+IEEE's editorial manual lists "Pers. Commun.", 
+but "Personal Commun. Mag." seems to be what is used in the journals
+@STRING{IEEE_M_PCOM       = "{IEEE} Personal Commun. Mag."}
+@STRING{IEEE_M_POT        = "{IEEE} Potentials"}
+CAP and PER merged to form PE in 2003
+@STRING{IEEE_M_PE         = "{IEEE} Power Energy Mag."}
+@STRING{IEEE_M_PER        = "{IEEE} Power Eng. Rev."}
+@STRING{IEEE_M_PVC        = "{IEEE} Pervasive Comput."}
+@STRING{IEEE_M_RA         = "{IEEE} Robot. Autom. Mag."}
+@STRING{IEEE_M_SAP        = "{IEEE} Security Privacy"}
+@STRING{IEEE_M_SP         = "{IEEE} Signal Process. Mag."}
+@STRING{IEEE_M_S          = "{IEEE} Softw."}
+@STRING{IEEE_M_SPECT      = "{IEEE} Spectr."}
+@STRING{IEEE_M_TS         = "{IEEE} Technol. Soc. Mag."}
+@STRING{IEEE_M_VT         = "{IEEE} Veh. Technol. Mag."}
+@STRING{IEEE_M_WC         = "{IEEE} Wireless Commun. Mag."}
+@STRING{IEEE_M_TODAY      = "Today's Engineer"}
+
+
+
+
+
+
+IEEE Online Publications 
+
+
+
+@STRING{IEEE_O_CSTO        = "{IEEE} Commun. Surveys Tuts."}
+disabled till definition is verified
+@STRING{IEEE_O_DSO          = "{IEEE} Distrib. Syst. Online"}
+
+
+@Article{Abril07,
+	author        = "Patricia S. Abril and Robert Plant",
+	title         = "The patent holder's dilemma: Buy, sell, or troll?",
+	journal       = "Communications of the ACM",
+	volume        = "50",
+	number        = "1",
+	month         = jan,
+	year          = "2007",
+	pages         = "36--44",
+	doi           = "10.1145/1188913.1188915",
+	url           = "http://doi.acm.org/10.1145/1219092.1219093",
+	note          = "",
+}
+
+@Article{Cohen07,
+	author        = "Sarah Cohen and Werner Nutt and Yehoshua Sagic",
+	title         = "Deciding equivalances among conjunctive aggregate queries",
+	journal       = JACM,
+	articleno     = "5",
+	numpages      = "50",
+	volume        = "54",
+	number        = "2",
+	month         = apr,
+	year          = "2007",
+	doi           = "10.1145/1219092.1219093",
+	url           = "http://doi.acm.org/10.1145/1219092.1219093",
+	acmid         = "1219093",
+	note          = "",
+}
+
+
+@periodical{JCohen96,
+	key =          "Cohen",
+	editor =       "Jacques Cohen",
+	title =        "Special issue: Digital Libraries",
+	journal =      CACM,
+	volume =       "39",
+	number =       "11",
+	month =        nov,
+	year =         "1996",
+}
+
+
+@Book{Kosiur01,
+	author =       "David Kosiur",
+	title =        "Understanding Policy-Based Networking",
+	publisher =    "Wiley",
+	year =         "2001",
+	address =      "New York, NY",
+	edition =      "2nd.",
+	editor =       "",
+	volume =       "",
+	number =       "",
+	series =       "",
+	month =        "",
+	note =         "",
+}
+
+
+@Book{Harel79,
+	author =       "David Harel",
+	year =         "1979",
+	title =        "First-Order Dynamic Logic",
+	series =       "Lecture Notes in Computer Science",
+	volume =       "68",
+	address =      "New York, NY",
+	publisher =    "Springer-Verlag",
+	doi =          "10.1007/3-540-09237-4",
+	url =          "http://dx.doi.org/10.1007/3-540-09237-4",
+	editor =       "",
+	number =       "",
+	month =        "",
+	note =         "",
+}
+
+
+@Inbook{Editor00,
+	author =       "",
+	editor =       "Ian Editor",
+	title =        "The title of book one",
+	subtitle =     "The book subtitle",
+	series =       "The name of the series one",
+	year =         "2007",
+	volume =       "9",
+	address =      "Chicago",
+	edition =      "1st.",
+	publisher =    "University of Chicago Press",
+	doi =          "10.1007/3-540-09237-4",
+	url =          "http://dx.doi.org/10.1007/3-540-09456-9",
+	chapter =      "",
+	pages =        "",
+	number =       "",
+	type =         "",
+	month =        "",
+	note =         "",
+}
+
+%
+@InBook{Editor00a,
+	author =       "",
+	editor =       "Ian Editor",
+	title =        "The title of book two",
+	subtitle =     "The book subtitle",
+	series =       "The name of the series two",
+	year =         "2008",
+	address =      "Chicago",
+	edition =      "2nd.",
+	publisher =    "University of Chicago Press",
+	doi =          "10.1007/3-540-09237-4",
+	url =          "http://dx.doi.org/10.1007/3-540-09456-9",
+	volume =       "",
+	chapter =      "100",
+	pages =        "",
+	number =       "",
+	type =         "",
+	month =        "",
+	note =         "",
+}
+
+
+% incollection (has an editor, title, and possibly a booktitle)
+@Incollection{Spector90,
+	author =       "Asad Z. Spector",
+	title =        "Achieving application requirements",
+	booktitle =    "Distributed Systems",
+	publisher =    "ACM Press",
+	address =      "New York, NY",
+	year =         "1990",
+	edition =      "2nd.",
+	chapter =      "",
+	editor =       "Sape Mullender",
+	pages =        "19--33",
+	doi =          "10.1145/90417.90738",
+	url =          "http://doi.acm.org/10.1145/90417.90738",
+	volume =       "",
+	number =       "",
+	series =       "",
+	type =         "",
+	month =        "",
+	note =         "",
+}
+
+
+% incollection (has an editor, title, and possibly a booktitle)
+@Incollection{Douglass98,
+	author =       "Bruce P. Douglass and David Harel and Mark B. Trakhtenbrot",
+	title =        "Statecarts in use: structured analysis and object-orientation",
+	series =       "Lecture Notes in Computer Science",
+	booktitle =    "Lectures on Embedded Systems",
+	publisher =    "Springer-Verlag",
+	address =      "London",
+	volume =       "1494",
+	year =         "1998",
+	chapter =      "",
+	editor =       "Grzegorz Rozenberg and Frits W. Vaandrager",
+	pages =        "368--394",
+	doi =          "10.1007/3-540-65193-4_29",
+	url =          "http://dx.doi.org/10.1007/3-540-65193-4_29",
+	edition =      "",
+	number =       "",
+	type =         "",
+	month =        "",
+	note =         "",
+}
+
+
+@Book{Knuth97,
+	author =       "Donald E. Knuth",
+	title =        "The Art of Computer Programming, Vol. 1: Fundamental Algorithms (3rd. ed.)",
+	publisher =    "Addison Wesley Longman Publishing Co., Inc.",
+	year =         "1997",
+	address =      "",
+	edition =      "",
+	editor =       "",
+	volume =       "",
+	number =       "",
+	series =       "",
+	month =        "",
+	note =         "",
+}
+
+
+@Book{Knuth98,
+	author =       "Donald E. Knuth",
+	year =         "1998",
+	title =        "The Art of Computer Programming",
+	series =       "Fundamental Algorithms",
+	volume =       "1",
+	edition =      "3rd",
+	address =      "",
+	publisher =    "Addison Wesley Longman Publishing Co., Inc.",
+	doi =          "",
+	url =          "",
+	editor =       "",
+	number =       "",
+	month =        "",
+	note =         "(book)",
+}
+
+%Inbook{Knuth97,
+	%  author =       "Donald E. Knuth",
+	%  title =        "The Art of Computer Programming",
+	%  booktitle =    "the booktitle",
+	%  edition =      "3",
+	%  volume =       "1",
+	%  year =         "1997",
+	%  publisher =    "Addison Wesley Longman Publishing Co., Inc.",
+	%  editor =       "",
+	%  number =       "",
+	%  series =       "Fundamental Algorithms",
+	%  type =         "",
+	%  chapter =      "",
+	%  pages =        "",
+	%  address =      "",
+	%  month =        "",
+	%  note =         "(inbook)",
+	%}
+
+%INBOOK{DK:73-inbook-full,
+	%   author = "Donald E. Knuth",
+	%   title = "Fundamental Algorithms (inbook w series)",
+	%   volume = 1,
+	%   series = "The Art of Computer Programming",
+	%   publisher = "Addison-Wesley",
+	%   address = "Reading, Massachusetts",
+	%   edition = "Second",
+	%   month = "10~" # jan,
+	%   year = "1973",
+	%   type = "Section",
+	%   chapter = "1.2",
+	%   pages = "10--119",
+	%   note = "Full INBOOK entry (w series)",
+	%}
+
+%INcollection{DK:74-incoll,
+	%   author = "Donald E. Knuth",
+	%   title = "Fundamental Algorithms (incoll)",
+	%   volume = 1,
+	%   booktitle = "The Art of Computer Programming",
+	%   publisher = "Addison-Wesley",
+	%   address = "Reading, Massachusetts",
+	%   month = "10~" # jan,
+	%   year = "1974",
+	%   pages = "10--119",
+	%   editor = "Bernard Rous",
+	%   note = "This is a full incoll entry with an editor",
+	%}
+
+%INcollection{DK:75-incollws,
+	%   author = "Donald E. Knuth",
+	%   title = "Fundamental Algorithms (incoll w series)",
+	%   volume = 1,
+	%   booktitle = "The Art of Computer Programming",
+	%   series = "The Art of Computer Programming",
+	%   publisher = "Addison-Wesley",
+	%   address = "Reading, Massachusetts",
+	%   month = "10~" # jan,
+	%   year = "1975",
+	%   pages = "10--119",
+	%   editor = "Bernard Rous",
+	%   note = "This is a full incoll entry with an editor and series",
+	%}
+
+
+@incollection{GM05,
+	Author= "Dan Geiger and Christopher Meek",
+	Title= "Structured Variational Inference Procedures and their Realizations (as incol)",
+	Year= 2005,
+	Booktitle="Proceedings of Tenth International Workshop on Artificial Intelligence and Statistics, {\rm The Barbados}",
+	Publisher="The Society for Artificial Intelligence and Statistics",
+	Month= jan,
+	Editors= "Z. Ghahramani and R. Cowell"
+}
+
+@Inproceedings{Smith10,
+	author =       "Stan W. Smith",
+	title =        "An experiment in bibliographic mark-up: Parsing metadata for XML export",
+	booktitle =    "Proceedings of the 3rd. annual workshop on Librarians and Computers",
+	series =       "LAC '10",
+	editor =       "Reginald N. Smythe and Alexander Noble",
+	volume =       "3",
+	year =         "2010",
+	publisher =    "Paparazzi Press",
+	address =      "Milan Italy",
+	pages =        "422--431",
+	doi =          "99.9999/woot07-S422",
+	url =          "http://dx.doi.org/99.0000/woot07-S422",
+	number =       "",
+	month =        "",
+	organization = "",
+	note =         "",
+}
+
+@Inproceedings{VanGundy07,
+	author =       "Matthew Van Gundy and Davide Balzarotti and Giovanni Vigna",
+	year =         "2007",
+	title =        "Catch me, if you can: Evading network signatures with web-based polymorphic worms",
+	booktitle =    "Proceedings of the first USENIX workshop on Offensive Technologies",
+	series =       "WOOT '07",
+	publisher =    "USENIX Association",
+	address =      "Berkley, CA",
+	articleno =    "7",
+	numpages =     "9",
+	editor =       "",
+	volume =       "",
+	number =       "",
+	pages =        "",
+	month =        "",
+	organization = "",
+	note =         "",
+}
+
+@Inproceedings{VanGundy08,
+	author =       "Matthew Van Gundy and Davide Balzarotti and Giovanni Vigna",
+	year =         "2008",
+	title =        "Catch me, if you can: Evading network signatures with web-based polymorphic worms",
+	booktitle =    "Proceedings of the first USENIX workshop on Offensive Technologies",
+	series =       "WOOT '08",
+	publisher =    "USENIX Association",
+	address =      "Berkley, CA",
+	articleno =    "7",
+	numpages =     "2",
+	editor =       "",
+	volume =       "",
+	number =       "",
+	pages =        "99-100",
+	month =        "",
+	organization = "",
+	note =         "",
+}
+
+@Inproceedings{VanGundy09,
+	author =       "Matthew Van Gundy and Davide Balzarotti and Giovanni Vigna",
+	year =         "2009",
+	title =        "Catch me, if you can: Evading network signatures with web-based polymorphic worms",
+	booktitle =    "Proceedings of the first USENIX workshop on Offensive Technologies",
+	series =       "WOOT '09",
+	publisher =    "USENIX Association",
+	address =      "Berkley, CA",
+	articleno =    "",
+	numpages =     "",
+	editor =       "",
+	volume =       "",
+	number =       "",
+	pages =        "90--100",
+	month =        "",
+	organization = "",
+	note =         "",
+}
+
+@Inproceedings{Andler79,
+	author =       "Sten Andler",
+	title =        "Predicate Path expressions",
+	booktitle =    "Proceedings of the 6th. ACM SIGACT-SIGPLAN symposium on Principles of Programming Languages",
+	series =       "POPL '79",
+	year =         "1979",
+	publisher =    "ACM Press",
+	address =      "New York, NY",
+	pages =        "226--236",
+	doi =          "10.1145/567752.567774",
+	url =          "http://doi.acm.org/10.1145/567752.567774",
+	editor =       "",
+	volume =       "",
+	number =       "",
+	month =        "",
+	organization = "",
+	note =         "",
+}
+
+@Techreport{Harel78,
+	author =       "David Harel",
+	year =         "1978",
+	title =        "LOGICS of Programs: AXIOMATICS and DESCRIPTIVE POWER",
+	institution =  "Massachusetts Institute of Technology",
+	type =         "MIT Research Lab Technical Report",
+	number =       "TR-200",
+	address =      "Cambridge, MA",
+	month =        "",
+	note =         "",
+}
+
+@MASTERSTHESIS{anisi03,
+	author = {David A. Anisi},
+	title = {Optimal Motion Control of a Ground Vehicle},
+	school = {Royal Institute of Technology (KTH), Stockholm, Sweden},
+	intitution = {FOI-R-0961-SE, Swedish Defence Research Agency (FOI)},
+	year = {2003},
+}
+
+
+@Phdthesis{Clarkson85,
+	author =       "Kenneth L. Clarkson",
+	year =         "1985",
+	title =        "Algorithms for Closest-Point Problems (Computational Geometry)",
+	school =       "Stanford University",
+	address =      "Palo Alto, CA",
+	note =         "UMI Order Number: AAT 8506171",
+	type =         "",
+	month =        "",
+}
+
+
+@online{Thornburg01,
+	author =       "Harry Thornburg",
+	year =         "2001",
+	title =        "Introduction to Bayesian Statistics",
+	url =          "http://ccrma.stanford.edu/~jos/bayes/bayes.html",
+	month =        mar,
+	lastaccessed = "March 2, 2005",
+}
+
+
+@online{Ablamowicz07,
+	author =       "Rafal Ablamowicz and Bertfried Fauser",
+	year =         "2007",
+	title =        "CLIFFORD: a Maple 11 Package for Clifford Algebra Computations, version 11",
+	url =          "http://math.tntech.edu/rafal/cliff11/index.html",
+	lastaccessed = "February 28, 2008",
+}
+
+
+@misc{Poker06,
+	author =       "Poker-Edge.Com",
+	year =         "2006",
+	month =        mar,
+	title =        "Stats and Analysis",
+	lastaccessed = "June 7, 2006",
+	url =          "http://www.poker-edge.com/stats.php",
+}
+
+@misc{Obama08,
+	author        = "Barack Obama",
+	year          = "2008",
+	title         = "A more perfect union",
+	howpublished  = "Video",
+	day           = "5",
+	url           = "http://video.google.com/videoplay?docid=6528042696351994555",
+	month         = mar,
+	lastaccessed  = "March 21, 2008",
+	note          =  "",
+}
+
+@misc{JoeScientist001,
+	author =       "Joseph Scientist",
+	year =         "2009",
+	title =        "The fountain of youth",
+	note =         "Patent No. 12345, Filed July 1st., 2008, Issued Aug. 9th., 2009",
+	url =          "",
+	howpublished = "",
+	month =        aug,
+	lastaccessed = "",
+}
+
+
+@Inproceedings{Novak03,
+	author =       "Dave Novak",
+	title =        "Solder man",
+	booktitle =    "ACM SIGGRAPH 2003 Video Review on Animation theater Program: Part I - Vol. 145 (July 27--27, 2003)",
+	year =         "2003",
+	publisher =    "ACM Press",
+	address =      "New York, NY",
+	pages =        "4",
+	month =        "March 21, 2008",
+	doi =          "99.9999/woot07-S422",
+	url =          "http://video.google.com/videoplay?docid=6528042696351994555",
+	note =         "",
+	howpublished = "Video",
+	editor =       "",
+	volume =       "",
+	number =       "",
+	series =       "",
+	organization = "",
+}
+
+
+@article{Lee05,
+	author =       "Newton Lee",
+	year =         "2005",
+	title =        "Interview with Bill Kinder: January 13, 2005",
+	journal =      "Comput. Entertain.",
+	eid =          "4",
+	volume =       "3",
+	number =       "1",
+	month =        "Jan.-March",
+	doi =          "10.1145/1057270.1057278",
+	url =          "http://doi.acm.org/10.1145/1057270.1057278",
+	howpublished = "Video",
+	note =         "",
+}
+
+@article{Rous08,
+	author =       "Bernard Rous",
+	year =         "2008",
+	title =        "The Enabling of Digital Libraries",
+	journal =      "Digital Libraries",
+	volume =       "12",
+	number =       "3",
+	month =        jul,
+	articleno =    "5",
+	doi =          "",
+	url =          "",
+	howpublished = "",
+	note =         "To appear",
+}
+
+@article{384253,
+	author = {Werneck,, Renato and Setubal,, Jo\~{a}o and da Conceic\~{a}o,, Arlindo},
+	title = {(old) Finding minimum congestion spanning trees},
+	journal = {J. Exp. Algorithmics},
+	volume = {5},
+	year = {2000},
+	issn = {1084-6654},
+	pages = {11},
+	doi = {http://doi.acm.org/10.1145/351827.384253},
+	publisher = {ACM},
+	address = {New York, NY, USA},
+}
+
+
+@article{Werneck:2000:FMC:351827.384253,
+	author = {Werneck, Renato and Setubal, Jo\~{a}o and da Conceic\~{a}o, Arlindo},
+	title = {(new) Finding minimum congestion spanning trees},
+	journal = {J. Exp. Algorithmics},
+	volume = {5},
+	month = dec,
+	year = {2000},
+	issn = {1084-6654},
+	articleno = {11},
+	url = {http://portal.acm.org/citation.cfm?id=351827.384253},
+	doi = {10.1145/351827.384253},
+	acmid = {384253},
+	publisher = {ACM},
+	address = {New York, NY, USA},
+}
+
+@article{1555162,
+	author = {Conti, Mauro and Di Pietro, Roberto and Mancini, Luigi V. and Mei, Alessandro},
+	title = {(old) Distributed data source verification in wireless sensor networks},
+	journal = {Inf. Fusion},
+	volume = {10},
+	number = {4},
+	year = {2009},
+	issn = {1566-2535},
+	pages = {342--353},
+	doi = {http://dx.doi.org/10.1016/j.inffus.2009.01.002},
+	publisher = {Elsevier Science Publishers B. V.},
+	address = {Amsterdam, The Netherlands, The Netherlands},
+}
+
+@article{Conti:2009:DDS:1555009.1555162,
+	author = {Conti, Mauro and Di Pietro, Roberto and Mancini, Luigi V. and Mei, Alessandro},
+	title = {(new) Distributed data source verification in wireless sensor networks},
+	journal = {Inf. Fusion},
+	volume = {10},
+	number = {4},
+	month = oct,
+	year = {2009},
+	issn = {1566-2535},
+	pages = {342--353},
+	numpages = {12},
+	url = {http://portal.acm.org/citation.cfm?id=1555009.1555162},
+	doi = {10.1016/j.inffus.2009.01.002},
+	acmid = {1555162},
+	publisher = {Elsevier Science Publishers B. V.},
+	address = {Amsterdam, The Netherlands, The Netherlands},
+	keywords = {Clone detection, Distributed protocol, Securing data fusion, Wireless sensor networks},
+}
+
+@inproceedings{Li:2008:PUC:1358628.1358946,
+	author = {Li, Cheng-Lun and Buyuktur, Ayse G. and Hutchful, David K. and Sant, Natasha B. and Nainwal, Satyendra K.},
+	title = {Portalis: using competitive online interactions to support aid initiatives for the homeless},
+	booktitle = {CHI '08 extended abstracts on Human factors in computing systems},
+	year = {2008},
+	isbn = {978-1-60558-012-X},
+	location = {Florence, Italy},
+	pages = {3873--3878},
+	numpages = {6},
+	url = {http://portal.acm.org/citation.cfm?id=1358628.1358946},
+	doi = {10.1145/1358628.1358946},
+	acmid = {1358946},
+	publisher = {ACM},
+	address = {New York, NY, USA},
+	keywords = {cscw, distributed knowledge acquisition, incentive design, online games, recommender systems, reputation systems, user studies, virtual community},
+}
+
+@book{Hollis:1999:VBD:519964,
+	author = {Hollis, Billy S.},
+	title = {Visual Basic 6: Design, Specification, and Objects with Other},
+	year = {1999},
+	isbn = {0130850845},
+	edition = {1st},
+	publisher = {Prentice Hall PTR},
+	address = {Upper Saddle River, NJ, USA},
+}
+
+
+@book{Goossens:1999:LWC:553897,
+	author = {Goossens, Michel and Rahtz, S. P. and Moore, Ross and Sutor, Robert S.},
+	title = {The  Latex Web Companion: Integrating TEX, HTML, and XML},
+	year = {1999},
+	isbn = {0201433117},
+	edition = {1st},
+	publisher = {Addison-Wesley Longman Publishing Co., Inc.},
+	address = {Boston, MA, USA},
+}
+
+% need to test genres for errant isbn output
+
+% techreport
+@techreport{897367,
+	author = {Buss, Jonathan F. and Rosenberg, Arnold L. and Knott, Judson D.},
+	title = {Vertex Types in Book-Embeddings},
+	year = {1987},
+	source = {http://www.ncstrl.org:8900/ncstrl/servlet/search?formname=detail\&id=oai%3Ancstrlh%3Aumass_cs%3Ancstrl.umassa_cs%2F%2FUM-CS-1987-018},
+	publisher = {University of Massachusetts},
+	address = {Amherst, MA, USA},
+}
+
+@techreport{Buss:1987:VTB:897367,
+	author = {Buss, Jonathan F. and Rosenberg, Arnold L. and Knott, Judson D.},
+	title = {Vertex Types in Book-Embeddings},
+	year = {1987},
+	source = {http://www.ncstrl.org:8900/ncstrl/servlet/search?formname=detail\&id=oai%3Ancstrlh%3Aumass_cs%3Ancstrl.umassa_cs%2F%2FUM-CS-1987-018},
+	publisher = {University of Massachusetts},
+	address = {Amherst, MA, USA},
+}
+
+% whole proceedings
+
+@proceedings{Czerwinski:2008:1358628,
+	author = {},
+	note = {General Chair-Czerwinski, Mary and General Chair-Lund, Arnie and Program Chair-Tan, Desney},
+	title = {CHI '08: CHI '08 extended abstracts on Human factors in computing systems},
+	year = {2008},
+	isbn = {978-1-60558-012-X},
+	location = {Florence, Italy},
+	order_no = {608085},
+	publisher = {ACM},
+	address = {New York, NY, USA},
+}
+
+% phdthesis
+
+@phdthesis{Clarkson:1985:ACP:911891,
+	author = {Clarkson, Kenneth Lee},
+	advisor = {Yao, Andrew C.},
+	title = {Algorithms for Closest-Point Problems (Computational Geometry)},
+	year = {1985},
+	note = {AAT 8506171},
+	school = {Stanford University},
+	address = {Stanford, CA, USA},
+}
+% school is being picked up -- but not publisher (which is OK)
+% Also -- the title is NOT being output in italics !!! Arrrrgh! - I fixed it. :-)
+
+
+%%% compare with 'old'
+%%% atsign-Phdthesis{Clarkson85,
+	%%%  author =       "Kenneth L. Clarkson",
+	%%%  year =         "1985",
+	%%%  title =        "Algorithms for Closest-Point Problems (Computational Geometry)",
+	%%%  school =       "Stanford University",
+	%%%  address =      "Palo Alto, CA",
+	%%%  note =         "UMI Order Number: AAT 8506171",
+	%%%  type =         "",
+	%%%  month =        "",
+	%%%}
+
+% A bibliography
+@Article{1984:1040142,
+	key = {{$\!\!$}},
+	journal = {SIGCOMM Comput. Commun. Rev.},
+	year = {1984},
+	issn = {0146-4833},
+	volume = {13-14},
+	number = {5-1},
+	issue_date = {January/April 1984},
+	publisher = {ACM},
+	address = {New York, NY, USA},
+}
+
+
+% grinder
+@inproceedings{2004:ITE:1009386.1010128,
+	key = {IEEE},
+	title = {IEEE TCSC Executive Committee},
+	booktitle = {Proceedings of the IEEE International Conference on Web Services},
+	series = {ICWS '04},
+	year = {2004},
+	isbn = {0-7695-2167-3},
+	pages = {21--22},
+	url = {http://dx.doi.org/10.1109/ICWS.2004.64},
+	doi = {http://dx.doi.org/10.1109/ICWS.2004.64},
+	acmid = {1010128},
+	publisher = {IEEE Computer Society},
+	address = {Washington, DC, USA},
+}
+
+% div book
+@book{Mullender:1993:DS(:302430,
+	editor = {Mullender, Sape},
+	title = {Distributed systems (2nd Ed.)},
+	year = {1993},
+	isbn = {0-201-62427-3},
+	publisher = {ACM Press/Addison-Wesley Publishing Co.},
+	address = {New York, NY, USA},
+}
+
+% master thesis (as techreport and thesis)
+
+@techreport{Petrie:1986:NAD:899644,
+	author = {Petrie, Charles J.},
+	title = {New Algorithms for Dependency-Directed Backtracking (Master's thesis)},
+	year = {1986},
+	source = {http://www.ncstrl.org:8900/ncstrl/servlet/search?formname=detail\&id=oai%3Ancstrlh%3Autexas_cs%3AUTEXAS_CS%2F%2FAI86-33},
+	publisher = {University of Texas at Austin},
+	address = {Austin, TX, USA},
+}
+
+@MASTERSTHESIS{Petrie:1986:NAD:12345,
+	author = {Petrie, Charles J.},
+	title = {New Algorithms for Dependency-Directed Backtracking (Master's thesis)},
+	year = {1986},
+	source = {http://www.ncstrl.org:8900/ncstrl/servlet/search?formname=detail\&id=oai%3Ancstrlh%3Autexas_cs%3AUTEXAS_CS%2F%2FAI86-33},
+	school = {University of Texas at Austin},
+	address = {Austin, TX, USA},
+}
+
+
+
+
+@BOOK{book-minimal,
+	author = "Donald E. Knuth",
+	title = "Seminumerical Algorithms",
+	publisher = "Addison-Wesley",
+	year = "1981",
+}
+
+% incollection (has an editor, title, and possibly a booktitle)
+@INcollection{KA:2001,
+	author = {Kong, Wei-Chang},
+	Title = {The implementation of electronic commerce in SMEs in Singapore (as Incoll)},
+	booktitle = {E-commerce and cultural values},
+	year = {2001},
+	isbn = {1-59140-056-2},
+	pages = {51--74},
+	numpages = {24},
+	url = {http://portal.acm.org/citation.cfm?id=887006.887010},
+	acmid = {887010},
+	publisher = {IGI Publishing},
+	address = {Hershey, PA, USA},
+}
+
+
+% with bibfield 'type' before chapter (note no editor)
+@INBOOK{KAGM:2001,
+	author = {Kong, Wei-Chang},
+	type = {Name of Chapter:},
+	chapter = {The implementation of electronic commerce in SMEs in Singapore (Inbook-w-chap-w-type)},
+	title = {E-commerce and cultural values},
+	year = {2001},
+	isbn = {1-59140-056-2},
+	pages = {51--74},
+	numpages = {24},
+	url = {http://portal.acm.org/citation.cfm?id=887006.887010},
+	acmid = {887010},
+	publisher = {IGI Publishing},
+	address = {Hershey, PA, USA},
+}
+
+%%% Notes! This is because the atsign-INBOOK citation type specifies EITHER
+%%% editor or author, but not both. In my experiments with the harvard/dcu
+%%% bibtex style (and presumably this applies to other styles too), bibtex
+%%% ignores the editor information if author information exists in an
+%%% atsign-INBOOK entry. atsign-INCOLLECTION is far more commonly used in my references,
+%%% and in the absence of an editor I believe most bibtex styles will just
+%%% ommit the editor from the reference - the chapter information will not
+%%% end up in the in-text citation as you suggest it should be but at least
+%%% there is a place to put the editor if necessary.
+
+
+
+% was 'Inbook' -- changed to incollection - (editor is different to author) - need to tell Asad to codify as such.
+@incollection{Kong:2002:IEC:887006.887010,
+	author =      {Kong, Wei-Chang},
+	editor =      {Theerasak Thanasankit},
+	title =       {Chapter 9},
+	booktitle =   {E-commerce and cultural values (Incoll-w-text (chap 9) 'title')},
+	year =        {2002},
+	address =     {Hershey, PA, USA},
+	publisher =   {IGI Publishing},
+	url =         {http://portal.acm.org/citation.cfm?id=887006.887010},
+	pages =       {51--74},
+	numpages =    {24},
+	acmid =       {887010},
+	isbn =        {1-59140-056-2},
+	number =      "",
+	type =        "",
+	month =       "",
+	note =        "",
+}
+
+% incol when the chapter is 'text' - due to presence of editor (different to author)
+@incollection{Kong:2003:IEC:887006.887011,
+	author = {Kong, Wei-Chang},
+	title = {The implementation of electronic commerce in SMEs in Singapore (Incoll)},
+	booktitle = {E-commerce and cultural values},
+	editor = {Thanasankit, Theerasak},
+	year = {2003},
+	isbn = {1-59140-056-2},
+	pages = {51--74},
+	numpages = {24},
+	url = {http://portal.acm.org/citation.cfm?id=887006.887010},
+	acmid = {887010},
+	publisher = {IGI Publishing},
+	address = {Hershey, PA, USA},
+}
+
+% ------ test
+%incollection{Kong:2003:IEC:887006.887010,
+	% author = {Kong, Wei-Chang},
+	% chapter = {The implementation of electronic commerce in SMEs in Singapore (Incoll-text-in-chap)},
+	% booktitle = {booktitle E-commerce and cultural values},
+	% title =   {The title},
+	% editor = {Thanasankit, Theerasak},
+	% year = {2003},
+	% isbn = {1-59140-056-2},
+	% pages = {51--74},
+	% numpages = {24},
+	% url = {http://portal.acm.org/citation.cfm?id=887006.887010},
+	% acmid = {887010},
+	% publisher = {IGI Publishing},
+	% address = {Hershey, PA, USA},
+	%}
+
+
+% ---------
+
+
+
+
+
+% Need inbook with num in chapter
+
+% and inbook with number in chapter
+@InBook{Kong:2004:IEC:123456.887010,
+	author =      {Kong, Wei-Chang},
+	editor =      {Theerasak Thanasankit},
+	title =       {E-commerce and cultural values - (InBook-num-in-chap)},
+	chapter =     {9},
+	year =        {2004},
+	address =     {Hershey, PA, USA},
+	publisher =   {IGI Publishing},
+	url =         {http://portal.acm.org/citation.cfm?id=887006.887010},
+	pages =       {51--74},
+	numpages =    {24},
+	acmid =       {887010},
+	isbn =        {1-59140-056-2},
+	number =      "",
+	type =        "",
+	month =       "",
+	note =        "",
+}
+
+
+% and inbook with text in chapter
+@Inbook{Kong:2005:IEC:887006.887010,
+	author =      {Kong, Wei-Chang},
+	editor =      {Theerasak Thanasankit},
+	title =       {E-commerce and cultural values (Inbook-text-in-chap)},
+	chapter =     {The implementation of electronic commerce in SMEs in Singapore},
+	year =        {2005},
+	address =     {Hershey, PA, USA},
+	publisher =   {IGI Publishing},
+	url =         {http://portal.acm.org/citation.cfm?id=887006.887010},
+	type =        {Chapter:},
+	pages =       {51--74},
+	numpages =    {24},
+	acmid =       {887010},
+	isbn =        {1-59140-056-2},
+	number =      "",
+	month =       "",
+	note =        "",
+}
+
+
+% and inbook with a num and type field
+@Inbook{Kong:2006:IEC:887006.887010,
+	author =      {Kong, Wei-Chang},
+	editor =      {Theerasak Thanasankit},
+	title =       {E-commerce and cultural values (Inbook-num chap)},
+	chapter =     {22},
+	year =        {2006},
+	address =     {Hershey, PA, USA},
+	publisher =   {IGI Publishing},
+	url =         {http://portal.acm.org/citation.cfm?id=887006.887010},
+	type =        {Chapter (in type field)},
+	pages =       {51--74},
+	numpages =    {24},
+	acmid =       {887010},
+	isbn =        {1-59140-056-2},
+	number =      "",
+	month =       "",
+	note =        "",
+}
+
+
+% and incol coz we have a BLANK chapter - due to presence of editor
+%atIncollection{Kong:2006:IEC:887006.887011,
+	%  author =     {Kong, Wei-Chang},
+	%  editor =     {Theerasak Thanasankit},
+	%  title =      "The title"
+	%  booktitle =  {E-commerce and cultural values (Incol-coz-blank-chap)},
+	%  year =       {2006},
+	%  address =    {Hershey, PA, USA},
+	%  publisher =  {IGI Publishing},
+	%  url =        {http://portal.acm.org/citation.cfm?id=887006.887010},
+	%  type =       {Type!},
+	%  chapter =    {},
+	%  pages =      {51--74},
+	%  numpages =   {24},
+	%  acmid =      {887010},
+	%  isbn =       {1-59140-056-2},
+	%  number =     "",
+	%  month =      "",
+	%  note =       "",
+	%}
+
+@article{SaeediMEJ10,
+	author = {Mehdi Saeedi and Morteza Saheb Zamani and Mehdi Sedighi},
+	title = {A library-based synthesis methodology for reversible logic},
+	journal = {Microelectron. J.},
+	volume = {41},
+	number = {4},
+	month = apr,
+	year = {2010},
+	pages = {185--194},
+}
+
+@ARTICLE{SaeediJETC10,
+	author = {Mehdi Saeedi and Morteza Saheb Zamani and Mehdi Sedighi and Zahra Sasanian},
+	title = {Synthesis of Reversible Circuit Using Cycle-Based Approach},
+	journal = {J. Emerg. Technol. Comput. Syst.},
+	volume = {6},
+	number = {4},
+	month = dec,
+	year = {2010}
+}
+
+% Asad's new version
+@article{Kirschmer:2010:AEI:1958016.1958018,
+	author = {Kirschmer, Markus and Voight, John},
+	title = {Algorithmic Enumeration of Ideal Classes for Quaternion Orders},
+	journal = {SIAM J. Comput.},
+	issue_date = {January 2010},
+	volume = {39},
+	number = {5},
+	month = jan,
+	year = {2010},
+	issn = {0097-5397},
+	pages = {1714--1747},
+	numpages = {34},
+	url = {http://dx.doi.org/10.1137/080734467},
+	doi = {https://doi.org/10.1137/080734467},
+	acmid = {1958018},
+	publisher = {Society for Industrial and Applied Mathematics},
+	address = {Philadelphia, PA, USA},
+	keywords = {ideal classes, maximal orders, number theory, quaternion algebras},
+}
+
+
+% incol due to presence of booktitle
+@incollection{Hoare:1972:CIN:1243380.1243382,
+	author = {Hoare, C. A. R.},
+	title = {Chapter II: Notes on data structuring},
+	booktitle = {Structured programming (incoll)},
+	editor = {Dahl, O. J. and Dijkstra, E. W. and Hoare, C. A. R.},
+	year = {1972},
+	isbn = {0-12-200550-3},
+	pages = {83--174},
+	numpages = {92},
+	url = {http://portal.acm.org/citation.cfm?id=1243380.1243382},
+	acmid = {1243382},
+	publisher = {Academic Press Ltd.},
+	address = {London, UK, UK},
+}
+
+% incol due to presence of booktitle
+@incollection{Lee:1978:TQA:800025.1198348,
+	author = {Lee, Jan},
+	title = {Transcript of question and answer session},
+	booktitle = {History of programming languages I (incoll)},
+	editor = {Wexelblat, Richard L.},
+	year = {1981},
+	isbn = {0-12-745040-8},
+	pages = {68--71},
+	numpages = {4},
+	url = {http://doi.acm.org/10.1145/800025.1198348},
+	doi = {http://doi.acm.org/10.1145/800025.1198348},
+	acmid = {1198348},
+	publisher = {ACM},
+	address = {New York, NY, USA},
+}
+
+% incol due to booktitle
+@incollection{Dijkstra:1979:GSC:1241515.1241518,
+	author = {Dijkstra, E.},
+	title = {Go to statement considered harmful},
+	booktitle = {Classics in software engineering (incoll)},
+	year = {1979},
+	isbn = {0-917072-14-6},
+	pages = {27--33},
+	numpages = {7},
+	url = {http://portal.acm.org/citation.cfm?id=1241515.1241518},
+	acmid = {1241518},
+	publisher = {Yourdon Press},
+	address = {Upper Saddle River, NJ, USA},
+}
+
+% incol due to booktitle
+@incollection{Wenzel:1992:TVA:146022.146089,
+	author = {Wenzel, Elizabeth M.},
+	title = {Three-dimensional virtual acoustic displays},
+	booktitle = {Multimedia interface design (incoll)},
+	year = {1992},
+	isbn = {0-201-54981-6},
+	pages = {257--288},
+	numpages = {32},
+	url = {http://portal.acm.org/citation.cfm?id=146022.146089},
+	doi = {10.1145/146022.146089},
+	acmid = {146089},
+	publisher = {ACM},
+	address = {New York, NY, USA},
+}
+
+% incol due to booktitle
+@incollection{Mumford:1987:MES:54905.54911,
+	author = {Mumford, E.},
+	title = {Managerial expert systems and organizational change: some critical research issues},
+	booktitle = {Critical issues in information systems research (incoll)},
+	year = {1987},
+	isbn = {0-471-91281-6},
+	pages = {135--155},
+	numpages = {21},
+	url = {http://portal.acm.org/citation.cfm?id=54905.54911},
+	acmid = {54911},
+	publisher = {John Wiley \& Sons, Inc.},
+	address = {New York, NY, USA},
+}
+
+@book{McCracken:1990:SSC:575315,
+	author = {McCracken, Daniel D. and Golden, Donald G.},
+	title = {Simplified Structured COBOL with Microsoft/MicroFocus COBOL},
+	year = {1990},
+	isbn = {0471514071},
+	publisher = {John Wiley \& Sons, Inc.},
+	address = {New York, NY, USA},
+}
+
+% Let's include Boris / BBeeton entries  (multi-volume works)
+
+@book {MR781537,
+	AUTHOR = {H{\"o}rmander, Lars},
+	TITLE = {The analysis of linear partial differential operators. {III}},
+	SERIES = {Grundlehren der Mathematischen Wissenschaften [Fundamental
+	Principles of Mathematical Sciences]},
+	VOLUME = {275},
+	NOTE = {Pseudodifferential operators},
+	PUBLISHER = {Springer-Verlag},
+	ADDRESS = {Berlin, Germany},
+	YEAR = {1985},
+	PAGES = {viii+525},
+	ISBN = {3-540-13828-5},
+	MRCLASS = {35-02 (35Sxx 47G05 58G15)},
+	MRNUMBER = {781536 (87d:35002a)},
+	MRREVIEWER = {Min You Qi},
+}
+
+@book {MR781536,
+	AUTHOR = {H{\"o}rmander, Lars},
+	TITLE = {The analysis of linear partial differential operators. {IV}},
+	SERIES = {Grundlehren der Mathematischen Wissenschaften [Fundamental
+	Principles of Mathematical Sciences]},
+	VOLUME = {275},
+	NOTE = {Fourier integral operators},
+	PUBLISHER = {Springer-Verlag},
+	ADDRESS = {Berlin, Germany},
+	YEAR = {1985},
+	PAGES = {vii+352},
+	ISBN = {3-540-13829-3},
+	MRCLASS = {35-02 (35Sxx 47G05 58G15)},
+	MRNUMBER = {781537 (87d:35002b)},
+	MRREVIEWER = {Min You Qi},
+}
+
+%%%%%%%%%%%%%%%%%%%%%% Start of Aptara sample bib entries
+
+% acmsmall-sam.bib
+@InProceedings{Adya-01,
+	author        = {A. Adya and P. Bahl and J. Padhye and A.Wolman and L. Zhou},
+	title         = {A multi-radio unification protocol for {IEEE} 802.11 wireless networks},
+	booktitle     = {Proceedings of the IEEE 1st International Conference on Broadnets Networks (BroadNets'04)},
+	publisher     = "IEEE",
+	address       = "Los Alamitos, CA",
+	year          = {2004},
+	pages         = "210--217"
+}
+
+@article{Akyildiz-01,
+	author        = {I. F. Akyildiz and W. Su and Y. Sankarasubramaniam and E. Cayirci},
+	title         = {Wireless Sensor Networks: A Survey},
+	journal       = {Comm. ACM},
+	volume        = 38,
+	number        = "4",
+	year          = {2002},
+	pages         = "393--422"
+}
+
+@article{Akyildiz-02,
+	author        = {I. F. Akyildiz and T. Melodia and K. R. Chowdhury},
+	title         = {A Survey on Wireless Multimedia Sensor Networks},
+	journal       = {Computer Netw.},
+	volume        = 51,
+	number        = "4",
+	year          = {2007},
+	pages         = "921--960"
+}
+
+@InProceedings{Bahl-02,
+	author        = {P. Bahl and R. Chancre and J. Dungeon},
+	title         = {{SSCH}: Slotted Seeded Channel Hopping for Capacity Improvement in {IEEE} 802.11 Ad-Hoc Wireless Networks},
+	booktitle     = {Proceeding of the 10th International Conference on Mobile Computing and Networking (MobiCom'04)},
+	publisher     = "ACM",
+	address       = "New York, NY",
+	year          = {2004},
+	pages         = "112--117"
+}
+
+@misc{CROSSBOW,
+	key       = {CROSSBOW},
+	title     = {{XBOW} Sensor Motes Specifications},
+	note      = {http://www.xbow.com},
+	year      = 2008
+}
+
+@article{Culler-01,
+	author        = {D. Culler and D. Estrin and M. Srivastava},
+	title         = {Overview of Sensor Networks},
+	journal       = {IEEE Comput.},
+	volume        = 37,
+	number        = "8 (Special Issue on Sensor Networks)",
+	publisher     = "IEEE",
+	address       = "Los Alamitos, CA",
+	year          = {2004},
+	pages         = "41--49"
+}
+
+@misc{Harvard-01,
+	key         = {Harvard CodeBlue},
+	title       = {{CodeBlue}: Sensor Networks for Medical Care},
+	note        = {http://www.eecs.harvard.edu/mdw/ proj/codeblue/},
+	year        = 2008
+}
+
+@InProceedings{Natarajan-01,
+	author      = {A. Natarajan and M. Motani and B. de Silva and K. Yap and K. C. Chua},
+	title       = {Investigating Network Architectures for Body Sensor Networks},
+	booktitle   = {Network Architectures},
+	editor      = {G. Whitcomb and P. Neece},
+	publisher   = "Keleuven Press",
+	address     = "Dayton, OH",
+	year        = {2007},
+	pages       = "322--328",
+	eprint      = "960935712",
+	primaryclass = "cs",
+}
+
+@techreport{Tzamaloukas-01,
+	author        = {A. Tzamaloukas and J. J. Garcia-Luna-Aceves},
+	title         = {Channel-Hopping Multiple Access},
+	number =        {I-CA2301},
+	institution =   {Department of Computer Science, University of California},
+	address =       {Berkeley, CA},
+	year          = {2000}
+}
+
+@BOOK{Zhou-06,
+	author        = {G. Zhou and J. Lu and C.-Y. Wan and M. D. Yarvis and J. A. Stankovic},
+	title         = {Body Sensor Networks},
+	publisher     = "MIT Press",
+	address       = "Cambridge, MA",
+	year          = {2008}
+}
+
+@mastersthesis{ko94,
+	author = "Jacob Kornerup",
+	title = "Mapping Powerlists onto Hypercubes",
+	school = "The University of Texas at Austin",
+	note = "(In preparation)",
+	year = "1994"}
+%month = "dec",}
+
+@PhdThesis{gerndt:89,
+	author =       "Michael Gerndt",
+	title =        "Automatic Parallelization for Distributed-Memory
+	Multiprocessing Systems",
+	school =       "University of Bonn",
+	year =         1989,
+	address =      "Bonn, Germany",
+	month =        dec
+}
+
+@article{6:1:1,
+	author = "J. E. {Archer, Jr.} and R. Conway and F. B. Schneider",
+	title = "User recovery and reversal in interactive systems",
+	journal = "ACM Trans. Program. Lang. Syst.",
+	volume =  "6",
+	number = "1",
+	month = jan,
+	year = 1984,
+	pages = "1--19"}
+
+@article{7:1:137,
+	author = "D. D. Dunlop and V. R. Basili",
+	title = "Generalizing specifications for uniformly implemented loops",
+	journal = "ACM Trans. Program. Lang. Syst.",
+	volume =  "7",
+	number = "1",
+	month = jan,
+	year = 1985,
+	pages = "137--158"}
+
+@article{7:2:183,
+	author = "J. Heering and P. Klint",
+	title = "Towards monolingual programming environments",
+	journal = "ACM Trans. Program. Lang. Syst.",
+	volume =  "7",
+	number = "2",
+	month = apr,
+	year = 1985,
+	pages = "183--213"}
+
+@book{knuth:texbook,
+	author = "Donald E. Knuth",
+	title = "The {\TeX{}book}",
+	publisher = "Addison-Wesley",
+	address = "Reading, MA.",
+	year = 1984}
+
+@article{6:3:380,
+	author = "E. Korach and D.  Rotem and N. Santoro",
+	title = "Distributed algorithms for finding centers and medians in networks",
+	journal = "ACM Trans. Program. Lang. Syst.",
+	volume =  "6",
+	number = "3",
+	month = jul,
+	year = 1984,
+	pages = "380--401"}
+
+@book{lamport:latex,
+	author = "Leslie Lamport",
+	title = "\it {\LaTeX}: A Document Preparation System",
+	publisher = "Addison-Wesley",
+	address = "Reading, MA.",
+	year = 1986}
+
+@article{7:3:359,
+	author = "F. Nielson",
+	title = "Program transformations in a denotational setting",
+	journal = "ACM Trans. Program. Lang. Syst.",
+	volume =  "7",
+	number = "3",
+	month = jul,
+	year = 1985,
+	pages = "359--379"}
+
+%testing
+@BOOK{test,
+	author = "Donald E. Knuth",
+	title = "Seminumerical Algorithms",
+	volume = 2,
+	series = "The Art of Computer Programming",
+	publisher = "Addison-Wesley",
+	address = "Reading, MA",
+	edition = "2nd",
+	month = "10~" # jan,
+	year = "1981",
+}
+
+@inproceedings{reid:scribe,
+	author = "Brian K. Reid",
+	title = "A high-level approach to computer document formatting",
+	booktitle = "Proceedings of the 7th Annual Symposium on Principles of
+	Programming Languages",
+	month = jan,
+	year = 1980,
+	publisher = "ACM",
+	address = "New York",
+	pages = "24--31"}
+
+@article{Zhou:2010:MMS:1721695.1721705,
+	author = {Zhou, Gang and Wu, Yafeng and Yan, Ting and He, Tian and Huang, Chengdu and Stankovic, John A. and Abdelzaher, Tarek F.},
+	title = {A multifrequency MAC specially designed for wireless sensor network applications},
+	journal = {ACM Trans. Embed. Comput. Syst.},
+	issue_date = {March 2010},
+	volume = 9,
+	number = 4,
+	month = {April},
+	year = 2010,
+	issn = {1539-9087},
+	pages = {39:1--39:41},
+	articleno = 39,
+	numpages = 41,
+	url = {http://doi.acm.org/10.1145/1721695.1721705},
+	doi = {10.1145/1721695.1721705},
+	acmid = 1721705,
+	publisher = {ACM},
+	address = {New York, NY, USA},
+	keywords = {Wireless sensor networks, media access control, multi-channel, radio interference, time synchronization},
+}
+
+
+@online{TUGInstmem,
+	key =          {TUG},
+	year  =        2017,
+	title =        "Institutional members of the {\TeX} Users Group",
+	url =          "http://wwtug.org/instmem.html",
+	lastaccessed = "May 27, 2017",
+}
+
+@online{CTANacmart,
+	author =    {Boris Veytsman},
+	title =  {acmart---{C}lass for typesetting publications of {ACM}},
+	url =    {http://www.ctan.org/pkg/acmart},
+	lastaccessed = {May 27, 2017}
+}
+
+@ARTICLE{bowman:reasoning,
+	author = {Bowman, Mic and Debray, Saumya K. and Peterson, Larry L.},
+	title = {Reasoning About Naming Systems},
+	journal = {ACM Trans. Program. Lang. Syst.},
+	volume = {15},
+	number = {5},
+	pages = {795-825},
+	month = {November},
+	year = {1993},
+	doi = {10.1145/161468.161471},
+}
+
+@ARTICLE{braams:babel,
+	author = {Braams, Johannes},
+	title = {Babel, a Multilingual Style-Option System for Use with LaTeX's Standard Document Styles},
+	journal = {TUGboat},
+	volume = {12},
+	number = {2},
+	pages = {291-301},
+	month = {June},
+	year = {1991},
+}
+
+@INPROCEEDINGS{clark:pct,
+	AUTHOR = "Malcolm Clark",
+	TITLE = "Post Congress Tristesse",
+	BOOKTITLE = "TeX90 Conference Proceedings",
+	PAGES = "84-89",
+	ORGANIZATION = "TeX Users Group",
+	MONTH = "March",
+	YEAR = {1991}
+}
+
+@ARTICLE{herlihy:methodology,
+	author = {Herlihy, Maurice},
+	title = {A Methodology for Implementing Highly Concurrent Data Objects},
+	journal = {ACM Trans. Program. Lang. Syst.},
+	volume = {15},
+	number = {5},
+	pages = {745-770},
+	month = {November},
+	year = {1993},
+	doi = {10.1145/161468.161469},
+}
+
+@BOOK{salas:calculus,
+	AUTHOR = "S.L. Salas and Einar Hille",
+	TITLE = "Calculus: One and Several Variable",
+	PUBLISHER = "John Wiley and Sons",
+	ADDRESS = "New York",
+	YEAR = "1978"
+}
+
+@MANUAL{Fear05,
+	title =        {Publication quality tables in {\LaTeX}},
+	author =       {Simon Fear},
+	month =        {April},
+	year =         2005,
+	note =         {\url{http://www.ctan.org/pkg/booktabs}}
+}
+
+@Manual{Amsthm15,
+	title =        {Using the amsthm Package},
+	organization = {American Mathematical Society},
+	month =        {April},
+	year =         2015,
+	note =         {\url{http://www.ctan.org/pkg/amsthm}}
+}
+
+@article{world2012world,
+	title={World Health Day 2012: ageing and health: toolkit for event organizers},
+	author={World Health Organization and others},
+	year={2012},
+	publisher={Geneva: World Health Organization}
+}
+
+@misc{Olivetti15,
+	author = {Paolo Olivetti},
+	title = {Sistema per la rilevazione e prevenzione di caduta anziani, mediante cassa di risonanza a pavimento},
+	howpublished = {Italian Patent 0001416548, July 1},
+	year = {2015}
+}
+
+@ARTICLE{Lustrek2015, 
+	author={Lustrek, Mitja and Gjoreski, Hristijan and Gonzalez Vega, Narciso and Kozina, Simon and Cvetkovic, Bozidara and Mirchevska, Violeta and Gams, Matjaz}, 
+	journal={Pervasive Computing}, 
+	title={Fall Detection Using Location Sensors and Accelerometers}, 
+	year={2015}, 
+	volume={14}, 
+	number={4}, 
+	pages={72-79}, 
+	month={Oct}}
+
+@book{Young2006,
+	author = {Steve Young and Gunnar Evermann and Mark Gales and Thomas Hain and Dan Kershaw and Xunying Liu and Gareth Moore and Julian Odell and Dave Ollason and Dan Povey and Valtcho Valtchev and Phil Woodland},
+	title = {The HTK Book (for HTK Version 3.4)},
+	year = {2006},
+	OPTeditor = {editor},
+	OPTeditora = {editora},
+	OPTeditorb = {editorb},
+	OPTeditorc = {editorc},
+	OPTtranslator = {translator},
+	OPTannotator = {annotator},
+	OPTcommentator = {commentator},
+	OPTintroduction = {introduction},
+	OPTforeword = {foreword},
+	OPTafterword = {afterword},
+	OPTsubtitle = {subtitle},
+	OPTtitleaddon = {titleaddon},
+	OPTmaintitle = {maintitle},
+	OPTmainsubtitle = {mainsubtitle},
+	OPTmaintitleaddon = {maintitleaddon},
+	OPTlanguage = {language},
+	OPToriglanguage = {origlanguage},
+	OPTvolume = {volume},
+	OPTpart = {part},
+	OPTedition = {edition},
+	OPTvolumes = {volumes},
+	OPTseries = {series},
+	OPTnumber = {number},
+	OPTnote = {note},
+	publisher = {Cambridge University Engineering Department},
+	OPTlocation = {location},
+	OPTisbn = {isbn},
+	OPTchapter = {chapter},
+	OPTpages = {pages},
+	OPTpagetotal = {pagetotal},
+	OPTaddendum = {addendum},
+	OPTpubstate = {pubstate},
+	OPTdoi = {doi},
+	OPTeprint = {eprint},
+	OPTeprintclass = {eprintclass},
+	OPTeprinttype = {eprinttype},
+	OPTurl = {url},
+	OPTurldate = {urldate},
+}
+
+@inproceedings{Liu2014,
+	author = {Liu, Liang and Popescu, Mihail and Skubic, Marjorie and Rantz, Marilyn},
+	booktitle = {Proc. of the 36th International Conference of the Engineering in Medicine and Biology Society (EMBC)},
+	isbn = {9781424479290},
+	keywords = {Decision support methods and systems,Technology and services for assisted-living,Wireless/ubiquitous technologies and systems,fall detection fusion,sensor fusion},
+	mendeley-tags = {fall detection fusion,sensor fusion},
+	pages = {5940--5943},
+	title = {{An automatic fall detection framework using data fusion of Doppler radar and motion sensor network}},
+	year = {2014}
+}
+
+@book{van2010,
+	title={{AALIANCE Ambient Assisted Living Roadmap}},
+	author={van den Broek, Ger and Cavallo, Filippo and Wehrmann, Christian},
+	volume={6},
+	year={2010},
+	publisher={IOS press},
+	address={Amsterdam, The Netherlands},
+	series={Ambient Intelligence and Smart Environments Series}
+}
+
+@INPROCEEDINGS{Hanilci13, 
+	author={Hanilci, C. and Kinnunen, T. and Saeidi, R. and Pohjalainen, J. and Alku, P. and Ertas, F.}, 
+	booktitle={Proc. of ICASSP}, 
+	title={{Speaker identification from shouted speech: Analysis and compensation}}, 
+	year={2013}, 
+	pages={8027-8031},
+	address={Vancouver, Canada},
+	month={May 26-31}
+}
+
+@ARTICLE{Hansen09, 
+	author={Hansen, J.H.L. and Varadarajan, V.}, 
+	journal={IEEE Trans. on Audio, Speech, and Lang. Process.}, 
+	title={{Analysis and Compensation of Lombard Speech Across Noise Type and Levels With Application to In-Set/Out-of-Set Speaker Recognition}}, 
+	year={2009}, 
+	volume={17}, 
+	number={2}, 
+	pages={366-378}
+}
+
+@ARTICLE{Hermansky90, 
+	author={H. Hermansky}, 
+	journal={J. Acoust. Soc. Am.}, 
+	title={Perceptual linear prediction analysis of speech}, 
+	year={1990},
+	month={Apr.},
+	volume={87}, 
+	number={4}, 
+	pages={1738-1752}}
+
+@article{Campbell06, 
+	author={Campbell, W.M. and Sturim, D.E. and Reynolds, D.A.}, 
+	journal={IEEE Signal Process. Letters}, 
+	title={Support vector machines using {GMM} supervectors for speaker verification}, 
+	year={2006}, 
+	volume={13}, 
+	number={5}, 
+	pages={308-311}}
+
+@article{cortes95, 
+	author={C. Cortes and V. Vapnik}, 
+	journal={Machine
+	learning}, 
+	title={{Support-vector networks}}, 
+	year={1995}, 
+	volume={20}, 
+	number={3}, 
+	pages={273-297}
+}
+
+
+@article{Zelinka12,
+	title     = {Impact of vocal effort variability on automatic speech recognition},
+	author    = {Zelinka, Petr and Sigmund, Milan and Schimmel, Jiri},
+	journal   = {Speech Communication},
+	year      = {2012},
+	publisher = {Elsevier},
+	pages     = {732-742},
+	number    = {54}
+}
+
+@InProceedings{Vacher13,
+	author = {M. Vacher and P. Chahuara and B. Lecouteux and D. Istrate and F. Portet and T. Joubert and M. Sehili and B. Meillon and N. Bonnefond and S. Fabre and C. Roux and S. Caffiau},
+	title = {{The Sweet-Home project: Audio processing and decision making in smart home to improve well-being and reliance}},
+	booktitle = {Proc. of EMBC},
+	year = {2013},
+	pages = {7298-7301}
+}
+
+
+@ARTICLE{Acampora13, 
+	author={Acampora, G. and Cook, D. J. and Rashidi, P. and Vasilakos, A. V.}, 
+	journal={Proceedings of the {IEEE}}, 
+	title={A Survey on Ambient Intelligence in Healthcare}, 
+	year={2013}, 
+	month={Dec.}, 
+	volume={101}, 
+	number={12}, 
+	pages={2470-2494}}
+
+@InProceedings{Principi13b,
+	author = {E. Principi and S. Squartini and F. Piazza and D. Fuselli and M. Bonifazi},
+	title = {{A Distributed System for Recognizing Home Automation Commands and Distress Calls in the Italian Language}},
+	booktitle = {Proc. of Interspeech},
+	year = {2013},
+	address = {Lyon, France},
+	month = {Aug. 25-29},
+	pages = {2049-2053}
+}
+
+@article{chang11,
+	title={{LIBSVM: a library for support vector machines}},
+	author={Chang, Chih-Chung and Lin, Chih-Jen},
+	journal={ACM Trans. Intell. Syst. Technol.},
+	volume={2},
+	number={3},
+	pages={27},
+	year={2011},
+}
+
+@article{Reynolds10,
+	author={D. Reynolds and T. Quatieri},
+	year={2000},
+	journal={Digital Signal Process.},
+	title={Speaker veriﬁcation using adapted gaussian mixture models},
+	volume={10},
+	number={1},
+	pages={19-40},
+}
+
+@book{bishop06,
+	author = {C. Bishop},
+	title = {Pattern Recognition and Machine Learning},
+	publisher = {Springer Science+Business Media, LLC},
+	address = {New York},
+	year = {2006}
+}
+
+@article{Kinnunen10,
+	author={Tomi Kinnunen and Haizhou Li},
+	year={2010},
+	journal={Speech Communication},
+	title={An overview of text-independent speaker recognition: From features to supervectors},
+	volume={52},
+	number={1},
+	pages={12-40},
+}
+
+@article{Rotili12b,
+	author={Rotili, Rudy and Principi, Emanuele and Squartini, Stefano and Schuller, Björn},
+	year={2012},
+	journal={Cognitive Computation},
+	title={A Real-Time Speech Enhancement Framework in Noisy and Reverberated Acoustic Scenarios},
+	publisher={Springer-Verlag},
+	pages={1-13},
+}
+
+@INPROCEEDINGS{Principi09, 
+	author={Principi, E. and Cifani, S. and Rocchi, C. and Squartini, S. and Piazza, F.}, 
+	booktitle={Proc. of HSI}, 
+	title={Keyword spotting based system for conversation fostering in tabletop scenarios: Preliminary evaluation}, 
+	year={2009},
+	address={Catania, Italy},
+	month={May 21-23},
+	pages={216-219},
+}
+
+@Article{Principi10a,
+	author = {Emanuele Principi and Simone Cifani and Rudy Rotili and Stefano Squartini and Francesco Piazza},
+	title = {Comparative Evaluation of Single-Channel {MMSE}-Based Noise Reduction Schemes for Speech Recognition},
+	journal = {Journal of Electrical and Computer Engineering},
+	year = {2010},
+	pages={6},
+	note = {{Article ID 962103}},
+}
+
+%% AAL %%
+@Misc{Giannakouris08,
+	author = {K. Giannakouris},
+	title = {Aging characterizes the demographic perspectives of the {European} societies},
+	year = {2008},
+	note = {{Eurostat 72}}
+}
+
+@Article{Vergados10,
+	author = {D. D. Vergados},
+	title = {Service personalization for assistive living in a mobile ambient healthcare-networked environment},
+	journal = {Personal and Ubiquitous Computing},
+	year = {2010},
+	volume = {14},
+	number = {6},
+	pages = {575-590},
+	month = {Mar.}
+}
+
+@InProceedings{Drossos12,
+	author = {K. Drossos and A. Floros and K. Agavanakis and N.-A. Tatlas and N.-G. Kanellopoulos},
+	title = {Emergency Voice/Stress-level Combined Recognition for Intelligent House Applications},
+	booktitle = {Proc. of the 132nd AES Convention},
+	pages = {1-11},
+	year = {2012},
+	month = {Apr. 26-29},
+	address = {Budapest, Hungary}
+}
+
+@InProceedings{Vacher08,
+	author = {M. Vacher and A. Fleury and J.-F. Serignat and N. Noury and H. Glasson},
+	title = {Preliminary evaluation of speech/sound recognition for telemedice application in a real environment},
+	booktitle = {Proc. of Interspeech},
+	pages = {496-499},
+	year = {2008},
+	month = {Sep.}, 
+	address= {Brisbane, Australia}
+}
+
+@InProceedings{Vacher09,
+	author = {M. Vacher and N. Guirand and J.-F. Serignat and A. Fleury and N. Noury},
+	title = {Speech recognition in a smart home: Some experiments for telemonitoring},
+	booktitle = {Proc. of Speech Technology and Human-Computer Dialogue},
+	pages = {1-10},
+	year = {2009},
+	month = {Jun.}, 
+	address= {Constanta, Romania}
+}
+
+@InProceedings{Vacher12,
+	author = {Michel Vacher and Benjamin Lecouteux and François Portet},
+	title = {RECOGNITION OF VOICE COMMANDS BY MULTISOURCE {ASR} AND NOISE CANCELLATION IN A SMART HOME ENVIRONMENT},
+	booktitle = {Proc. of Eusipco},
+	pages = {1663-1667},
+	year = {2012},
+	month = {Aug. 27-31},
+	address = {Bucharest, Romania}
+}
+
+@Book{Broek10,
+	author = {G. Broek and F. Cavallo and C. Wehrmann},
+	title = {AALIANCE Ambient Assisted Living Roadmap},
+	publisher = {IOS Press BV},
+	year = {2010},
+	address = {Amsterdam, The Netherlands}
+}
+
+@Article{Goetze12,
+	author = {S. Goetze and J. Schroder and S. Gerlach},
+	title  = {Acoustic Monitoring and Localization for Social Care},
+	journal = {Journal of Computing Science and Engineering},
+	volume = {6},
+	number = {1},
+	pages  = {40-50},
+	year   = {2012}
+}
+
+@INPROCEEDINGS{Ziefle11, 
+	author={Ziefle, M. and Rocker, C. and Holzinger, A.}, 
+	booktitle={Proc. of COMPSACW},
+	title = {Medical Technology in Smart Homes: Exploring the User's Perspective on Privacy, Intimacy and Trust}, 
+	year  = {2011}, 
+	month = {Jul. 18-22}, 
+	pages = {410-415}
+}
+
+@Article{Boll10,
+	author = {S. Boll and W. Heuten and E. M. Meyer and M. Meis},
+	title = {Development of a multimodal reminder system for older persons in their residential home},
+	journal = {Informatics for Health and Social Care},
+	year = {2010},
+	volume = {35},
+	number = {3-4},
+	pages = {104-124},
+}
+
+@Article{Lisetti10,
+	author = {C. Lisetti and F. Nasoz and C. LeRouge and O. Ozyer and K. Alvarez},
+	title = {Developing multimodal intelligent affective interfaces for tele-home health care},
+	journal = {Int. Journal of Human-Computer Studies},
+	year = {2003},
+	volume = {59},
+	number = {1-2},
+	pages = {245-255},
+}
+
+@inproceedings{Chew10,
+	author = {S. Chew and W. Tay and D. Smit and C. Bartneck},
+	title = {Do social robots walk or roll?},
+	booktitle = {Proceedings of the Second International Conference on Social Robotics},
+	year = {2010},
+	address = {Singapore},
+	pages = {355-361},
+}
+
+@article{Leggetter95,
+	author = {C. J. Leggetter and P. C. Woodland},
+	title = {{Maximum likelihood linear regression for speaker adaptation of continuous density hidden Markov models}},
+	journal = {Computer Speech and Language},
+	year = {1995},
+	volume = {9},
+	number = {2},
+	pages = {171-185}
+}
+
+
+@misc{p56,
+	author = {{ITU-T}},
+	title = {{Objective Measurement of Active Speech Level}},
+	note = {{ITU-T Recommendation P.56, Mar. 1993}}
+}
+
+@Article{Schuller09,
+	author = {Bj\"orn Schuller and Martin W\"ollmer and Tobias Moosmayr and Gerhard Rigoll},
+	title = {{Recognition of Noisy Speech: A Comparative Survey of Robust Model Architecture and Feature Enhancement}},
+	journal = {EURASIP Journal on Audio, Speech, and Music Processing},
+	year = {2009},
+	volume = {2009},
+	pages = {17},
+	note = {{Article ID 942617}}
+}
+
+@inproceedings{Eyben13,
+	author = {Florian Eyben and Felix Weninger and Stefano Squartini and Bj\"orn Schuller},
+	title = {{Real-Life Voice Activity Detection with LSTM Recurrent Neural Networks and application to Hollywood Movies}},
+	booktitle = {Proc. of ICASSP},
+	year = {2013},
+	note = {to appear}
+}
+
+
+@inproceedings{Draxler04,
+	title={Speechrecorder - A universal platform independent multi-channel audio recording software},
+	author={Draxler, Christoph and J{\"a}nsch, Klaus},
+	booktitle={Proc. LREC},
+	pages={559-562},
+	year={2004},
+	address={Lisbon, Portugal},
+	month={26-28 May}  
+}
+
+@Standard{Rosenberg02,
+	author = {J. Rosenberg and H. Schulzrinne and G. Camarillo and A. Johnston and J. Peterson and R. Sparks and M. Handley and E. Schooler},
+	title = {SIP: Session Initiation Protocol},
+	institution = {RFC 3261, IETF},
+	year = {2002}
+}
+
+@book{Oppenheim_Schafer,
+	Author = {Oppenheim, A. and Schafer, R.},
+	Title = {Discrete-Time Signal Processing},
+	Publisher = {Prentice-Hall Inc.},
+	edition = {Third},
+	address = {Upper Saddle River, New Jersey (USA)},
+	Year = {2009}
+}
+
+@book{Vaidyanathan,
+	Author = {Vaidyanathan, P.P.},
+	Title  = {Multirate systems and filter banks},
+	Publisher = {Prentice-Hall, Englewood Cliffs},
+	Year = {1993}}
+
+@Book{Peinado06,
+	author = {Antonio M. Peinado and José C. Segura},
+	title = {Speech Recognition Over Digital Channels: Robustness and Standards},
+	publisher = {John Wiley \& Sons, Ltd},
+	year = {2006},
+	address = {West Sussex, England}
+}
+
+%% ASR %%
+@InProceedings{Angelini93,
+	author = {B.  Angelini and F.  Brugnara and  D.  Falavigna and D.  Giuliani and R. Gretter and M.  Omologo},
+	title = {Automatic  Segmentation and Labeling of English and Italian Speech Databases},
+	booktitle = {Proc.  of  Eurospeech},
+	pages = {653-656},
+	year = {1993},
+	address = {Berlin, Germany},
+	month = {Sep. 22-25}
+}
+
+
+
+@ARTICLE{Yu08,
+	title={Robust {S}peech {R}ecognition {U}sing a {C}epstral {M}inimum-{M}ean-{S}quare-{E}rror-{M}otivated {N}oise {S}uppressor},
+	author={Dong Yu and Li Deng and Droppo, J. and Jian Wu and Yifan Gong and Acero, A.},
+	journal={IEEE Trans. Audio, Speech, and Lang. Process.},
+	year={2008},
+	month={Jul.},
+	volume={16},
+	number={5},
+	pages={1061-1070}}
+
+@PhDThesis{Stouten06,
+	author = {Stouten, V.},
+	title  ={Robust {A}utomatic {S}peech {R}ecognition in {T}ime-varying {E}nvironments},
+	year = {2006},
+	school = {K. U. Leuven},
+	address = {Leuven, the Netherlands}
+}
+
+@INPROCEEDINGS{Bazzi00,
+	title={MODELING OUT-OF-VOCABULARY WORDS FOR ROBUST SPEECH RECOGNITION},
+	author={Bazzi, I. and Glass, J.R.},
+	booktitle={Proc. of ICSLP},
+	pages={401-404},
+	address={Beijing, China},
+	volume={1},
+	year = {2000}
+	
+}
+@INPROCEEDINGS{Huang90, 
+	author={Huang, X. and Lee, K.-F. and Hon, H.-W.}, 
+	booktitle={Proc. of ICASSP},
+	title={On semi-continuous hidden {Markov} modeling}, 
+	year={1990},
+	month={Apr.}, 
+	pages={689-692}}
+
+@techreport{Vertanen06,
+	author       = "Keith Vertanen",
+	title        = "Baseline {WSJ} Acoustic Models for {HTK} and {Sphinx}: Training Recipes and Recognition Experiments",
+	year         = "2006",
+	institution  = "Cavendish Laboratory, University of Cambridge"},
+}
+
+@InProceedings{Pearce00,
+	author = {D. Pearce and H.-G. Hirsch},
+	title  = {The {Aurora} experimental framework for the performance evaluation of speech recognition systems under noisy conditions},
+	booktitle = {Proc. ICSLP},
+	year  = {2000},
+	month = {Oct.},
+	volume = {4},
+	pages = {29-32},
+	address = {Beijing, China}
+}
+
+@InProceedings{Nanjo09,
+	author = {H. Nanjo and H. Mikami and H. Kawano and T. Nishiura},
+	title  = {A Fundamental Study of Shouted Speech for Acoustic-Based Security System},
+	booktitle = {Proc. of Interspeech},
+	year  = {2009},
+	pages = {1027-1030},
+	address = {Brighton, U.K.},
+	month = {Sep. 6-10}
+}
+
+@InProceedings{Lamel86,
+	author = {L. F. Lamel and R. H. Kassel and S. Seneff},
+	title = {Speech Database Development: Design and Analysis of the Acoustic-Phonetic Corpus},
+	booktitle = {Proc. of Speech Recognition Workshop (DARPA)},
+	pages = {1392-1394},
+	year = {1986}
+}
+
+@InProceedings{Angelini94,
+	author = {Angelini, B. and Brugnara, F. and Falavigna, D. and Giuliani, D. and Gretter, R. M. and Omologo, M.},
+	title = {Speaker Independent Continuous Speech Recognition Using an Acoustic-Phonetic Italian
+	Corpus},
+	booktitle = {Proc. of ICLSP},
+	pages = {1392-1394},
+	year = {1994},
+	volume = {3},
+	address = {Yokohama, Japan}
+}
+
+@INPROCEEDINGS{Leonard84, 
+	author={Leonard, R.}, 
+	booktitle={Proc. of ICASSP},
+	title={A database for speaker-independent digit recognition}, 
+	year={1984}, 
+	month={Mar.}, 
+	volume={9}, 
+	pages={328-331}}
+
+@Misc{Pitt07,
+	author={Pitt, M.A. and Dilley, L. and Johnson, K. and Kiesling, S. and Raymond, W. and Hume, E. and Fosler-Lussier, E.},
+	title={Buckeye Corpus of Conversational Speech (2nd release)},
+	url={http://www.buckeyecorpus.osu.edu},
+	note={Columbus, OH: Department of Psychology, Ohio State University (Distributor), 2007}
+}
+
+@inproceedings{Paul92,
+	author = {Paul, Douglas B. and Baker, Janet M.},
+	title = {{The design for the Wall Street Journal-based CSR corpus}},
+	booktitle = {Proc. of DARPA Speech and Natural Language Workshop},
+	year = {1992},
+	pages = {357-362},
+	month = {Feb.}
+} 
+
+@Article{Keshet09,
+	author = {Joseph Keshet and David Grangier and Samy Bengio},
+	title = {Discriminative keyword spotting},
+	journal = {Speech Communication},
+	year = {2009},
+	volume = {51},
+	number = {4},
+	pages = {317-329},
+	month = {Apr.}
+}
+
+@ARTICLE{Rahim97, 
+	author={Rahim, M.G. and Chin-Hui Lee and Biing-Hwang Juang}, 
+	journal={IEEE Transactions on Speech and Audio Processing},
+	title={Discriminative utterance verification for connected digits recognition}, 
+	year={1997}, 
+	month={May}, 
+	volume={5}, 
+	number={3}, 
+	pages={266-277}
+}
+
+@INPROCEEDINGS{Manos97, 
+	author={Manos, A.S. and Zue, V.W.}, 
+	booktitle={Proc. of the International Conference on Acoustics, Speech, and Signal Processing},
+	title={A segment-based wordspotter using phonetic filler models}, 
+	year={1997}, 
+	month={Apr.}, 
+	volume={2},  
+	pages={899-902}}
+
+@inproceedings{Szoke05,
+	title={Comparison of keyword spotting approaches for informal continuous speech},
+	author={Szoke, I. and Schwarz, P. and Matejka, P. and Burget, L. and Karafi{\'a}t, M. and Fapso, M. and Cernocky, J.},
+	booktitle={Proc. Joint Workshop on Multimodal Interaction and Related Machine Learning Algorithms},
+	year={2005}
+}
+
+@Article{Wilpon90,
+	author = {Jay G. Wilpon and Lawrence R. Rabiner and Chin-Hui Lee and E. R. Goldman},
+	title = {Automatic Recognition of Keywords in Unconstrained  Speech Using Hidden Markov Models},
+	journal = {IEEE Transactions on Acoustics Speech and Signal Processing},
+	year = {1990},
+	volume = {38},
+	number = {11},
+	pages = {1870-1878},
+	month = {Nov.}
+}
+
+@InProceedings{Kokubo07,
+	author = {H. Kokubo and N. Hataoka and A. Lee and T. Kawahara and K. Shikano},
+	title  = {Real-Time Continuous Speech Recognition System on SH-4A Microprocessor},
+	booktitle = {Proc. of International Workshop on Multimedia Signal Processing},
+	pages = {35-38},
+	year = {2007}
+}
+
+@InProceedings{Lee09,
+	author = {A. Lee and T. Kawahara},
+	title = {{Recent Development of Open-Source Speech Recognition Engine Julius}},
+	booktitle = {Proc. of the Asia-Pacific Signal and Information Processing Association Annual Summit and Conference},
+	year = {2009}
+}
+
+@inproceedings{Huggins06,
+	title={{PocketSphinx}: A free, real-time continuous speech recognition system for hand-held devices},
+	author={Huggins-Daines, D. and Kumar, M. and Chan, A. and Black, A.W. and Ravishankar, M. and Rudnicky, A.I.},
+	booktitle={Proc. of ICASSP},
+	volume={1},
+	pages={185-188},
+	year={2006},
+	month={May 15-19},
+	address={Toulouse, France}
+}
+
+@Misc{navigon,
+	author = {{Navigon AG}},
+	title  ={Navigon personal navigation device},
+	url = {www.navigon.com}
+}
+
+@Misc{tomtom,
+	author = {TomTom},
+	title  ={{TomTom} personal navigation device},	
+	url = {www.tomtom.com}
+}
+
+@Misc{vocon,
+	author = {{Nuance Communications}},
+	title  ={VoCon 3200 Speech Recognition Engine},	
+	url = {http://www.nuance.com/vocon/3200/}
+}
+
+@book{Huang2001,
+	author = {Huang, Xuedong and Acero, Alex and Hon, Hsiao-Wuen},    
+	howpublished = {Paperback},
+	month = {Apr.},    
+	address = {Upper Saddle River, NJ},
+	publisher = {Prentice Hall PTR},
+	title = {Spoken Language Processing: A Guide to Theory, Algorithm and System Development},    
+	year = {2001}
+}
+
+@PhDThesis{Odell95,
+	author = {Odell, J. J.},
+	title  ={The Use of Context in Large Vocabulary Speech Recognition},
+	year = {1995},
+	school = {Queen's college, University of Cambridge}
+}
+
+@Inproceedings{Young94,
+	author = {Young, S. J. and Woodland, P. C.},
+	title  ={State clustering in {HMM}-based continuous speech recognition},
+	year = {1994},
+	pages = {369-394},
+	booktitle = {Computer Speech \& Language},
+	volume = {4},
+	number = {8}
+}
+
+@Inproceedings{Deng90,
+	author = {Deng, L. and Lennig, M. and Seitz, F. and Mermelstein, P.},
+	title  ={Large vocabulary word recognition using context-dependent allophonic hidden Markov models},
+	year = {1990},
+	pages = {345-357},
+	booktitle = {Computer Speech \& Language},
+	volume = {4}
+}
+
+@Inproceedings{Schwartz85,
+	author = {Schwartz, R. and Chow, Y. L. and Kimball, O. and Roukos, S. and Krasnwer, M. and Makhoul, J.},
+	title  ={Context-dependent modeling for acoustic-phonetic recognition of continuous speech},
+	year = {1985},
+	pages = {1205-1208},
+	booktitle = {Proc. of ICASSP},
+	volume = {3}
+}
+
+@ARTICLE{Ney99,
+	title={Dynamic programming search for continuous speech recognition},
+	author={Ney, H. and Ortmanns, S.},
+	journal={IEEE Signal Processing Magazine},
+	year={1999},
+	month={Sep},
+	volume={16},
+	number={5},
+	pages={64-83}}
+
+@INPROCEEDINGS{Furui86,
+	title={Speaker-independent isolated word recognition based on emphasized spectral dynamics},
+	author={Furui, S.},
+	booktitle={Proc. of Int. Conf. on Acoustics, Speech, and Signal Processing},
+	year={1986},
+	month={Apr.},
+	volume={11},
+	pages={1991-1994},
+}
+
+@ARTICLE{Furui81,
+	title={Cepstral analysis technique for automatic speaker verification},
+	author={Furui, S.},
+	journal=IEEE_J_ASSP,
+	year={1981},
+	month={Apr},
+	volume={29},
+	number={2},
+	pages={254-272}}
+
+@book{Deller93,
+	author = {Deller, J. and Proakis, J. and Manolakis, J.},
+	publisher = {Prentice-Hall},
+	title = {Discrete-Time Processing of Speech Signals},	
+	year = {1993},	
+}
+
+@BOOK{HTK,
+	author        = {Young, S. and Kershaw, D. and Odell, J. and Ollason, D. and Valtchev, V. and Woodland, P.},
+	title         = {The HTK Book. V2.2},
+	year          = {1999}
+}
+
+@INPROCEEDINGS{Sarikaya01,
+	author       = "Sarikaya, R. and Hansen, J.",
+	title        = "Analysis of the root-cepstrum for acoustic modeling and fast decoding in speech recognition",
+	year         = "2001",    
+	journal    = "Proc. of Eurospeech 2001",
+	address = "Aalborg, Denmark"
+}
+
+@INPROCEEDINGS{Sigurdsson06,
+	author       = "S. Sigurdsson and K. B. Petersen and T. Lehn-Schi{\o}ler",
+	title        = "Mel Frequency Cepstral Coefficients: An Evaluation of Robustness of MP3 Encoded Music",
+	year         = "2006",
+	journal    = "Proc. of the 7th Int. Conf. on Music Information Retrieval (ISMIR)",
+	pages  =  {286-289},
+}
+
+@book{Rabiner1993Fundamentals,
+	author = {Rabiner, Lawrence and Juang, Biing H.},	
+	howpublished = {Paperback},
+	month = {Apr.},
+	priority = {2},
+	publisher = {{Prentice Hall PTR}},
+	title = {Fundamentals of Speech Recognition},	
+	year = {1993}
+}
+
+@ARTICLE{Makhoul75,
+	title={Linear prediction: A tutorial review},
+	author={Makhoul, J.},
+	journal={Proc. of the IEEE},
+	year={1975},
+	month={April},
+	volume={63},
+	number={4},
+	pages={ 561-580}
+}
+
+@article{Nakamura2008171,
+	title = "Differences between acoustic characteristics of spontaneous and read speech and their effects on speech recognition performance",
+	journal = "Computer Speech \& Language",
+	volume = "22",
+	number = "2",
+	pages = "171-184",
+	year = "2008",
+	author = "Masanobu Nakamura and Koji Iwano and Sadaoki Furui"
+}
+
+@BOOK{SR-Jurafsky-08,
+	author		= {Jurafsky, Daniel and Martin, James H.},
+	title 		= {Speech and Language Processing},
+	publisher = {Prentice Hall},
+	year      = {2008},
+	address 	= {Upper Saddle River, NJ},
+	edition 	= {Second}
+}
+
+@INPROCEEDINGS{Lockwood91,
+	author = {Lockwood, P. and Baillargeat, C. and Gillot, J. M. and Boudy, J. and Faucon, G.},
+	title = {Noise reduction for speech enhancement in cars: non-linear spectral subtraction},
+	year  ={1991},
+	journal = {Proc. of Eurospeech '91},
+	address = {Genova, Italy},
+	pages = {83-86}
+}
+
+%% SPEECH ENCHANCEMENT %%
+@article{Martin_2001,
+	Author = {Martin, R.},
+	Title = {Noise power spectral density estimation based on optimal smoothing and minimum statistics},
+	Journal = {IEEE Transactions on Speech and Audio Processing},
+	Year = {2001},
+	Volume = {9},
+	Number={5},
+	Pages={504-512}}
+
+@article{Cohen_2002,
+	Author = {Cohen, I. and Berdugo, B.},
+	Title = {Noise estimation by minima controlled recursive averaging for robust speech enhancement},
+	Journal = {IEEE Signal Processing Letters},
+	Year = {2002},
+	Volume = {9},
+	Number = {1},
+	Pages={12-15}}
+
+@article{Cohen_2003,
+	Author = {Cohen, I.},
+	Title = {Noise spectrum estimation in adverse environments: improved minima controlled recursive averaging},
+	Journal = {IEEE Transactions on Speech and Audio Processing},
+	Year = {2003},
+	Volume = {11},
+	Number = {5},
+	Pages={466-475}}
+
+@Book{Loizou07,
+	author = {Philipos C. Loizou},
+	title = {Speech Enhancement: Theory and Practice},
+	publisher = {CRC Press},
+	year = {2007},
+	OPTseries = {Signal processing and communications},
+	address = {Boca Raton, FL},
+	edition = {First}
+}
+
+
+@article{Cohen_2001,
+	Author = {Cohen, I. and Berdugo, B.},
+	Title = {Speech enhancement for nonstationary noise environments},
+	Journal = {Signal Processing},
+	Year = {2001},
+	Volume = {81},
+	Number = {11},
+	Pages={2403-2418}
+}
+
+@article{McAulay_Malpass_1980,
+	Author={McAulay, R.J. and Malpass, M.L.},
+	Title={Speech enhancement using a soft-decision noise suppression filter}, 
+	Journal={ IEEE Transactions on Acoustics, Speech and Signal Processing},
+	Year={1980},
+	Volume={28},
+	Number={2},
+	Pages={137-145}
+}
+
+@article{Lotter_2005,
+	Author={Lotter, T. and Vary, P.},
+	Title={Speech Enhancement by MAP Spectral Amplitude Estimation using a Super-Gaussian Speech Model}, 
+	Journal={EURASIP Journal on Applied Signal Processing},
+	Year={2005},
+	Volume={7},
+	Pages={1110-1126}}
+
+@article{Wolfe_2003,
+	Title={Efficient alternatives to the Ephraim and Malah suppression rule for audio signal enhancement},
+	Author={Wolfe, P. and Godsill, S.},
+	Journal={EURASIP Journal Applied Signal Processing},
+	Year={2003},
+	Volume={2003},
+	Pages={1043-1051}
+}
+
+@article{Gray_Buzo_1980,
+	Title={Distortion measures for speech processing},
+	Author={Gray, R. and Buzo, A. and Gray, A., Jr. and Matsuyama, Y.},
+	Journal={IEEE Transactions on Acoustics, Speech and Signal Processing},
+	Year={1980},
+	Volume={28},
+	Number={4},
+	Pages={367-376}
+}
+
+@article{Cohen_2005_IEEE_SAP,
+	Title={Relaxed Statistical Model for Speech Enhancement and A Priori SNR Estimation},
+	Author={Cohen, I.},
+	Journal={IEEE Transactions on Speech and Audio Processing},
+	Year={2005},
+	Month={Sep.},
+	Volume={13},
+	Number={5},
+	Pages={870-881}
+}
+
+@article{Boll_1979,
+	Title={Suppression of acoustic noise in speech using spectral subtraction},
+	Author={Boll, S.},
+	Journal={IEEE Transactions on Acoustics, Speech and Signal Processing},
+	Year={1979},
+	Volume={27},
+	Pages={113-120}}
+
+@article{Hu_Loizou_2007,
+	Title={Subjective comparison and evaluation of speech enhancement algorithms},
+	Author={Hu, Y. and Loizou, P.C.},
+	Journal={Speech Communication},
+	Year={2007},
+	Volume={49},
+	Pages={588-601}}
+
+
+
+%% VAD %%
+@InProceedings{Shin05,
+	author = {J. W. Shin and J. H. Chang and H. S. Yun and N. S. Kim},
+	title = {Voice activity detection based on generalized gamma distribution},
+	booktitle = {Proc. IEEE Int. Conf. Acoust., Speech, Signal Process.},
+	year = {2005},
+	volume = {1},
+	pages = {I781-I784}
+}
+
+
+@Article{Chang03,
+	author = {J. H. Chang and N. S. Kim},
+	title = {Voice activity detection based on complex Laplacian model},
+	journal = {Electron. Lett.},
+	year = {2003},
+	volume = {39},
+	number = {7},
+	pages = {632-634},
+	month = {Apr.}
+}
+
+
+@Standard{AMR2,
+	title = {Voice Activity Detection (VAD) for Adaptive Multi-Rate (AMR) Speech Traffic Channels},
+	institution = {ETSI EN 301 708 Rec., ETSI},
+	year = {1999}
+}
+
+@Standard{G729,
+	title = {Coding of speech at 8 kbit/s using conjugate structure algebraic code-excited linear rrediction. Annex B: A silence compression scheme for G.729 optimized for terminals conforming to recommend},
+	institution = {V.70, ITU},
+	year = {1996}
+}
+
+@article{Sohn99,
+	title={A statistical model-based voice activity detection},
+	author={Sohn, J. and Kim, N.S. and Sung, W.},
+	journal={IEEE Signal Processing Letters},
+	volume={6},
+	number={1},
+	pages={1-3},
+	year={1999},
+	publisher={IEEE}
+}
+
+@inproceedings{srinivasan93,
+	title={Voice activity detection for cellular networks},
+	author={Srinivasan, K. and Gersho, A.},
+	booktitle={Proc. of IEEE Workshop on Speech Coding for Telecommunications},
+	pages={85-86},
+	year={1993}
+}
+
+@article{Ying11,
+	author = {D. Ying and Y. Yan and J. Dang and F. K. Soong},
+	title = {Voice Activity Detection Based on an Unsupervised Learning Framework},
+	journal = {IEEE Trans. on Audio, Speech, and Language Process.},
+	volume = {19},
+	number = {4},
+	pages = {2624-2633},
+	year = {2011}
+}
+
+@article{Mousazadeh11,
+	author = {S. Mousazadeh and I. Cohen},
+	title  = {{AR-GARCH} in presence of noise: parameter estimation and its application to voice activity detection},
+	journal = {IEEE Trans. on Audio, Speech, and Language Process.},
+	number = {4},
+	volume = {19},
+	pages  = {916-926},
+	year   = {2011}
+}
+
+@inproceedings{Hollosi2010,
+	address = {Rome, Italy},
+	author = {Hollosi, Danilo and Schroder, J and Goetze, Stefan and Appell, Jens-E.},
+	booktitle = {Proc. of the 3rd International Symposium on Applied Sciences in Biomedical and Communication Technologies},
+	pages = {1-4},
+	title = {{Voice activity detection driven acoustic event classification for monitoring in smart homes}},
+	year = {2010}
+}
+
+@article{Ramirez2005,
+	author = {Ram\'irez, Javier and Segura, Jos\'{e} C and Ben\'itez, Carmen and de la Torre, \'{A}ngel and Rubio, Antonio},
+	journal = {IEEE Signal Process. Letters},
+	month = {Oct.},
+	number = {10},
+	pages = {689-692},
+	title = {{Statistical Voice Activity Detection Using a Multiple Observation Likelihood Ratio Test}},
+	volume = {12},
+	year = {2005}
+}
+
+@article{Ramirez2004,
+	author = {Ram\'irez, Javier and Segura, Jos\'{e} C and Ben\'itez, Carmen and de la Torre, \'{A}ngel and Rubio, Antonio},
+	journal = {Speech Communication},
+	month = {Apr.},
+	number = {3-4},
+	pages = {271-287},
+	title = {{Efficient voice activity detection algorithms using long-term speech information}},
+	volume = {42},
+	year = {2004}
+}
+
+@article{Rabiner89,
+	author = {Rabiner, Lawrence R},
+	journal = {Proceedings of the IEEE},
+	number = {62},
+	pages = {257-286},
+	title = {{A Tutorial on Hidden Markov Models and Selected Applications in Speech Recognition}},
+	volume = {77},
+	year = {1989}
+}
+
+@TechReport{Weinshall11,
+	author = {Daphna Weinshall and J\"orn Anem\"uller},
+	title = {{DIRAC: Detection and Identification of Rare Audio-visual Cues - Final Activity Report}},
+	year = {2011},
+	month = {Jul.}
+}
+
+@PhdThesis{Kim10,
+	author = {C. Kim},
+	title = {SIGNAL PROCESSING FOR ROBUST SPEECH RECOGNITION MOTIVATED BY AUDITORY PROCESSING},
+	school = {Carnegie Mellon University},
+	year = {2010},
+	month = {Dec.}
+}
+
+
+@InProceedings{Kim12,
+	author    = {C. Kim and R. M. Stern},
+	title     = {{Power-normalized coefficients (PNCC) for robust speech recognition}},
+	booktitle = {Proc. of ICASSP},
+	year      = {2012},
+	month     = {Mar.},
+	pages     = {4101-4104},
+	address   = {Kyoto, Japan}
+}
+
+@article{Davis80,
+	author = {S. B. Davis and P. Mermelstein},
+	title = {Comparison of parametric representations for monosyllabic word recognition in continuously spoken sentences},
+	journal = IEEE_J_ASSP,
+	pages = {357-366},
+	year = {1980},
+	volume = {28},
+	number = {4},
+}
+
+@article{Soo1990,
+	author = {Soo, J.-S. and Pang, K.K.},
+	issn = {00963518},
+	journal = IEEE_J_ASSP,
+	number = {2},
+	pages = {373-376},
+	title = {{Multidelay Block Frequency Domain Adaptive Filter}},
+	volume = {38},
+	year = {1990}
+}
+
+
+@Article{Temko06,
+	author = {Andrey Temko and Climent Nadeu},
+	title = {Classification of acoustic events using {SVM-based} clustering schemes},
+	journal = {Pattern Recognition},
+	year = {2006},
+	volume = {39},
+	number = {4},
+	pages = {682-694},
+	month = {Apr.}
+}
+
+@incollection{Temko2009,
+	address = {Berlin},
+	author = {Temko, Andrey and Nadeu, Climent and Macho, Du\v{s}an and Malkin, Robert and Omologo, Maurizio},
+	booktitle = {Hum. Comput. Interact. XXII, Comput. Hum. Interact. Loop},
+	chapter = {7},
+	editor = {Waibel, W. and Stieflhagen, R.},
+	file = {:E$\backslash$:/Documenti/Papers/Sound Event Detection and Classification/[2009] - Temko et al. - Acoustic Event Detection and Classification.pdf:pdf},
+	keywords = {audio event classification,audio event detection},
+	mendeley-tags = {audio event detection},
+	pages = {61--73},
+	publisher = {Springer-Verlag},
+	title = {{Acoustic Event Detection and Classification}},
+	year = {2009}
+}
+
+
+@article{Ephraim1985,
+	author = {Ephraim, Yariv and Malah, David},
+	journal = {IEEE Transactions on Acoustics, Speech, and Signal Processing},
+	keywords = {speech enhancement},
+	number = {2},
+	pages = {443-445},
+	title = {{Speech Enhancement Using a Minimum Mean-Square Error Log-Spectral Amplitude Estimator}},
+	volume = {ASSP-33},
+	year = {1985}
+}
+@article{Ephraim1984,
+	author = {Ephraim, Yariv and Malah, David},
+	journal = {IEEE Transactions on Acoustics, Speech, and Signal Processing},
+	keywords = {speech enhancement},
+	number = {6},
+	pages = {1109-1121},
+	title = {{Speech Enhancement Using a Minimum Mean-Square Error Short-Time Spectral Amplitude Estimator}},
+	volume = {ASSP-32},
+	year = {1984}
+}
+
+@article{Cohen2002,
+	author = {Cohen, Israel and Berdugo, B},
+	doi = {10.1109/97.988717},
+	issn = {1070-9908},
+	journal = {IEEE Signal Processing Letters},
+	keywords = {acoustic noise,signal detection,spectral analysis,speech enhancement},
+	month = jan,
+	number = {1},
+	pages = {12--15},
+	title = {{Noise estimation by minima controlled recursive averaging for robust speech enhancement}},
+	volume = {9},
+	year = {2002}
+}
+
+@article{Eneman2003,
+	author = {Eneman, Koen and Moonen, Marc},
+	journal = {IEEE Transactions on Speech and Audio Processing},
+	keywords = {Acoustic echo cancellation,adaptive filtering,frequency-domain,speech enhancement},
+	number = {2},
+	pages = {143-158},
+	title = {{Iterated Partitioned Block Frequency-Domain Adaptive Filtering for Acoustic Echo Cancellation}},
+	volume = {11},
+	year = {2003}
+}
+
+@article{Valin2007,
+	author = {Valin, Jean-Marc},
+	journal = {IEEE Trans. on Audio, Speech, and Lang. Process.},
+	keywords = {Acoustic echo cancellation,adaptive learning,double-talk,echo path change,multidelay block frequency domain (MDF) algorithm,normalized least mean square (NLMS) algorithm,rate},
+	number = {3},
+	pages = {1030--1034},
+	title = {{On Adjusting the Learning Rate in Frequency Domain Echo Cancellation With Double-Talk}},
+	volume = {15},
+	year = {2007}
+}
+
+@InProceedings{Valin06,
+	author = {Valin, Jean-Marc},
+	title = {Speex: A free codec for free speech},
+	booktitle = {Proc. Linux Conf.},
+	year = {2006},
+	address = {Australia},
+}
+
+@INPROCEEDINGS{Schroeder85, 
+	author={Schroeder, M. and Atal, B.}, 
+	booktitle={Proc. of International Conference on Acoustics, Speech, and Signal Processing}, title={{Code-excited linear prediction (CELP): High-quality speech at very low bit rates}}, 
+	year={1985}, 
+	month={Apr.}, 
+	volume={10}, 
+	pages={937-940}
+}
+
+@ARTICLE{Gustafsson02, 
+	author={Gustafsson, S. and Martin, R. and Jax, P. and Vary, P.}, 
+	journal={IEEE Transactions on Speech and Audio Processing},
+	title={A psychoacoustic approach to combined acoustic echo cancellation and noise reduction}, 
+	year={2002}, 
+	month={Jul.}, 
+	volume={10}, 
+	number={5}, 
+	pages={245-256}}
+
+@Article{Gustafsson97,
+	author = {Gustafsson, S. and Martin, R. and Vary, P.},
+	title = {Combined acoustic echo control and noise reduction for hands-free telephony},
+	journal = {Signal Processing},
+	year = {1997},
+	volume = {64},
+	number = {1},
+	pages = {21-32},
+}
+
+@Book{Benesty10,
+	author = {J. Benesty and T. G\"{a}nsler and D.R. Morgan and M.M. Sondhi and S.L. Gay},
+	title = {Advances in Network and Acoustic Echo Cancellation},
+	publisher = {Springer},
+	year = {2001},
+	address = {New York}
+}
+
+@article{Squartini12,
+	title = "Environmental robust speech and speaker recognition through multi-channel histogram equalization ",
+	journal = "Neurocomputing",
+	volume = "78",
+	number = "1",
+	pages = "111-120",
+	year = "2012",
+	author = "Stefano Squartini and Emanuele Principi and Rudy Rotili and Francesco Piazza",
+}
+
+%%%%%%STS
+@article{Zelinka12,
+	title     = {Impact of vocal effort variability on automatic speech recognition},
+	author    = {Zelinka, Petr and Sigmund, Milan and Schimmel, Jiri},
+	journal   = {Speech Communication},
+	year      = {2012},
+	publisher = {Elsevier},
+	pages     = {732-742},
+	number    = {54}
+}
+
+@article{wollmer2011multi,
+	title={Multi-stream LSTM-HMM decoding and histogram equalization for noise robust keyword spotting},
+	author={W{\"o}llmer, Martin and Marchi, Erik and Squartini, Stefano and Schuller, Bj{\"o}rn},
+	journal={Cognitive neurodynamics},
+	volume={5},
+	number={3},
+	pages={253--264},
+	year={2011},
+	publisher={Springer}
+}
+
+@incollection{sehili2012sound,
+	title={Sound Environment Analysis in Smart Home},
+	author={Sehili, Mohamed A and Lecouteux, Benjamin and Vacher, Michel and Portet, Fran{\c{c}}ois and Istrate, Dan and Dorizzi, Bernadette and Boudy, J{\'e}r{\^o}me},
+	booktitle={Ambient Intelligence},
+	pages={208--223},
+	year={2012},
+	publisher={Springer}
+}
+
+@article{lecouteux2011distant,
+	title={Distant speech recognition in a smart home: comparison of several multisource ASRs in realistic conditions},
+	author={Lecouteux, Benjamin and Vacher, Michel and Portet, Fran{\c{c}}ois and others},
+	journal={Proceedings of Interspeech 2011},
+	pages={2273--2276},
+	year={2011}
+}
+
+
+@INPROCEEDINGS{Pohjalainen11, 
+	author={Pohjalainen, J. and Alku, P. and Kinnunen, T.}, 
+	booktitle={Proc. of ICASSP},
+	title={Shout detection in noise}, 
+	year={2011}, 
+	pages={4968-4971},
+	address={Prague, Czech Republic},
+	month={May 22-27}
+}
+
+@inproceedings{Obin12,
+	title={Cries and Whispers-Classification of Vocal Effort in Expressive Speech},
+	author={Obin, Nicolas},
+	booktitle={Proc. of Interspeech},
+	year={2012},
+	pages={2234-2237},
+	month={Sep. 9-13},
+	address={Portland, OR, USA}
+}
+
+@article{sehili2012daily,
+	title={DAILY SOUND RECOGNITION USING A COMBINATION OF GMM AND SVM FOR HOME AUTOMATION},
+	booktitle={Acoustics, Speech and Signal Processing (ICASSP), 2012 IEEE International Conference on},
+	author={Sehili, MA and Istrate, D and Dorizzi, B and Boudy, J},
+	year={2012}
+}
+
+@inproceedings{kumar2012audio,
+	title={Audio event detection from acoustic unit occurrence patterns},
+	author={Kumar, Anurag and Dighe, Pranay and Singh, Rita and Chaudhuri, Sourish and Raj, Bhiksha},
+	booktitle={Acoustics, Speech and Signal Processing (ICASSP), 2012 IEEE International Conference on},
+	pages={489--492},
+	year={2012},
+	organization={IEEE}
+}
+
+@inproceedings{zhang2012semi,
+	title={Semi-supervised learning helps in sound event classification},
+	author={Zhang, Zixing and Schuller, Bjorn},
+	booktitle={Acoustics, Speech and Signal Processing (ICASSP), 2012 IEEE International Conference on},
+	pages={333--336},
+	year={2012},
+	organization={IEEE}
+}
+
+@article{mubashir2013survey,
+	title={A survey on fall detection: Principles and approaches},
+	author={Mubashir, Muhammad and Shao, Ling and Seed, Luke},
+	journal={Neurocomputing},
+	volume={100},
+	pages={144--152},
+	year={2013},
+	publisher={Elsevier}
+}
+
+
+@article{li2014efficient,
+	author = {Li, Yun and Ho, K C and Popescu, Mihail},
+	journal = {IEEE Trans. Biomed. Eng.},
+	number = {3},
+	pages = {745-755},
+	title = {{Efficient source separation algorithms for acoustic fall detection using a Microsoft Kinect}},
+	volume = {61},
+	year = {2014}
+}
+
+@article{li2012microphone,
+	title={A microphone array system for automatic fall detection},
+	author={Li, Yun and Ho, KC and Popescu, Mihail},
+	journal=IEEE_J_BME,
+	volume={59},
+	number={5},
+	pages={1291-1301},
+	year={2012},
+	publisher={IEEE}
+}
+
+
+@techreport{bilmes1998gentle,
+	author = {Jeff A. Bilmes},
+	title = {{A gentle tutorial of the EM algorithm and its application to parameter estimation for Gaussian mixture and hidden Markov models}},
+	institution = {University of Berkeley},
+	number = {ICSI-TR-97-021},
+	year={1997}
+}
+
+@inproceedings{Bahari2013,
+	author={Bahari, M.H. and Saeidi, R. and Van Hamme, H. and Van Leeuwen, D.},
+	title={Accent recognition using i-vector, Gaussian Mean Supervector and Gaussian posterior probability supervector for spontaneous telephone speech},
+	booktitle={Proc. of th IEEE Int. Conf. on Acoustics, Speech and Signal Processing (ICASSP)},
+	year={2013},
+	pages={7344-7348},
+	address={Vancouver, BC, Canada},
+	date={May 26-31}
+}
+
+
+@article{bilmes1998gentleold,
+	title={A gentle tutorial of the EM algorithm and its application to parameter estimation for Gaussian mixture and hidden Markov models},
+	author={Bilmes, Jeff A.},
+	journal={International Computer Science Institute},
+	volume={4},
+	number={510},
+	pages={126},
+	year={1998}
+}
+
+@article{Principi2015426old,
+	title = "Acoustic template-matching for automatic emergency state detection: An \{ELM\} based algorithm ",
+	journal = "Neurocomputing ",
+	volume = "149, Part A",
+	number = "0",
+	pages = "426 - 434",
+	year = "2015",
+	author = "Emanuele Principi and Stefano Squartini and Erik Cambria and Francesco Piazza",
+}
+
+@Article{Principi2015426,
+	author = {E. Principi and S. Squartini and E. Cambria and F. Piazza},
+	title = {{Acoustic Template-Matching for Automatic Emergency State Detection: an ELM based algorithm}},
+	journal = {Neurocomputing},
+	year = {2014},
+	volume={149},
+	pages = "426-434",
+	number={PA}
+}
+
+@InProceedings{principi2013speech,
+	author = {E. Principi and Danilo Fuselli and S. Squartini and Maurizio Bonifazi and F. Piazza},
+	title = {{A Speech-Based System for In-Home Emergency Detection and Remote Assistance}},
+	booktitle = {Proc. of the 134th International AES Convention},
+	year = {2013},
+	address = {Rome, Italy},
+	month = {May 4-7}
+}
+
+@INPROCEEDINGS{principi2014power, 
+	author = {E. Principi and S. Squartini and F. Piazza},
+	title = {Power Normalized Cepstral Coefficients based supervectors and i-vectors for small vocabulary speech recognition},
+	booktitle={Proc. of International Joint Conference on Neural Networks (IJCNN)},
+	year = {2014},
+	address = {Beijing, China},
+	month = {Jul. 6-11}
+}
+
+@InProceedings{PrincipiSPFB13,
+	author = {E. Principi and S. Squartini and F. Piazza and D. Fuselli and M. Bonifazi},
+	title = {{A Distributed System for Recognizing Home Automation Commands and Distress Calls in the Italian Language}},
+	booktitle = {Proc. of Interspeech},
+	year = {2013},
+	address = {Lyon, France},
+	month = {Aug. 25-29},
+	pages = {2049-2053}
+}
+
+@inproceedings{noury2007fall,
+	title={Fall detection-principles and methods},
+	author={Noury, Norbert and Fleury, Anthony and Rumeau, Pierre and Bourke, AK and Laighin, GO and Rialle, Vincent and Lundy, JE},
+	booktitle={Engineering in Medicine and Biology Society, 2007. EMBS 2007. 29th Annual International Conference of the IEEE},
+	pages={1663--1666},
+	year={2007},
+	organization={IEEE}
+}
+
+@inproceedings{yu2008approaches,
+	title={Approaches and principles of fall detection for elderly and patient},
+	author={Yu, Xinguo},
+	booktitle={e-health Networking, Applications and Services, 2008. HealthCom 2008. 10th International Conference on},
+	pages={42--47},
+	year={2008},
+	organization={IEEE}
+}
+
+@inproceedings{wang2008development,
+	title={Development of a fall detecting system for the elderly residents},
+	author={Wang, Chia-Chi and Chiang, Chih-Yen and Lin, Po-Yen and Chou, Yi-Chieh and Kuo, I-Ting and Huang, Chih-Ning and Chan, Chia-Tai},
+	booktitle={Bioinformatics and Biomedical Engineering, 2008. ICBBE 2008. The 2nd International Conference on},
+	pages={1359--1362},
+	year={2008},
+	organization={IEEE}
+}
+
+@inproceedings{srinivasan2007towards,
+	title={Towards automatic detection of falls using wireless sensors},
+	author={Srinivasan, Soundararajan and Han, Jun and Lal, Dhananjay and Gacic, Aca},
+	booktitle={Engineering in Medicine and Biology Society, 2007. EMBS 2007. 29th Annual International Conference of the IEEE},
+	pages={1379--1382},
+	year={2007},
+	organization={IEEE}
+}
+
+@inproceedings{lee2007implementation,
+	title={Implementation of accelerometer sensor module and fall detection monitoring system based on wireless sensor network},
+	author={Lee, Youngbum and Kim, Jinkwon and Son, Muntak and Lee, Jong-Ho},
+	booktitle={Engineering in Medicine and Biology Society, 2007. EMBS 2007. 29th Annual International Conference of the IEEE},
+	pages={2315--2318},
+	year={2007},
+	organization={IEEE}
+}
+
+@article{lai2011detection,
+	title={Detection of cognitive injured body region using multiple triaxial accelerometers for elderly falling},
+	author={Lai, Chin-Feng and Chang, Sung-Yen and Chao, Han-Chieh and Huang, Yueh-Min},
+	journal={IEEE Sensors Journal},
+	volume={11},
+	number={3},
+	pages={763--770},
+	year={2011},
+	publisher={IEEE}
+}
+
+@article{kaluvza2010fall,
+	title={Fall Detection and Activity Recognition Methods for the Confidence Project: A Survey},
+	author={Kalu{\v{z}}a, Bo{\v{s}}tjan and Lu{\v{s}}trek, Mitja},
+	journal={population},
+	volume={2020},
+	number={2030},
+	pages={2040},
+	year={2010}
+}
+
+@incollection{toreyin2005hmm,
+	title={HMM based falling person detection using both audio and video},
+	author={T{\"o}reyin, B U{\u{g}}ur and Dedeo{\u{g}}lu, Yi{\u{g}}ithan and {\c{C}}etin, A Enis},
+	booktitle={Computer Vision in Human-Computer Interaction},
+	pages={211--220},
+	year={2005},
+	publisher={Springer}
+}
+
+@inproceedings{fleury2008data,
+	title={Data fusion in health smart home: Preliminary individual evaluation of two families of sensors},
+	author={Fleury, Anthony and Vacher, Michel and Glasson, Hubert and Serignat, J-F and Noury, Norbert and others},
+	booktitle={Proceedings of the conference of the International Society of Gerontechnology (ISG 2008)},
+	year={2008}
+}
+
+@inproceedings{grassi2008hardware,
+	title={A hardware-software framework for high-reliability people fall detection},
+	author={Grassi, M and Lombardi, A and Rescio, G and Malcovati, P and Malfatti, M and Gonzo, L and Leone, A and Diraco, G and Distante, C and Siciliano, P and others},
+	booktitle={Sensors, 2008 IEEE},
+	pages={1328--1331},
+	year={2008},
+	organization={IEEE}
+}
+
+@inproceedings{zhuang2009acoustic,
+	title={Acoustic fall detection using {Gaussian} mixture models and {GMM} supervectors},
+	author={Zhuang, Xiaodan and Huang, Jing and Potamianos, Gerasimos and Hasegawa-Johnson, Mark},
+	booktitle={Proc. of ICASSP},
+	pages={69-72},
+	year={2009},
+	month={Apr. 19-24},
+	address = {Taipei, Taiwan}
+}
+
+@inproceedings{alwan2006smart,
+	title={A smart and passive floor-vibration based fall detector for elderly},
+	author={Alwan, Majd and Rajendran, Prabhu Jude and Kell, Steve and Mack, David and Dalal, Siddharth and Wolfe, Matt and Felder, Robin},
+	booktitle={Proc. of Inf. Commun. Technol.},
+	volume={1},
+	pages={1003-1007},
+	year={2006}
+}
+
+@article{robinson1998design,
+	title={Design, control, and characterization of a sliding linear investigative platform for analyzing lower limb stability (SLIP-FALLS)},
+	author={Robinson, Charles J and Purucker, Michael C and Faulkner, Lawrence W},
+	journal={Rehabilitation Engineering, IEEE Transactions on},
+	volume={6},
+	number={3},
+	pages={334-350},
+	year={1998},
+	publisher={IEEE}
+}
+
+@article{zigel2009method,
+	title={A method for automatic fall detection of elderly people using floor vibrations and sound—Proof of concept on human mimicking doll falls},
+	author={Zigel, Yaniv and Litvak, Dima and Gannot, Israel},
+	journal=IEEE_J_BME,
+	volume={56},
+	number={12},
+	pages={2858-2867},
+	year={2009},
+	publisher={IEEE}
+}
+
+@article{rimminen2010detection,
+	title={Detection of falls among the elderly by a floor sensor using the electric near field.},
+	author={Rimminen, Henry and Lindstr{\"o}m, Juha and Linnavuo, Matti and Sepponen, Raimo},
+	journal={IEEE transactions on information technology in biomedicine: a publication of the IEEE Engineering in Medicine and Biology Society},
+	volume={14},
+	number={6},
+	pages={1475--1476},
+	year={2010}
+}
+
+@Article{Toreyin2008,
+	AUTHOR = {Toreyin, B and Soyer, A and Onaran, Ibrahim and Cetin, E},
+	TITLE = {Falling Person Detection Using Multi-Sensor Signal Processing},
+	JOURNAL = {EURASIP Journal on Advances in Signal Processing},
+	VOLUME = {2008},
+	YEAR = {2008},
+	NUMBER = {1},
+	PAGES = {7},
+}
+
+@article{nyan2006distinguishing,
+	title={Distinguishing fall activities from normal activities by angular rate characteristics and high-speed camera characterization},
+	author={Nyan, MN and Tay, Francis EH and Tan, AWY and Seah, KHW},
+	journal={Medical engineering \& physics},
+	volume={28},
+	number={8},
+	pages={842--849},
+	year={2006},
+	publisher={Elsevier}
+}
+
+@inproceedings{foroughi2008eigenspace,
+	title={An eigenspace-based approach for human fall detection using integrated time motion image and multi-class support vector machine},
+	author={Foroughi, Homa and Yazdi, Hadi Sadoghi and Pourreza, Hamidreza and Javidi, Malihe},
+	booktitle={Intelligent Computer Communication and Processing, 2008. ICCP 2008. 4th International Conference on},
+	pages={83--90},
+	year={2008},
+	organization={IEEE}
+}
+
+@article{rougier2011robust,
+	title={Robust video surveillance for fall detection based on human shape deformation},
+	author={Rougier, Caroline and Meunier, Jean and St-Arnaud, Alain and Rousseau, Jacqueline},
+	journal=IEEE_J_CASVT,
+	volume={21},
+	number={5},
+	pages={611--622},
+	year={2011},
+	publisher={IEEE}
+}
+
+@article{cucchiara2005probabilistic,
+	title={Probabilistic posture classification for human-behavior analysis},
+	author={Cucchiara, Rita and Grana, Costantino and Prati, Andrea and Vezzani, Roberto},
+	journal={Systems, Man and Cybernetics, Part A: Systems and Humans, IEEE Transactions on},
+	volume={35},
+	number={1},
+	pages={42--54},
+	year={2005},
+	publisher={IEEE}
+}
+
+@inproceedings{hazelhoff2008video,
+	title={Video-based fall detection in the home using principal component analysis},
+	author={Hazelhoff, Lykele and Han, Jungong and others},
+	booktitle={Advanced Concepts for Intelligent Vision Systems},
+	pages={298--309},
+	year={2008},
+	organization={Springer}
+}
+
+
+@inproceedings{kim2012power,
+	title={Power-normalized cepstral coefficients (PNCC) for robust speech recognition},
+	author={Kim, Chanwoo and Stern, Richard M},
+	booktitle={Acoustics, Speech and Signal Processing (ICASSP), 2012 IEEE International Conference on},
+	pages={4101--4104},
+	year={2012},
+	organization={IEEE}
+}
+
+@article{Carone2006,
+	author={Carone, G. and Costello, D.},
+	title={Can Europe afford to grow old?},
+	journal={Finance and Development},
+	year={2006},
+	volume={43},
+	number={3},
+	pages={28-31},
+	affiliation={European Commission, Department of Economic and Financial Affairs}
+}
+
+@article{Zhu2015,
+	author = {Zhu, Ni and Diethe, Tom and Camplani, Massimo and Tao, Lili and Burrows, Alison and Twomey, Niall},
+	journal = {IEEE Intell. Syst.},
+	number = {4},
+	issue = {4},
+	pages = {39-46},
+	title = {{Bridging e-Health and the Internet of Things: The SPHERE Project}},
+	volume = {30},
+	year = {2015}
+}
+
+@InProceedings{Principi2015b,
+	author = {Emanuele Principi and Paolo Olivetti and Stefano Squartini and Roberto Bonfigli and Francesco Piazza},
+	title = {{A Floor Acoustic Sensor for Fall Classification}},
+	booktitle = {Proc. of The 138th International AES Convention},
+	year = {2015},
+	address = {Warsaw, Poland},
+	month = {May 7-10}
+}
+
+@article{Ozdemir2014,
+	author = {\"{O}zdemir, Ahmet and Barshan, Billur},
+	issn = {1424-8220},
+	journal = {Sensors},
+	number = {6},
+	pages = {10691-10708},
+	title = {{Detecting Falls with Wearable Sensors Using Machine Learning Techniques}},
+	volume = {14},
+	year = {2014}
+}
+
+@article{Yang2010,
+	author = {Yang, C.-C. and Hsu, Y.-L.},
+	journal = {Sensors},
+	pages = {7772-7788},
+	title = {{A review of accelerometry-based wearable motion detectors for physical activity monitoring}},
+	volume = {10},
+	year = {2010}
+}
+
+@article{Charlon2013,
+	title = "Design and evaluation of a device worn for fall detection and localization: Application for the continuous monitoring of risks incurred by dependents in an {A}lzheimer's care unit",
+	journal = "Expert Systems with Applications",
+	volume = "40",
+	number = "18",
+	pages = "7316-7330",
+	year = "2013",
+	author = "Yoann Charlon and Nicolas Fourty and Walid Bourennane and Eric Campo"
+}
+
+@ARTICLE{Bourke2007,
+	author={Bourke, A.K. and O'Brien, J.V. and Lyons, G.M.},
+	title={Evaluation of a threshold-based tri-axial accelerometer fall detection algorithm},
+	journal={Gait and Posture},
+	year={2007},
+	volume={26},
+	number={2},
+	pages={194-199},
+}
+
+@article{Yazar2013,
+	author = {Yazar, Ahmet and Keskin, Furkan and T\"{o}reyin, B. Ugur and \c{C}etin, A. Enis},
+	journal = {Pattern Recognition Letters},
+	title = {{Fall detection using single-tree complex wavelet transform}},
+	year = {2013},
+	pages={1945-1952},
+	volume={34}
+}
+
+@article{Doukas2011,
+	author = {Doukas, Charalampos N and Maglogiannis, Ilias},
+	journal = {IEEE Trans. Inf. Technol. Biomed.},
+	month = {Mar.},
+	number = {2},
+	pages = {277-89},
+	title = {{Emergency fall incidents detection in assisted living environments utilizing motion, sound, and visual perceptual components}},
+	volume = {15},
+	year = {2011}
+}
+
+@InProceedings{Werner2011,
+	author={Werner, F. and Diermaier, J. and Schmid, S. and Panek, P.},
+	title={Fall detection with distributed floor-mounted accelerometers: An overview of the development and evaluation of a fall detection system within the project {eHome}},
+	booktitle={Proc. of the 5th Int. Conf. on Pervasive Computing Technologies for Healthcare and Workshops},
+	year={2011},
+	pages={354-361},
+	address={Dublin, Ireland},
+	month={May 23-26}}
+
+@article{Principi2015a,
+	title = "An integrated system for voice command recognition and emergency detection based on audio signals ",
+	journal = "Expert Systems with Applications ",
+	volume = "42",
+	number = "13",
+	issue = "13",
+	pages = "5668-5683",
+	year = "2015",
+	issn = "0957-4174",
+	author = "Emanuele Principi and Stefano Squartini and Roberto Bonfigli and Giacomo Ferroni and Francesco Piazza",
+	keywords = "Automatic speech recognition",
+	keywords = "Novelty detection",
+	keywords = "Emergency detection",
+	keywords = "Ambient assisted living "
+}
+
+@article{Principi2016a,
+	title = "Acoustic cues from the floor: a new approach for fall classification",
+	journal = "Expert Systems with Applications ",
+	year = "2016",
+	doi = "http://dx.doi.org/10.1016/j.eswa.2016.04.007",
+	author = "Emanuele Principi and Diego Droghini and Stefano Squartini and Paolo Olivetti and Francesco Piazza",
+	pages ={51-61},
+	volume={60}
+}
+
+@misc{eurostat,
+	author = {},
+	title = {Eurostat Statistic Explained: Fertility statistics},
+	date = {},
+	OPTsubtitle = {subtitle},
+	OPTtitleaddon = {titleaddon},
+	OPTlanguage = {language},
+	OPThowpublished = {howpublished},
+	OPTtype = {type},
+	OPTversion = {version},
+	OPTnote = {note},
+	OPTorganization = {organization},
+	OPTlocation = {location},
+	OPTdate = {date},
+	month = {March},
+	year = {2016},
+	OPTaddendum = {addendum},
+	OPTpubstate = {pubstate},
+	OPTdoi = {doi},
+	OPTeprint = {eprint},
+	OPTeprintclass = {eprintclass},
+	OPTeprinttype = {eprinttype},
+	url = {http://ec.europa.eu/eurostat/statistics-explained/index.php/Fertility_statistics},
+	OPTurldate = {urldate},
+}
+
+@inproceedings{Martin97,
+	title = {The {DET} curve in assessment of detection task performance},
+	booktitle = {Proc. of the European Conference on Speech Communication and Technology},
+	pages = {1895-1898},
+	year = {1997},
+	author = {A. Martin and G. Doddington and T. Kamm and M. Ordowski and M. Przybocki}
+}
+
+@incollection{wirn2016fall, 
+	author = {Droghini, D. and Principi, E. and Squartini, S. and Olivetti, P. and Piazza F.}, 
+	title = {Human Fall Detection by Using an Innovative Floor Acoustic Sensor}, 
+	booktitle = {Proc. of WIRN},
+	year = {2016}, 
+	address = {Vietri sul Mare, Italy},
+	month={May, 18-20},
+	note = {(8 pages), to appear.}
+}
+
+@inproceedings{scholkopf2000,
+	title={Support Vector Method for Novelty Detection},
+	author={Sch{\"o}lkopf, Bernhard and Williamson, Robert C. and Smola, Alexander J. and Shawe-Taylor, John and Platt, John C.},
+	booktitle={Advances in  Neural Information Processing Systems},
+	volume={12},
+	pages={582-588},
+	year={2000},
+	editors = {S. A. Solla and T. K. Leen and  K.-R. M{\"u}ller},
+	publisher = {MIT Press}
+}
+
+@ARTICLE{Campbell2006,
+	author={Campbell, W.M. and Sturim, D.E. and Reynolds, D.A.},
+	title={Support vector machines using {GMM} supervectors for speaker verification},
+	journal={IEEE Signal Processing Letters},
+	year={2006},
+	volume={13},
+	number={5},
+	pages={308-311},
+	doi={10.1109/LSP.2006.870086},
+	document_type={Article},
+	source={Scopus},
+}
+
+@book{boyd2004convex,
+	title={Convex optimization},
+	author={Boyd, Stephen and Vandenberghe, Lieven},
+	year={2004},
+	publisher={Cambridge University Press}
+}
+
+@article{pierleoni2016wearable,
+	title={A Wearable Fall Detector for Elderly People Based on {AHRS} and Barometric Sensor},
+	author={Pierleoni, Paola and Belli, Alberto and Maurizi, Lorenzo and Palma, Lorenzo and Pernini, Luca and Paniccia, Michele and Valenti, Simone},
+	journal={IEEE Sensors Journal},
+	volume={16},
+	number={17},
+	pages={6733-6744},
+	year={2016}
+}
+
+@ARTICLE{Ando20161960,
+	author={And\`o, B. and Baglio, S. and Lombardo, C.O. and Marletta, V.},
+	title={A multisensor data-fusion approach for {ADL} and fall classification},
+	journal={IEEE Transactions on Instrumentation and Measurement},
+	year={2016},
+	volume={65},
+	number={9},
+	pages={1960-1967},
+	doi={10.1109/TIM.2016.2552678},
+	art_number={7470501},
+	document_type={Article},
+	source={Scopus},
+}
+
+@article{wang2016outdoor,
+	title={An outdoor intelligent healthcare monitoring device for the elderly},
+	author={Wang, Liang-Hung and Hsiao, Yi-Mao and Xie, Xue-Qin and Lee, Shuenn-Yuh},
+	journal=IEEE_J_CE,
+	volume={62},
+	number={2},
+	pages={128-135},
+	year={2016},
+	
+}
+
+@article{valcourt2016smartphone,
+	title={Smartphone-based Human Fall Detection System},
+	author={Valcourt, Luis and De La Hoz, Yueng and Labrador, Miguel},
+	journal={IEEE Latin America Transactions},
+	volume={14},
+	number={2},
+	pages={1011-1017},
+	year={2016},
+	
+}
+
+@incollection{zhou2012activity2,
+	title={An activity transition based fall detection model on mobile devices},
+	author={Zhou, Min and Wang, Shuangquan and Chen, Yiqiang and Chen, Zhenyu and Zhao, Zhongtang},
+	booktitle={Human Centric Technology and Service in Smart Space},
+	pages={1-8},
+	year={2012}
+}
+
+@ARTICLE{zhou2012activity3,
+	author={Zhou, M. and Wang, S. and Chen, Y. and Chen, Z. and Zhao, Z.},
+	title={An activity transition based fall detection model on mobile devices},
+	journal={Lecture Notes in Electrical Engineering},
+	year={2012},
+	volume={182 LNEE},
+	pages={1-8},
+	note={Conference of 2012 International Conference on Human-Centric Computing, HumanCom 2012 ; Conference Date: 6 September 2012 Through 8 September 2012;  Conference Code:94252},
+	sponsors={Future Technology Research Association International (FTRA)},
+	address={Gwangju},
+	abbrev_source_title={Lect. Notes Electr. Eng.},
+	document_type={Conference Paper},
+	source={Scopus},
+}
+
+@incollection{zhou2012activity,
+	author="Zhou, Min
+	and Wang, Shuangquan
+	and Chen, Yiqiang
+	and Chen, Zhenyu
+	and Zhao, Zhongtang",
+	editor="Park, James J. (Jong Hyuk)
+	and Jin, Qun
+	and Sang-soo Yeo, Martin
+	and Hu, Bin",
+	title="An Activity Transition Based Fall Detection Model on Mobile Devices",
+	bookTitle="Human Centric Technology and Service in Smart Space: HumanCom 2012",
+	year="2012",
+	publisher="Springer Netherlands",
+	address="Dordrecht",
+	pages="1-8",
+	isbn="978-94-007-5086-9"
+}
+
+
+@article{mukhopadhyay2015wearable,
+	title={Wearable sensors for human activity monitoring: A review},
+	author={Mukhopadhyay, Subhas Chandra},
+	journal={IEEE Sensors Journal},
+	volume={15},
+	number={3},
+	pages={1321-1330},
+	year={2015},
+	
+}
+
+@article{stone2015fall,
+	title={Fall detection in homes of older adults using the Microsoft Kinect},
+	author={Stone, Erik E and Skubic, Marjorie},
+	journal=IEEE_J_BHI,
+	volume={19},
+	number={1},
+	pages={290-301},
+	year={2015},
+	publisher={IEEE}
+}
+
+@INPROCEEDINGS{Tran2014484,
+	author={Tran, T.-T.-H. and Le, T.-L. and Morel, J.},
+	title={An analysis on human fall detection using skeleton from Microsoft kinect},
+	booktitle={Proc. of IEEE 5th International Conference on Communications and Electronics},
+	year={2014},
+	pages={484-489},
+	document_type={Conference Paper},
+	address={Danang, Vietnam},
+	date={30 Jul. - 01 Aug. 2014}
+}
+
+@ARTICLE{Qu2016378,
+	author={Qu, C. and Sun, J. and Wang, J. and Zhu, X.},
+	title={Automatic fall detection for the elderly using {Kinect} sensor},
+	journal={Chinese Journal of Sensors and Actuators},
+	year={2016},
+	volume={29},
+	number={3},
+	pages={378-383},
+	doi={10.3969/j.issn.1004-1699.2016.03.013},
+	document_type={Article},
+	
+}
+
+@ARTICLE{Palmerini201511575,
+	author={Palmerini, L. and Bagalà, F. and Zanetti, A. and Klenk, J. and Becker, C. and Cappello, A.},
+	title={A wavelet-based approach to fall detection},
+	journal={Sensors (Switzerland)},
+	year={2015},
+	volume={15},
+	number={5},
+	pages={11575-11586},
+	document_type={Article}
+}
+
+@ARTICLE{Feng201640,
+	author={Feng, G. and Mai, J. and Ban, Z. and Guo, X. and Wang, G.},
+	title={Floor Pressure Imaging for Fall Detection with Fiber-Optic Sensors},
+	journal={IEEE Pervasive Computing},
+	year={2016},
+	volume={15},
+	number={2},
+	pages={40-47},
+	doi={10.1109/MPRV.2016.27},
+	document_type={Article},
+	
+}
+
+@ARTICLE{Cheffena20161073,
+	author={Cheffena, M.},
+	title={Fall Detection Using Smartphone Audio Features},
+	journal={IEEE Journal of Biomedical and Health Informatics},
+	year={2016},
+	volume={20},
+	number={4},
+	pages={1073-1080},
+	doi={10.1109/JBHI.2015.2425932},
+	document_type={Article},
+}
+
+@article{markou2003novelty2,
+	title={Novelty detection: a review -- part 2: neural network based approaches},
+	author={Markou, M. and Singh, S.},
+	journal={Signal processing},
+	volume={83},
+	number={12},
+	pages={2499-2521},
+	year={2003},
+	publisher={Elsevier}
+}
+
+@article{markou2003novelty1,
+	title={Novelty detection: a review -- part 1: statistical approaches},
+	author={Markou, M. and Singh, S.},
+	journal={Signal processing},
+	volume={83},
+	number={12},
+	pages={2481-2497},
+	year={2003},
+	publisher={Elsevier}
+}
+
+@INPROCEEDINGS{Noury2007,
+	author={Noury, N. and Fleury, A. and Rumeau, P. and Bourke, A.K. and Laighin, G.Ó. and Rialle, V. and Lundy, J.E.},
+	title={Fall detection - Principles and methods},
+	booktitle={Proc. of the Annual Int. Conf. of the IEEE Engineering in Medicine and Biology Society (EMBC)},
+	year={2007},
+	pages={1663-1666},
+	address={Lyon, France},
+}
+
+@ARTICLE{Pannurat2014,
+	author={Pannurat, N. and Thiemjarus, S. and Nantajeewarawat, E.},
+	title={Automatic fall monitoring: A review},
+	journal={Sensors (Switzerland)},
+	year={2014},
+	volume={14},
+	number={7},
+	pages={12900-12936}
+}
+
+@inproceedings{Popescu2009,
+	author={Popescu, M. and Mahnot, A.},
+	title={Acoustic fall detection using one-class classifiers},
+	booktitle={Proc. of the Annual Int. Conf. of the IEEE Engineering in Medicine and Biology Society (EMBC)},
+	year={2009},
+	pages={3505-3508},
+	address={Minneapolis, MN, USA},
+	date={Sep. 2-6}
+}
+@inproceedings{glorot2010understanding,
+	title={Understanding the difficulty of training deep feedforward neural networks.},
+	author={Glorot, Xavier and Bengio, Yoshua},
+	booktitle={Aistats},
+	volume={9},
+	pages={249--256},
+	year={2010}
+}
+@article{kingma2014adam,
+	title={Adam: A method for stochastic optimization},
+	author={Kingma, Diederik and Ba, Jimmy},
+	journal={arXiv preprint arXiv:1412.6980},
+	year={2014}
+}
+
+@article{gurley1996persons,
+	title={Persons found in their homes helpless or dead},
+	author={Gurley, R Jan and Lum, Nancy and Sande, Merle and Lo, Bernard and Katz, Mitchell H},
+	journal={New England Journal of Medicine},
+	volume={334},
+	number={26},
+	pages={1710--1716},
+	year={1996},
+	publisher={Mass Medical Soc}
+}
+
+@inproceedings{muller2006off,
+	title={Off-road obstacle avoidance through end-to-end learning},
+	author={Muller, Urs and Ben, Jan and Cosatto, Eric and Flepp, Beat and Cun, Yann L},
+	booktitle={Advances in neural information processing systems},
+	pages={739--746},
+	year={2006}
+}
+
+@inproceedings{bergstra2013making,
+	title={Making a science of model search: Hyperparameter optimization in hundreds of dimensions for vision architectures},
+	author={Bergstra, James and Yamins, Daniel and Cox, David},
+	booktitle={International Conference on Machine Learning},
+	pages={115--123},
+	year={2013}
+}
+
+@article{cippitelli2017radar,
+	title={Radar and RGB-Depth Sensors for Fall Detection: A Review},
+	author={Cippitelli, Enea and Fioranelli, Francesco and Gambi, Ennio and Spinsante, Susanna},
+	journal={IEEE Sensors Journal},
+	year={2017},
+	publisher={IEEE}
+}
+
+@article{lopez2016wearable,
+	title={Wearable Inertial Sensors for Human Motion Analysis: A Review},
+	author={L{\'o}pez-Nava, Irvin Hussein and Mu{\~n}oz-Mel{\'e}ndez, Ang{\'e}lica},
+	journal={IEEE Sensors Journal},
+	volume={16},
+	number={22},
+	pages={7821--7834},
+	year={2016},
+	publisher={IEEE}
+}
+
+@article{erden2016sensors,
+	title={Sensors in assisted living: a survey of signal and image processing methods},
+	author={Erden, Fatih and Velipasalar, Senem and Alkar, Ali Ziya and Cetin, A Enis},
+	journal={IEEE Signal Processing Magazine},
+	volume={33},
+	number={2},
+	pages={36--44},
+	year={2016},
+	publisher={IEEE}
+}
+
+@ARTICLE{Igual2013,
+	author={Igual, R. and Medrano, C. and Plaza, I.},
+	title={Challenges, issues and trends in fall detection systems},
+	journal={BioMedical Engineering Online},
+	year={2013},
+	volume={12},
+	number={1},
+	doi={10.1186/1475-925X-12-66},
+	art_number={66},
+	note={cited By 111},
+	document_type={Review},
+	source={Scopus},
+}
+
+@article{ng2011sparse,
+	title={Sparse autoencoder},
+	author={Ng, Andrew},
+	journal={CS294A Lecture notes},
+	volume={72},
+	number={2011},
+	pages={1--19},
+	year={2011}
+}
+
+@inproceedings{krizhevsky2012imagenet,
+	title={Imagenet classification with deep convolutional neural networks},
+	author={Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
+	booktitle={Advances in neural information processing systems},
+	pages={1097--1105},
+	year={2012}
+}
+
+@article{marchi2017deep,
+	title={Deep Recurrent Neural Network-Based Autoencoders for Acoustic Novelty Detection},
+	author={Marchi, Erik and Vesperini, Fabio and Squartini, Stefano and Schuller, Bj{\"o}rn},
+	journal={Computational intelligence and neuroscience},
+	volume={2017},
+	year={2017},
+	publisher={Hindawi Publishing Corporation}
+}
+
+@article{bojarski2016end,
+	title={End to end learning for self-driving cars},
+	author={Bojarski, Mariusz and Del Testa, Davide and Dworakowski, Daniel and Firner, Bernhard and Flepp, Beat and Goyal, Prasoon and Jackel, Lawrence D and Monfort, Mathew and Muller, Urs and Zhang, Jiakai and others},
+	journal={arXiv preprint arXiv:1604.07316},
+	year={2016}
+}
+
+@inproceedings{dieleman2014end,
+	title={End-to-end learning for music audio},
+	author={Dieleman, Sander and Schrauwen, Benjamin},
+	booktitle={Acoustics, Speech and Signal Processing (ICASSP), 2014 IEEE International Conference on},
+	pages={6964--6968},
+	year={2014},
+	organization={IEEE},
+	
+}
+
+@techreport{song2015end,
+	title={End-to-end deep neural network for automatic speech recognition},
+	author={Song, William and Cai, Jim},
+	year={2015},
+	institution={Technical Report CS224D, University of Stanford}
+}
+
+@article{droghiniCin1017,
+	title={A Combined One-Class SVM and Template Matching Approach for User-Aided Human Fall Detection by Means of Floor Acoustic Features},
+	author  = {Diego Droghini and Daniele Ferretti and Emanuele Principi and Stefano Squartini and Francesco Piazza}, 
+	year = {2017},
+	volume={2017},
+	journal = {Computational Intelligence and Neuroscience},
+	note = {{Article ID 1512670}},
+	doi = {10.1155/2017/1512670},
+	pagetotal = {13}
+	
+}
+
+@InProceedings{Principi13a,
+	author = {Emanuele Principi and Danilo Fuselli and Stefano Squartini and Maurizio Bonifazi and Francesco Piazza},
+	title = {{A Speech-Based System for In-Home Emergency Detection and Remote Assistance}},
+	booktitle = {Proc. of the 134th International AES Convention},
+	year = {2013},
+	address = {Rome, Italy},
+	month = {May 4-7},
+	pages={560-569}
+}
+
+@InProceedings{Principi14c,
+	author = {Emanuele Principi and Stefano Squartini and Francesco Piazza},
+	title = {{Power Normalized Cepstral Coefficients based supervectors and i-vectors for small vocabulary speech recognition}},
+	booktitle = {Proc. of the International Joint Conference on Neural Networks (IJCNN)},
+	year = {2014},
+	address = {Beijing, China},
+	month = {Jul. 6-11},
+	pages = {3562-3568}
+}
+
+@InProceedings{wirn2017-fall, 
+	author = {Droghini, D. and Daniele F. and Principi, E. and Squartini, P. and Piazza F.}, 
+	title = {An End-To-End Unsupervised Approach employing Convolutional Neural Network Autoencoders for Human Fall Detection}, 
+	booktitle = {Proc. of WIRN},
+	year = {2017}, 
+	address = {Vietri sul Mare, Italy},
+	month={June, 14-16},
+	note = {to appear.}
+}
+
+@incollection{abbate2010monitoring,
+	title={Monitoring of human movements for fall detection and activities recognition in elderly care using wireless sensor network: a survey},
+	author={Abbate, Stefano and Avvenuti, Marco and Corsini, Paolo and Light, Janet and Vecchio, Alessio},
+	booktitle={Wireless Sensor Networks: Application-Centric Design},
+	year={2010},
+	publisher={InTech}
+}
+
+@article{xu2018new,
+	title={New Advances and Challenges of Fall Detection Systems: A Survey},
+	author={Xu, Tao and Zhou, Yun and Zhu, Jing},
+	journal={Applied Sciences},
+	volume={8},
+	number={3},
+	pages={418},
+	year={2018},
+	publisher={Multidisciplinary Digital Publishing Institute}
+}
+
+
+@inproceedings{koch2015siamese,
+	title={Siamese neural networks for one-shot image recognition},
+	author={Koch, Gregory and Zemel, Richard and Salakhutdinov, Ruslan},
+	booktitle={ICML Deep Learning Workshop},
+	volume={2},
+	year={2015}
+}
+
+@inproceedings{bromley1994signature,
+	title={Signature verification using a" siamese" time delay neural network},
+	author={Bromley, Jane and Guyon, Isabelle and LeCun, Yann and S{\"a}ckinger, Eduard and Shah, Roopak},
+	booktitle={Advances in Neural Information Processing Systems},
+	pages={737--744},
+	year={1994}
+}
+
+@article{manocha2017content,
+	title={Content-based Representations of audio using Siamese neural networks},
+	author={Manocha, Pranay and Badlani, Rohan and Kumar, Anurag and Shah, Ankit and Elizalde, Benjamin and Raj, Bhiksha},
+	journal={arXiv preprint arXiv:1710.10974},
+	year={2017}
+}
+
+@inproceedings{zhang2017iminet,
+	title={IMINET: Convolutional semi-siamese networks for sound search by vocal imitation},
+	author={Zhang, Yichi and Duan, Zhiyao},
+	booktitle={Applications of Signal Processing to Audio and Acoustics (WASPAA), 2017 IEEE Workshop on},
+	pages={304--308},
+	year={2017},
+	organization={IEEE}
+}
+
+@inproceedings{lake2011one,
+	title={One shot learning of simple visual concepts},
+	author={Lake, Brenden and Salakhutdinov, Ruslan and Gross, Jason and Tenenbaum, Joshua},
+	booktitle={Proceedings of the Annual Meeting of the Cognitive Science Society},
+	volume={33},
+	number={33},
+	year={2011}
+}
+
+@article{raodeep,
+	title={A Deep Siamese Neural Network Learns the Human-Perceived Similarity Structure of Facial Expressions Without Explicit Categories},
+	author={Rao, Sanjeev Jagannatha and Wang, Yufei and Cottrell, Garrison W}
+}
+
+@inproceedings{gemmeke2013exemplar,
+	title={An exemplar-based NMF approach to audio event detection},
+	author={Gemmeke, Jort F and Vuegen, Lode and Karsmakers, Peter and Vanrumste, Bart and others},
+	booktitle={Applications of Signal Processing to Audio and Acoustics (WASPAA), 2013 IEEE Workshop on},
+	pages={1--4},
+	year={2013},
+	organization={IEEE}
+}
+
+@article{parascandolo2017convolutional,
+	title={Convolutional recurrent neural networks for polyphonic sound event detection},
+	author={Parascandolo, Giambattista and Heittola, Toni and Huttunen, Heikki and Virtanen, Tuomas and others},
+	journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},
+	volume={25},
+	number={6},
+	pages={1291--1303},
+	year={2017},
+	publisher={IEEE}
+}
+
+@inproceedings{mesaros2010acoustic,
+	title={Acoustic event detection in real life recordings},
+	author={Mesaros, Annamaria and Heittola, Toni and Eronen, Antti and Virtanen, Tuomas},
+	booktitle={Signal Processing Conference, 2010 18th European},
+	pages={1267--1271},
+	year={2010},
+	organization={IEEE}
+}
+
+@inproceedings{brodersen2010balanced,
+	title={The balanced accuracy and its posterior distribution},
+	author={Brodersen, Kay Henning and Ong, Cheng Soon and Stephan, Klaas Enno and Buhmann, Joachim M},
+	booktitle={Pattern recognition (ICPR), 2010 20th international conference on},
+	pages={3121--3124},
+	year={2010},
+	organization={IEEE}
+}
+
+@article{khan2017review,
+	title={Review of fall detection techniques: A data availability perspective},
+	author={Khan, Shehroz S and Hoey, Jesse},
+	journal={Medical engineering and physics},
+	volume={39},
+	pages={12--22},
+	year={2017},
+	publisher={Elsevier}
+}
+
+@inproceedings{chopra2005learning,
+	title={Learning a similarity metric discriminatively, with application to face verification},
+	author={Chopra, Sumit and Hadsell, Raia and LeCun, Yann},
+	booktitle={Computer Vision and Pattern Recognition, 2005. CVPR 2005. IEEE Computer Society Conference on},
+	volume={1},
+	pages={539--546},
+	year={2005},
+	organization={IEEE}
+}
+
+@article{zeiler2012adadelta,
+	title={ADADELTA: an adaptive learning rate method},
+	author={Zeiler, Matthew D},
+	journal={arXiv preprint arXiv:1212.5701},
+	year={2012}
+}
+
+@article{pimentel2014review,
+	title={A review of novelty detection},
+	author={Pimentel, Marco AF and Clifton, David A and Clifton, Lei and Tarassenko, Lionel},
+	journal={Signal Processing},
+	volume={99},
+	pages={215--249},
+	year={2014},
+	publisher={Elsevier}
+}
+
+@article{yu2013online,
+	title={An online one class support vector machine-based person-specific fall detection system for monitoring an elderly individual in a room environment},
+	author={Yu, Miao and Yu, Yuanzhang and Rhuma, Adel and Naqvi, Syed Mohsen Raza and Wang, Liang and Chambers, Jonathon A},
+	journal={IEEE journal of biomedical and health informatics},
+	volume={17},
+	number={6},
+	pages={1002--1014},
+	year={2013},
+	publisher={IEEE}
+}
+
+@article{khan2015unsupervised,
+	title={An unsupervised acoustic fall detection system using source separation for sound interference suppression},
+	author={Khan, Muhammad Salman and Yu, Miao and Feng, Pengming and Wang, Liang and Chambers, Jonathon},
+	journal={Signal processing},
+	volume={110},
+	pages={199--210},
+	year={2015},
+	publisher={Elsevier}
+}
+
+@inproceedings{popescu2009acoustic,
+	title={Acoustic fall detection using one-class classifiers},
+	author={Popescu, Mihail and Mahnot, Abhishek},
+	booktitle={Engineering in Medicine and Biology Society, 2009. EMBC 2009. Annual International Conference of the IEEE},
+	pages={3505--3508},
+	year={2009},
+	organization={IEEE}
+}
+
+@misc{dhhsOlderPop,
+	author = {},
+	title = {{Department of Health and Human Services: World's older population grows dramatically}},
+	howpublished = "\url{http://www.who.int/en/news-room/fact-sheets/detail/falls}",
+	
+	note = "[Online; accessed 30-Oct-2018]"
+}
+@misc{whoFall,
+	author = {},
+	title = {{World Healt Organization: Falls}},
+	howpublished = "\url{http://www.who.int/en/news-room/fact-sheets/detail/falls}",
+	
+	note = "[Online; accessed 30-Oct-2018]"
+}
+
+@article{Carone2006,
+	author={Carone, G. and Costello, D.},
+	title={Can Europe afford to grow old?},
+	journal={Finance and Development},
+	year={2006},
+	volume={43},
+	number={3},
+	pages={28-31},
+	affiliation={European Commission, Department of Economic and Financial Affairs}
+}
+@article{lapierre2017state,
+	title={The state of knowledge on technologies and their use for fall detection: A scoping review},
+	author={Lapierre, N and Neubauer, N and Miguel-Cruz, A and Rincon, A Rios and Liu, Lili and Rousseau, Jacqueline},
+	journal={International journal of medical informatics},
+	year={2017},
+	publisher={Elsevier}
+}
+@article{pannurat2014automatic,
+	title={Automatic fall monitoring: a review},
+	author={Pannurat, Natthapon and Thiemjarus, Surapa and Nantajeewarawat, Ekawit},
+	journal={Sensors},
+	volume={14},
+	number={7},
+	pages={12900--12936},
+	year={2014},
+	publisher={Multidisciplinary Digital Publishing Institute}
+}
+
+@article{el2013fall,
+	title={FALL DETECTION AND PREVENTION FOR THE ELDERLY: A REVIEW OF TRENDS AND CHALLENGES.},
+	author={El-Bendary, Nashwa and Tan, Qing and Pivot, Fr{\'e}d{\'e}rique C and Lam, Anthony},
+	journal={International Journal on Smart Sensing \& Intelligent Systems},
+	volume={6},
+	number={3},
+	year={2013}
+}
+@inproceedings{liu2008vision,
+	title={Vision-based semi-supervised homecare with spatial constraint},
+	author={Liu, Tianqiang and Yao, Hongxun and Ji, Rongrong and Liu, Yan and Liu, Xianming and Sun, Xiaoshuai and Xu, Pengfei and Zhang, Zhen},
+	booktitle={Pacific-Rim Conference on Multimedia},
+	pages={416--425},
+	year={2008},
+	organization={Springer}
+}
+@inproceedings{popescu2008acoustic,
+	title={An acoustic fall detector system that uses sound height information to reduce the false alarm rate},
+	author={Popescu, Mihail and Li, Yun and Skubic, Marjorie and Rantz, Marilyn},
+	booktitle={Engineering in Medicine and Biology Society, 2008. EMBS 2008. 30th Annual International Conference of the IEEE},
+	pages={4628--4631},
+	year={2008},
+	organization={IEEE}
+}
+@inproceedings{werner2011fall,
+	title={Fall detection with distributed floor-mounted accelerometers: An overview of the development and evaluation of a fall detection system within the project eHome},
+	author={Werner, Franz and Diermaier, Josef and Schmid, Sebastian and Panek, Paul},
+	booktitle={Pervasive Computing Technologies for Healthcare (PervasiveHealth), 2011 5th International Conference on},
+	pages={354--361},
+	year={2011},
+	organization={IEEE}
+}
+
+@inproceedings{zhang2009detecting,
+	title={Detecting abnormal events via hierarchical Dirichlet processes},
+	author={Zhang, Xian-Xing and Liu, Hua and Gao, Yang and Hu, Derek Hao},
+	booktitle={Pacific-Asia Conference on Knowledge Discovery and Data Mining},
+	pages={278--289},
+	year={2009},
+	organization={Springer}
+}
+
+@article{wu2015radar,
+	title={Radar-based fall detection based on Doppler time--frequency signatures for assisted living},
+	author={Wu, Qisong and Zhang, Yimin D and Tao, Wenbing and Amin, Moeness G},
+	journal={IET Radar, Sonar \& Navigation},
+	volume={9},
+	number={2},
+	pages={164--172},
+	year={2015},
+	publisher={IET}
+}
+
+@inproceedings{droghini2018fewshot,
+	author = {Droghini, Diego and Vesperini, Fabio and Principi, Emanuele and Squartini, Stefano and Piazza, Francesco},
+	title = {Few-Shot Siamese Neural Networks Employing Audio Features for Human-Fall Detection},
+	booktitle = {Proceedings of the International Conference on Pattern Recognition and Artificial Intelligence},
+	series = {PRAI 2018},
+	year = {2018},
+	isbn = {978-1-4503-6482-9},
+	location = {Union, NJ, USA},
+	pages = {63--69},
+	numpages = {7},
+	url = {http://doi.acm.org/10.1145/3243250.3243268},
+	doi = {10.1145/3243250.3243268},
+	acmid = {3243268},
+	publisher = {ACM},
+	address = {New York, NY, USA},
+	keywords = {Deep Learning, Few-shot Learning, Human Fall Detection, Siamese Neural Networks},
+} 
+
+@article{cheffena2016fall,
+	title={Fall detection using smartphone audio features},
+	author={Cheffena, Michael},
+	journal={IEEE journal of biomedical and health informatics},
+	volume={20},
+	number={4},
+	pages={1073--1080},
+	year={2016},
+	publisher={IEEE}
+}
+
+@inproceedings{popescu2009acoustic,
+	title={Acoustic fall detection using one-class classifiers},
+	author={Popescu, Mihail and Mahnot, Abhishek},
+	booktitle={Engineering in Medicine and Biology Society, 2009. EMBC 2009. Annual International Conference of the IEEE},
+	pages={3505--3508},
+	year={2009},
+	organization={IEEE}
+}
+
+@inproceedings{collado2017machine,
+	title={Machine learning approach to detect falls on elderly people using sound},
+	author={Collado-Villaverde, Armando and R-Moreno, Mar{\'\i}a D and Barrero, David F and Rodriguez, Daniel},
+	booktitle={International Conference on Industrial, Engineering and Other Applications of Applied Intelligent Systems},
+	pages={149--159},
+	year={2017},
+	organization={Springer}
+}
+
+@inproceedings{irtaza2017framework,
+	title={A framework for fall detection of elderly people by analyzing environmental sounds through acoustic local ternary patterns},
+	author={Irtaza, Aun and Adnan, Syed M and Aziz, Sumair and Javed, Ali and Ullah, M Obaid and Mahmood, Muhammad Tariq},
+	booktitle={Systems, Man, and Cybernetics (SMC), 2017 IEEE International Conference on},
+	pages={1558--1563},
+	year={2017},
+	organization={IEEE}
+}
+
+@article{er2018non,
+	title={Non-intrusive fall detection monitoring for the elderly based on fuzzy logic},
+	author={Er, Poi Voon and Tan, Kok Kiong},
+	journal={Measurement},
+	volume={124},
+	pages={91--102},
+	year={2018},
+	publisher={Elsevier}
+}
+@inproceedings{vinyals2016matching,
+	title={Matching networks for one shot learning},
+	author={Vinyals, Oriol and Blundell, Charles and Lillicrap, Tim and Wierstra, Daan and others},
+	booktitle={Advances in Neural Information Processing Systems},
+	pages={3630--3638},
+	year={2016}
+}
+@inproceedings{lake2014one,
+	title={One-shot learning of generative speech concepts},
+	author={Lake, Brenden and Lee, Chia-ying and Glass, James and Tenenbaum, Josh},
+	booktitle={Proceedings of the Annual Meeting of the Cognitive Science Society},
+	volume={36},
+	number={36},
+	year={2014}
+}
+
+@inproceedings{smucker2007comparison,
+	title={A comparison of statistical significance tests for information retrieval evaluation},
+	author={Smucker, Mark D and Allan, James and Carterette, Ben},
+	booktitle={Proceedings of the sixteenth ACM conference on Conference on information and knowledge management},
+	pages={623--632},
+	year={2007},
+	organization={ACM}
+}
+
+@article{Dawadi20161188,
+	author={Dawadi, P.N. and Cook, D.J. and Schmitter-Edgecombe, M.},
+	title={Automated Cognitive Health Assessment from Smart Home-Based Behavior Data},
+	journal={IEEE Journal of Biomedical and Health Informatics},
+	year={2016},
+	volume={20},
+	number={4},
+	pages={1188-1194},
+	doi={10.1109/JBHI.2015.2445754},
+	art_number={7206522},
+}
+
+@inproceedings{scholkopf2000support,
+	title={Support vector method for novelty detection},
+	author={Sch{\"o}lkopf, Bernhard and Williamson, Robert C and Smola, Alex J and Shawe-Taylor, John and Platt, John C},
+	booktitle={Advances in neural information processing systems},
+	pages={582--588},
+	year={2000}
+}
