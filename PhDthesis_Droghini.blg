@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: PhDthesis_Droghini.aux
+The style file: IEEEbib.bst
+Database file #1: IEEEabrv.bib
+Database file #2: 8_backMatter/refs.bib
+Warning--I didn't find a database entry for "SalmanKhan2015"
+You've used 44 entries,
+            1838 wiz_defined-function locations,
+            1251 strings with 23101 characters,
+and the built_in function-call counts, 11730 in all, are:
+= -- 1037
+> -- 567
+< -- 12
++ -- 205
+- -- 161
+* -- 981
+:= -- 1791
+add.period$ -- 50
+call.type$ -- 44
+change.case$ -- 42
+chr.to.int$ -- 0
+cite$ -- 44
+duplicate$ -- 478
+empty$ -- 1117
+format.name$ -- 161
+if$ -- 2675
+int.to.chr$ -- 0
+int.to.str$ -- 44
+missing$ -- 41
+newline$ -- 217
+num.names$ -- 43
+pop$ -- 140
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 227
+stack$ -- 0
+substring$ -- 861
+swap$ -- 151
+text.length$ -- 12
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 99
+width$ -- 46
+write$ -- 483
+(There was 1 warning)

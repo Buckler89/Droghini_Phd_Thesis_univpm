@@ -1,0 +1,279 @@
+\begin{thebibliography}{10}
+
+\bibitem{eurostat}
+``Eurostat statistic explained: Fertility statistics,'' March 2016.
+
+\bibitem{Carone2006}
+G.~Carone and D.~Costello,
+\newblock ``Can europe afford to grow old?,''
+\newblock {\em Finance and Development}, vol. 43, no. 3, pp. 28--31, 2006.
+
+\bibitem{Dawadi20161188}
+P.~Dawadi, D.~Cook, and M.~Schmitter-Edgecombe,
+\newblock ``Automated cognitive health assessment from smart home-based
+  behavior data,''
+\newblock {\em IEEE Journal of Biomedical and Health Informatics}, vol. 20, no.
+  4, pp. 1188--1194, 2016.
+
+\bibitem{Principi2015a}
+E.~Principi, S.~Squartini, R.~Bonfigli, G.~Ferroni, and F.~Piazza,
+\newblock ``An integrated system for voice command recognition and emergency
+  detection based on audio signals,''
+\newblock {\em Expert Systems with Applications}, vol. 42, no. 13, pp.
+  5668--5683, 2015.
+
+\bibitem{mubashir2013survey}
+M.~Mubashir, L.~Shao, and L.~Seed,
+\newblock ``A survey on fall detection: Principles and approaches,''
+\newblock {\em Neurocomputing}, vol. 100, pp. 144--152, 2013.
+
+\bibitem{dhhsOlderPop}
+``{Department of Health and Human Services: World's older population grows
+  dramatically},''
+  \url{http://www.who.int/en/news-room/fact-sheets/detail/falls},
+\newblock [Online; accessed 30-Oct-2018].
+
+\bibitem{whoFall}
+``{World Healt Organization: Falls},''
+  \url{http://www.who.int/en/news-room/fact-sheets/detail/falls},
+\newblock [Online; accessed 30-Oct-2018].
+
+\bibitem{khan2017review}
+S.~S. Khan and J.~Hoey,
+\newblock ``Review of fall detection techniques: A data availability
+  perspective,''
+\newblock {\em Medical engineering and physics}, vol. 39, pp. 12--22, 2017.
+
+\bibitem{lapierre2017state}
+N.~Lapierre, N.~Neubauer, A.~Miguel-Cruz, A.~R. Rincon, L.~Liu, and
+  J.~Rousseau,
+\newblock ``The state of knowledge on technologies and their use for fall
+  detection: A scoping review,''
+\newblock {\em International journal of medical informatics}, 2017.
+
+\bibitem{pannurat2014automatic}
+N.~Pannurat, S.~Thiemjarus, and E.~Nantajeewarawat,
+\newblock ``Automatic fall monitoring: a review,''
+\newblock {\em Sensors}, vol. 14, no. 7, pp. 12900--12936, 2014.
+
+\bibitem{xu2018new}
+T.~Xu, Y.~Zhou, and J.~Zhu,
+\newblock ``New advances and challenges of fall detection systems: A survey,''
+\newblock {\em Applied Sciences}, vol. 8, no. 3, pp. 418, 2018.
+
+\bibitem{el2013fall}
+N.~El-Bendary, Q.~Tan, F.~C. Pivot, and A.~Lam,
+\newblock ``Fall detection and prevention for the elderly: A review of trends
+  and challenges.,''
+\newblock {\em International Journal on Smart Sensing \& Intelligent Systems},
+  vol. 6, no. 3, 2013.
+
+\bibitem{wu2015radar}
+Q.~Wu, Y.~D. Zhang, W.~Tao, and M.~G. Amin,
+\newblock ``Radar-based fall detection based on doppler time--frequency
+  signatures for assisted living,''
+\newblock {\em IET Radar, Sonar \& Navigation}, vol. 9, no. 2, pp. 164--172,
+  2015.
+
+\bibitem{liu2008vision}
+T.~Liu, H.~Yao, R.~Ji, Y.~Liu, X.~Liu, X.~Sun, P.~Xu, and Z.~Zhang,
+\newblock ``Vision-based semi-supervised homecare with spatial constraint,''
+\newblock in {\em Pacific-Rim Conference on Multimedia}. Springer, 2008, pp.
+  416--425.
+
+\bibitem{werner2011fall}
+F.~Werner, J.~Diermaier, S.~Schmid, and P.~Panek,
+\newblock ``Fall detection with distributed floor-mounted accelerometers: An
+  overview of the development and evaluation of a fall detection system within
+  the project ehome,''
+\newblock in {\em Pervasive Computing Technologies for Healthcare
+  (PervasiveHealth), 2011 5th International Conference on}. IEEE, 2011, pp.
+  354--361.
+
+\bibitem{zigel2009method}
+Y.~Zigel, D.~Litvak, and I.~Gannot,
+\newblock ``A method for automatic fall detection of elderly people using floor
+  vibrations and sound—proof of concept on human mimicking doll falls,''
+\newblock {\em {IEEE} Trans. Biomed. Eng.}, vol. 56, no. 12, pp. 2858--2867,
+  2009.
+
+\bibitem{li2012microphone}
+Y.~Li, K.~Ho, and M.~Popescu,
+\newblock ``A microphone array system for automatic fall detection,''
+\newblock {\em {IEEE} Trans. Biomed. Eng.}, vol. 59, no. 5, pp. 1291--1301,
+  2012.
+
+\bibitem{popescu2008acoustic}
+M.~Popescu, Y.~Li, M.~Skubic, and M.~Rantz,
+\newblock ``An acoustic fall detector system that uses sound height information
+  to reduce the false alarm rate,''
+\newblock in {\em Engineering in Medicine and Biology Society, 2008. EMBS 2008.
+  30th Annual International Conference of the IEEE}. IEEE, 2008, pp.
+  4628--4631.
+
+\bibitem{khan2015unsupervised}
+M.~S. Khan, M.~Yu, P.~Feng, L.~Wang, and J.~Chambers,
+\newblock ``An unsupervised acoustic fall detection system using source
+  separation for sound interference suppression,''
+\newblock {\em Signal processing}, vol. 110, pp. 199--210, 2015.
+
+\bibitem{zhang2009detecting}
+X.-X. Zhang, H.~Liu, Y.~Gao, and D.~H. Hu,
+\newblock ``Detecting abnormal events via hierarchical dirichlet processes,''
+\newblock in {\em Pacific-Asia Conference on Knowledge Discovery and Data
+  Mining}. Springer, 2009, pp. 278--289.
+
+\bibitem{popescu2009acoustic}
+M.~Popescu and A.~Mahnot,
+\newblock ``Acoustic fall detection using one-class classifiers,''
+\newblock in {\em Engineering in Medicine and Biology Society, 2009. EMBC 2009.
+  Annual International Conference of the IEEE}. IEEE, 2009, pp. 3505--3508.
+
+\bibitem{stone2015fall}
+E.~E. Stone and M.~Skubic,
+\newblock ``Fall detection in homes of older adults using the microsoft
+  kinect,''
+\newblock {\em {IEEE} J. Biomed. Health Inform.}, vol. 19, no. 1, pp. 290--301,
+  2015.
+
+\bibitem{Bourke2007}
+A.~Bourke, J.~O'Brien, and G.~Lyons,
+\newblock ``Evaluation of a threshold-based tri-axial accelerometer fall
+  detection algorithm,''
+\newblock {\em Gait and Posture}, vol. 26, no. 2, pp. 194--199, 2007.
+
+\bibitem{Charlon2013}
+Y.~Charlon, N.~Fourty, W.~Bourennane, and E.~Campo,
+\newblock ``Design and evaluation of a device worn for fall detection and
+  localization: Application for the continuous monitoring of risks incurred by
+  dependents in an {A}lzheimer's care unit,''
+\newblock {\em Expert Systems with Applications}, vol. 40, no. 18, pp.
+  7316--7330, 2013.
+
+\bibitem{Ozdemir2014}
+A.~\"{O}zdemir and B.~Barshan,
+\newblock ``{Detecting Falls with Wearable Sensors Using Machine Learning
+  Techniques},''
+\newblock {\em Sensors}, vol. 14, no. 6, pp. 10691--10708, 2014.
+
+\bibitem{Lustrek2015}
+M.~Lustrek, H.~Gjoreski, N.~Gonzalez~Vega, S.~Kozina, B.~Cvetkovic,
+  V.~Mirchevska, and M.~Gams,
+\newblock ``Fall detection using location sensors and accelerometers,''
+\newblock {\em Pervasive Computing}, vol. 14, no. 4, pp. 72--79, Oct 2015.
+
+\bibitem{alwan2006smart}
+M.~Alwan, P.~J. Rajendran, S.~Kell, D.~Mack, S.~Dalal, M.~Wolfe, and R.~Felder,
+\newblock ``A smart and passive floor-vibration based fall detector for
+  elderly,''
+\newblock in {\em Proc. of Inf. Commun. Technol.}, 2006, vol.~1, pp.
+  1003--1007.
+
+\bibitem{Yazar2013}
+A.~Yazar, F.~Keskin, B.~U. T\"{o}reyin, and A.~E. \c{C}etin,
+\newblock ``{Fall detection using single-tree complex wavelet transform},''
+\newblock {\em Pattern Recognition Letters}, vol. 34, pp. 1945--1952, 2013.
+
+\bibitem{zhuang2009acoustic}
+X.~Zhuang, J.~Huang, G.~Potamianos, and M.~Hasegawa-Johnson,
+\newblock ``Acoustic fall detection using {Gaussian} mixture models and {GMM}
+  supervectors,''
+\newblock in {\em Proc. of ICASSP}, Taipei, Taiwan, Apr. 19-24 2009, pp.
+  69--72.
+
+\bibitem{Liu2014}
+L.~Liu, M.~Popescu, M.~Skubic, and M.~Rantz,
+\newblock ``{An automatic fall detection framework using data fusion of Doppler
+  radar and motion sensor network},''
+\newblock in {\em Proc. of the 36th International Conference of the Engineering
+  in Medicine and Biology Society (EMBC)}, 2014, pp. 5940--5943.
+
+\bibitem{Doukas2011}
+C.~N. Doukas and I.~Maglogiannis,
+\newblock ``{Emergency fall incidents detection in assisted living environments
+  utilizing motion, sound, and visual perceptual components},''
+\newblock {\em IEEE Trans. Inf. Technol. Biomed.}, vol. 15, no. 2, pp. 277--89,
+  Mar. 2011.
+
+\bibitem{Toreyin2008}
+B.~Toreyin, A.~Soyer, I.~Onaran, and E.~Cetin,
+\newblock ``Falling person detection using multi-sensor signal processing,''
+\newblock {\em EURASIP Journal on Advances in Signal Processing}, vol. 2008,
+  no. 1, pp. 7, 2008.
+
+\bibitem{cortes95}
+C.~Cortes and V.~Vapnik,
+\newblock ``{Support-vector networks},''
+\newblock {\em Machine learning}, vol. 20, no. 3, pp. 273--297, 1995.
+
+\bibitem{bishop06}
+C.~Bishop,
+\newblock {\em Pattern Recognition and Machine Learning},
+\newblock Springer Science+Business Media, LLC, New York, 2006.
+
+\bibitem{scholkopf2000support}
+B.~Sch{\"o}lkopf, R.~C. Williamson, A.~J. Smola, J.~Shawe-Taylor, and J.~C.
+  Platt,
+\newblock ``Support vector method for novelty detection,''
+\newblock in {\em Advances in neural information processing systems}, 2000, pp.
+  582--588.
+
+\bibitem{scholkopf2000}
+B.~Sch{\"o}lkopf, R.~C. Williamson, A.~J. Smola, J.~Shawe-Taylor, and J.~C.
+  Platt,
+\newblock ``Support vector method for novelty detection,''
+\newblock in {\em Advances in Neural Information Processing Systems}. 2000,
+  vol.~12, pp. 582--588, MIT Press.
+
+\bibitem{boyd2004convex}
+S.~Boyd and L.~Vandenberghe,
+\newblock {\em Convex optimization},
+\newblock Cambridge University Press, 2004.
+
+\bibitem{spinsantefalldata}
+E.~C. E. G. S. G.~S. Spinsante,
+\newblock ``Tst fall detection dataset v1,'' 2016.
+
+\bibitem{kwolek2014human}
+B.~Kwolek and M.~Kepski,
+\newblock ``Human fall detection on embedded platform using depth maps and
+  wireless accelerometer,''
+\newblock {\em Computer methods and programs in biomedicine}, vol. 117, no. 3,
+  pp. 489--501, 2014.
+
+\bibitem{charfi2013optimized}
+I.~Charfi, J.~Miteran, J.~Dubois, M.~Atri, and R.~Tourki,
+\newblock ``Optimized spatio-temporal descriptors for real-time fall detection:
+  comparison of support vector machine and adaboost-based classification,''
+\newblock {\em Journal of Electronic Imaging}, vol. 22, no. 4, pp. 041106,
+  2013.
+
+\bibitem{s140610691}
+A.~T. Özdemir and B.~Barshan,
+\newblock ``Detecting falls with wearable sensors using machine learning
+  techniques,''
+\newblock {\em Sensors}, vol. 14, no. 6, pp. 10691--10708, 2014.
+
+\bibitem{s17071513}
+E.~Casilari, J.-A. Santoyo-Ramón, and J.-M. Cano-García,
+\newblock ``Analysis of public datasets for wearable fall detection systems,''
+\newblock {\em Sensors}, vol. 17, no. 7, 2017.
+
+\bibitem{cirdodataset}
+M.~Vacher, S.~Bouakaz, M.-E.~B. Chaumon, F.~Aman, R.~A. Khan, S.~Bekkadja,
+  F.~Portet, E.~Guillou, S.~Rossato, and B.~Lecouteux,
+\newblock ``The cirdo corpus: Comprehensive audio/video database of domestic
+  falls of elderly people,''
+\newblock in {\em Proceedings of the Tenth International Conference on Language
+  Resources and Evaluation (LREC 2016)}, N.~C.~C. Chair), K.~Choukri,
+  T.~Declerck, S.~Goggi, M.~Grobelnik, B.~Maegaard, J.~Mariani, H.~Mazo,
+  A.~Moreno, J.~Odijk, and S.~Piperidis, Eds., Paris, France, may 2016,
+  European Language Resources Association (ELRA).
+
+\bibitem{Olivetti15}
+P.~Olivetti,
+\newblock ``Sistema per la rilevazione e prevenzione di caduta anziani,
+  mediante cassa di risonanza a pavimento,'' Italian Patent 0001416548, July 1,
+  2015.
+
+\end{thebibliography}

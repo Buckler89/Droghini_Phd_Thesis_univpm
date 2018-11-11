@@ -1,0 +1,28 @@
+\select@language {italian}
+\select@language {italian}
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Fall Detection Systems}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}State-Of-The-Art}{3}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Problem Statement}{5}{subsection.1.2.1}
+\contentsline {chapter}{\numberline {2}Background}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Support Vector Machines}{7}{section.2.1}
+\contentsline {paragraph}{\nonumberline Linear Support Vector Machines}{7}{section*.5}
+\contentsline {paragraph}{\nonumberline Non-Linear Support Vector Machines}{9}{section*.7}
+\contentsline {subsection}{\numberline {2.1.1}One-Class Support Vector Machines}{10}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}Gaussian Mixture Model}{11}{section.2.2}
+\contentsline {section}{\numberline {2.3}K-Nearest Neighbor}{12}{section.2.3}
+\contentsline {section}{\numberline {2.4}Deep Neural Network}{12}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Convolutional Neural Network}{12}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Autoencoder}{12}{subsection.2.4.2}
+\contentsline {chapter}{\numberline {3}Dataset}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}The floor acoustic sensor}{13}{section.3.1}
+\contentsline {section}{\numberline {3.2}The fall events dataset: A3Fall-v1.0}{14}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}The recording setup}{14}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Description}{15}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Signal analysis}{18}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Supervised Approach}{23}{chapter.4}
+\contentsline {chapter}{\numberline {5}Unsupervised Approach}{25}{chapter.5}
+\contentsline {chapter}{\numberline {6}Semi-Unsupervised Approach}{27}{chapter.6}
+\contentsline {chapter}{\numberline {7}Other contributions}{29}{chapter.7}
+\contentsline {chapter}{List of Publications}{31}{section*.17}

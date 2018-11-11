@@ -109,8 +109,10 @@ The most popular kernel functions are:
 \end{itemize}
 
 Up to now the SVM algorithm for binary classification has been described. This algorithm can be extended to the multi-class case using the ``one vs all'' technique \cite{bishop06}.
+
+
 \subsection{One-Class Support Vector Machines}
-One-Class SVM (OCSVM) proposed by Sch{\"o}lkopf et al. \cite{scholkopf2000support} is a natural extension of the support vector algorithm to the case of unlabeled data that makes them useful for novelty detection problems. In the OCSVM, a new parameter $\nu$ 
+One-Class SVM (OCSVM) proposed by Sch{\"o}lkopf et al. \cite{scholkopf2000support} is the extension of the support vector machine to the case of unlabeled data that makes them useful for novelty detection problems. In the OCSVM, a new parameter $\nu$ 
 that controls the trade-off between maximizing the distance of the hyperplane from the origin and the number of data points contained by the hyperplane has been introduced. To separate the data from the origin, the following quadratic program has to be solved:
 \begin{equation}
 %\begin{eqnarray}
@@ -119,16 +121,34 @@ that controls the trade-off between maximizing the distance of the hyperplane fr
 %\end{eqnarray}S
 \end{equation}
 \begin{equation}\nonumber
-\textrm{ subject to } ( \vec{w}\cdot \phi(\vec{x}_i))  \geq \rho - \xi_i \textrm{ and } \xi_i \geq 0 \textrm{ for } i = 1 \cdots m.
+\textrm{ subject to }\quad ( \vec{w}\cdot \phi(\vec{x}_i))  \geq \rho - \xi_i \textrm{ and } \xi_i \geq 0 \textrm{ for } i = 1 \cdots m.
 \end{equation}
-Now the optimization problem of the OCSVM can be solved as the dual quadratic problem
+In fact, One-Class SVM consists in a discriminant function that takes the value $+1$ in a small region that captures the majority of the data points of a set and $-1$ outside that region \cite{scholkopf2000}. The discriminant function has the following expression:
+\begin{equation}\label{eq:svm}
+f(\mathbf{x}) = \mathop{\mathrm{sgn}} \left( \sum_{i} \alpha_i \cdot k(\mathbf{x}_i,\mathbf{x}) - \rho\right),
+\end{equation}
+where $ \vec{x}_i$ denotes the $i$-th support vector. The position of the hyperplane, thus, defines the region that represents normal data points. For each point $\textbf{x}$ that lies outside this region, the function $f( \vec{x})$ takes the value $-1$, whereas for point inside the region, it takes the value $+1$.
+The terms $\lambda_i$ can be found by solving the solution to the dual problem:
+
+
+The terms $\lambda_i$ can be found by solving the solution to the dual problem:
 \begin{equation}
 \min_{\lambda} \frac{1}{2} \sum_{ij}^{} K(\vec{x_i}, \vec{x_j}) 
 \end{equation}
 \begin{equation}\nonumber
-\textrm{ subject to } 0 \leq \lambda_i \leq \frac{1}{\nu l} \textrm{ and } \sum_{i}^{} \lambda_i = 1,
+\textrm{ subject to }\quad 0 \leq \lambda_i \leq \frac{1}{\nu l}\quad \textrm{ and }\quad \sum_{i}^{} \lambda_i = 1,
 \end{equation}
 where $\lambda_i$ is a Lagrange  multiplier and $l$ is the number of points in the  training dataset.
+The term $\nu \in (0,1]$ is an hyperparameter of the algorithm that is determined on a validation set. 
+
+The offset $\rho$ can be obtained from the Karush-Kuhn-Tucker (KKT) condition with the expression \cite{boyd2004convex}:
+\begin{equation}
+\rho = \sum_j \lambda_i k(\vec{x}_j,\vec{x}_i),
+\end{equation}
+which is satisfied for any $\lambda_i$ that is not at the upper or lower bound.
+
+
+
 \section{Gaussian Mixture Model}
 https://pdfs.semanticscholar.org/734b/07b53c23f74a3b004d7fe341ae4fce462fc6.pdf
 A Gaussian Mixture Model (GMM) is a parametric probability density function represented as a weighted sum of Gaussian component densities. Generally, GMMs are used as a parametric model of the probability distribution of some features.  To estimate the parameter of GMM the algorithm Expectation-Maximization (EM) algorithm or Maximum A Posteriori (MAP)  are used starting from a well-trained prior model usually named Universal Background Model (UBM).
