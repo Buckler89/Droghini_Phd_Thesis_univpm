@@ -2,3 +2,245 @@
 qua vengono presentati sia il metodo multilabel classifier GMM-UBM SVM (ESWN) che 
 il binary  GMM-UBM SVM (WIRN2016)
 
+
+
+\section{Support-Vector Machine based algorithm for evens fall classification}
+\label{sec:algorithm}
+The fall detection task consists in recognize which object produced the pattern of a signal and it mainly consists of two subtasks: the location of the time boundaries of the fall event and the classification of that event. In this section, we concentrate on the second subtask, since the main objective is determining the performance of the acoustic sensor as compared to common aerial microphones. The entire falls detection activity will be addressed in the works presented below.
+
+The fall classification algorithm is composed of a feature extraction stage and a classification stage. The first extracts MFCCs from the input audio signal, while the second classifies the audio event by means of Gaussian means supervectors and SVM. Following is a detailed description of the two stages.
+
+\subsection{Feature extraction}\label{ssec:fx}
+Despite MFCCs were originally developed for speech and speaker recognition tasks, they have been successfully applied also for acoustic event classification \cite{Temko2009} and fall detection \cite{zigel2009method}.
+
+\begin{figure}[b]
+	\centering
+	\includegraphics[width=0.75\columnwidth]{img/mfcc_bn.pdf}
+	\caption{The MFCC feature extraction pipeline.} \label{fig:mfcc}
+\end{figure}
+
+The block-scheme of the MFCC feature extraction pipeline is shown in \figref{fig:mfcc}. The first processing step is the pre-emphasis of the input signal, which consists in applying a filter whose transfer function is:
+\begin{equation}
+G(z) = 1 - \alpha z^{-1}.
+\end{equation}
+Usually $0.9<\alpha\leq1.0$ and here it has been set to 0.97. The objective of pre-emphasis is to remove the DC components and to raise the high-frequency part of the spectrum.
+
+The signal is then segmented in frames 16\,ms long overlapped by 8\,ms and multiplied with a Hamming window. For each frame, the Discrete Fourier Transform (DFT) is calculated and filtered with a filterbank composed of 29 triangular filters uniformly spaced on the mel scale. 
+
+Denoting with $S(i)$ the DFT of a frame and $i$ the frequency bin, the output of the ``Mel Filterbank \& Frequency Integration'' block in \figref{fig:mfcc} is
+\begin{equation}
+mel(k) = \sum_{i=ini(k)}^{end(k)}|S(i)|^2 W_k(i), \qquad k=1,2,\ldots,N
+\end{equation}
+where $mel(k)$ is the energy of the $k$-th subband, $W_k(i)$ is the frequency response of the $k$-th filter, $ini(k)$ and $end(k)$ are starting and ending frequency indices of that filter and $N$ is the number of filters in the bank, which in this case is 29. The terms $mel(k)$ are often named ``mel coefficients''.
+
+The final steps for the calculation of the $j$-th MFCC $c(j)$ is the logarithm and the Discrete Cosine Transform (DCT):
+\begin{equation}
+\begin{aligned}
+c(j) = \sum_{k=1}^{N}\log \left[ H(k)\right] \cos\left[\frac{\pi j}{N}(k-0.5)\right], \quad j=0,1,\ldots,M-1\leq N
+\end{aligned}
+\end{equation}
+The set $\{c(0),c(1),\ldots,c(M-1)\}$ forms the static coefficients elements of the feature vector. Here $M$ has been set to 13. The final feature vector is composed of 39 coefficients, i.e., the 13 static coefficients plus their first and second derivatives. %  MFCCs have been extracted with the HCopy tool of the Hidden Markov Model Toolkit \cite{Young2006}.
+
+%Cepstral Mean Normalization (CMN) is then applied to MFCCs to increase the robustness against channel distortions. CMN consists in subtracting the mean of each cepstral coefficients calculated over the entire event:
+%\begin{equation}
+%c'_t(n) = c_t(n) - \frac{1}{T}\sum_{l=0}^{T-1}c_l(n), \qquad t=0,1,\ldots,T-1
+%\end{equation}
+%where $t$ denotes the time frame index and $T$ is the event length in frames.
+
+\subsection{Classification stage}
+The classification stage employs Gaussian Mean Supervectors (GMS) and a Support Vector Machine classifier as in speaker recognition systems \cite{kinnunen10}. The algorithms consists in modelling the entire acoustic space with a Universal Background Model (UBM) represented by mixture of gaussians (Gaussian Mixture Model, GMM). The GMM is trained using the Expectation Maximization (EM) algorithm \cite{bilmes1998gentle} on a large corpus of acoustic events. Then, for each acoustic event class in the training corpus a GMS is calculated by adapting the UBM with the Maximum A Posteriori (MAP) algorithm \cite{reynolds10} and concatenating the adapted GMM mean values. The block diagram of the approach is shown in \figref{fig:gms}. The final step of the training phase is the estimation of the SVM parameters. In this work, an SVM with a radial basis function has been used. The complete diagram of the training phase is shown in \figref{fig:training-scheme}.
+
+Classification is performed by extracting the supervector from an input audio signal as in the training phase, and then determining the acoustic event class evaluating the SVM discriminant function (\figref{fig:scheme-classify-color}). Since the number of classes is greater than two and SVMs are binary classifiers, the ``one versus all''  technique has been adopted \cite{bishop06}. LIBSVM \cite{chang11} has been employed both in the training and testing phases of the SVM.
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.75\columnwidth]{img/gms_bn.pdf}
+	\caption{Block scheme for extracting a gaussian mean supervector from MFCCs and a trained UBM.} \label{fig:gms}
+\end{figure}
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.3334\columnwidth]{img/training_scheme.pdf}
+	\caption{Block scheme for training the UBM and SVM models.}
+	\label{fig:training-scheme}
+\end{figure}
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.333\columnwidth]{img/scheme_classify_bn.pdf}
+	\caption{Block-scheme of the fall classification phase.}
+	\label{fig:scheme-classify-color}
+\end{figure}
+
+\section{Experiments}\label{sec:experiments}
+
+This section firstly presents presents which portion of the dataset described in \secref{sec:dataset} has been used in this work, then the classification performance of the algorithm. 
+
+\subsection{Dataset}
+
+All the experiments have been conducted data related to R0 room only. In particular, in order to compare the performance of the FAS with a standard aerial microphone, not all data concerning all the aerial microphones array have been used but only the one of the microphone closest to the wall (see \figref{fig:room}). Moreover, signals have been downsampled to 16\,kHz and the resolution has been reduced to 16\,bit. In order to obtain a balanced dataset, for each object andfor each distance, 11 fall events have been randomly picked for a total of 44 events perobject, while all the 44 simulated human fall with the manikin has been selected. In addition, the three musical track recored in the R0 room have been employed to create a noisy version ofthe dataset by digitally adding a random segment of the recorded musical tracksto the ``clean'' datasets as was done for the analysis of the signals in \secref{ssec:sig_analysis}. In particular, the analysis presented in \secref{ssec:sig_analysis} suggested the authors that the standard MFCC extraction pipeline can be modified in order to better exploit the properties the floor acoustic sensor. In particular, the analysis led to the following considerations:
+\begin{itemize}
+	\item The pre-emphasis filter is an inheritance of automatic speech recognition systems, where the input signal is the human voice. Since the effect of the filter is to enhance the high frequency components of the signal and the floor sensor is more sensitive to low frequencies, removing the pre-emphasis could improve the classification performance.
+	\item The majority of the energy of the signals acquired with the floor acoustic sensor is concentrated at frequencies below 1.5\,kHz. This suggest that introducing a low-pass filter that removes low SNR frequencies may improve the classification performance.
+\end{itemize}
+In \tableref{tab:eswa_dataset} the data used for this approach are summarized.
+\begin{table}[t]
+	\caption{Data related to R0 room used in this work.}
+	\label{tab:eswa_dataset}
+	\begin{center}
+		\begin{tabular}[t]{c|c}
+			
+			\hline
+			\textbf{Classes}  & \textbf{Nr. of occurrences} \\ %\cline{2-5} 
+			%& \hspace{8pt}Clean\hspace{8pt}  & \hspace{6pt}Clean\hspace{6pt}   \\ 
+			\hline
+			
+			Basket      			&   44    	\\
+			Fork        			&   44     	\\
+			Ball       				&   44    	\\
+			Book        			&   44    	\\
+			Bag         			&   44    	\\
+			Chair       			&   44    	\\
+			$\,$ Manikin Doll $\,$ 	&   44    	\\
+			\hline
+			\textbf{Backgrounds} & \textbf{Total length (s)}\\			
+			%			Human Activity  		& 1135  &   3050&   580   	\\
+			%			Music					& 1395  &	4330&   3345  	\\
+			%			Television				& 0   	&	1675&   1625  	\\
+			Classic Music  			&   882   	\\
+			Rock Music  			&   616   	\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\subsection{Experimental setup}
+The MFCC extraction pipeline has been firstly parametrised as described in \secref{ssec:fx}, then, based on the study presented in the previous section, two additional pipelines have been tested:
+\begin{itemize}
+	\item no pre-emphasis (NOPRE): the pre-emphasis stage has been removed from the feature extraction pipeline;
+	\item no pre-emphasis plus low-pass filtering (NOPRELP): the pre-emphasis stage has been removed and the maximum frequency of the mel filterbank has been set to 4\,kHz.
+\end{itemize}
+The standard MFCC extraction pipeline described in \secref{ssec:fx} will be denoted with ``STD'' in the results.
+
+Regarding the UBM, it has been trained until convergence with the EM algorithm setting the threshold value to $10^{-3}$. The same value has been employed in the MAP adaptation algorithm, but the maximum number of iterations was set to 5.
+
+Due to the limited amount of data, the experiments have been conducted with the leave-one-label-out method: fall events recorded at all distances but one were employed for training and validation, while the remaining for testing. The validation phase consisted in searching for the number of components of the UBM and for the SVM hyperparameters which yielded the best results. In particular, the number of components of the UBM assumed the values $\{ 1,2,\ldots,64 \}$, while the SVM hyperparameters $C$ and $\gamma$ the values $\{ 2^{-5},2^{-3},\ldots,2^{15} \}$ and $\{ 2^{-15},2^{-13},\ldots,2^{3} \}$ respectively. 
+
+The performance was evaluated both on clean data and on data corrupted with the music interference. In particular, the system was evaluated in matched condition, where the acoustic scenario of the training, validation and test data is the same, in mismatched condition, where training data is clean and testing data is corrupted with music, and in multi-condition, where training data and testing data contain both clean signals and corrupted signals. In the latter case, the training, validation and test sets have been divided so that they contain 1/3 of clean data and 2/3 of noisy data.
+
+The performance has been evaluated in terms of precision ($P$), recall ($R$) and F$_1$-Measure ($F$) per class and the values have then been averaged. The metrics definitions for class $i$ is:
+\begin{align}
+P_i &=  \frac{C(i,i) }{\sum_j C(j,i)}, \\
+R_i &=  \frac{C(i,i) }{\sum_j C(i,j)}, \\
+F_{i} &= \frac{2P_iR_i}{P_i+R_i},
+\end{align}
+where $C=[C(i,j)]$ is the confusion matrix.
+
+%\begin{table}[t]
+%\centering
+%\caption{Number of fall events employed for training, validation and testing. \textbf{@Diego: completare.}}\label{tbl:tvtsplit}
+%\begin{footnotesize}
+%\begin{tabular}{r | c c c c c c c | c}
+%\hline						 
+%						 & \textbf{Volleyball} & \textbf{Basket} & \textbf{Book} & \textbf{Fork} & \textbf{Chair} & \textbf{Bag} & \textbf{Doll} & \textbf{Total} \\						 
+%\hline
+%\textbf{Training}     & 32 & 32 & 32 & 32 & 48 & 32 & -- &    --      \\
+%\textbf{Validation}   & 16 & 16 & 16 & 16 & 24 & 16 & --  &    --         \\
+%\textbf{Testing}      & 16 & 16 & 16 & 16 & 24 & 16 & -- &     --        \\
+%\hline
+%\end{tabular}
+%\end{footnotesize}
+%\end{table}
+
+%The best performance was obtained by using an UBM with 16 mixtures, $C=\{2,2,2^{-1},2\}$ and $\gamma=\{2^{-9},2^{-9},2^{-7},2^{-7} \}$. The values of $C$ and $\gamma$ are four since they are specific for each test fold.
+
+\subsection{Results in matched condition}
+\figref{fig:results_match} shows the results obtained in matched condition. As shown in the figure, the FAS exceeds the F$_1$-Measure of the aerial microphone both with clean and noisy signals regardless the feature setup employed. In particular, in clean conditions the aerial microphone achieves the highest F$_1$-Measure with standard MFCCs, while the FAS with the NOPRELP ones, which results in 6.50\% absolute improvement. In noisy conditions, the aerial microphones best performance is again achieved with STD features, while the FAS one is achieved with the NOPRE features, with the NOPRELP setup performing almost the same. The absolute improvement of the FAS respect to the aerial microphone is 5.36\%.
+
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}[b]{0.48\textwidth}
+		\includegraphics[width=\textwidth]{img/pgfsources/16_matched_clean/16_matched_CLEAN.pdf}
+		\caption{}\label{fig:results_match_clean}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{img/pgfsources/16_matched_noisy/16_matched_NOISY.pdf}
+		\caption{}\label{fig:results_match_noisy}
+	\end{subfigure}
+	\caption{Fall classification performance in matched condition with clean (a) and noisy signals (b).} \label{fig:results_match}
+\end{figure}
+
+Focusing on the FAS performance with the various feature extraction pipelines, the highest F$_1$-Measure is obtained by removing the pre-emphasis and low-pass filtering the signals (NOPRELP) in clean conditions. Notice, however, the standard pipeline performs almost the same, thus in this condition the influence is minimal. The sole removal of the pre-emphasis, on the other hand, is detrimental for the classification performance. The opposite occurs in noisy condition, where the removal of the pre-emphasis improves the results by 3.99\%. Low-pass filtering, on the other hand, does not give further improvements. Overall, the feature pipeline that gives the highest F$_1$-Measure is the NOPRELP, as argued in \secref{ssec:sig_analysis}.
+
+Further insights on the results are given by the confusion matrices of the aerial microphone (\tableref{tbl:cm_mic_clean_matched_np}) and of the FAS (\tableref{tbl:cm_fas_clean_matched_npre4k}) for the feature pipeline giving the highest F$_1$-Measure. With the only exception of the basket falls, the FAS is able to achieve superior performance for all the objects in the dataset. In particular, the doll F$_1$-Measure improves by 9.89\% respect to the aerial microphone. The object exhibiting the lowest performance regardless the sensor is the book: this can denote a limit in the algorithm suggesting that further improvements could be obtained by properly modifying the features or the classifier.
+
+\begin{table}[t]
+	\caption{Aerial microphone confusion matrix related to the STD configuration in clean condition. The average precision is 91.48\%, the average recall 91.23\%, and the average F$_1$-Measure 91.04\%.}
+	\label{tbl:cm_mic_clean_matched_np}
+	\centering
+	\footnotesize
+	\begin{tabular} {r  *{7}{E} | c|}
+		\hhline{~*{8}-}
+		\multicolumn{1}{c}{} & \multicolumn{1}{|c}{\textbf{Doll}} & \multicolumn{1}{c}{\textbf{Bag}} & \multicolumn{1}{c}{\textbf{Ball}} & \multicolumn{1}{c}{\textbf{Basket}} & \multicolumn{1}{c}{\textbf{Book}} & \multicolumn{1}{c}{\textbf{Chair}} & \multicolumn{1}{c|}{\textbf{Fork}} 
+		& \multicolumn{1}{c|}{\textbf{F$_1$}}\\
+		\hhline{*{9}{-|}}
+		\multicolumn{1}{|r|}{~\textbf{Doll}} & 93.18 & 0 & 0 & 0 & 2.27 & 4.55 & 0 & 90.11 \\ 
+		\multicolumn{1}{|r|}{~\textbf{Bag}} & 0 & 86.36 & 0 & 0 & 13.64 & 0 & 0 & 82.61 \\
+		\multicolumn{1}{|r|}{~\textbf{Ball}} & 0 & 0 & 100.00 & 0 & 0 & 0 & 0 & 100.00 \\  
+		\multicolumn{1}{|r|}{~\textbf{Basket}} & 2.27 & 0 & 0 & 97.73 & 0 & 0 & 0 & 98.85 \\ %\hline
+		\multicolumn{1}{|r|}{~\textbf{Book}} & 0 & 22.73 & 0 & 0 & 77.27 & 0 & 0 & 78.16\\ %hline
+		\multicolumn{1}{|r|}{~\textbf{Chair}} & 11.36 & 0 & 0 & 0 & 4.55 & 84.09 & 0 & 89.16 \\ %\hline
+		\multicolumn{1}{|r|}{~\textbf{Fork}} & 0 & 0 & 0 & 0 & 0 & 0 & 100 & 100.00\\ \hhline{*{9}{-}}
+		\multicolumn{1}{|r|}{~\textbf{Precision}} & \multicolumn{1}{c}{87.27} & \multicolumn{1}{c}{79.17} & \multicolumn{1}{c}{100.00} & \multicolumn{1}{c}{100.00} & \multicolumn{1}{c}{79.07} & \multicolumn{1}{c}{94.87} & \multicolumn{1}{c|}{100.00} & \multicolumn{1}{c}{} \\ \hhline{*{8}{-}}
+	\end{tabular}
+\end{table}
+
+\begin{table}[t]
+	\caption{FAS confusion matrix related to the NPRELP configuration in clean condition. The average precision is 98.13\%, the average recall 98.05\%, and the average F$_1$-Measure 98.06\%.} 
+	\label{tbl:cm_fas_clean_matched_npre4k}
+	\centering
+	\footnotesize
+	\begin{tabular} {r  *{7}{E} | c|}
+		\hhline{~*{8}-}
+		\multicolumn{1}{c}{} & \multicolumn{1}{|c}{\textbf{Doll}} & \multicolumn{1}{c}{\textbf{Bag}} & \multicolumn{1}{c}{\textbf{Ball}} & \multicolumn{1}{c}{\textbf{Basket}} & \multicolumn{1}{c}{\textbf{Book}} & \multicolumn{1}{c}{\textbf{Chair}} & \multicolumn{1}{c|}{\textbf{Fork}} 
+		& \multicolumn{1}{c|}{\textbf{F$_1$}}\\
+		\hhline{*{9}{-|}}
+		\multicolumn{1}{|r|}{~\textbf{Doll}} & 100.00 & 0 & 0 & 0 & 0 & 0 & 0& 100.00 \\ 
+		\multicolumn{1}{|r|}{~\textbf{Bag}} & 0 & 97.73 & 0 & 0 & 2.27 & 0 & 0& 97.73 \\ 
+		\multicolumn{1}{|r|}{~\textbf{Ball}} & 0 & 0 & 100.00 & 0 & 0 & 0 & 0  & 100.00 \\   
+		\multicolumn{1}{|r|}{~\textbf{Basket}} &  0 & 0 & 0 & 95.45 & 2.27 & 2.27 & 0 & 97.67 \\  %\hline
+		\multicolumn{1}{|r|}{~\textbf{Book}} &  0 & 2.27 & 0 & 0 & 97.73 & 0 & 0 & 94.51 \\  %hline
+		\multicolumn{1}{|r|}{~\textbf{Chair}} & 0 & 0 & 0 & 0 & 4.55 & 95.45 & 0  & 96.55 \\  %\hline
+		\multicolumn{1}{|r|}{~\textbf{Fork}} & 0 & 0 & 0 & 0 & 0 & 0 & 100.00  & 100.00 \\   \hhline{*{9}{-}}
+		\multicolumn{1}{|r|}{~\textbf{Precision}} & \multicolumn{1}{c}{100.00} & \multicolumn{1}{c}{97.73} & \multicolumn{1}{c}{100.00} & \multicolumn{1}{c}{100.00} & \multicolumn{1}{c}{91.49} & \multicolumn{1}{c}{97.67} & \multicolumn{1}{c|}{100.00} & \multicolumn{1}{c}{} \\ \hhline{*{8}{-}}
+	\end{tabular}
+\end{table}
+
+\subsection{Results in mismatched condition}
+\figref{fig:results_mismatch} shows the results obtained in mismatched condition, i.e., with training and validation performed on clean data and testing on noisy data. As expected, both the performance of the aerial microphone and of the floor sensor decrease. Notice, however, that regardless the features employed, the floor sensor is able to achieve considerably higher F$_1$-Measures respect to the aerial microphone. In particular, the floor sensor highest F$_1$-Measure, obtained with the NPRE features, exceeds the one of the aerial microphone obtained with the standard MFCC pipeline by 8.76\%. This value confirms that the higher SNR of the floor sensor signals actually results in better classification performance.
+
+Regarding the features, the hypothesis that the pre-emphasis could be detrimental for the performance of the sensor is confirmed: indeed, the highest F$_1$-Measure has been obtained with the NOPRE configuration and exceeds the one of the standard MFCC pipeline by 1.32\%. Differently, the introduction of the low-pass filter does not result in better performance respect to the NOPRE case. %The motivation is probably that despite being noisy, the information contained in the higher frequencies is still relevant for classification.
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.75\textwidth]{img/pgfsources/16_mismatched/16_mismatched}
+	\caption{Fall classification performance in mismatched condition.} \label{fig:results_mismatch}
+\end{figure}
+
+\subsection{Results in multicondition}
+\figref{fig:results_multi} shows the results obtained in multicondition, i.e., when training and test sets both contain clean and noisy data. The results further confirm the superiority of the FAS respect to the aerial microphone, with the first reaching 90.82\% using the NOPRE features and the latter reaching 85.28\% using the standard MFCC pipeline. Regarding the features, \figref{fig:results_multi} confirms that removing the pre-emphasis indeed improves classification results, while introducing the low-pass filtering does not give further benefits.
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.75\textwidth]{img/pgfsources/16_multicondition/16_multicondition}
+	\caption{Fall classification performance in multicondition.} \label{fig:results_multi}
+\end{figure}
+
+\subsection{Final remarks}
+The experimental results taken as a whole provide important insights on the system behavior and allow us to express possible future directions for its improvement. In particular, the experiments demonstrated the superiority of the floor acoustic sensor compared to the aerial microphone. The results in matched condition are notable, since the F$_1$-Measure is greater than 98\% in clean condition and close to 90\% in noisy condition. The experiment in matched condition is important to compare the performance of the two sensors, but it puts the classifier in a favourable scenario. The mismatched condition is closer to a real scenario, where the classifier is trained on a dataset whose characteristics differ from testing ones. The floor sensor still achieves higher results compared to the aerial microphone, but respect to the matched condition they are considerably lower. This suggests that there is room for improvement both on the sensor side and on the algorithmic side.
+
+Regarding the sensor, the insertion of isolating material in the enclosure would further reduce the impact of external interferences. On the algorithmic side, different low-level features could be employed instead of MFCCs. In particular, recalling the works on speech recognition systems, Power Normalized Cepstral Coefficients (PNCCs) \cite{Kim12} exhibited good performance in noisy conditions and could be considered also for fall classification. In addition, the SVM classifier here employed has not been designed to recognize a specific class. In the latter case, e.g., focusing on the human fall class, the problem can be tackled in two ways: as a two class problem, where one class is the class of interest and the other comprises ``the rest of the world'' that will be addressed in \secref{sec:biclass_svm} or as a novelty detection problem, where the ``novel'' events are represented by the specific class occurrence that will be addressed in \secref{sec:ocsvm}. In both cases, the classification task is simpler, since the number of classes to discriminate is reduced and the overall performance is expected to increase \cite{bishop06}.
+
+\section{Binary SVM based classifier for human fall detection}
+\label{sec:biclass_svm}
+

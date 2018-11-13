@@ -12,17 +12,33 @@
 \contentsline {subsection}{\numberline {2.1.1}One-Class Support Vector Machines}{10}{subsection.2.1.1}
 \contentsline {section}{\numberline {2.2}Gaussian Mixture Model}{11}{section.2.2}
 \contentsline {section}{\numberline {2.3}K-Nearest Neighbor}{12}{section.2.3}
-\contentsline {section}{\numberline {2.4}Deep Neural Network}{12}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Convolutional Neural Network}{12}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Autoencoder}{12}{subsection.2.4.2}
-\contentsline {chapter}{\numberline {3}Dataset}{13}{chapter.3}
-\contentsline {section}{\numberline {3.1}The floor acoustic sensor}{13}{section.3.1}
-\contentsline {section}{\numberline {3.2}The fall events dataset: A3Fall-v1.0}{14}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}The recording setup}{14}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Description}{15}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Signal analysis}{18}{subsection.3.2.3}
-\contentsline {chapter}{\numberline {4}Supervised Approach}{23}{chapter.4}
-\contentsline {chapter}{\numberline {5}Unsupervised Approach}{25}{chapter.5}
-\contentsline {chapter}{\numberline {6}Semi-Unsupervised Approach}{27}{chapter.6}
-\contentsline {chapter}{\numberline {7}Other contributions}{29}{chapter.7}
-\contentsline {chapter}{List of Publications}{31}{section*.17}
+\contentsline {section}{\numberline {2.4}Deep Neural Network (DNN)}{12}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Stochastic gradient descent (SGD)}{20}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Autoencoder}{22}{subsection.2.4.2}
+\contentsline {chapter}{\numberline {3}Dataset}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}The floor acoustic sensor}{25}{section.3.1}
+\contentsline {section}{\numberline {3.2}The fall events dataset: A3Fall-v1.0}{26}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}The recording setup}{26}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Description}{27}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Signal analysis}{30}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Supervised Approach}{35}{chapter.4}
+\contentsline {section}{\numberline {4.1}Support-Vector Machine based algorithm for evens fall classification}{35}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Feature extraction}{35}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Classification stage}{36}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Experiments}{38}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Dataset}{38}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Experimental setup}{39}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Results in matched condition}{40}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Results in mismatched condition}{41}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Results in multicondition}{42}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}Final remarks}{43}{subsection.4.2.6}
+\contentsline {section}{\numberline {4.3}Binary SVM based classifier for human fall detection}{45}{section.4.3}
+\contentsline {chapter}{\numberline {5}Unsupervised Approach}{47}{chapter.5}
+\contentsline {section}{\numberline {5.1}Novelty detection algorithm for human fall detection based on One-Class Support Vector Machine}{47}{section.5.1}
+\contentsline {section}{\numberline {5.2}End-To-End Unsupervised Approach employing Convolutional Neural Network Autoencoders for Human Fall Detection}{47}{section.5.2}
+\contentsline {chapter}{\numberline {6}Semi-Unsupervised Approach}{49}{chapter.6}
+\contentsline {section}{\numberline {6.1}A Combined One-Class SVM and Template Matching Approach for User-Aided Human Fall Detection}{49}{section.6.1}
+\contentsline {section}{\numberline {6.2}Few-shot Siamese Neural Networks employing Audio features for Human-Fall Detection}{49}{section.6.2}
+\contentsline {section}{\numberline {6.3}Audio Metric Learning by using Siamese Autoencoders for One-Shot Human Fall Detection}{49}{section.6.3}
+\contentsline {chapter}{\numberline {7}Other contributions}{51}{chapter.7}
+\contentsline {chapter}{List of Publications}{53}{section*.41}

@@ -12,6 +12,7 @@
 \usepackage{booktabs}
 \usepackage{framed}
 \usepackage{algorithm,algpseudocode}
+\usepackage[table]{xcolor}
 \usepackage{pgfplots,pgfplotstable}
 \usetikzlibrary{pgfplots.groupplots}
 \usepackage{tabularx}
@@ -22,7 +23,10 @@
 \usepackage{tkz-kiviat,numprint}
 \usetikzlibrary{decorations.pathreplacing, arrows, fit}
 \usepackage{hyperref}
+%\usepackage{lineno}
 
+\usepackage{collcell}
+\usepackage{hhline}
 
 \usetikzlibrary{shadows,arrows,fit,shapes,positioning,calc,backgrounds,spy,decorations.markings}
 \usetikzlibrary{backgrounds}
@@ -89,6 +93,22 @@ double distance=1.4pt, shorten >= 5.5pt, preaction = {decorate}, postaction = {d
 \def\N{{\mathbb{N}}}
 \def\Z{{\mathbb{Z}}}
 \def\R{{\mathbb{R}}}
+
+
+% Il codice che segue colora una cella in base al suo contenuto
+% #1 è il contenuto della cella (ad esempio, 80)
+% \pgfmathparse{#1/100<.7?1:0} 
+
+\newcommand\gray{gray}
+\newcommand\ColCell[1]{%
+	\pgfmathparse{#1/100<.7?1:0}% valuta se #1/100 è maggiore di 0.7 oppure è minore. Se minore ritorna 1, altrimenti 0
+	\ifnum\pgfmathresult=0\relax\color{white}\fi % imposta il colore del testo a bianco se il risultato di pgfmathparse è 0
+	\pgfmathparse{1-#1/100}% calcola 1-#1/100
+	\expandafter\cellcolor\expandafter[%
+	\expandafter\gray\expandafter]\expandafter{\pgfmathresult}#1} % colora la cella della gradazione di grigio impostata dal risultato di pgfmathparse ed inserisce il valore originario della cella.
+\newcolumntype{E}{>{\collectcell\ColCell}c<{\endcollectcell}}
+
+%\modulolinenumbers[5]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Metadata

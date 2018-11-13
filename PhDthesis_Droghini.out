@@ -14,8 +14,8 @@
 \BOOKMARK [2][-]{subsection.2.1.1}{One-Class Support Vector Machines}{section.2.1}% 14
 \BOOKMARK [1][-]{section.2.2}{Gaussian Mixture Model}{chapter.2}% 15
 \BOOKMARK [1][-]{section.2.3}{K-Nearest Neighbor}{chapter.2}% 16
-\BOOKMARK [1][-]{section.2.4}{Deep Neural Network}{chapter.2}% 17
-\BOOKMARK [2][-]{subsection.2.4.1}{Convolutional Neural Network}{section.2.4}% 18
+\BOOKMARK [1][-]{section.2.4}{Deep Neural Network \(DNN\)}{chapter.2}% 17
+\BOOKMARK [2][-]{subsection.2.4.1}{Stochastic gradient descent \(SGD\)}{section.2.4}% 18
 \BOOKMARK [2][-]{subsection.2.4.2}{Autoencoder}{section.2.4}% 19
 \BOOKMARK [0][-]{chapter.3}{Dataset}{}% 20
 \BOOKMARK [1][-]{section.3.1}{The floor acoustic sensor}{chapter.3}% 21
@@ -24,7 +24,23 @@
 \BOOKMARK [2][-]{subsection.3.2.2}{Description}{section.3.2}% 24
 \BOOKMARK [2][-]{subsection.3.2.3}{Signal analysis}{section.3.2}% 25
 \BOOKMARK [0][-]{chapter.4}{Supervised Approach}{}% 26
-\BOOKMARK [0][-]{chapter.5}{Unsupervised Approach}{}% 27
-\BOOKMARK [0][-]{chapter.6}{Semi-Unsupervised Approach}{}% 28
-\BOOKMARK [0][-]{chapter.7}{Other contributions}{}% 29
-\BOOKMARK [0][-]{section*.17}{List of Publications}{}% 30
+\BOOKMARK [1][-]{section.4.1}{Support-Vector Machine based algorithm for evens fall classification}{chapter.4}% 27
+\BOOKMARK [2][-]{subsection.4.1.1}{Feature extraction}{section.4.1}% 28
+\BOOKMARK [2][-]{subsection.4.1.2}{Classification stage}{section.4.1}% 29
+\BOOKMARK [1][-]{section.4.2}{Experiments}{chapter.4}% 30
+\BOOKMARK [2][-]{subsection.4.2.1}{Dataset}{section.4.2}% 31
+\BOOKMARK [2][-]{subsection.4.2.2}{Experimental setup}{section.4.2}% 32
+\BOOKMARK [2][-]{subsection.4.2.3}{Results in matched condition}{section.4.2}% 33
+\BOOKMARK [2][-]{subsection.4.2.4}{Results in mismatched condition}{section.4.2}% 34
+\BOOKMARK [2][-]{subsection.4.2.5}{Results in multicondition}{section.4.2}% 35
+\BOOKMARK [2][-]{subsection.4.2.6}{Final remarks}{section.4.2}% 36
+\BOOKMARK [1][-]{section.4.3}{Binary SVM based classifier for human fall detection}{chapter.4}% 37
+\BOOKMARK [0][-]{chapter.5}{Unsupervised Approach}{}% 38
+\BOOKMARK [1][-]{section.5.1}{Novelty detection algorithm for human fall detection based on One-Class Support Vector Machine}{chapter.5}% 39
+\BOOKMARK [1][-]{section.5.2}{End-To-End Unsupervised Approach employing Convolutional Neural Network Autoencoders for Human Fall Detection}{chapter.5}% 40
+\BOOKMARK [0][-]{chapter.6}{Semi-Unsupervised Approach}{}% 41
+\BOOKMARK [1][-]{section.6.1}{A Combined One-Class SVM and Template Matching Approach for User-Aided Human Fall Detection}{chapter.6}% 42
+\BOOKMARK [1][-]{section.6.2}{Few-shot Siamese Neural Networks employing Audio features for Human-Fall Detection}{chapter.6}% 43
+\BOOKMARK [1][-]{section.6.3}{Audio Metric Learning by using Siamese Autoencoders for One-Shot Human Fall Detection}{chapter.6}% 44
+\BOOKMARK [0][-]{chapter.7}{Other contributions}{}% 45
+\BOOKMARK [0][-]{section*.41}{List of Publications}{}% 46
