@@ -7,8 +7,11 @@
 \contentsline {table}{\numberline {\relax 3.1}{\ignorespaces Composition of the A3Fall-v2.0 dataset.\relax }}{28}{table.caption.24}
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {\relax 4.1}{\ignorespaces Data related to R0 room used in this work.\relax }}{39}{table.caption.35}
-\contentsline {table}{\numberline {\relax 4.2}{\ignorespaces Aerial microphone confusion matrix related to the STD configuration in clean condition. The average precision is 91.48\%, the average recall 91.23\%, and the average F$_1$-Measure 91.04\%.\relax }}{42}{table.caption.37}
-\contentsline {table}{\numberline {\relax 4.3}{\ignorespaces FAS confusion matrix related to the NPRELP configuration in clean condition. The average precision is 98.13\%, the average recall 98.05\%, and the average F$_1$-Measure 98.06\%.\relax }}{42}{table.caption.38}
+\contentsline {table}{\numberline {\relax 4.2}{\ignorespaces Aerial microphone confusion matrix related to the STD configuration in clean condition. The average precision is 91.48\%, the average recall 91.23\%, and the average F$_1$-Measure 91.04\%.\relax }}{41}{table.caption.37}
+\contentsline {table}{\numberline {\relax 4.3}{\ignorespaces FAS confusion matrix related to the NPRELP configuration in clean condition. The average precision is 98.13\%, the average recall 98.05\%, and the average F$_1$-Measure 98.06\%.\relax }}{41}{table.caption.38}
+\contentsline {table}{\numberline {\relax 4.4}{\ignorespaces Data related to R0 room used in this work.\relax }}{45}{table.caption.41}
+\contentsline {table}{\numberline {\relax 4.5}{\ignorespaces Fall classification performance in matched condition with the dataset excluding everyday noises.\relax }}{47}{table.caption.48}
+\contentsline {table}{\numberline {\relax 4.6}{\ignorespaces Fall classification performance in mismatched condition (a) and multicondition (b) with the dataset excluding everyday noises. F$_1$ denotes the F$_1$-Measure.\relax }}{47}{table.caption.49}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

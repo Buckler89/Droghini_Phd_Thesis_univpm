@@ -185,13 +185,14 @@
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Support-Vector Machine based algorithm for evens fall classification}{35}{section.4.1}}
-\newlabel{sec:algorithm}{{4.1}{35}{Support-Vector Machine based algorithm for evens fall classification}{section.4.1}{}}
+\newlabel{sec:algorithm_svm_multiclass}{{4.1}{35}{Support-Vector Machine based algorithm for evens fall classification}{section.4.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Feature extraction}{35}{subsection.4.1.1}}
 \newlabel{ssec:fx}{{4.1.1}{35}{Feature extraction}{subsection.4.1.1}{}}
 \citation{kinnunen10}
 \citation{bilmes1998gentle}
 \citation{reynolds10}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Classification stage}{36}{subsection.4.1.2}}
+\newlabel{sec:svm_multi_classification}{{4.1.2}{36}{Classification stage}{subsection.4.1.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces The MFCC feature extraction pipeline.\relax }}{36}{figure.caption.31}}
 \newlabel{fig:mfcc}{{\relax 4.1}{36}{The MFCC feature extraction pipeline.\relax }{figure.caption.31}{}}
 \citation{bishop06}
@@ -205,52 +206,94 @@
 \@writefile{toc}{\contentsline {section}{\numberline {4.2}Experiments}{38}{section.4.2}}
 \newlabel{sec:experiments}{{4.2}{38}{Experiments}{section.4.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Dataset}{38}{subsection.4.2.1}}
+\newlabel{sec:dataset_svm_multiclass}{{4.2.1}{38}{Dataset}{subsection.4.2.1}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {\relax 4.1}{\ignorespaces Data related to R0 room used in this work.\relax }}{39}{table.caption.35}}
 \newlabel{tab:eswa_dataset}{{\relax 4.1}{39}{Data related to R0 room used in this work.\relax }{table.caption.35}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Experimental setup}{39}{subsection.4.2.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Results in matched condition}{40}{subsection.4.2.3}}
-\newlabel{fig:results_match_clean}{{\relax 4.5a}{41}{\relax }{figure.caption.36}{}}
-\newlabel{sub@fig:results_match_clean}{{a}{41}{\relax }{figure.caption.36}{}}
-\newlabel{fig:results_match_noisy}{{\relax 4.5b}{41}{\relax }{figure.caption.36}{}}
-\newlabel{sub@fig:results_match_noisy}{{b}{41}{\relax }{figure.caption.36}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Fall classification performance in matched condition with clean (a) and noisy signals (b).\relax }}{41}{figure.caption.36}}
-\newlabel{fig:results_match}{{\relax 4.5}{41}{Fall classification performance in matched condition with clean (a) and noisy signals (b).\relax }{figure.caption.36}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}Results in mismatched condition}{41}{subsection.4.2.4}}
-\@writefile{lot}{\contentsline {table}{\numberline {\relax 4.2}{\ignorespaces Aerial microphone confusion matrix related to the STD configuration in clean condition. The average precision is 91.48\%, the average recall 91.23\%, and the average F$_1$-Measure 91.04\%.\relax }}{42}{table.caption.37}}
-\newlabel{tbl:cm_mic_clean_matched_np}{{\relax 4.2}{42}{Aerial microphone confusion matrix related to the STD configuration in clean condition. The average precision is 91.48\%, the average recall 91.23\%, and the average F$_1$-Measure 91.04\%.\relax }{table.caption.37}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {\relax 4.3}{\ignorespaces FAS confusion matrix related to the NPRELP configuration in clean condition. The average precision is 98.13\%, the average recall 98.05\%, and the average F$_1$-Measure 98.06\%.\relax }}{42}{table.caption.38}}
-\newlabel{tbl:cm_fas_clean_matched_npre4k}{{\relax 4.3}{42}{FAS confusion matrix related to the NPRELP configuration in clean condition. The average precision is 98.13\%, the average recall 98.05\%, and the average F$_1$-Measure 98.06\%.\relax }{table.caption.38}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {\relax 4.2}{\ignorespaces Aerial microphone confusion matrix related to the STD configuration in clean condition. The average precision is 91.48\%, the average recall 91.23\%, and the average F$_1$-Measure 91.04\%.\relax }}{41}{table.caption.37}}
+\newlabel{tbl:cm_mic_clean_matched_np}{{\relax 4.2}{41}{Aerial microphone confusion matrix related to the STD configuration in clean condition. The average precision is 91.48\%, the average recall 91.23\%, and the average F$_1$-Measure 91.04\%.\relax }{table.caption.37}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {\relax 4.3}{\ignorespaces FAS confusion matrix related to the NPRELP configuration in clean condition. The average precision is 98.13\%, the average recall 98.05\%, and the average F$_1$-Measure 98.06\%.\relax }}{41}{table.caption.38}}
+\newlabel{tbl:cm_fas_clean_matched_npre4k}{{\relax 4.3}{41}{FAS confusion matrix related to the NPRELP configuration in clean condition. The average precision is 98.13\%, the average recall 98.05\%, and the average F$_1$-Measure 98.06\%.\relax }{table.caption.38}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}Results in mismatched condition}{42}{subsection.4.2.4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.5}Results in multicondition}{42}{subsection.4.2.5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Fall classification performance in mismatched condition.\relax }}{43}{figure.caption.39}}
-\newlabel{fig:results_mismatch}{{\relax 4.6}{43}{Fall classification performance in mismatched condition.\relax }{figure.caption.39}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.6}Final remarks}{43}{subsection.4.2.6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.6}Final remarks}{42}{subsection.4.2.6}}
 \citation{Kim12}
 \citation{bishop06}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Fall classification performance in multicondition.\relax }}{44}{figure.caption.40}}
-\newlabel{fig:results_multi}{{\relax 4.7}{44}{Fall classification performance in multicondition.\relax }{figure.caption.40}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Binary SVM based classifier for human fall detection}{45}{section.4.3}}
-\newlabel{sec:biclass_svm}{{4.3}{45}{Binary SVM based classifier for human fall detection}{section.4.3}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Unsupervised Approach}{47}{chapter.5}}
+\citation{Davis80}
+\citation{Temko06}
+\citation{zigel2009method}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Binary SVM based classifier for human fall detection}{43}{section.4.3}}
+\newlabel{sec:biclass_svm}{{4.3}{43}{Binary SVM based classifier for human fall detection}{section.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Dataset}{44}{subsection.4.3.1}}
+\newlabel{sec:data_binary_svm}{{4.3.1}{44}{Dataset}{subsection.4.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Experiments}{44}{subsection.4.3.2}}
+\newlabel{sec:exp}{{4.3.2}{44}{Experiments}{subsection.4.3.2}{}}
+\citation{Martin97}
+\@writefile{lot}{\contentsline {table}{\numberline {\relax 4.4}{\ignorespaces Data related to R0 room used in this work.\relax }}{45}{table.caption.41}}
+\newlabel{tab:binary_svm_dataset}{{\relax 4.4}{45}{Data related to R0 room used in this work.\relax }{table.caption.41}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Results in matched condition}{46}{section*.42}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Results in mismatched condition}{46}{section*.44}}
+\@writefile{lot}{\contentsline {table}{\numberline {\relax 4.5}{\ignorespaces Fall classification performance in matched condition with the dataset excluding everyday noises.\relax }}{47}{table.caption.48}}
+\newlabel{tab:match_lolo44}{{\relax 4.5}{47}{Fall classification performance in matched condition with the dataset excluding everyday noises.\relax }{table.caption.48}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {\relax 4.6}{\ignorespaces Fall classification performance in mismatched condition (a) and multicondition (b) with the dataset excluding everyday noises. F$_1$ denotes the F$_1$-Measure.\relax }}{47}{table.caption.49}}
+\newlabel{tab:mism_lolo44}{{\relax 4.7a}{47}{\relax }{table.caption.49}{}}
+\newlabel{sub@tab:mism_lolo44}{{a}{47}{\relax }{table.caption.49}{}}
+\newlabel{tab:multi_lolo44}{{\relax 4.7b}{47}{\relax }{table.caption.49}{}}
+\newlabel{sub@tab:multi_lolo44}{{b}{47}{\relax }{table.caption.49}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Results in multicondition}{47}{section*.46}}
+\citation{Rotili08}
+\citation{Cifani2008}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Final remarks}{48}{subsection.4.3.3}}
+\newlabel{fig:results_match_clean}{{\relax 4.5a}{49}{\relax }{figure.caption.36}{}}
+\newlabel{sub@fig:results_match_clean}{{a}{49}{\relax }{figure.caption.36}{}}
+\newlabel{fig:results_match_noisy}{{\relax 4.5b}{49}{\relax }{figure.caption.36}{}}
+\newlabel{sub@fig:results_match_noisy}{{b}{49}{\relax }{figure.caption.36}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Fall classification performance in matched condition with clean (a) and noisy signals (b).\relax }}{49}{figure.caption.36}}
+\newlabel{fig:results_match}{{\relax 4.5}{49}{Fall classification performance in matched condition with clean (a) and noisy signals (b).\relax }{figure.caption.36}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Fall classification performance in mismatched condition.\relax }}{50}{figure.caption.39}}
+\newlabel{fig:results_mismatch}{{\relax 4.6}{50}{Fall classification performance in mismatched condition.\relax }{figure.caption.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Fall classification performance in multicondition.\relax }}{51}{figure.caption.40}}
+\newlabel{fig:results_multi}{{\relax 4.7}{51}{Fall classification performance in multicondition.\relax }{figure.caption.40}{}}
+\newlabel{fig:match_bck_BAR}{{\relax 4.8a}{52}{F$_1$-Measure histogram plot.\relax }{figure.caption.43}{}}
+\newlabel{sub@fig:match_bck_BAR}{{a}{52}{F$_1$-Measure histogram plot.\relax }{figure.caption.43}{}}
+\newlabel{fig:match_bck_DET}{{\relax 4.8b}{52}{Comparison of DET graphs.\relax }{figure.caption.43}{}}
+\newlabel{sub@fig:match_bck_DET}{{b}{52}{Comparison of DET graphs.\relax }{figure.caption.43}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Fall classification performance in matched condition with the dataset comprising everyday noises.\relax }}{52}{figure.caption.43}}
+\newlabel{fig:match_bck}{{\relax 4.8}{52}{Fall classification performance in matched condition with the dataset comprising everyday noises.\relax }{figure.caption.43}{}}
+\newlabel{fig:mism_bck_BAR}{{\relax 4.9a}{53}{F$_1$-Measure histogram plot.\relax }{figure.caption.45}{}}
+\newlabel{sub@fig:mism_bck_BAR}{{a}{53}{F$_1$-Measure histogram plot.\relax }{figure.caption.45}{}}
+\newlabel{fig:mism_bck_DET}{{\relax 4.9b}{53}{Comparison of DET curves.\relax }{figure.caption.45}{}}
+\newlabel{sub@fig:mism_bck_DET}{{b}{53}{Comparison of DET curves.\relax }{figure.caption.45}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces Fall classification performance in mismatched condition with the dataset comprising everyday noises.\relax }}{53}{figure.caption.45}}
+\newlabel{fig:multi_bck_BAR}{{\relax 4.10a}{54}{F$_1$-Measure histogram plot.\relax }{figure.caption.47}{}}
+\newlabel{sub@fig:multi_bck_BAR}{{a}{54}{F$_1$-Measure histogram plot.\relax }{figure.caption.47}{}}
+\newlabel{fig:multi_bck_DET}{{\relax 4.10b}{54}{Comparison of DET curves.\relax }{figure.caption.47}{}}
+\newlabel{sub@fig:multi_bck_DET}{{b}{54}{Comparison of DET curves.\relax }{figure.caption.47}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces Fall classification performance in multicondition with the dataset comprising everyday noises.\relax }}{54}{figure.caption.47}}
+\newlabel{fig:multi_bck}{{\relax 4.10}{54}{Fall classification performance in multicondition with the dataset comprising everyday noises.\relax }{figure.caption.47}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Unsupervised Approach}{55}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Novelty detection algorithm for human fall detection based on One-Class Support Vector Machine}{47}{section.5.1}}
-\newlabel{sec:ocsvm}{{5.1}{47}{Novelty detection algorithm for human fall detection based on One-Class Support Vector Machine}{section.5.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}End-To-End Unsupervised Approach employing Convolutional Neural Network Autoencoders for Human Fall Detection}{47}{section.5.2}}
-\newlabel{sec:autoencoder}{{5.2}{47}{End-To-End Unsupervised Approach employing Convolutional Neural Network Autoencoders for Human Fall Detection}{section.5.2}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Semi-Unsupervised Approach}{49}{chapter.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Novelty detection algorithm for human fall detection based on One-Class Support Vector Machine}{55}{section.5.1}}
+\newlabel{sec:ocsvm}{{5.1}{55}{Novelty detection algorithm for human fall detection based on One-Class Support Vector Machine}{section.5.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}End-To-End Unsupervised Approach employing Convolutional Neural Network Autoencoders for Human Fall Detection}{55}{section.5.2}}
+\newlabel{sec:autoencoder}{{5.2}{55}{End-To-End Unsupervised Approach employing Convolutional Neural Network Autoencoders for Human Fall Detection}{section.5.2}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Semi-Unsupervised Approach}{57}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}A Combined One-Class SVM and Template Matching Approach for User-Aided Human Fall Detection}{49}{section.6.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Few-shot Siamese Neural Networks employing Audio features for Human-Fall Detection}{49}{section.6.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Audio Metric Learning by using Siamese Autoencoders for One-Shot Human Fall Detection}{49}{section.6.3}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Other contributions}{51}{chapter.7}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}A Combined One-Class SVM and Template Matching Approach for User-Aided Human Fall Detection}{57}{section.6.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Few-shot Siamese Neural Networks employing Audio features for Human-Fall Detection}{57}{section.6.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Audio Metric Learning by using Siamese Autoencoders for One-Shot Human Fall Detection}{57}{section.6.3}}
+\newlabel{sec:autoencoder_one_shot}{{6.3}{57}{Audio Metric Learning by using Siamese Autoencoders for One-Shot Human Fall Detection}{section.6.3}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Other contributions}{59}{chapter.7}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{ch:other}{{7}{51}{Other contributions}{chapter.7}{}}
-\@writefile{toc}{\contentsline {chapter}{List of Publications}{53}{section*.41}}
+\newlabel{ch:other}{{7}{59}{Other contributions}{chapter.7}{}}
+\@writefile{toc}{\contentsline {chapter}{List of Publications}{61}{section*.50}}
 \bibstyle{IEEEbib}
 \bibdata{IEEEabrv,8_backMatter/refs}
 \bibcite{eurostat}{1}
@@ -307,6 +350,11 @@
 \bibcite{reynolds10}{52}
 \bibcite{chang11}{53}
 \bibcite{Kim12}{54}
+\bibcite{Davis80}{55}
+\bibcite{Temko06}{56}
+\bibcite{Principi2016a}{57}
+\bibcite{Martin97}{58}
+\bibcite{Cifani2008}{59}
 \global\@namedef{scr@dte@chapter@lastmaxnumwidth}{9.89993pt}
 \global\@namedef{scr@dte@section@lastmaxnumwidth}{16.7777pt}
 \global\@namedef{scr@dte@subsection@lastmaxnumwidth}{24.55545pt}

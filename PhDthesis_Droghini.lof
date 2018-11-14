@@ -32,9 +32,12 @@
 \contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Block scheme for extracting a gaussian mean supervector from MFCCs and a trained UBM.\relax }}{37}{figure.caption.32}
 \contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Block scheme for training the UBM and SVM models.\relax }}{37}{figure.caption.33}
 \contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Block-scheme of the fall classification phase.\relax }}{38}{figure.caption.34}
-\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Fall classification performance in matched condition with clean (a) and noisy signals (b).\relax }}{41}{figure.caption.36}
-\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Fall classification performance in mismatched condition.\relax }}{43}{figure.caption.39}
-\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Fall classification performance in multicondition.\relax }}{44}{figure.caption.40}
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Fall classification performance in matched condition with clean (a) and noisy signals (b).\relax }}{49}{figure.caption.36}
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Fall classification performance in mismatched condition.\relax }}{50}{figure.caption.39}
+\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Fall classification performance in multicondition.\relax }}{51}{figure.caption.40}
+\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Fall classification performance in matched condition with the dataset comprising everyday noises.\relax }}{52}{figure.caption.43}
+\contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces Fall classification performance in mismatched condition with the dataset comprising everyday noises.\relax }}{53}{figure.caption.45}
+\contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces Fall classification performance in multicondition with the dataset comprising everyday noises.\relax }}{54}{figure.caption.47}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

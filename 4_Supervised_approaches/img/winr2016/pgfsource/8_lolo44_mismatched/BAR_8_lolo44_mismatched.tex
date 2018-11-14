@@ -1,0 +1,48 @@
+\documentclass[margin=0.5mm]{standalone}
+\usepackage{pgfplots}
+\usetikzlibrary{pgfplots.groupplots}
+\pgfplotsset{compat=1.7}
+
+\usetikzlibrary{pgfplots.groupplots}
+
+\definecolor{BoxCol}{rgb}{0.43,0.62,0.86}
+%\definecolor{BoxCol}{rgb}{0.5686,0.07451,0.07451}
+%\definecolor{BoxCol}{RGB}{62,126,148}
+\begin{document}
+	\thispagestyle{empty}
+%	\begin{figure}[t]
+%		\centering
+		\begin{tikzpicture}
+		\begin{axis}[
+		width=12cm,
+		height=10cm,
+		ybar,
+		enlargelimits=0.70,
+		legend style={at={(0.5,0.975)},
+		anchor=north,legend columns=-1},
+		ylabel={\ F1 measure (\%)},
+		symbolic x coords={Aerial,FAS},
+		xtick=data,
+		nodes near coords={\pgfmathprintnumber[fixed zerofill, precision=2]{\pgfplotspointmeta}},
+		nodes near coords align={vertical},
+		bar width=40pt,
+		style={font=\large},
+		ytick={95,96,...,100},
+		ymax=99,
+		ymin=96
+		]
+%					STD		NPRE
+%			Aerial	96.20	95.44
+%			FAS		97.80	98.11
+			
+		\addplot [color=black,fill=red!40!white] coordinates {(Aerial,96.20) (FAS,97.80) };
+		\addplot [color=black,fill=blue!40!white] coordinates {(Aerial,95.44) (FAS,98.11) };
+		
+		\legend{STD,NOPRE}
+		\end{axis}
+		\end{tikzpicture}
+		%\vspace{-0.7cm}
+		%\caption{Left: the pitch distribution for the 10 male speakers. Right: the active speech level for the 20 speakers.}\label{fig:pitch}
+		%\vspace{-0.5cm}
+%	\end{figure}
+\end{document}

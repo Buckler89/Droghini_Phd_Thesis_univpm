@@ -153,12 +153,4 @@ The analysis of noisy signals highlights the different behaviour of the floor se
 In fact, taking into account the backgrounds tracks as interferences, the floor sensor has a global signal-to-noise ratio (SNR) equal to 20.94\,dB and a segmental SNR equal to 7.28\,dB. The global SNR of the central aerial microphone is 8.92\,dB and the segmental SNR is -1.47\,dB. The values of the aerial microphone SNRs are thus considerably lower than the ones of the floor sensor.%: this highlights the superiority of the FAS respect to the aerial microphone in reducing sounds propagating through the air and not related to fall events.
 The global SNR of the floor sensor noisy dataset is 13.66\,dB higher than the one of the aerial microphone, highlighting the superior ability of the former to isolate fall signals from external interferences. However, it is worth investigating how the SNR distributes over the frequency range of the acquired signals in order to have a better insight of the physical phenomenon. \figref{fig:noisymel} shows the SNR calculated for each mel channel and averaged across the noisy datasets. It can be noticed that the SNR of the floor sensor exceeds the one of the aerial microphone for channels below the fourth. Then, the opposite occurs and the SNR of the aerial microphone assumes greater values. The ``valley'' in the curves are due to the pitch of the music signal.
 
-\textcolor{red}{QESTO VA NEL LAOVOR ESWA\\
-This analysis suggested the authors that the standard MFCC extraction pipeline can be modified in order to better exploit the properties the floor acoustic sensor. In particular, the analysis led to the following considerations:
-\begin{itemize}
-	\item The pre-emphasis filter is an inheritance of automatic speech recognition systems, where the input signal is the human voice. Since the effect of the filter is to enhance the high frequency components of the signal and the floor sensor is more sensitive to low frequencies, removing the pre-emphasis could improve the classification performance.
-	\item The majority of the energy of the signals acquired with the floor acoustic sensor is concentrated at frequencies below 1.5\,kHz. This suggest that introducing a low-pass filter that removes low SNR frequencies may improve the classification performance.
-	%	\item As a consequence of low-pass filtering, the sampling frequency can be accordingly reduced, thus resulting in a reduction of the computational burden.
-\end{itemize}
-}
 

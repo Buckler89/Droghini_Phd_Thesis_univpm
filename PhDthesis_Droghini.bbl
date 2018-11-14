@@ -336,4 +336,36 @@ C.~Kim and R.~M. Stern,
   recognition},''
 \newblock in {\em Proc. of ICASSP}, Kyoto, Japan, Mar. 2012, pp. 4101--4104.
 
+\bibitem{Davis80}
+S.~B. Davis and P.~Mermelstein,
+\newblock ``Comparison of parametric representations for monosyllabic word
+  recognition in continuously spoken sentences,''
+\newblock {\em {IEEE} Trans. Acoust., Speech, Signal Process.}, vol. 28, no. 4,
+  pp. 357--366, 1980.
+
+\bibitem{Temko06}
+A.~Temko and C.~Nadeu,
+\newblock ``Classification of acoustic events using {SVM-based} clustering
+  schemes,''
+\newblock {\em Pattern Recognition}, vol. 39, no. 4, pp. 682--694, Apr. 2006.
+
+\bibitem{Principi2016a}
+E.~Principi, D.~Droghini, S.~Squartini, P.~Olivetti, and F.~Piazza,
+\newblock ``Acoustic cues from the floor: a new approach for fall
+  classification,''
+\newblock {\em Expert Systems with Applications}, vol. 60, pp. 51--61, 2016.
+
+\bibitem{Martin97}
+A.~Martin, G.~Doddington, T.~Kamm, M.~Ordowski, and M.~Przybocki,
+\newblock ``The {DET} curve in assessment of detection task performance,''
+\newblock in {\em Proc. of the European Conference on Speech Communication and
+  Technology}, 1997, pp. 1895--1898.
+
+\bibitem{Cifani2008}
+S.~Cifani, E.~Principi, C.~Rocchi, S.~Squartini, and F.~Piazza,
+\newblock ``A multichannel noise reduction front-end based on psychoacoustics
+  for robust speech recognition in highly noisy environments,''
+\newblock in {\em Proc. of Hands-Free Speech Communication and Microphone
+  Arrays (HSCMA)}, Trento, Italy, May 6-8 2008, pp. 172--175.
+
 \end{thebibliography}

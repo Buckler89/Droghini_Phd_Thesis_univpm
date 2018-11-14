@@ -4,44 +4,46 @@ The top-level auxiliary file: PhDthesis_Droghini.aux
 The style file: IEEEbib.bst
 Database file #1: IEEEabrv.bib
 Database file #2: 8_backMatter/refs.bib
-You've used 54 entries,
+Warning--I didn't find a database entry for "Rotili08"
+You've used 59 entries,
             1838 wiz_defined-function locations,
-            1320 strings with 24961 characters,
-and the built_in function-call counts, 14734 in all, are:
-= -- 1307
-> -- 712
-< -- 18
-+ -- 255
-- -- 201
-* -- 1230
-:= -- 2249
-add.period$ -- 63
-call.type$ -- 54
-change.case$ -- 52
+            1355 strings with 26023 characters,
+and the built_in function-call counts, 16248 in all, are:
+= -- 1440
+> -- 779
+< -- 20
++ -- 279
+- -- 220
+* -- 1355
+:= -- 2470
+add.period$ -- 68
+call.type$ -- 59
+change.case$ -- 57
 chr.to.int$ -- 0
-cite$ -- 54
-duplicate$ -- 613
-empty$ -- 1392
-format.name$ -- 201
-if$ -- 3370
+cite$ -- 59
+duplicate$ -- 681
+empty$ -- 1536
+format.name$ -- 220
+if$ -- 3726
 int.to.chr$ -- 0
-int.to.str$ -- 54
-missing$ -- 50
-newline$ -- 267
-num.names$ -- 59
-pop$ -- 170
+int.to.str$ -- 59
+missing$ -- 55
+newline$ -- 292
+num.names$ -- 64
+pop$ -- 185
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 295
+skip$ -- 334
 stack$ -- 0
-substring$ -- 1069
-swap$ -- 198
-text.length$ -- 18
+substring$ -- 1190
+swap$ -- 224
+text.length$ -- 20
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 128
-width$ -- 56
-write$ -- 598
+while$ -- 140
+width$ -- 61
+write$ -- 654
+(There was 1 warning)

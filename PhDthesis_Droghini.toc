@@ -29,16 +29,22 @@
 \contentsline {subsection}{\numberline {4.2.1}Dataset}{38}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Experimental setup}{39}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Results in matched condition}{40}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Results in mismatched condition}{41}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.4}Results in mismatched condition}{42}{subsection.4.2.4}
 \contentsline {subsection}{\numberline {4.2.5}Results in multicondition}{42}{subsection.4.2.5}
-\contentsline {subsection}{\numberline {4.2.6}Final remarks}{43}{subsection.4.2.6}
-\contentsline {section}{\numberline {4.3}Binary SVM based classifier for human fall detection}{45}{section.4.3}
-\contentsline {chapter}{\numberline {5}Unsupervised Approach}{47}{chapter.5}
-\contentsline {section}{\numberline {5.1}Novelty detection algorithm for human fall detection based on One-Class Support Vector Machine}{47}{section.5.1}
-\contentsline {section}{\numberline {5.2}End-To-End Unsupervised Approach employing Convolutional Neural Network Autoencoders for Human Fall Detection}{47}{section.5.2}
-\contentsline {chapter}{\numberline {6}Semi-Unsupervised Approach}{49}{chapter.6}
-\contentsline {section}{\numberline {6.1}A Combined One-Class SVM and Template Matching Approach for User-Aided Human Fall Detection}{49}{section.6.1}
-\contentsline {section}{\numberline {6.2}Few-shot Siamese Neural Networks employing Audio features for Human-Fall Detection}{49}{section.6.2}
-\contentsline {section}{\numberline {6.3}Audio Metric Learning by using Siamese Autoencoders for One-Shot Human Fall Detection}{49}{section.6.3}
-\contentsline {chapter}{\numberline {7}Other contributions}{51}{chapter.7}
-\contentsline {chapter}{List of Publications}{53}{section*.41}
+\contentsline {subsection}{\numberline {4.2.6}Final remarks}{42}{subsection.4.2.6}
+\contentsline {section}{\numberline {4.3}Binary SVM based classifier for human fall detection}{43}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Dataset}{44}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Experiments}{44}{subsection.4.3.2}
+\contentsline {subsubsection}{\nonumberline Results in matched condition}{46}{section*.42}
+\contentsline {subsubsection}{\nonumberline Results in mismatched condition}{46}{section*.44}
+\contentsline {subsubsection}{\nonumberline Results in multicondition}{47}{section*.46}
+\contentsline {subsection}{\numberline {4.3.3}Final remarks}{48}{subsection.4.3.3}
+\contentsline {chapter}{\numberline {5}Unsupervised Approach}{55}{chapter.5}
+\contentsline {section}{\numberline {5.1}Novelty detection algorithm for human fall detection based on One-Class Support Vector Machine}{55}{section.5.1}
+\contentsline {section}{\numberline {5.2}End-To-End Unsupervised Approach employing Convolutional Neural Network Autoencoders for Human Fall Detection}{55}{section.5.2}
+\contentsline {chapter}{\numberline {6}Semi-Unsupervised Approach}{57}{chapter.6}
+\contentsline {section}{\numberline {6.1}A Combined One-Class SVM and Template Matching Approach for User-Aided Human Fall Detection}{57}{section.6.1}
+\contentsline {section}{\numberline {6.2}Few-shot Siamese Neural Networks employing Audio features for Human-Fall Detection}{57}{section.6.2}
+\contentsline {section}{\numberline {6.3}Audio Metric Learning by using Siamese Autoencoders for One-Shot Human Fall Detection}{57}{section.6.3}
+\contentsline {chapter}{\numberline {7}Other contributions}{59}{chapter.7}
+\contentsline {chapter}{List of Publications}{61}{section*.50}
