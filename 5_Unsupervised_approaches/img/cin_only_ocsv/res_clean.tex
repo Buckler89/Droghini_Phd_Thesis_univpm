@@ -1,0 +1,68 @@
+\documentclass[margin=0.5mm]{standalone}
+%\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+
+\pgfplotsset{width=\textwidth}
+
+
+\definecolor{rred}{RGB}{64,48,117}
+\definecolor{ccian}{RGB}{0,151,57}
+\definecolor{ggreen}{RGB}{151,170,57}
+
+\pgfplotstableread[col sep=comma]{
+Name,OCSVM,Comp
+casoTre,  82.25,  70.76
+casoDue,  75.71, 75.37
+casoUno,  93.62, 76.01
+}\datatableTabClear
+\begin{document}
+
+\begin{tikzpicture}
+    \begin{axis}[
+	    xbar=2pt,% space of 0pt between adjacent bars
+	    xmin=67.5,
+	    xmax=102.5,
+	    bar width=0.5cm,
+	    width=12cm,
+	    height=9cm,
+	    xlabel={F$_1$-Measure},		
+            %xbar,
+            %xmin=0,
+            nodes near coords={\pgfmathprintnumber\pgfplotspointmeta\%},
+            nodes near coords align={horizontal},
+			%every node near coord/.append style={font=\boldmath},
+            enlarge y limits=0.3,
+            xmajorgrids,
+            xticklabel={\pgfmathparse{\tick}\pgfmathprintnumber{\pgfmathresult}\%},
+            xtick={70,80,...,100},
+            ytick=data,
+            yticklabels={
+                {Set 3: Human falls with \\object falls, human \\activities and music},
+                {Set 2: Human falls with \\object falls},
+                {Set 1: Human falls with \\human activities\\ and music}
+            },
+            yticklabel style={font=\normalsize,xshift=0.5ex,align=right},
+            legend entries={OCSVM+Template,OCSVM,Popescu (2009)},
+            legend image code/.code={%
+            	\draw[#1] (0cm,-0.1cm) rectangle (0.6cm,0.1cm);
+            },
+            legend style={
+            	%at={(0.5,-0.2)},
+            	anchor=south east,
+            	legend columns=-1,
+            	/tikz/every even column/.append style={column sep=0.5cm}
+            }, reverse legend
+            ]
+			
+
+            \addplot [fill=ccian] table [x=OCSVM,y expr=\coordindex] {\datatableTabClear};
+            \addplot [fill=ggreen] table [x=Comp,y expr=\coordindex] {\datatableTabClear};
+            %\legend{OCSVM,OCSVM+Template}
+    \end{axis}
+\end{tikzpicture}
+
+\end{document}

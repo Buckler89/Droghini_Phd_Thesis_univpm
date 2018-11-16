@@ -349,17 +349,18 @@ A.~Temko and C.~Nadeu,
   schemes,''
 \newblock {\em Pattern Recognition}, vol. 39, no. 4, pp. 682--694, Apr. 2006.
 
-\bibitem{Principi2016a}
-E.~Principi, D.~Droghini, S.~Squartini, P.~Olivetti, and F.~Piazza,
-\newblock ``Acoustic cues from the floor: a new approach for fall
-  classification,''
-\newblock {\em Expert Systems with Applications}, vol. 60, pp. 51--61, 2016.
-
 \bibitem{Martin97}
 A.~Martin, G.~Doddington, T.~Kamm, M.~Ordowski, and M.~Przybocki,
 \newblock ``The {DET} curve in assessment of detection task performance,''
 \newblock in {\em Proc. of the European Conference on Speech Communication and
   Technology}, 1997, pp. 1895--1898.
+
+\bibitem{Rotili08}
+R.~Rotili, S.~Cifani, E.~Principi, S.~Squartini, and F.~Piazza,
+\newblock ``A robust iterative inverse filtering approach for speech
+  dereverberation in presence of disturbances,''
+\newblock in {\em Proc. of IEEE Asia Pacific Conference on Circuits and Systems
+  (APCCAS)}, Macao, China, Nov. 30 - Dec. 3 2008, pp. 434--437.
 
 \bibitem{Cifani2008}
 S.~Cifani, E.~Principi, C.~Rocchi, S.~Squartini, and F.~Piazza,
@@ -367,5 +368,48 @@ S.~Cifani, E.~Principi, C.~Rocchi, S.~Squartini, and F.~Piazza,
   for robust speech recognition in highly noisy environments,''
 \newblock in {\em Proc. of Hands-Free Speech Communication and Microphone
   Arrays (HSCMA)}, Trento, Italy, May 6-8 2008, pp. 172--175.
+
+\bibitem{Popescu2009}
+M.~Popescu and A.~Mahnot,
+\newblock ``Acoustic fall detection using one-class classifiers,''
+\newblock in {\em Proc. of the Annual Int. Conf. of the IEEE Engineering in
+  Medicine and Biology Society (EMBC)}, Minneapolis, MN, USA, 2009, pp.
+  3505--3508.
+
+\bibitem{noury2007fall}
+N.~Noury, A.~Fleury, P.~Rumeau, A.~Bourke, G.~Laighin, V.~Rialle, and J.~Lundy,
+\newblock ``Fall detection-principles and methods,''
+\newblock in {\em Engineering in Medicine and Biology Society, 2007. EMBS 2007.
+  29th Annual International Conference of the IEEE}. IEEE, 2007, pp.
+  1663--1666.
+
+\bibitem{Principi14c}
+E.~Principi, S.~Squartini, and F.~Piazza,
+\newblock ``{Power Normalized Cepstral Coefficients based supervectors and
+  i-vectors for small vocabulary speech recognition},''
+\newblock in {\em Proc. of the International Joint Conference on Neural
+  Networks (IJCNN)}, Beijing, China, Jul. 6-11 2014, pp. 3562--3568.
+
+\bibitem{muller2006off}
+U.~Muller, J.~Ben, E.~Cosatto, B.~Flepp, and Y.~L. Cun,
+\newblock ``Off-road obstacle avoidance through end-to-end learning,''
+\newblock in {\em Advances in neural information processing systems}, 2006, pp.
+  739--746.
+
+\bibitem{bergstra2013making}
+J.~Bergstra, D.~Yamins, and D.~Cox,
+\newblock ``Making a science of model search: Hyperparameter optimization in
+  hundreds of dimensions for vision architectures,''
+\newblock in {\em International Conference on Machine Learning}, 2013, pp.
+  115--123.
+
+\bibitem{Werner2011}
+F.~Werner, J.~Diermaier, S.~Schmid, and P.~Panek,
+\newblock ``Fall detection with distributed floor-mounted accelerometers: An
+  overview of the development and evaluation of a fall detection system within
+  the project {eHome},''
+\newblock in {\em Proc. of the 5th Int. Conf. on Pervasive Computing
+  Technologies for Healthcare and Workshops}, Dublin, Ireland, May 23-26 2011,
+  pp. 354--361.
 
 \end{thebibliography}

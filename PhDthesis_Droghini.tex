@@ -12,7 +12,7 @@
 \usepackage{booktabs}
 \usepackage{framed}
 \usepackage{algorithm,algpseudocode}
-\usepackage[table]{xcolor}
+\usepackage[table,xcdraw]{xcolor}
 \usepackage{pgfplots,pgfplotstable}
 \usetikzlibrary{pgfplots.groupplots}
 \usepackage{tabularx}
@@ -107,7 +107,7 @@ double distance=1.4pt, shorten >= 5.5pt, preaction = {decorate}, postaction = {d
 	\expandafter\cellcolor\expandafter[%
 	\expandafter\gray\expandafter]\expandafter{\pgfmathresult}#1} % colora la cella della gradazione di grigio impostata dal risultato di pgfmathparse ed inserisce il valore originario della cella.
 \newcolumntype{E}{>{\collectcell\ColCell}c<{\endcollectcell}}
-
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
 %\modulolinenumbers[5]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

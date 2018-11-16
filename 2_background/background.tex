@@ -149,7 +149,7 @@ which is satisfied for any $\lambda_i$ that is not at the upper or lower bound.
 
 
 
-\section{Gaussian Mixture Model}
+\section{Gaussian Mixture Model} TODO CAMBIA/integra CON CIN
 https://pdfs.semanticscholar.org/734b/07b53c23f74a3b004d7fe341ae4fce462fc6.pdf
 A Gaussian Mixture Model (GMM) is a parametric probability density function represented as a weighted sum of Gaussian component densities. Generally, GMMs are used as a parametric model of the probability distribution of some features.  To estimate the parameter of GMM the algorithm Expectation-Maximization (EM) algorithm or Maximum A Posteriori (MAP)  are used starting from a well-trained prior model usually named Universal Background Model (UBM).
 A Gaussian mixture model is a weighted sum of M component Gaussian densities as given by the equation
@@ -180,16 +180,21 @@ a
 
 
 
-\section{Deep Neural Network (DNN)}
+
+\section{The Artificial Deep Neural Networks}
+
+The human brain is composed of a big set of specialized cells (\textit{neurons}) connected among them, which memorize and process information, thus controlling the body activities they belong to as depicted in \figref{fig:brain}. The human brain is probably the most remarkable result of evolution for its ability to elaborate information. 
+The Artificial Neural Networks are mathematical models that represent the interconnection between elements defined "Artificial Neurons", mathematical constructs that somehow imitate the properties of biological neurons, going to reproduce the functioning of the human nervous system.
 
 %\textbf{ndRob} to complete, 3 pages with figures
 %\begin{itemize}
 %\item formula (notazione matriciale) del calcolo output di ogni rete
 %\end{itemize}
-
+\subsection{The Human Nervous System} 
 A \textit{biological Neural Networks} is a big set of specialized cells (\textit{neurons}) connected among them, which memorize and process information, thus controlling the body activities they belong to.
 
 \begin{figure}[t]
+	\label{fig:brain}
 	\centering
 	\includegraphics[width=0.65\linewidth]{img/Brain}
 	\caption{The human brain.}
@@ -198,10 +203,10 @@ A \textit{biological Neural Networks} is a big set of specialized cells (\textit
 
 The \textit{neuron} model is composed of:
 \begin{itemize}
-	\item DENDRITE: input terminal
-	\item CELL BODY (Nucleus): processing core
-	\item AXON: output way-out
-	\item SYNAPSES: output terminal (with weight)
+	\item \textit{Soma}, which is the calculation unit
+	\item \textit{Axon}, that acts as a transmission line output
+	\item \textit{Dendrite} is the input terminal ot the cell that receive messages from other connected cells
+	\item \textit{Synapses}: permits a neuron to pass an electrical or chemical signal to another neuron or to the target effector cell.
 \end{itemize}
 
 %The Biological neurons are electro-chemical devices, operating at low rates ($\approx mses$).
@@ -216,20 +221,20 @@ The \textit{neuron} model is composed of:
 
 The \textit{neuron} properties can be described in:
 \begin{itemize}
-	\item LOCAL SIMPLICITY: the neuron receives stimuli (excitation or inhibition) from dendrites and produces an impulse to the axon which is proportional to the weighted sum of the inputs;
-	\item GLOBAL COMPLEXITY: the human brain possess 
+	\item \textit{local simplicity}: the neuron receives stimuli (excitation or inhibition) from dendrites and produces an impulse to the axon which is proportional to the weighted sum of the inputs;
+	\item \textit{global complexity}: the human brain possess 
 	$\mathcal{O}(10^{10})$ 
 	neurons, with more than 10K connections each;
-	\item LEARNING: even though the network topology is relatively fixed, the strength of connections (synaptic weights) can change when the network is exposed to external stimuli;
-	\item DISTRIBUTED CONTROL: no centralized control, each neuron reacts only to its own stimuli;
-	\item TOLERANCE TO FAILURES: performance slowly decrease with the increase of failures.
+	\item \textit{learning}: even though the network topology is relatively fixed, the strength of connections (synaptic weights) can change when the network is exposed to external stimuli;
+	\item \textit{distributed control}: no centralized control, each neuron reacts only to its own stimuli;
+	\item \textit{tolerance to failures}: performance slowly decrease with the increase of failures.
 \end{itemize}
 
 The biological Neural Networks are able to solve very complex tasks in few time instants (like memorization, recognition, association, and so on.)
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=0.4\textwidth]{img/ANN}
+	\includegraphics[width=\textwidth]{img/ANN}
 	\caption{The Artificial Neural Network.}
 	%\label{aa}
 \end{figure}
@@ -242,16 +247,22 @@ An ANN resembles the brain in two aspects:
 	\item Synaptic weights are used to store the acquired knowledge.
 \end{enumerate}
 
-A \textit{neuron} is an information-processing unit that is fundamental to the operation of a neural network.
-The model of a neuron is composed of three basic elements of the neural model:
+An artificial neural network (ANN), is a mathematical/informatical model calculation based on biological neural networks.
+This model is constituted by a group of interconnections of information consisting of artificial neurons and processes using a connectionist approach to computation. In most cases, an artificial neural network is an adaptive system that changes its structure, which is based on external or internal information that flows through the network during the learning phase. 
+In practical terms neural networks are non-linear structures of statistical data organized as modeling tools.
+They can be used to simulate the complex relationships between inputs and outputs that other analytic functions fail to represent.
+An artificial neural network receives external signals on a layer of nodes (processing unit) input, each of which is connected with a number of internal nodes, organized in several levels. Each node processes the received signals performing a very simple task  and transmits the result to subsequent nodes. 
+
+The artificial neuron is an information-processing unit that is fundamental to the operation of a neural network. The model of a neuron is composed of three basic elements, as shown in (\figref{fig:artificial_neuron}) 
 \begin{itemize}
-	\item a \textit{set of synapses}, or connecting links, each of which is characterized by a weight or strength of its own, $w_{kj}$;
+	\item a \textit{set of synapses}, or connecting links, each of which is characterized by a weight or strength of its own, $w_{km}$; The neural model also includes an externally applied \textit{bias}, denoted by $b_k$.
 	\item an \textit{adder} for summing the input signals, weighted by the respective synaptic strengths of the neuron; the operations described here constitute a linear combiner;
 	\item an \textit{activation function} for limiting the amplitude of the output of a neuron. Typically, the normalized amplitude range of the output of a neuron is written as the closed unit interval [0,1], or, alternatively, [-1,1].
 \end{itemize}
 The neural model also includes an externally applied \textit{bias}, denoted by $b_k$.
 
 \begin{figure}[t]
+	\label{fig:artificial_neuron}
 	\centering
 	\includegraphics[width=0.8\linewidth]{img/NeuronModel.jpg}
 	%\label{aa}

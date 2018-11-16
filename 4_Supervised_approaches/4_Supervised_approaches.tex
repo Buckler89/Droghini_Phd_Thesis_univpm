@@ -49,6 +49,10 @@ The set $\{c(0),c(1),\ldots,c(M-1)\}$ forms the static coefficients elements of 
 
 \subsection{Classification stage}
 \label{sec:svm_multi_classification}
+The approach proposed in this section is based on a One-Class Support Vector Machine (OCSVM) \cite{scholkopf2000}. The general idea is that a human fall produces a sound considerably different from the ones commonly occurring in a home (e.g., voices, sounds from electronic devices, footsteps, etc.). The OCSVM is trained on a large set of ``normal'' sounds to detect acoustic events that deviate from normality. However, it is expected that certain acoustic events are as abnormal as a human fall (e.g., the fall of book, a chair, etc.), thus they could raise false alarms. 
+
+
+
 The classification stage employs Gaussian Mean Supervectors (GMS) and a Support Vector Machine classifier as in speaker recognition systems \cite{kinnunen10}. The algorithms consists in modelling the entire acoustic space with a Universal Background Model (UBM) represented by mixture of gaussians (Gaussian Mixture Model, GMM). The GMM is trained using the Expectation Maximization (EM) algorithm \cite{bilmes1998gentle} on a large corpus of acoustic events. Then, for each acoustic event class in the training corpus a GMS is calculated by adapting the UBM with the Maximum A Posteriori (MAP) algorithm \cite{reynolds10} and concatenating the adapted GMM mean values. The block diagram of the approach is shown in \figref{fig:gms}. The final step of the training phase is the estimation of the SVM parameters. In this work, an SVM with a radial basis function has been used. The complete diagram of the training phase is shown in \figref{fig:training-scheme}.
 
 Classification is performed by extracting the supervector from an input audio signal as in the training phase, and then determining the acoustic event class evaluating the SVM discriminant function (\figref{fig:scheme-classify-color}). Since the number of classes is greater than two and SVMs are binary classifiers, the ``one versus all''  technique has been adopted \cite{bishop06}. LIBSVM \cite{chang11} has been employed both in the training and testing phases of the SVM.
@@ -295,7 +299,7 @@ In addition to the clean dataset, a noisy version has been created to assess the
 %\vspace{-0.10cm}
 In this section, the experimental procedure is firstly discussed and then the algorithm performance is presented. In the experiments, the signals of the dataset described above have been downsampled to 8\,kHz and the bit depth has been reduced to 16 bit. Both the choice of the sampling frequency and the choice of MFCCs are justified by the analysis performed in the \secref{ssec:sig_analysis}, where it was shown that the signals recorded with the FAS have the majority of the energy concentrated at low frequencies (below 1\,kHz). Indeed, the mel scale used in the feature extraction pipeline has a higher resolution at low frequencies, that allows to better describe the portion of the spectrum where the majority of the energy resides. In addition, the algorithm has been evaluated using two features extraction pipelines:
 \begin{itemize}
-	\item the first is the same described in the \secref{sec:algo} and will be denoted as STD; %and it will later be called by the abbreviation STD (standard) 
+	\item the first is the same described in the \secref{ssec:fx} and will be denoted as STD; %and it will later be called by the abbreviation STD (standard) 
 	\item the second pipeline does not include the pre-emphasis filter and will be denoted with NOPRE.
 \end{itemize}
 

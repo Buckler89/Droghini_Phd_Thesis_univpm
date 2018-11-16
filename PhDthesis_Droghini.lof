@@ -5,18 +5,18 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces A hyperplane separating two classes with the maximum margin. The red highlighted points are the support vectors. \relax }}{8}{figure.caption.6}
 \contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces The human brain.\relax }}{12}{figure.caption.8}
-\contentsline {figure}{\numberline {\relax 2.3}{\ignorespaces The neuron model.\relax }}{12}{figure.caption.9}
+\contentsline {figure}{\numberline {\relax 2.3}{\ignorespaces The neuron model.\relax }}{13}{figure.caption.9}
 \contentsline {figure}{\numberline {\relax 2.4}{\ignorespaces The Artificial Neural Network.\relax }}{13}{figure.caption.10}
-\contentsline {figure}{\numberline {\relax 2.5}{\ignorespaces The artificial neuron model.\relax }}{14}{figure.caption.11}
-\contentsline {figure}{\numberline {\relax 2.6}{\ignorespaces The threshold non-linear function.\relax }}{15}{figure.caption.12}
-\contentsline {figure}{\numberline {\relax 2.7}{\ignorespaces The sigmoid non-linear function.\relax }}{15}{figure.caption.13}
-\contentsline {figure}{\numberline {\relax 2.8}{\ignorespaces The $tanh$ non-linear function.\relax }}{16}{figure.caption.14}
-\contentsline {figure}{\numberline {\relax 2.9}{\ignorespaces The $ReLU$ non-linear function.\relax }}{16}{figure.caption.15}
-\contentsline {figure}{\numberline {\relax 2.10}{\ignorespaces The $\textit {softmax}$ layer in a neural network classifier.\relax }}{17}{figure.caption.16}
-\contentsline {figure}{\numberline {\relax 2.11}{\ignorespaces The Multilayer Feedforward Network.\relax }}{18}{figure.caption.17}
-\contentsline {figure}{\numberline {\relax 2.12}{\ignorespaces The Convolutional Neural Network.\relax }}{18}{figure.caption.18}
-\contentsline {figure}{\numberline {\relax 2.13}{\ignorespaces The convolution operation.\relax }}{19}{figure.caption.19}
-\contentsline {figure}{\numberline {\relax 2.14}{\ignorespaces The max-pooling layer.\relax }}{19}{figure.caption.20}
+\contentsline {figure}{\numberline {\relax 2.5}{\ignorespaces The artificial neuron model.\relax }}{15}{figure.caption.11}
+\contentsline {figure}{\numberline {\relax 2.6}{\ignorespaces The threshold non-linear function.\relax }}{16}{figure.caption.12}
+\contentsline {figure}{\numberline {\relax 2.7}{\ignorespaces The sigmoid non-linear function.\relax }}{16}{figure.caption.13}
+\contentsline {figure}{\numberline {\relax 2.8}{\ignorespaces The $tanh$ non-linear function.\relax }}{17}{figure.caption.14}
+\contentsline {figure}{\numberline {\relax 2.9}{\ignorespaces The $ReLU$ non-linear function.\relax }}{17}{figure.caption.15}
+\contentsline {figure}{\numberline {\relax 2.10}{\ignorespaces The $\textit {softmax}$ layer in a neural network classifier.\relax }}{18}{figure.caption.16}
+\contentsline {figure}{\numberline {\relax 2.11}{\ignorespaces The Multilayer Feedforward Network.\relax }}{19}{figure.caption.17}
+\contentsline {figure}{\numberline {\relax 2.12}{\ignorespaces The Convolutional Neural Network.\relax }}{19}{figure.caption.18}
+\contentsline {figure}{\numberline {\relax 2.13}{\ignorespaces The convolution operation.\relax }}{20}{figure.caption.19}
+\contentsline {figure}{\numberline {\relax 2.14}{\ignorespaces The max-pooling layer.\relax }}{20}{figure.caption.20}
 \contentsline {figure}{\numberline {\relax 2.15}{\ignorespaces The different types of Autoencoders.\relax }}{23}{figure.caption.21}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces The floor acoustic sensor: conceptual scheme. \unhbox \voidb@x \hbox {1 - The} outer container. \unhbox \voidb@x \hbox {2 - The} inner container. \unhbox \voidb@x \hbox {3 - The} microphone slot. \unhbox \voidb@x \hbox {4 - The} membrane touching the floor.\relax }}{26}{figure.caption.22}
@@ -30,14 +30,16 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces The MFCC feature extraction pipeline.\relax }}{36}{figure.caption.31}
 \contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Block scheme for extracting a gaussian mean supervector from MFCCs and a trained UBM.\relax }}{37}{figure.caption.32}
-\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Block scheme for training the UBM and SVM models.\relax }}{37}{figure.caption.33}
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Block scheme for training the UBM and SVM models.\relax }}{38}{figure.caption.33}
 \contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Block-scheme of the fall classification phase.\relax }}{38}{figure.caption.34}
-\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Fall classification performance in matched condition with clean (a) and noisy signals (b).\relax }}{49}{figure.caption.36}
-\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Fall classification performance in mismatched condition.\relax }}{50}{figure.caption.39}
-\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Fall classification performance in multicondition.\relax }}{51}{figure.caption.40}
-\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Fall classification performance in matched condition with the dataset comprising everyday noises.\relax }}{52}{figure.caption.43}
-\contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces Fall classification performance in mismatched condition with the dataset comprising everyday noises.\relax }}{53}{figure.caption.45}
-\contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces Fall classification performance in multicondition with the dataset comprising everyday noises.\relax }}{54}{figure.caption.47}
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Fall classification performance in matched condition with clean (a) and noisy signals (b).\relax }}{50}{figure.caption.36}
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Fall classification performance in mismatched condition.\relax }}{51}{figure.caption.39}
+\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Fall classification performance in multicondition.\relax }}{52}{figure.caption.40}
+\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Fall classification performance in matched condition with the dataset comprising everyday noises.\relax }}{53}{figure.caption.43}
+\contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces Fall classification performance in mismatched condition with the dataset comprising everyday noises.\relax }}{54}{figure.caption.45}
+\contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces Fall classification performance in multicondition with the dataset comprising everyday noises.\relax }}{55}{figure.caption.47}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Results in \textit {clean} conditions for the three test cases. ``Set 1'' comprises human falls, human activities and music. ``Set 2'' comprises human falls and object falls. ``Set 3'' comprises human falls, object falls, human activities, and music.\relax }}{62}{figure.caption.57}
+\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Results in noisy conditions for the three test cases. ``Set 1'' comprises human falls, human activities and music. ``Set 2'' comprises human falls and object falls. ``Set 3'' comprises human falls, object falls, human activities, and music.\relax }}{63}{figure.caption.58}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
