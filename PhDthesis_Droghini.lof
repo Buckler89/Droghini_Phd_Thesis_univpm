@@ -28,18 +28,22 @@
 \contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces Average value of the mel channels.\relax }}{33}{figure.caption.29}
 \contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces Average value of the SNR for each mel channel.\relax }}{33}{figure.caption.30}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces The MFCC feature extraction pipeline.\relax }}{36}{figure.caption.31}
-\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Block scheme for extracting a gaussian mean supervector from MFCCs and a trained UBM.\relax }}{37}{figure.caption.32}
-\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Block scheme for training the UBM and SVM models.\relax }}{38}{figure.caption.33}
-\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Block-scheme of the fall classification phase.\relax }}{38}{figure.caption.34}
-\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Fall classification performance in matched condition with clean (a) and noisy signals (b).\relax }}{50}{figure.caption.36}
-\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Fall classification performance in mismatched condition.\relax }}{51}{figure.caption.39}
-\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Fall classification performance in multicondition.\relax }}{52}{figure.caption.40}
-\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Fall classification performance in matched condition with the dataset comprising everyday noises.\relax }}{53}{figure.caption.43}
-\contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces Fall classification performance in mismatched condition with the dataset comprising everyday noises.\relax }}{54}{figure.caption.45}
-\contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces Fall classification performance in multicondition with the dataset comprising everyday noises.\relax }}{55}{figure.caption.47}
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces The MFCC feature extraction pipeline.\relax }}{36}{figure.caption.32}
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Block scheme for extracting a gaussian mean supervector from MFCCs and a trained UBM.\relax }}{37}{figure.caption.34}
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Block scheme for training the UBM and SVM models.\relax }}{38}{figure.caption.35}
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Block-scheme of the fall classification phase.\relax }}{38}{figure.caption.36}
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Fall classification performance in matched condition with clean (a) and noisy signals (b).\relax }}{50}{figure.caption.39}
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Fall classification performance in mismatched condition.\relax }}{51}{figure.caption.43}
+\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Fall classification performance in multicondition.\relax }}{52}{figure.caption.45}
+\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Fall classification performance in matched condition with the dataset comprising everyday noises.\relax }}{53}{figure.caption.48}
+\contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces Fall classification performance in mismatched condition with the dataset comprising everyday noises.\relax }}{54}{figure.caption.50}
+\contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces Fall classification performance in multicondition with the dataset comprising everyday noises.\relax }}{55}{figure.caption.52}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Results in \textit {clean} conditions for the three test cases. ``Set 1'' comprises human falls, human activities and music. ``Set 2'' comprises human falls and object falls. ``Set 3'' comprises human falls, object falls, human activities, and music.\relax }}{62}{figure.caption.57}
-\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Results in noisy conditions for the three test cases. ``Set 1'' comprises human falls, human activities and music. ``Set 2'' comprises human falls and object falls. ``Set 3'' comprises human falls, object falls, human activities, and music.\relax }}{63}{figure.caption.58}
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Results in \textit {clean} conditions for the three test cases. ``Set 1'' comprises human falls, human activities and music. ``Set 2'' comprises human falls and object falls. ``Set 3'' comprises human falls, object falls, human activities, and music.\relax }}{62}{figure.caption.61}
+\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Results in noisy conditions for the three test cases. ``Set 1'' comprises human falls, human activities and music. ``Set 2'' comprises human falls and object falls. ``Set 3'' comprises human falls, object falls, human activities, and music.\relax }}{63}{figure.caption.62}
+\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces The proposed approach scheme.\relax }}{64}{figure.caption.63}
+\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Results in \textit {clean} and \textit {noisy} conditions for the three test cases.\relax }}{68}{figure.caption.67}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Time domain (on the left) and frequency domain (on the right) representation of a normal human activity signal (a-b), human fall signal (c-d), and book fall signal (e-f).\relax }}{72}{figure.caption.68}
+\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces The block scheme of the proposed approach.\relax }}{74}{figure.caption.69}
 \addvspace {10\p@ }

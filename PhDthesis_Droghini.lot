@@ -6,18 +6,21 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {\relax 3.1}{\ignorespaces Composition of the A3Fall-v2.0 dataset.\relax }}{28}{table.caption.24}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {\relax 4.1}{\ignorespaces Data related to R0 room used in this work.\relax }}{39}{table.caption.35}
-\contentsline {table}{\numberline {\relax 4.2}{\ignorespaces Aerial microphone confusion matrix related to the STD configuration in clean condition. The average precision is 91.48\%, the average recall 91.23\%, and the average F$_1$-Measure 91.04\%.\relax }}{41}{table.caption.37}
-\contentsline {table}{\numberline {\relax 4.3}{\ignorespaces FAS confusion matrix related to the NPRELP configuration in clean condition. The average precision is 98.13\%, the average recall 98.05\%, and the average F$_1$-Measure 98.06\%.\relax }}{42}{table.caption.38}
-\contentsline {table}{\numberline {\relax 4.4}{\ignorespaces Data related to R0 room used in this work.\relax }}{45}{table.caption.41}
-\contentsline {table}{\numberline {\relax 4.5}{\ignorespaces Fall classification performance in matched condition with the dataset excluding everyday noises.\relax }}{47}{table.caption.48}
-\contentsline {table}{\numberline {\relax 4.6}{\ignorespaces Fall classification performance in mismatched condition (a) and multicondition (b) with the dataset excluding everyday noises. F$_1$ denotes the F$_1$-Measure.\relax }}{48}{table.caption.49}
+\contentsline {table}{\numberline {\relax 4.1}{\ignorespaces Data related to R0 room used in this work.\relax }}{39}{table.caption.37}
+\contentsline {table}{\numberline {\relax 4.2}{\ignorespaces Aerial microphone confusion matrix related to the STD configuration in clean condition. The average precision is 91.48\%, the average recall 91.23\%, and the average F$_1$-Measure 91.04\%.\relax }}{41}{table.caption.40}
+\contentsline {table}{\numberline {\relax 4.3}{\ignorespaces FAS confusion matrix related to the NPRELP configuration in clean condition. The average precision is 98.13\%, the average recall 98.05\%, and the average F$_1$-Measure 98.06\%.\relax }}{42}{table.caption.41}
+\contentsline {table}{\numberline {\relax 4.4}{\ignorespaces Data related to R0 room used in this work.\relax }}{45}{table.caption.46}
+\contentsline {table}{\numberline {\relax 4.5}{\ignorespaces Fall classification performance in matched condition with the dataset excluding everyday noises.\relax }}{47}{table.caption.53}
+\contentsline {table}{\numberline {\relax 4.6}{\ignorespaces Fall classification performance in mismatched condition (a) and multicondition (b) with the dataset excluding everyday noises. F$_1$ denotes the F$_1$-Measure.\relax }}{48}{table.caption.54}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {\relax 5.1}{\ignorespaces Composition of the dataset.\relax }}{58}{table.caption.50}
-\contentsline {table}{\numberline {\relax 5.2}{\ignorespaces Composition of the training-set.\relax }}{59}{table.caption.51}
-\contentsline {table}{\numberline {\relax 5.3}{\ignorespaces Composition of ``Set 1''.\relax }}{59}{table.caption.52}
-\contentsline {table}{\numberline {\relax 5.4}{\ignorespaces Composition of ``Set 2''.\relax }}{60}{table.caption.53}
-\contentsline {table}{\numberline {\relax 5.5}{\ignorespaces Composition of ``Set 3''.\relax }}{60}{table.caption.54}
-\contentsline {table}{\numberline {\relax 5.6}{\ignorespaces Hyperparameters of the algorithm and search space explored in the validation phase.\relax }}{61}{table.caption.55}
+\contentsline {table}{\numberline {\relax 5.1}{\ignorespaces Composition of the dataset.\relax }}{58}{table.caption.55}
+\contentsline {table}{\numberline {\relax 5.2}{\ignorespaces Composition of the training-set.\relax }}{59}{table.caption.56}
+\contentsline {table}{\numberline {\relax 5.3}{\ignorespaces Composition of ``Set 1''.\relax }}{59}{table.caption.57}
+\contentsline {table}{\numberline {\relax 5.4}{\ignorespaces Composition of ``Set 2''.\relax }}{60}{table.caption.58}
+\contentsline {table}{\numberline {\relax 5.5}{\ignorespaces Composition of ``Set 3''.\relax }}{60}{table.caption.59}
+\contentsline {table}{\numberline {\relax 5.6}{\ignorespaces Hyperparameters of the algorithm and search space explored in the validation phase.\relax }}{61}{table.caption.60}
+\contentsline {table}{\numberline {\relax 5.7}{\ignorespaces Composition of the dataset.\relax }}{66}{table.caption.64}
+\contentsline {table}{\numberline {\relax 5.8}{\ignorespaces Hyper-parameters optimized in the random-search phase, and their range.\relax }}{67}{table.caption.65}
+\contentsline {table}{\numberline {\relax 5.9}{\ignorespaces Best hyper-parameters find in random-search phase for \textit {clean} and \textit {noisy} condition\relax }}{67}{table.caption.66}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -8,9 +8,10 @@ il binary  GMM-UBM SVM (WIRN2016)
 \label{sec:algorithm_svm_multiclass}
 The fall detection task consists in recognize which object produced the pattern of a signal and it mainly consists of two subtasks: the location of the time boundaries of the fall event and the classification of that event. In this section, we concentrate on the second subtask, since the main objective is determining the performance of the acoustic sensor as compared to common aerial microphones. The entire falls detection activity will be addressed in the works presented below.
 
+\subsection{Porposed approach}
 The fall classification algorithm is composed of a feature extraction stage and a classification stage. The first extracts MFCCs from the input audio signal, while the second classifies the audio event by means of Gaussian means supervectors and SVM. Following is a detailed description of the two stages.
 
-\subsection{Feature extraction}\label{ssec:fx}
+\subsubsection{Feature extraction}\label{ssec:fx}
 Despite MFCCs were originally developed for speech and speaker recognition tasks, they have been successfully applied also for acoustic event classification \cite{Temko2009} and fall detection \cite{zigel2009method}.
 
 \begin{figure}[b]
@@ -47,7 +48,7 @@ The set $\{c(0),c(1),\ldots,c(M-1)\}$ forms the static coefficients elements of 
 %\end{equation}
 %where $t$ denotes the time frame index and $T$ is the event length in frames.
 
-\subsection{Classification stage}
+\subsubsection{Classification stage}
 \label{sec:svm_multi_classification}
 The approach proposed in this section is based on a One-Class Support Vector Machine (OCSVM) \cite{scholkopf2000}. The general idea is that a human fall produces a sound considerably different from the ones commonly occurring in a home (e.g., voices, sounds from electronic devices, footsteps, etc.). The OCSVM is trained on a large set of ``normal'' sounds to detect acoustic events that deviate from normality. However, it is expected that certain acoustic events are as abnormal as a human fall (e.g., the fall of book, a chair, etc.), thus they could raise false alarms. 
 
@@ -77,9 +78,9 @@ Classification is performed by extracting the supervector from an input audio si
 	\label{fig:scheme-classify-color}
 \end{figure}
 
-\section{Experiments}\label{sec:experiments}
-
-This section firstly presents presents which portion of the dataset described in \secref{sec:dataset} has been used in this work, then the classification performance of the algorithm. 
+%\section{Experiments}\label{sec:experiments}
+%
+%This section firstly presents presents which portion of the dataset described in \secref{sec:dataset} has been used in this work, then the classification performance of the algorithm. 
 
 \subsection{Dataset}
 \label{sec:dataset_svm_multiclass}
@@ -158,8 +159,8 @@ where $C=[C(i,j)]$ is the confusion matrix.
 %\end{table}
 
 %The best performance was obtained by using an UBM with 16 mixtures, $C=\{2,2,2^{-1},2\}$ and $\gamma=\{2^{-9},2^{-9},2^{-7},2^{-7} \}$. The values of $C$ and $\gamma$ are four since they are specific for each test fold.
-
-\subsection{Results in matched condition}
+\subsection{Results}
+\subsubsection{Results in matched condition}
 \figref{fig:results_match} shows the results obtained in matched condition. As shown in the figure, the FAS exceeds the F$_1$-Measure of the aerial microphone both with clean and noisy signals regardless the feature setup employed. In particular, in clean conditions the aerial microphone achieves the highest F$_1$-Measure with standard MFCCs, while the FAS with the NOPRELP ones, which results in 6.50\% absolute improvement. In noisy conditions, the aerial microphones best performance is again achieved with STD features, while the FAS one is achieved with the NOPRE features, with the NOPRELP setup performing almost the same. The absolute improvement of the FAS respect to the aerial microphone is 5.36\%.
 
 \begin{figure}[t]
@@ -221,7 +222,7 @@ Further insights on the results are given by the confusion matrices of the aeria
 	\end{tabular}
 \end{table}
 
-\subsection{Results in mismatched condition}
+\subsubsection{Results in mismatched condition}
 \figref{fig:results_mismatch} shows the results obtained in mismatched condition, i.e., with training and validation performed on clean data and testing on noisy data. As expected, both the performance of the aerial microphone and of the floor sensor decrease. Notice, however, that regardless the features employed, the floor sensor is able to achieve considerably higher F$_1$-Measures respect to the aerial microphone. In particular, the floor sensor highest F$_1$-Measure, obtained with the NPRE features, exceeds the one of the aerial microphone obtained with the standard MFCC pipeline by 8.76\%. This value confirms that the higher SNR of the floor sensor signals actually results in better classification performance.
 
 Regarding the features, the hypothesis that the pre-emphasis could be detrimental for the performance of the sensor is confirmed: indeed, the highest F$_1$-Measure has been obtained with the NOPRE configuration and exceeds the one of the standard MFCC pipeline by 1.32\%. Differently, the introduction of the low-pass filter does not result in better performance respect to the NOPRE case. %The motivation is probably that despite being noisy, the information contained in the higher frequencies is still relevant for classification.
@@ -232,7 +233,7 @@ Regarding the features, the hypothesis that the pre-emphasis could be detrimenta
 	\caption{Fall classification performance in mismatched condition.} \label{fig:results_mismatch}
 \end{figure}
 
-\subsection{Results in multicondition}
+\subsubsection{Results in multicondition}
 \figref{fig:results_multi} shows the results obtained in multicondition, i.e., when training and test sets both contain clean and noisy data. The results further confirm the superiority of the FAS respect to the aerial microphone, with the first reaching 90.82\% using the NOPRE features and the latter reaching 85.28\% using the standard MFCC pipeline. Regarding the features, \figref{fig:results_multi} confirms that removing the pre-emphasis indeed improves classification results, while introducing the low-pass filtering does not give further benefits.
 
 \begin{figure}[t]
@@ -241,7 +242,7 @@ Regarding the features, the hypothesis that the pre-emphasis could be detrimenta
 	\caption{Fall classification performance in multicondition.} \label{fig:results_multi}
 \end{figure}
 
-\subsection{Final remarks}
+\subsection{Remarks}
 The experimental results taken as a whole provide important insights on the system behavior and allow us to express possible future directions for its improvement. In particular, the experiments demonstrated the superiority of the floor acoustic sensor compared to the aerial microphone. The results in matched condition are notable, since the F$_1$-Measure is greater than 98\% in clean condition and close to 90\% in noisy condition. The experiment in matched condition is important to compare the performance of the two sensors, but it puts the classifier in a favourable scenario. The mismatched condition is closer to a real scenario, where the classifier is trained on a dataset whose characteristics differ from testing ones. The floor sensor still achieves higher results compared to the aerial microphone, but respect to the matched condition they are considerably lower. This suggests that there is room for improvement both on the sensor side and on the algorithmic side.
 
 Regarding the sensor, the insertion of isolating material in the enclosure would further reduce the impact of external interferences. On the algorithmic side, different low-level features could be employed instead of MFCCs. In particular, recalling the works on speech recognition systems, Power Normalized Cepstral Coefficients (PNCCs) \cite{Kim12} exhibited good performance in noisy conditions and could be considered also for fall classification. In addition, the SVM classifier here employed has not been designed to recognize a specific class. In the latter case, e.g., focusing on the human fall class, the problem can be tackled in two ways: as a two class problem, where one class is the class of interest and the other comprises ``the rest of the world'' that will be addressed in \secref{sec:biclass_svm} or as a novelty detection problem, where the ``novel'' events are represented by the specific class occurrence that will be addressed in \secref{sec:ocsvm}. In both cases, the classification task is simpler, since the number of classes to discriminate is reduced and the overall performance is expected to increase \cite{bishop06}.
@@ -251,9 +252,9 @@ Regarding the sensor, the insertion of isolating material in the enclosure would
 
 The classification algorithm is based on the previous work. It employs both low-level features, i.e., MFCCs \cite{Davis80}, and high-level features, i.e., Gaussian Mean Supervectors which are then used by a Support Vector Machine to distinguish falls from no-falls. Despite MFCCs were originally developed for speech and speaker recognition tasks, they have been successfully applied also for acoustic event classification \cite{Temko06} and fall detection \cite{zigel2009method}. Differently from the algorithm presented in the previous section, where the algorithm discriminated falls of general objects, here the focus is specifically on the classification of human falls. The classifier, thus, has been designed to discriminate between two classes: human falls and generic sound events. In order to assess the performance of the approach, the dataset described in \secref{sec:dataset_svm_multiclass} has been augmented with instances of everyday sounds (speech, footsteps, etc.), thus making the task more challenging. As a reference, results employing the original dataset (\secref{sec:dataset_svm_multiclass}) are also reported.
 
+\subsection{Proposed approach}
 The classification algorithm is composed of two main parts.
 The first is the features extraction phase where we have extract the Mel Frequency Cepstral Coefficients from all audio files that comprise the dataset. For doing this, the feature extraction pipeline is the same used in \secref{ssec:fx}. In particular, the signal is segmented in frames 16\,ms long overlapped by 8\,ms, the parameter $\alpha$ of the pre-emphasis filter has been set to 0.97 and the number of filters which compose the filterbank has been set to 29. At the end, after the Discrete Cosine Transform, 13 statics coefficients are extracted that, together with their first and second derivatives, form the final feature vector of a signal.
-
 The classification phase is similar to that one adopted in \secref{sec:svm_multi_classification}: first it uses a mixture of gaussians (GMM), trained on a large corpus of audio events with the Expectation Maximization algorithm to model the acoustic space (Universal Background Model, UBM). Then, for each audio segment, the Maximum a Posteriori (MAP) algorithm is used to calculate the Gaussian Mean Supervector (GMS) from the MFCCs. %The GMSs are then employed in validation phase to estimate the Support Vector Machine parameters.
 %a MAP algorithm is employed to model the acoustic space with Universal Background Model (UBM),  starting from the MFCCs.  calculate the Gaussian Mean Supervector (GMN) starting from the MFCC using the GMM-UBM paradigm, then estimate the SVM parameters. 
 In contrast with the previous work \secref{sec:svm_multi_classification}, where we used a multi-class approach, here we employ a binary SVM to discriminate the class ``fall'' from ``rest'' which allows to distinguish human falls from the other types of sounds. In addition, the class decision is usually performed by evaluating the sign of the SVM discriminative function, which ultimately consists in deciding whether in example belongs to a class by setting a threshold equal to zero. However, in a human fall classification task, it is important to minimize the probability of missing a fall event, i.e., false negatives. In order to push the system towards this direction, we decided to consider the entire value of the SVM discriminative function, and then to set an appropriate threshold in order to minimize the occurrence of false negatives.
@@ -312,7 +313,7 @@ The experiments have been conducted with a 4-fold cross-validation strategy and 
 
 The tests have been conducted also without using the signals of everyday noises, i.e., using the same dataset employed in \secref{sec:dataset_svm_multiclass}. The performance is evaluated in terms of F$_1$-Measure per class and the values have then been averaged to obtain a single performance metric. To better describe the algorithm behavior, we have used the Detection Error Trade-off (DET) curve, as defined in \cite{Martin97}. This graph allows evaluating the false alarm probability when miss probability is equal to 0 (henceforward named as FPM0), which is particularly relevant in a fall classification task.
 
-
+\subsection{Results}
 \subsubsection{Results in matched condition}
 %\vspace{-0.25cm}
 \figref{fig:match_bck} shows the results obtained in the matched condition case study using the enlarged version of the dataset. In \figref{fig:match_bck_BAR}, the FAS achieves higher F$_1$-Measures both in clean and noisy conditions. In the first case, the floor sensor exceeds the F$_1$-Measure of the aerial microphone obtained with the standard MFCC pipeline by 0.11\%. In the noisy condition case study, the FAS with STD features achieves an F$_1$-Measure greater than 0.3\% with respect to the aerial microphone with NOPRE features.
@@ -425,7 +426,7 @@ In the last table (\tableref{tab:multi_lolo44}) are shown the result of the mult
 	\end{subtable}
 
 \end{table}
-\subsection{Final remarks}
+\subsection{Remarks}
 In this section, a human fall classification system based on the previous work discussed in \secref{sec:algorithm_svm_multiclass} has been described. The main sensor used in the FAS the sensor operates similarly to stethoscopes, with a microphone embedded in a resonant enclosure and a membrane in contact with the floor that captures the acoustic waves resulting from a fall. The performance of that sensor has been compared with the one obtained by a standard aerial microphone. The classification algorithm extracts MFCC features from the signal acquired with the FAS, and then discriminates a fall from a generic event by using GMM supervectors and an SVM classifier. Differently from the works discussed in  \secref{sec:algorithm_svm_multiclass}, here we specifically addressed the human fall classification task by designing the classifier to discriminate human falls from other events.
 
 The performance of the system has been evaluated on a corpus containing recordings of several events: falls of a human mimicking doll, falls of common objects and everyday noises (speech, footsteps, etc.). In order to assess the performance of the solution in adverse acoustic conditions, a noisy version of the dataset has been created. The experiments have been performed in three operating conditions: matched, mismatched and multicondition, and the performance has been evaluated in terms of average F$_1$-Measure and false alarm probability when the miss probability is equal to 0. The superiority of the FAS resulted evident in all the addressed conditions, in particular with an F$_1$-Measure equal to 100\%  and an FP0 equal to 0\% in clean matched conditions, and an F$_1$-Measure equal to 99.14\% and an FP0 equal to 13\% in noisy mismatched conditions.

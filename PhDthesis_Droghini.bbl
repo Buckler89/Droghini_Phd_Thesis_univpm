@@ -201,6 +201,13 @@ B.~Toreyin, A.~Soyer, I.~Onaran, and E.~Cetin,
 \newblock {\em EURASIP Journal on Advances in Signal Processing}, vol. 2008,
   no. 1, pp. 7, 2008.
 
+\bibitem{noury2007fall}
+N.~Noury, A.~Fleury, P.~Rumeau, A.~Bourke, G.~Laighin, V.~Rialle, and J.~Lundy,
+\newblock ``Fall detection-principles and methods,''
+\newblock in {\em Engineering in Medicine and Biology Society, 2007. EMBS 2007.
+  29th Annual International Conference of the IEEE}. IEEE, 2007, pp.
+  1663--1666.
+
 \bibitem{cortes95}
 C.~Cortes and V.~Vapnik,
 \newblock ``{Support-vector networks},''
@@ -369,19 +376,29 @@ S.~Cifani, E.~Principi, C.~Rocchi, S.~Squartini, and F.~Piazza,
 \newblock in {\em Proc. of Hands-Free Speech Communication and Microphone
   Arrays (HSCMA)}, Trento, Italy, May 6-8 2008, pp. 172--175.
 
+\bibitem{Noury2007}
+N.~Noury, A.~Fleury, P.~Rumeau, A.~Bourke, G.~Laighin, V.~Rialle, and J.~Lundy,
+\newblock ``Fall detection - principles and methods,''
+\newblock in {\em Proc. of the Annual Int. Conf. of the IEEE Engineering in
+  Medicine and Biology Society (EMBC)}, Lyon, France, 2007, pp. 1663--1666.
+
+\bibitem{markou2003novelty1}
+M.~Markou and S.~Singh,
+\newblock ``Novelty detection: a review -- part 1: statistical approaches,''
+\newblock {\em Signal processing}, vol. 83, no. 12, pp. 2481--2497, 2003.
+
+\bibitem{markou2003novelty2}
+M.~Markou and S.~Singh,
+\newblock ``Novelty detection: a review -- part 2: neural network based
+  approaches,''
+\newblock {\em Signal processing}, vol. 83, no. 12, pp. 2499--2521, 2003.
+
 \bibitem{Popescu2009}
 M.~Popescu and A.~Mahnot,
 \newblock ``Acoustic fall detection using one-class classifiers,''
 \newblock in {\em Proc. of the Annual Int. Conf. of the IEEE Engineering in
   Medicine and Biology Society (EMBC)}, Minneapolis, MN, USA, 2009, pp.
   3505--3508.
-
-\bibitem{noury2007fall}
-N.~Noury, A.~Fleury, P.~Rumeau, A.~Bourke, G.~Laighin, V.~Rialle, and J.~Lundy,
-\newblock ``Fall detection-principles and methods,''
-\newblock in {\em Engineering in Medicine and Biology Society, 2007. EMBS 2007.
-  29th Annual International Conference of the IEEE}. IEEE, 2007, pp.
-  1663--1666.
 
 \bibitem{Principi14c}
 E.~Principi, S.~Squartini, and F.~Piazza,
@@ -411,5 +428,39 @@ F.~Werner, J.~Diermaier, S.~Schmid, and P.~Panek,
 \newblock in {\em Proc. of the 5th Int. Conf. on Pervasive Computing
   Technologies for Healthcare and Workshops}, Dublin, Ireland, May 23-26 2011,
   pp. 354--361.
+
+\bibitem{dieleman2014end}
+S.~Dieleman and B.~Schrauwen,
+\newblock ``End-to-end learning for music audio,''
+\newblock in {\em Acoustics, Speech and Signal Processing (ICASSP), 2014 IEEE
+  International Conference on}. IEEE, 2014, pp. 6964--6968.
+
+\bibitem{ng2011sparse}
+A.~Ng,
+\newblock ``Sparse autoencoder,''
+\newblock {\em CS294A Lecture notes}, vol. 72, no. 2011, pp. 1--19, 2011.
+
+\bibitem{krizhevsky2012imagenet}
+A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton,
+\newblock ``Imagenet classification with deep convolutional neural networks,''
+\newblock in {\em Advances in neural information processing systems}, 2012, pp.
+  1097--1105.
+
+\bibitem{marchi2017deep}
+E.~Marchi, F.~Vesperini, S.~Squartini, and B.~Schuller,
+\newblock ``Deep recurrent neural network-based autoencoders for acoustic
+  novelty detection,''
+\newblock {\em Computational intelligence and neuroscience}, vol. 2017, 2017.
+
+\bibitem{kingma2014adam}
+D.~Kingma and J.~Ba,
+\newblock ``Adam: A method for stochastic optimization,''
+\newblock {\em arXiv preprint arXiv:1412.6980}, 2014.
+
+\bibitem{glorot2010understanding}
+X.~Glorot and Y.~Bengio,
+\newblock ``Understanding the difficulty of training deep feedforward neural
+  networks.,''
+\newblock in {\em Aistats}, 2010, vol.~9, pp. 249--256.
 
 \end{thebibliography}
