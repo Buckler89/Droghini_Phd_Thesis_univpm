@@ -17,6 +17,7 @@ Abnormal acoustic events are discriminate from normal ones employing the OCSVM c
 
 
 \subsection{Dataset}
+\label{sec:dataset_cin_ocsvm_only}
 The performance of the algorithm has been evaluated on a corpus containing sounds of human falls, falling objects, human activities, and music. In particular, from the dataset presented in \secref{sec:dataset}, have been used the samples reported in \tableref{tab:ocsvm_dataset}.
 
 \begin{table}[t]
@@ -85,7 +86,7 @@ Training has been performed on the set shown in \tableref{tab:trainComposition} 
 	\centering
 
 	\caption{Composition  of ``Set 1''.}
-	\label{tab:set1Composition}
+	\label{tab:set1Composition} % è lo stesso del capitolo 6
 	\begin{center}
 		\begin{tabular}{K{3cm}K{3cm}}				
 			\hline
@@ -163,12 +164,12 @@ Training has been performed on the set shown in \tableref{tab:trainComposition} 
 \end{table}
 
 For each set, the data have been divided in four folds, each composed of 11 human falls and 11 non-falls. Then, one fold has been used for estimating the hyperparameters of the algorithm and three for calculating the performance. The final performance is calculated by using the cumulative true positives, false positives, and false negatives obtained by varying the test folds.
-The validation phase consisted in searching for the number of components of the UBM, the values of $\nu$ and $\gamma$ of the OCSVM. The values assumed by these variables are summarised in \tableref{tab:parameter}.
+The validation phase consisted in searching for the number of components of the UBM, the values of $\nu$ and $\gamma$ of the OCSVM. The values assumed by these variables are summarised in \tableref{tab:parameter_ocsvm}.
 
 \begin{table}[t]
 	\centering
 	\caption{Hyperparameters of the algorithm and search space explored in the validation phase.}
-	\label{tab:parameter}
+	\label{tab:parameter_ocsvm}
 	\begin{tabular}{c |c | c}
 		\hline
 		\textbf{Stage} & \textbf{Hyperparameter} & \textbf{Range} \\
@@ -182,12 +183,14 @@ The validation phase consisted in searching for the number of components of the 
 	\end{tabular}
 \end{table}
 
-
+\paragraph{Comparative method}
+\label{par:popescu_mod}
 The proposed approach has been compared to the algorithm presented in \cite{Popescu2009} based on OCSVM. The same algorithm has also been employed in \cite{khan2015unsupervised} with a multi-microphone acquisition setup and a source separation stage. As in \cite{Popescu2009}, the audio signals are divided in windows of the same lengths, and the related MFCCs are used for training the OCSVM and for classification. In \cite{Popescu2009}, 7 MFCCs were extracted from audio signals sampled at 20\,kHz and the length of the window was set to 1\,s. Here, the feature vectors are the same of the proposed approach, i.e., they are composed of the first 13 MFCCs and their first and second derivatives. The same window length of \cite{Popescu2009} cannot be employed here, since the dataset used in this paper comprises signals with lengths less than 1\,s. Thus, the length of the window corresponds to the duration of the shortest event in the dataset, and it is equal to 576\,ms (71 frames). Windows are overlapped by 50\%, and, as in \cite{Popescu2009}, an event is classified as fall if at least two consecutive frames are classified as novelty by the OCSVM. The same grid search procedure of the proposed approach has been adopted to search for the optimal values of $\nu$ and $\gamma$ of the OCSVM.
 
 
 The performance has been evaluated in terms of F$_1$-Measure calculated as:
 \begin{equation}
+\label{eq:f1}
 \text{F}_1\text{-Measure} = \frac{2\cdot tp}{2\cdot tp+fn+fp},
 \end{equation}
 where $tp$ is the number of correctly classified falls, $fn$ is the number of falls misclassified as non-falls, and $fp$ is the number of non-falls misclassified as falls.
@@ -299,7 +302,6 @@ The signals have been acquired with a sampling rate equal to 44.1 kHz and 32 bit
 \end{table}
 
 \subsection{Experimental Setup}
-
 
 Since in this work a novelty approach is presented, the dataset has been divided in two groups: the former composed only of background sounds (i.e human activity sounds and musical background) used for the training; the latter composed of both background sound and novelty sounds, i.e, the human falls, used in development and test phase.
 In order to assess the classification accuracy in noisy conditions, a second version of human fall sounds were crated in which a musical background was recorded and then digitally added to the fall events.
