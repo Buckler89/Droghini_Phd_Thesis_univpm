@@ -29,6 +29,7 @@
 \usepackage{hhline}
 \usepackage{tablefootnote}
 \usepackage{siunitx}
+\usepackage{cleveref}
 
 \usetikzlibrary{shadows,arrows,fit,shapes,positioning,calc,backgrounds,spy,decorations.markings}
 \usetikzlibrary{backgrounds}
@@ -99,7 +100,7 @@ double distance=1.4pt, shorten >= 5.5pt, preaction = {decorate}, postaction = {d
 \def\Z{{\mathbb{Z}}}
 \def\R{{\mathbb{R}}}
 
-
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
 % Il codice che segue colora una cella in base al suo contenuto
 % #1 è il contenuto della cella (ad esempio, 80)
 % \pgfmathparse{#1/100<.7?1:0} 

@@ -1,0 +1,29 @@
+\documentclass[margin=0.5mm]{standalone}
+%\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+
+\pgfplotsset{width=\textwidth}
+
+\begin{document}
+
+\begin{tikzpicture}
+	\begin{axis}[%
+	xlabel=Folds,
+	ylabel= $ F_1 -Measure$,
+	xmin=1,xmax=10, ymin=0, ymax=100, % <-- added here to preserve view
+	legend pos=south east,
+	]
+		 \addplot coordinates
+ 		{(1,100) (2,100) (3,100) (4,100) (5,100) (6,100) (7,100) (8,100) (9,100) (10,100) };
+		\addlegendentry{Test}
+		\addplot coordinates
+		{(1,83.33) (2,90.91) (3,90.91) (4,100) (5,90.91) (6,100) (7,75.00) (8,100) (9,100) (10,100) };
+		\addlegendentry{Validation}
+	\end{axis}
+\end{tikzpicture}
+
+\end{document}

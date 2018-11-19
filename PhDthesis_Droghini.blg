@@ -4,44 +4,46 @@ The top-level auxiliary file: PhDthesis_Droghini.aux
 The style file: IEEEbib.bst
 Database file #1: IEEEabrv.bib
 Database file #2: 8_backMatter/refs.bib
-You've used 74 entries,
+Warning--can't use both volume and number fields in lake2014one
+You've used 86 entries,
             1838 wiz_defined-function locations,
-            1435 strings with 28915 characters,
-and the built_in function-call counts, 21439 in all, are:
-= -- 1939
-> -- 955
-< -- 32
-+ -- 343
-- -- 269
-* -- 1710
-:= -- 3156
-add.period$ -- 85
-call.type$ -- 74
-change.case$ -- 72
+            1495 strings with 31275 characters,
+and the built_in function-call counts, 24992 in all, are:
+= -- 2253
+> -- 1128
+< -- 40
++ -- 405
+- -- 319
+* -- 1980
+:= -- 3679
+add.period$ -- 100
+call.type$ -- 86
+change.case$ -- 84
 chr.to.int$ -- 0
-cite$ -- 74
-duplicate$ -- 954
-empty$ -- 2039
-format.name$ -- 269
-if$ -- 4992
+cite$ -- 87
+duplicate$ -- 1121
+empty$ -- 2376
+format.name$ -- 319
+if$ -- 5816
 int.to.chr$ -- 0
-int.to.str$ -- 74
-missing$ -- 70
-newline$ -- 367
-num.names$ -- 79
-pop$ -- 255
+int.to.str$ -- 86
+missing$ -- 82
+newline$ -- 427
+num.names$ -- 91
+pop$ -- 302
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 528
+skip$ -- 622
 stack$ -- 0
-substring$ -- 1625
-swap$ -- 357
-text.length$ -- 32
+substring$ -- 1856
+swap$ -- 425
+text.length$ -- 40
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 186
-width$ -- 76
-write$ -- 826
+warning$ -- 1
+while$ -- 218
+width$ -- 88
+write$ -- 960
+(There was 1 warning)

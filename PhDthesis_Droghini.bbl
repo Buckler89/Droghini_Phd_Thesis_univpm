@@ -463,4 +463,76 @@ X.~Glorot and Y.~Bengio,
   networks.,''
 \newblock in {\em Aistats}, 2010, vol.~9, pp. 249--256.
 
+\bibitem{pimentel2014review}
+M.~A. Pimentel, D.~A. Clifton, L.~Clifton, and L.~Tarassenko,
+\newblock ``A review of novelty detection,''
+\newblock {\em Signal Processing}, vol. 99, pp. 215--249, 2014.
+
+\bibitem{bromley1994signature}
+J.~Bromley, I.~Guyon, Y.~LeCun, E.~S{\"a}ckinger, and R.~Shah,
+\newblock ``Signature verification using a" siamese" time delay neural
+  network,''
+\newblock in {\em Advances in Neural Information Processing Systems}, 1994, pp.
+  737--744.
+
+\bibitem{chopra2005learning}
+S.~Chopra, R.~Hadsell, and Y.~LeCun,
+\newblock ``Learning a similarity metric discriminatively, with application to
+  face verification,''
+\newblock in {\em Computer Vision and Pattern Recognition, 2005. CVPR 2005.
+  IEEE Computer Society Conference on}. IEEE, 2005, vol.~1, pp. 539--546.
+
+\bibitem{koch2015siamese}
+G.~Koch, R.~Zemel, and R.~Salakhutdinov,
+\newblock ``Siamese neural networks for one-shot image recognition,''
+\newblock in {\em ICML Deep Learning Workshop}, 2015, vol.~2.
+
+\bibitem{vinyals2016matching}
+O.~Vinyals, C.~Blundell, T.~Lillicrap, D.~Wierstra, et~al.,
+\newblock ``Matching networks for one shot learning,''
+\newblock in {\em Advances in Neural Information Processing Systems}, 2016, pp.
+  3630--3638.
+
+\bibitem{lake2014one}
+B.~Lake, C.-y. Lee, J.~Glass, and J.~Tenenbaum,
+\newblock ``One-shot learning of generative speech concepts,''
+\newblock in {\em Proceedings of the Annual Meeting of the Cognitive Science
+  Society}, 2014, vol.~36.
+
+\bibitem{manocha2017content}
+P.~Manocha, R.~Badlani, A.~Kumar, A.~Shah, B.~Elizalde, and B.~Raj,
+\newblock ``Content-based representations of audio using siamese neural
+  networks,''
+\newblock {\em arXiv preprint arXiv:1710.10974}, 2017.
+
+\bibitem{gemmeke2013exemplar}
+J.~F. Gemmeke, L.~Vuegen, P.~Karsmakers, B.~Vanrumste, et~al.,
+\newblock ``An exemplar-based nmf approach to audio event detection,''
+\newblock in {\em Applications of Signal Processing to Audio and Acoustics
+  (WASPAA), 2013 IEEE Workshop on}. IEEE, 2013, pp. 1--4.
+
+\bibitem{parascandolo2017convolutional}
+G.~Parascandolo, T.~Heittola, H.~Huttunen, T.~Virtanen, et~al.,
+\newblock ``Convolutional recurrent neural networks for polyphonic sound event
+  detection,''
+\newblock {\em IEEE/ACM Transactions on Audio, Speech, and Language
+  Processing}, vol. 25, no. 6, pp. 1291--1303, 2017.
+
+\bibitem{mesaros2010acoustic}
+A.~Mesaros, T.~Heittola, A.~Eronen, and T.~Virtanen,
+\newblock ``Acoustic event detection in real life recordings,''
+\newblock in {\em Signal Processing Conference, 2010 18th European}. IEEE,
+  2010, pp. 1267--1271.
+
+\bibitem{Principi2016a}
+E.~Principi, D.~Droghini, S.~Squartini, P.~Olivetti, and F.~Piazza,
+\newblock ``Acoustic cues from the floor: a new approach for fall
+  classification,''
+\newblock {\em Expert Systems with Applications}, vol. 60, pp. 51--61, 2016.
+
+\bibitem{zeiler2012adadelta}
+M.~D. Zeiler,
+\newblock ``Adadelta: an adaptive learning rate method,''
+\newblock {\em arXiv preprint arXiv:1212.5701}, 2012.
+
 \end{thebibliography}

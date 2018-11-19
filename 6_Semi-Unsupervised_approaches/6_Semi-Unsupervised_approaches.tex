@@ -14,34 +14,34 @@ As shown in the previous section, ``unsupervised methods'' are able to overcome 
 
 \begin{figure}[htbp!]
 	\centering
-	\begin{subfigure}[t]{0.5\columnwidth}
+	\begin{subfigure}[ht]{0.5\columnwidth}
 		\centering
 		\includegraphics[width=0.9\textwidth]{img/cin/ha_time_.pdf}
 		\caption{Normal human activity signal in the time domain.}\label{fig:time_ha}
 	\end{subfigure}%
-	\begin{subfigure}[t]{0.5\columnwidth}
+	\begin{subfigure}[ht]{0.5\columnwidth}
 		\centering
 		\includegraphics[width=\textwidth]{img/cin/ha_freq_.pdf}
 		\caption{Normal human activity signal in the frequency domain.}\label{fig:spec_ha}
 	\end{subfigure}
 	
-	\begin{subfigure}[t]{0.5\columnwidth}
+	\begin{subfigure}[ht]{0.5\columnwidth}
 		\centering
 		\includegraphics[width=0.9\textwidth]{img/cin/rndy_time_.pdf}
 		\caption{Human fall signal in the time domain.}\label{fig:time_hf}
 	\end{subfigure}%
-	\begin{subfigure}[t]{0.5\columnwidth}
+	\begin{subfigure}[ht]{0.5\columnwidth}
 		\centering
 		\includegraphics[width=\textwidth]{img/cin/rndy_freq_.pdf}
 		\caption{Human fall signal in the frequency domain.}\label{fig:spec_hf}
 	\end{subfigure}
 	
-	\begin{subfigure}[t]{0.5\columnwidth}
+	\begin{subfigure}[ht]{0.5\columnwidth}
 		\centering
 		\includegraphics[width=0.9\textwidth]{img/cin/book_time_.pdf}
 		\caption{Book fall signal in the time domain.}\label{fig:time_bf}
 	\end{subfigure}%
-	\begin{subfigure}[t]{0.5\columnwidth}
+	\begin{subfigure}[ht]{0.5\columnwidth}
 		\centering
 		\includegraphics[width=\textwidth]{img/cin/book_freq_.pdf}
 		\caption{Book fall signal in the frequency domain.}\label{fig:spec_bf}
@@ -57,7 +57,7 @@ The proposed approach is composed of three stages \figref{fig:overall_ocsvm_user
 \subsubsection{Template Matching}
 The template-matching classifier operates on a set of templates, i.e., supervectors, that can be defined a-priori or selected by the user when the OCSVM detects an abnormal sound that is not a human fall. Denoting with $\mathbf{x}$ the supervector of the input signal and with $\mathcal{Y} = \{\mathbf{y}_1,\ldots,\mathbf{y}_N\}$ the set of templates, the algorithm operates by calculating the Euclidean distance $D^{(i)} = \| \mathbf{x} - \mathbf{y}_i \|$ between the supervector to be classified and all the templates in the set. Indicating with $D_{min} = \underset{i}{\min}\,\,D^{(i)}$, the supervector $\mathbf{x}$ is classified as a fall if $D_{min}>\beta$ and as non-fall otherwise. The threshold $\beta$ is a hyperparameter of the algorithm that can be determined on a validation set.
 
-\begin{figure}[t]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.95\columnwidth]{img/cin/approccioComplessivo.pdf}
 	\caption{The block scheme of the proposed approach.}\label{fig:overall_ocsvm_user_aided}
@@ -77,10 +77,10 @@ Training has been performed on the same set used for the OCSVM base algorithm pr
 \end{itemize}
 
 
-\begin{table}[t]
+\begin{table}[ht]
 	\centering
 	\caption{Data used in ``Set 1''.}
-	\begin{subtable}[t]{.6\textwidth}
+	\begin{subtable}[ht]{.6\textwidth}
 		\centering		
 		\caption{Composition  of ``Set 1''.}
 		\label{tab:set1Composition_} % è lo stesso del capitolo 5. Lo riporto qui per comodità di lettura
@@ -98,7 +98,7 @@ Training has been performed on the same set used for the OCSVM base algorithm pr
 			\end{tabular}			
 		\end{center}		
 	\end{subtable}%
-	\begin{subtable}[t]{.6\textwidth}
+	\begin{subtable}[ht]{.6\textwidth}
 		\centering		
 		\caption{Templates of ``Set 1''.}\label{tab:set1Template}
 		\begin{center}
@@ -125,10 +125,10 @@ Training has been performed on the same set used for the OCSVM base algorithm pr
 	
 \end{table}
 
-\begin{table}[t]
+\begin{table}[ht]
 	\centering
 	\caption{Data used in ``Set 2''.}
-	\begin{subtable}[t]{.6\textwidth}
+	\begin{subtable}[ht]{.6\textwidth}
 		\centering
 		
 		\caption{Composition  of ``Set 2''.}
@@ -155,7 +155,7 @@ Training has been performed on the same set used for the OCSVM base algorithm pr
 		\end{center}
 		
 	\end{subtable}%
-	\begin{subtable}[t]{.6\textwidth}
+	\begin{subtable}[ht]{.6\textwidth}
 		\centering
 		
 		\caption{Templates of ``Set 2''.}
@@ -189,10 +189,10 @@ Training has been performed on the same set used for the OCSVM base algorithm pr
 \end{table}
 
 
-\begin{table}[t]
+\begin{table}[ht]
 	\centering
 	\caption{Data used in ``Set 3''.}
-	\begin{subtable}[t]{.6\textwidth}
+	\begin{subtable}[ht]{.6\textwidth}
 		\centering
 		
 		\caption{Composition  of ``Set 3''.}
@@ -223,7 +223,7 @@ Training has been performed on the same set used for the OCSVM base algorithm pr
 		\end{center}
 		
 	\end{subtable}%
-	\begin{subtable}[t]{.6\textwidth}
+	\begin{subtable}[ht]{.6\textwidth}
 		\centering
 		
 		\caption{Templates of ``Set 3''.}
@@ -260,7 +260,7 @@ The method employed for the template-matching decision threshold is explained in
 
 %\subsection{Comparative method}
 
-\begin{table}[t]
+\begin{table}[ht]
 	\centering
 	\caption{Hyperparameters of the algorithm and search space explored in the validation phase. The search space of the template-matching threshold $\beta$ is not reported, since is determined with the procedure described in \secref{ssec:templateThreshold}. }
 	\label{tab:parameter}
@@ -292,7 +292,7 @@ Observing clean condition distributions, in ``Set 1'' the two density are consid
 
 Noisy condition distributions, shown in \figref{fig:distr_noisy}, are in general less distinct compared to clean condition ones. The effect of noisy is to flatten the distances of the fall and non-fall classes, thus resulting in a less discriminative capabilities of the classifier. Thus, it is expected that the performance improvement in noisy conditions will be more modest respect to the one obtained in clean condition.
 
-\begin{figure}[t]
+\begin{figure}[ht]
 	\centering
 	\begin{subfigure}{0.9\columnwidth}
 		\centering
@@ -312,7 +312,7 @@ Noisy condition distributions, shown in \figref{fig:distr_noisy}, are in general
 	\caption{Probability distributions of the minimum Euclidean distances among the template sets, and human falls and non-falls in \textit{clean} acoustic condition.}\label{fig:distr_clean}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[ht]
 	\centering
 	\begin{subfigure}{0.9\columnwidth}
 		\centering
@@ -335,7 +335,7 @@ Noisy condition distributions, shown in \figref{fig:distr_noisy}, are in general
 \subsection{Results}
 \figref{fig:res_clean_} shows the results in clean conditions obtained with and without the template-matching stage, respectively denoted as ``OCSVM+Template-Matching'' and ``OCSVM''. The results obtained with the method proposed in \cite{Popescu2009} are denoted with ``Popescu (2009)''. Observing the figure, it is evident that in all the three cases the template-matching approach is able to improve the performance with respect to ``Popescu (2009)'' \cite{Popescu2009} and the OCSVM only approach. In particular, in ``Set 1'', that comprises human falls, human activities and music, the performance improves by 2.03\% with respect to OCSVM and by 19.64\% with respect to ``Popescu (2009)''. This case can be considered as the least challenging of the three, since non-falls events are considerably different from falls ones. Conversely, ``Set 2'' comprises both human falls and object falls, thus it includes abnormal events whose pattern is similar to the one of human falls. The introduction of the template-matching stage considerably reduces the number of false positives, leading to an overall performance improvement of 20.76\%. ``Set 3'' comprises human falls, human activities, music and object falls and represents the most realistic test condition of the three. Introducing the template-matching stage, the performance improves by 7.64\%, leading to an F$_1$-Measure equal to 89.89\%. 
 
-\begin{figure}[t]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=\columnwidth]{img/cin/res_clean.pdf}
 	\caption{Results in \textit{clean} conditions for the three test cases. ``Set 1'' comprises human falls, human activities and music. ``Set 2'' comprises human falls and object falls. ``Set 3'' comprises human falls, object falls, human activities, and music.} \label{fig:res_clean_}
@@ -347,12 +347,383 @@ In summary, the results demonstrated that the introduction of a template-matchin
 
 Comparing the results in clean (\figref{fig:res_clean_}) and noisy (\figref{fig:res_noisy_}) conditions, it is evident that techniques for reducing the impact of additive noise are needed. Additionally, the proposed solution requires the intervention of the user for selecting the templates after the first classification stage performed by the OCSVM. This aspect will be addressed in next sections in order to make the algorithm completely independent of the user, using a low number of examples related to human fall.
 
-\begin{figure}[t]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=\columnwidth]{img/cin/res_noisy.pdf}
 	\caption{Results in noisy conditions for the three test cases. ``Set 1'' comprises human falls, human activities and music. ``Set 2'' comprises human falls and object falls. ``Set 3'' comprises human falls, object falls, human activities, and music.} \label{fig:res_noisy_}
 \end{figure}
-\section{Few-shot Siamese Neural Networks employing Audio featuresfor Human-Fall Detection}
+
+
+\section{Few-shot Siamese Neural Networks employing Audio features
+for Human-Fall Detection}
 \label{sec:siamese_few_shot}
-\section{Audio Metric Learning by using Siamese Autoencodersfor One-Shot Human Fall Detection}
+As already mentioned, the main challenge for falls detector systems is the lack of human falls examples in the dataset, that are rare and hardly recoverable. Hence the need to develop systems that are able to work with no or few such data. In fact, Khan et al. \cite{khan2017review} analyze Fall Detection techniques and divides them based on data availability prospective in two groups. The group is composed of algorithms that can draw form dataset with sufficient number of human falls that can be used in training. Mostly based on supervised machine learning, thresholding and one-class techniques, this methods attempt to detect a fall directly given their training data. As we show here, although these supervised techniques can achieve a high reliability, they needs a large labelled dataset including many human fall, that is not easy to retrieve for this specific application. Moreover, applying this techniques when there are no training data for human falls leads to an unacceptable miss rate. As a comparative model for this category, has been evaluated an algorithm based on SVM.% described below %that shows good results in \cite{Principi2016a}
+. The second group include algorithms that can draw form dataset with insufficient or no training data for falls mostly based on over/under-sampling, semi-supervised learning, novelty detection and one-class classification. Those techniques differ from the previous ones because uses the available data as a description of normal activities. Once it is trained on these data, can be able to classify a test sample as a human fall or non-human fall. The major drawback here is that they need a good description of what ``normal activities'' are. In fact to give a good representation of this concept, a big data set comprising all the normal activities is needed \cite{pimentel2014review}. In real scenario, this is very difficult to obtain and this may induce the classifier to produce a high number of false alarms. As a comparative models for this category, 2 approaches have been evaluated: a OCSVM that is a totally unsupervised method and a extremely unbalanced SVM that use only one human fall for the training phase%, both described below.
+.
+
+The proposed algorithm belongs to the second category, and as a first step, we demonstrate that the SNN can achieve better results than both unsupervised and supervised methods when they are tested under similar conditions.
+
+
+%Learning a Similarity Metric Discriminatively, with Application to Face Verification
+% quello di lecunn e ella contrastive loss
+%One-Shot Learning of Object Categories 
+% del 2006
+%One-shot Learning with Memory-Augmented Neural Networks
+%altro lavoro su one shot learning
+%Matching Networks for One Shot Learning
+%altri lavori sepre su immagini per il one shot (non siamesi)
+One-shot or few-shot methods have been recently revived in other fields of application.
+The Siamese approach was introduced by Bromley et al. \cite{bromley1994signature} for signature verification and later also used in \cite{chopra2005learning} for face verification, both of them in a supervised framework. Regarding the one-shot learning approach, the Siamese framework was first employed by Koch et al.\cite{koch2015siamese} for image recognition.
+In \cite{vinyals2016matching} an attention mechanism over a learned metrics is used. In that work, the authors propose so-called Matching Networks trained by showing only a few examples per class for each minibatch in order to mimic the few-shot task by subsampling classes in a meta-learning perspective.
+In the audio field, one-shot approaches have been rarely used up to now.
+Lake et al. \cite{lake2014one} proposed a hierarchical Bayesian acoustic-based approach to model the way a person learns a word of a new language from a few examples. They use a Hierarchical Hidden Markov model that induces the set of phone-like acoustic units directly from the raw unsegmented speech data in a completely unsupervised manner, identifying segments that should be clustered together and learning a set of phone-like acoustic units for the language.
+Manocha et al.\cite{manocha2017content} proposed a method based on Siamese networks for audio Content-based Representations.
+
+\section{Proposed Approach}
+\label{sec:proposed_app}
+%In this work the authors applied a Siamese Neural Network 
+In this work the authors propose a Siamese Neural Network able to learn a latent representation of an audio event. In particular, a SNN is composed of two twin networks with binded weights. A pair of inputs is provided to the system, one to each twin network. Downstream, the network maps these inputs into two different representation vectors. Then, a certain type of distance between those two representations is computed. In this work euclidean distance was used. In \figref{proposed_approach}, are reported two example of mel-spectrograms: the spectrum that is given as input to the function first network represents a chair that is overturned. The other inputs instead represent a human fall. As can be seen, the signals are not distinguishable at a glance, thus we think that the differential approach of the SNN, described below, seems to be appropriate.
+
+Consider $X_1$, $X_2$ as a pair of two input samples and $Y(X_1, X_2)$ as the label assigned to this pair, we assign $Y = 0$ (positive example) if the inputs $X_1$ and $X_2$ are from the same distribution, $Y = 1$ (negative example) otherwise. The euclidean distance between the mapping $S_e(X_1)$ and $S_e(X_2)$ performed by the network is defined as:
+\begin{equation}
+E_w = \norm{S_e (X_1) - S_e (X_2)}.
+\end{equation}\\
+The training procedure consists in minimize the differences of $X_1$, $X_2$ for inputs belonging to the same class ($Y = 0$) while maximize the differences for inputs of different classes ($Y = 1$). % In fact, entire network is trained in such a way to learn inputs differences, predicting 1 if the two input are not from the same distributions and 0 (negative example) if the input are from the same distributions (positive example).
+The loss function used to achieve this minimization is the contrastive loss, described by LeCun et al. in \cite{chopra2005learning}:
+\begin{equation}
+Loss = (1 - Y)\frac{1}{2}(E_w)^2 + (Y)\frac{1}{2}\{(max(0, m - E_w)\}^2 .
+\end{equation}\\
+Here the parameter $m > 0$ is the \textit{margin} that allows only negative examples whose distance is less than the radius defined by $m$ itself, to contribute to the loss function.
+In this way the system should be able to learn embedded features allowing classification even of the unseen rare sound event such as human fall.
+%Dire che questo tipo di approccio, dovendo combinare in ingesso gli esempi a disposizione, permette un aumento del trainset, vantaggioso nel caso in cui si opera con dataset piccoli.
+Our Siamese network has been trained on a corpus of labelled object fall events and not including any human fall. Pairs of events belonging to the same class correspond to the positive examples while pairs of events belonging to the different class a negative one as explained in section \ref{sec:dataselection}. In particular, the term few-shot comes from the fact that although, in this case study, human falls have not been used for training, some of them are used in the optimization phase, before the final test.
+\begin{figure*}
+	\includegraphics[width=\linewidth]{img/prai/Siamese_approach}
+	\caption{Proposed approach.}
+	\label{proposed_approach}
+	% i mel spect sono rndy_d4st_chair_2.wav e chair_d6h0_side_5.wav
+	
+\end{figure*}
+\subsection{Feature Extraction}
+The example provided to the system are preprocessed in a features extraction stage that computes the log mel-energies. These features have been chosen as they are very popular for computational audio analysis \cite{gemmeke2013exemplar,parascandolo2017convolutional,mesaros2010acoustic}.
+In particular, for this work the log mel-energies have been computed as follows.
+First the signals were padded with some AWGN samples to the length of the longest audio event present in the dataset in order to work with the designed neural network.
+Then the audio has been downsampled to 16 kHz and normalized. After that signal has been segmented in frames 40 ms long overlapped
+by 20 ms and multiplied with a Hamming window. Discrete Fourier Transform (DFT) is calculated and the absolute value is filtered with a filterbank composed of 40 triangular filters uniformly spaced on the mel scale. At the end each audio event is represented as a matrix $X$ of shape $40\times159$.  
+
+\subsection{Network Architecture}
+As shown in \figref{proposed_approach}, the architecture explored here for the twin networks consists of $L_c$ convolutional layers followed by a max pooling. After the convolutional part, there are $L_f$ fully connected layers. After each convolutional and fully-connected layers a \textsl{batch normalization} on features map is applied followed by a \textsl{Leaky ReLU} activation function.
+See \secref{sec:Results} for details about the best performing network. 
+
+
+
+\subsection{Dataset}
+All the instances related to the fall events of the R0 room (\secref{sec:dataset}) has been used in this work. In order to achieve a data augmentation, the instances recorded with all the microphones used during the creation of the dataset has been used:
+\begin{itemize}
+	\item one microphone array composed of 3 microphones (here taken as single microphones);
+	\item 2 prototype of Floor Acoustic Sensor: the first, from now on indicated with FAS, was widely described and used in previous works \cite{Principi2016a} (\figref{fig:FAS}). For the second the only difference is the microphone used inside\footnote{RODE Lavalier: http://en.rode.com/microphones/lavalier.} that is characterized by an omni-directional directivity pattern instead of hyper-cardioid pattern.
+\end{itemize}
+
+\tableref{tab:numDataset} shows the number of instances for each class used in this work considering only audio recorded with FAS. 
+%\begin{figure}
+%	\includegraphics[width=\linewidth]{images/oggetti_cadute3.jpeg}
+%	\caption{Objects used during the data acquisition camping.}
+%	\label{fig:objects}
+%\end{figure}
+%\begin{figure}
+%	\includegraphics[width=\linewidth]{images/impalcatura.jpg}
+%	\caption{Mimikin doll used to simulate the human falls.}
+%	\label{fig:mimikin_doll}
+%\end{figure}
+
+\begin{table}[ht]
+	\caption{Composition  of the dataset.}
+	\label{tab:numDataset}
+	\begin{center}
+		%		\begin{tabular}[ht]{c>{\centering}m{5cm}c}
+		\begin{tabular}[ht]{c|c|c}	
+			\hline
+			\textbf{Class} & \textbf{Nr. of occurrences} & \textbf{Total length (s)} \\ %\cline{2-5} 
+			%& \hspace{8pt}Clean\hspace{8pt}  & \hspace{6pt}Clean\hspace{6pt}   \\ 
+			\hline
+			Basket      			& 64    &   86    	\\
+			Fork        			& 64    &   82     	\\
+			Ball       				& 64    &   129     \\
+			Book        			& 64    &   63    	\\
+			Bag         			& 64    &   57     	\\
+			Chair       			& 96    &   157     \\
+			$\,$ Human Falls $\,$ 	& 44    &   76     	\\
+			%Human Activity  		& 665   &   1218     \\
+			%Music					& 776   &	1498	\\
+			%				 Classic Music       	& 441   &   882     \\
+			%				 Rock Music       		& 335   &   616     \\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+
+\section{Experiments}
+\label{sec:experiments}
+
+
+Two methods previously described have been taken as a baseline for the comparison:
+in \secref{sec:biclass_svm} a supervised approach based on bi-class SVM able to discriminate fall event from  non-fall event was employed. In this works the training set was composed of labeled data representing fall and non-fall event. In \secref{sec:ocsvm_approach} instead, an unsupervised method based on OCSVM was presented. In this case the training set was composed only from background that comprises human daily activities sounds, classical and rock music played from a loudspeaker.
+.
+For a correct comparison baseline, experiments have been repeated using the same data employed here for the SNN %but with some difference dependent on the type of the algorithm 
+as described below \secref{sec:dataselection}.
+
+\subsubsection{Data Selection}
+\label{sec:dataselection}
+All the experiments have been conducted with three-way data split and a 10 folds cross-validation strategy. In particular, for each fold, the data has been divided in 90\% for indicated, 5\% for validation and 5\% for the test, so in each set, all the classes indicated in the \tableref{tab:numDataset}, are present in a balanced way. Since here we approach the problem as a binary classification, this has led, of course, to an imbalance between the human fall and the rest% detto perchè poi mi serve per giustiicare i fatto dela confusion matrix cumulativa 
+.
+Because each evaluated approach differs from the other, it was necessary to select the data for each of them. To keep the various experiments comparable to each other, starting from the set above, we have constructed the various data sets for each approach as follows:
+\begin{itemize}
+	\item SNN: first all the signals corresponding to the human fall class have been removed from the training set. Inasmuch as the Siamese network works with paired inputs we generated all the combinations, without repetitions, between all the training examples and then randomly 80000 pairs were selected. In prediction phase, the Siamese Network needs a template to classify the events, so the development set has been subdivided in sub-test: in each of these a human fall present in the validation set has been paired with all the other events present in the same set. In the test, instead, a single human fall was selected randomly to be used as a template for each fold. This was done to keep the test set comparable between the different methods;
+	\item SVM: no changes have been made to the lists;
+	\item SVM-unbalanced: in the training set only a human fall has been left;
+	\item OCSVM: as this is an unsupervised method all the signals corresponding to the human fall class have been removed from the training set.
+\end{itemize}
+For each method, the development and test set have been used only the FAS signals while the training set has been augmented with the instances of the events recorded with all others the microphones. 
+
+
+
+\subsubsection{Validation and Evaluation}
+
+The performances of the compared algorithm have been evaluated in term of $ F_1 -Measure$ referred to the human fall class. Due to the unbalanced nature of development and test set, the metric has been computed starting from a normalized confusion matrix. In particular, for the final evaluation, all the absolute confusion matrices coming from each fold have been summed. The cumulative confusion matrix has been then normalized and the final  $ F_1 -Measure$ was computed from it. 
+
+To optimize the hyper-parameters of the methods the following strategies have been adopted:
+\begin{itemize}
+	\item for the SNN a small random search of 30 network configurations has been performed. The hyper-parameters varied during the search are reported in \tableref{tab:random_search_params}.
+	The search of the threshold value of the output layer of the network which yielded the best $ F_1 -Measure$ has been performed on the validation set.
+	%	 During the computation of the $ F_1 -Measure$ on the development set, optimum threshold search for the output layer of the network have been performed.
+	The threshold found in this way was then used for the test of the same fold;
+	\item for the SVM methods a grid search strategy has been adopted to optimize the parameters. In particular the parameters have assumed values in the ranges  $\{ 2^{-5},2^{-3},\ldots,2^{15} \}$ for $ C $ (SVM) and $ \nu $ (OCSVM), $\{ 2^{-15},\\2^{-13},\ldots,2^{3} \}$ for $ \gamma $ (both SVM and OCSVM) and  $\{ 1,2,\\\ldots,64 \}$ for the number of mixture of the GMM-UBM. 
+	The parameter's values that led to the highest result were then used during the test of the same fold.
+\end{itemize}
+
+For the Siamese network, a Glorot uniform weight initializer has been used for all layers. Adadelta has been used as optimizer algorithm with default initial parameters \cite{zeiler2012adadelta}. Different values of learning rate decay have been tried in the random-search.
+We trained the network for a maximum of 300 epochs, but an early stopping on the $ F_1 -Measure$ has been used to interrupt training if there were no improvements for 25 consecutive epochs. At the ends, the model corresponding to the epoch that gave the best result was selected for the evaluation on the test set.
+
+\begin{table}[ht]
+	\caption{Hyper-parameters optimized in the random-search phase, and their range.}\label{tab:random_search_params}
+	\centering
+	
+	\begin{tabular} {|K{4cm}|K{4cm}|}
+		\hline
+		\textbf{Parameter} 		& \textbf{Range} \\  
+		\hline
+		Cnn layer Nr. 	& [2-5]		                          \\
+		\hline
+		Kernel shape 	& [3x3-9x9]  \footnotemark[3]      \\
+		\hline									
+		Kernel Nr. 		& [8-256]	                            \\
+		\hline                      
+		MLP layers Nr. 	&	[1-5]	                          \\
+		\hline
+		MLP layers dim.	&[30-8000]                            \\
+		\hline
+		Stride & [1x1-2x2]			                          \\
+		\hline
+		Dilation & [1x1-20x20]\footnotemark[3]   \\
+		\hline
+		Batch size	&	[100-2000]                                    						\\
+		\hline 
+		Max pool shape & [1x1-5x5]\footnotemark[3]      \\
+		\hline
+		Dropout & [Yes-No]     \tablefootnote{For all layers.}               \\
+		\hline
+		Drop rate	&	[0.3-0.8]                         \\
+		\hline
+		Learning rate decay	&	[$0$-$0.2$] \% \tablefootnote{After each epoch.}    \\
+		\hline                
+		Batch normalization	&	[Yes-No]                    \\
+		\hline
+		
+	\end{tabular}
+\end{table}
+
+\footnotetext[5]{Also not squared shape has been used.}
+
+\footnotetext[6]{Value in the square brackets represents the value adopted for each layer.}
+
+\section{Results}
+\label{sec:Results}
+The results obtained for each method are reported in \figref{fig:results_f1}. The figure shows the $ F_1 -Measure$, false negative rate (miss rate) and false positive rate (false alarm rate) referred to the human fall class. It is clear that the supervised SVM method outperforms all other in terms of  $ F_1 -Measure$ as expected. The OCSVM instead is the worst method if used in this context, because its training procedure does not include any human fall, but the normality model is composed of others types of falls, making it difficult to identify the human fall as ``novelty''. The Siamese and the SVM-unbalanced, which start from the same data for the training, are classified in the intermediate positions as expected. However, we note that the proposed approach achieves a better result, exceeding the $ F_1 -Measure$ of SVM-unbalanced of about 11\%. 
+
+As the fall detection is a task that needs to give a higher weight to the miss with respect to the false alarm, \figref{fig:results_fn_fp} reports those metrics. 
+Here can be seen that both SVMs methods outperform the others, obtaining an optimum false alarm rate of 0\%. For the Miss rate, instead, while SVM reach a good result of 11\%, SVM-unbalanced give an unacceptable result of about 50\%.
+The Siamese network behaves in an opposite manner with respect to the SVM-unbalanced. Although it has an high false alarm rate, it manages to reduce to zero the miss rate.
+For a complete overview of the scores, in \cref{tab:cm_svm,tab:cm_svmo,tab:cm_ocsvm,tab:cm_ocsvm} are reported the normalized confusion matrix.
+
+Another consideration is about the generalization capacity of these 4 methods. \figref{fig:score_val_test} reports the score achieved by the algorithms for both validation and test set in the 10 folds. 
+The trends show that while for the SVM there is always a set of hyper-parameter able to achieve a 100 $ F_1 -Measure$ in validation phase, this does not happen for the SVM-unbalanced due to the lack of human falls during the training phase. Moreover, the results of validation are not always similar to the test value. The OCSVM instead, have a stable performance in validation, but they drop during the test, showing the poor generalization capacity of the algorithm. 
+For the proposed method, instead, the trends in test follow closely the validation ones. This is highlighted in \figref{fig:diff_test_validation} where the trends of the differences in the results between the tests and validations score are shown.
+
+	\begin{figure}
+	\includegraphics[width=\linewidth]{img/prai/results_f1/results_f1}
+	\caption{$ F_1 -Measure$, precision and recall: the metrics are referred to the human fall class}
+	\label{fig:results_f1}
+\end{figure}
+\begin{figure}
+	\includegraphics[width=\linewidth]{img/prai/results_fn_fp/results_fn_fp}
+	\caption{Miss and false alarm rate: the metrics are referred to the human fall class}
+	\label{fig:results_fn_fp}
+\end{figure}
+\begin{table}[ht]
+	\caption{Normalized confusion matrix of the SVM approach.}
+	\label{tab:cm_svm}
+	\begin{center}
+		
+		\begin{tabular}[ht]{c|c|c}	
+			\hline
+			\textbf{\%} & \textbf{$\,$ Human Falls $\,$ } & \textbf{Objects} \\ %\cline{2-5} 
+			
+			\hline
+			\textbf{$\,$ Human Falls $\,$ }     			& 89    &   11     \\
+			\textbf{Objects} 								& 0    &   100     	\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+\begin{table}[ht]
+	\caption{Normalized confusion matrix of the SVM-unbalanced approach.}
+	\label{tab:cm_svmo}
+	\begin{center}
+		
+		\begin{tabular}[ht]{c|c|c}	
+			\hline
+			\textbf{\%} & \textbf{$\,$ Human Falls $\,$ } & \textbf{Objects} \\ %\cline{2-5} 
+			
+			\hline
+			\textbf{$\,$ Human Falls $\,$ }     			& 52    &   48     \\
+			\textbf{Objects} 								& 0    &   100     	\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+\begin{table}[ht]
+	\caption{Normalized confusion matrix of the OCSVM approach.}
+	\label{tab:cm_ocsvm}
+	\begin{center}
+		
+		\begin{tabular}[ht]{c|c|c}	
+			\hline
+			\textbf{\%} & \textbf{$\,$ Human Falls $\,$ } & \textbf{Objects} \\ %\cline{2-5} 
+			
+			\hline
+			\textbf{$\,$ Human Falls $\,$ }     			& 55    &   45     \\
+			\textbf{Objects} 								& 45    &   55     \\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+\begin{table}[ht]
+	\caption{Normalized confusion matrix of the Siamese Neural Network approach.}
+	\label{tab:cm_siamese}
+	\begin{center}
+		\begin{tabular}[ht]{c|c|c}	
+			\hline
+			\textbf{\%} & \textbf{$\,$ Human Falls $\,$ } & \textbf{Objects} \\ %\cline{2-5} 
+			\hline
+			\textbf{$\,$ Human Falls $\,$ }     			& 100    &   0     \\
+			\textbf{Objects} 								& 51     &   49    \\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\begin{figure}[ht]
+	\centering
+	\begin{subfigure}[b]{0.48\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/prai/svm_test_validation/svm_test_validation}
+		\caption[Network2]%
+		{{\small SVM}}    
+		\label{fig:svm_val_test}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.48\textwidth}  
+		\centering 
+		\includegraphics[width=\textwidth]{img/prai/svm_unbalanced_test_validation/svm_unbalanced_test_validation}
+		\caption[]%
+		{{\small SVM-unbalanced}}    
+		\label{fig:svm_unb_val_test}
+	\end{subfigure}
+	\vskip\baselineskip
+	\begin{subfigure}[b]{0.48\textwidth}   
+		\centering 
+		\includegraphics[width=\textwidth]{img/prai/ocsvm_test_validation/ocsvm_test_validation}
+		\caption[]%
+		{{\small OCSVM}}    
+		\label{fig:ocsvm_val_test}
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{0.48\textwidth}   
+		\centering 
+		\includegraphics[width=\textwidth]{img/prai/siamese_test_validation/siamese_test_validation}
+		\caption[]%
+		{{\small Siamese Network}}    
+		\label{fig:siamese_val_test}
+	\end{subfigure}
+	\caption[  ]
+	{$ F_1 -Measure$ in validation and test achieved by the 4 methods in each folds} 
+	\label{fig:score_val_test}
+\end{figure}
+\begin{figure}
+	\includegraphics[width=\linewidth]{img/prai/diff_test_validation/diff_test_validation}
+	\caption{Absolute value of differences between the validation and test $ F_1 -Measure$ for each fold}
+	\label{fig:diff_test_validation}
+\end{figure}
+\begin{table}[ht]
+	%	\caption{Best hyper-parameters find in random-search phase for Siamese network\tablefootnote{Value in the square brackets represents the value adopted for each layer.}.}\label{tab:opt_hyperparam}
+	\caption{Best hyper-parameters find in random-search phase for Siamese network\protect\footnotemark[6].}\label{tab:opt_hyperparam}
+	\centering
+	
+	\begin{tabular} {c | c}
+		\hline
+		\textbf{Parameter} 		& \textbf{Value} \\  
+		\hline
+		Cnn layer Nr. 	& 4		                          \\
+		\hline
+		Kernel shape 	& [[3x3],[3x3],[3x3],[3x3]]     \\
+		\hline									
+		Kernel Nr. 		& [32,32,32,32]	                            \\
+		\hline   
+		Stride & [[1x1],[1x1],[1x1],[1x1]]			                          \\
+		\hline
+		Dilation & [[1x1],[1x1],[1x1],[1x1]]  \\
+		\hline
+		Max pool shape & [[2x1],[1x3],[1x2],[3x2]]     \\
+		\hline                   
+		MLP layers Nr. 	&	3	                          \\
+		\hline
+		MLP layers dim.	& [3000,300,30]                        \\
+		\hline
+		Batch size	&	[100]                                    						\\
+		\hline 
+		Dropout & [Yes]        \\
+		\hline
+		Drop rate	&	[0.5]                         \\
+		\hline
+		Learning rate decay	&	[$0.1$] \% \\
+		\hline                
+		Batch normalization	&	[yes,no,no,no,yes,yes,yes]                   \\
+		\hline
+		
+	\end{tabular}
+\end{table}
+
+
+The Siamese Network seems to be promising. Without the needing of humans falls for training, it can reduce to zero the miss rate showing also a good generalization performance with respect to the others methods. All these elements suggest that it can be used in a real scenario, but it has to be assessed also in others conditions.
+In \secref{sec:siamese_one_shot}, a method based on this work will be evaluated inserting in the test even more types of audio events and noises.
+Another interesting evaluation, as future work, could be to evaluate how the system behaves if trained on different data sets with respect to the one used here, also using transfer learning techniques. This is important because it could relax the necessity of carrying out a data collection campaign in every environment in which the system is going to be installed. In addition, other types of networks such as Recurrent Neural Networks or Long Short-Term Memory that have not been explored in this work could be tested.
+
+
+
+
+\section{Audio Metric Learning by using Siamese Autoencoders
+for One-Shot Human Fall Detection}
 \label{sec:siamese_one_shot}
+
+As shown in \secref{sec:soa}, although the literature provides several supervised and unsupervised approaches, no solution has been proposed exploiting one-shot learning for fall detection, nor to fill the gap between simulated falls and scarcely available real human falls.

@@ -1,0 +1,71 @@
+\documentclass[margin=0.5mm]{standalone}
+%\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+
+\pgfplotsset{width=\textwidth}
+
+
+\definecolor{rred}{RGB}{255,104,90}
+
+\definecolor{ggreen}{RGB}{90,255,140}
+
+\pgfplotstableread[col sep=comma]{
+Name,FP,FN
+Saimese,49, 0.00 
+OCSVM,45.00, 45.00
+SVMo,0, 48.00
+SVM,0, 11.00
+}\datatableTabClear
+\begin{document}
+
+\begin{tikzpicture}
+    \begin{axis}[
+	    xbar=2pt,% space of 0pt between adjacent bars
+	    xmin=0,
+	    xmax=107,
+	    bar width=0.8cm,
+	    width=12cm,
+	    height=10cm,
+	    xlabel={},		
+            %xbar,
+            %xmin=0,
+            nodes near coords={\pgfmathprintnumber\pgfplotspointmeta\%},
+            nodes near coords align={horizontal},
+			%every node near coord/.append style={font=\boldmath},
+            enlarge y limits=0.3,
+            xmajorgrids,
+            xticklabel={\pgfmathparse{\tick}\pgfmathprintnumber{\pgfmathresult}\%},
+            xtick={0,10,...,100},
+            ytick=data,
+            yticklabels={
+                {Siamese},
+                {OCSVM},
+                {SVM-unbalanced},
+                {SVM}
+            },
+            yticklabel style={font=\normalsize,xshift=0.5ex,align=right},
+            legend entries={False allarm,Miss},
+            legend image code/.code={%
+            	\draw[#1] (0cm,-0.1cm) rectangle (0.6cm,0.1cm);
+            },
+            legend style={
+            	%at={(0.5,-0.2)},
+            	anchor=south east,
+            	legend columns=-1,
+            	/tikz/every even column/.append style={column sep=0.5cm}
+            }, reverse legend
+            ]
+            
+
+            \addplot [fill=rred] table [x=FP,y expr=\coordindex] {\datatableTabClear};
+            \addplot [fill=ggreen] table [x=FN,y expr=\coordindex] {\datatableTabClear};
+
+            %\legend{OCSVM,OCSVM+Template}
+    \end{axis}
+\end{tikzpicture}
+
+\end{document}
