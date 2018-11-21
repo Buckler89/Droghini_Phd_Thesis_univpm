@@ -535,4 +535,11 @@ M.~D. Zeiler,
 \newblock ``Adadelta: an adaptive learning rate method,''
 \newblock {\em arXiv preprint arXiv:1212.5701}, 2012.
 
+\bibitem{smucker2007comparison}
+M.~D. Smucker, J.~Allan, and B.~Carterette,
+\newblock ``A comparison of statistical significance tests for information
+  retrieval evaluation,''
+\newblock in {\em Proceedings of the sixteenth ACM conference on Conference on
+  information and knowledge management}. ACM, 2007, pp. 623--632.
+
 \end{thebibliography}

@@ -92,6 +92,7 @@ double distance=1.4pt, shorten >= 5.5pt, preaction = {decorate}, postaction = {d
 \newcommand{\figref}[1]{\figurename~\ref{#1}}
 \newcommand{\tableref}[1]{Table~\ref{#1}}
 %\newcommand{\eqref}[1]{Equation~\ref{#1}}
+\newcommand{\equationref}[1]{Eq.~\ref{#1}}
 
 \newcommand*\rfrac[2]{{}^{#1}\!/_{#2}}
 
@@ -114,6 +115,9 @@ double distance=1.4pt, shorten >= 5.5pt, preaction = {decorate}, postaction = {d
 	\expandafter\gray\expandafter]\expandafter{\pgfmathresult}#1} % colora la cella della gradazione di grigio impostata dal risultato di pgfmathparse ed inserisce il valore originario della cella.
 \newcolumntype{E}{>{\collectcell\ColCell}c<{\endcollectcell}}
 \newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
 %\modulolinenumbers[5]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
