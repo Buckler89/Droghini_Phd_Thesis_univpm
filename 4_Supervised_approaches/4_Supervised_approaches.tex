@@ -1,4 +1,5 @@
-\chapter{Supervised Approach}
+\chapter{Supervised Approaches}
+\label{ch:supervised_approaches}
 qua vengono presentati sia il metodo multilabel classifier GMM-UBM SVM (ESWN) che 
 il binary  GMM-UBM SVM (WIRN2016)
 
@@ -84,7 +85,11 @@ Classification is performed by extracting the supervector from an input audio si
 
 \subsection{Dataset}
 \label{sec:dataset_svm_multiclass}
-All the experiments have been conducted data related to R0 room only. In particular, in order to compare the performance of the FAS with a standard aerial microphone, not all data concerning all the aerial microphones array have been used but only the one of the microphone closest to the wall (see \figref{fig:room}). Moreover, signals have been downsampled to 16\,kHz and the resolution has been reduced to 16\,bit. In order to obtain a balanced dataset, for each object andfor each distance, 11 fall events have been randomly picked for a total of 44 events perobject, while all the 44 simulated human fall with the manikin has been selected. In addition, the three musical track recored in the R0 room have been employed to create a noisy version ofthe dataset by digitally adding a random segment of the recorded musical tracksto the ``clean'' datasets as was done for the analysis of the signals in \secref{ssec:sig_analysis}. In particular, the analysis presented in \secref{ssec:sig_analysis} suggested the authors that the standard MFCC extraction pipeline can be modified in order to better exploit the properties the floor acoustic sensor. In particular, the analysis led to the following considerations:
+All the experiments have been conducted data related to R0 room only. In particular, in order to compare the performance of the FAS with a standard aerial microphone, not all data concerning all the aerial microphones array have been used but only the one of the microphone closest to the wall (see \figref{fig:room}). Moreover, signals have been downsampled to 16\,kHz and the resolution has been reduced to 16\,bit. In order to obtain a balanced dataset, for each object and
+for each distance, 11 fall events have been randomly picked for a total of 44 events per
+object, while all the 44 simulated human fall with the manikin has been selected. In addition, the three musical track recored in the R0 room have been employed to create a noisy version of
+the dataset by digitally adding a random segment of the recorded musical tracks
+to the ``clean'' datasets as was done for the analysis of the signals in \secref{ssec:sig_analysis}. In particular, the analysis presented in \secref{ssec:sig_analysis} suggested the authors that the standard MFCC extraction pipeline can be modified in order to better exploit the properties the floor acoustic sensor. In particular, the analysis led to the following considerations:
 \begin{itemize}
 	\item The pre-emphasis filter is an inheritance of automatic speech recognition systems, where the input signal is the human voice. Since the effect of the filter is to enhance the high frequency components of the signal and the floor sensor is more sensitive to low frequencies, removing the pre-emphasis could improve the classification performance.
 	\item The majority of the energy of the signals acquired with the floor acoustic sensor is concentrated at frequencies below 1.5\,kHz. This suggest that introducing a low-pass filter that removes low SNR frequencies may improve the classification performance.

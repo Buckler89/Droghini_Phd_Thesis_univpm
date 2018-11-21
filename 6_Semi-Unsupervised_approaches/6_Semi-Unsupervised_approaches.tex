@@ -1,7 +1,16 @@
-\chapter{Semi-Unsupervised Approach}
-
+\chapter{Weakly-supervised Approach}
+\label{ch:weakley_supervised}
 Unsupervised methods, consider a human fall as an event that deviate from normality and they are based on one-class classifiers. The main advantage of an unsupervised methods for fall detection is that it can works without knowing any examples related the the class of interest, i.e. the human fall. As aforementioned, this should be the perfect way to go in an application like this, where what we are interested in is very difficult to retrieve or we only have very few data available, but the principal weakness of an unsupervised system is that certain events deviate from normality as the human fall (e.g., the fall of an object), thus they may produce false alarms.
-In this Chapter, two types of methods are described: in \secref{sec:user_aided_cin} a OCSVM used-ided method is exposed, while \secref{sec:siamese_few_shot} present an approach based on Siamese neural network for one-shot learning, both of them assessed with samples related to R0 room of the employed dataset \secref{sec:dataset}. An extension of the Siamese approach is presented in \secref{sec:siamese_few_shot} where the entire dataset presented in \secref{sec:dataset} has been used.
+Moreover, in some applications, like the fall detection task, it can be difficult to obtain
+strong supervision information due to the high cost of the data-labeling process. Thus, it is desirable for machine-learning techniques to be able to work with weak supervision.
+The weak-supervision is a generic term that include different kind of techniques \cite{zhou2017brief}:
+\begin{itemize}
+	\item ``incomplete supervision'' where the labels are available only for a small subset of training;	
+	\item ``inexact supervision'' where only coarse labels with respect to the samples are provided
+	\item ``inaccurate supervision'' where the labels are not always correct.
+\end{itemize}
+
+In this Chapter, methods belogning to the first an second category are described: in \secref{sec:user_aided_cin} a semi-supervised OCSVM method, that is a subcategory of the ``incomplete supervision'' problem \cite{zhou2017brief}, is exposed. Instead, in \secref{sec:siamese_few_shot} present an approach based on Siamese neural network for one-shot learning in a ``inexact supervision'' context. Both of them, has been assessed with samples related to R0 room of the employed dataset \secref{sec:dataset}. An extension of the Siamese approach is presented in \secref{sec:siamese_few_shot} where the entire dataset described in \secref{sec:dataset} has been used.
 
 
 
@@ -813,7 +822,7 @@ All the following experiments have been conducted with 120000 pairs, on average 
 
 \subsubsection{Data Splitting}
 
-Firstly, the A3Fall-2.0 has been split into 5 folds for cross-validation: in particular, the data related to R0 room, except for \textit{SHF}, have been used only for training and used in each fold. Differently, the samples related to R1 and R2, except for \textit{RHF}, have been split into 5 folds with 20\% for test and 80\% for the training set. Both simulated and real human falls have been treated differently, based on the algorithm under examination:
+Firstly, dataset has been split into 5 folds for cross-validation: in particular, the data related to R0 room, except for \textit{SHF}, have been used only for training and used in each fold. Differently, the samples related to R1 and R2, except for \textit{RHF}, have been split into 5 folds with 20\% for test and 80\% for the training set. Both simulated and real human falls have been treated differently, based on the algorithm under examination:
 \begin{itemize}
 	\item SCAE: for the proposed approach, one \textit{RHF} per room has been randomly selected for each fold and then added to the related trainset. The \textit{SHF}, instead, have been split in 5 folds with 80\% for train the SCAE, while the remaining 20\% has been left out from the training set of the Siamese network but used only to train the classifier as explained in  \secref{sec:classification_stage}. The pairs for training the SNN have been generated keeping balanced all the combinations between the classes.
 	\item OCSVM: since this is a completely unsupervised method, both real an simulated human falls have been removed from trainset.
@@ -1039,3 +1048,8 @@ In \tableref{tab:cm_prai} and \tableref{tab:cm_scae} the normalized confusion ma
 		\end{tabular}
 	\end{center}
 \end{table}
+
+\section{Remarks}
+In this work, previous work by the authors \cite{droghini2018fewshot} has been extended. First, a complete data set has been collected starting from the one used in the previous work. The recordings of A3Fall-v1.0 dataset have been extended with new events recorded in different environments and with different flooring. Moreover, in order to test the system, the dataset was augmented with 80 human falls performed by four actors. In this article, the authors have shown that the proposed method outperforms the other four comparative methods and that the same algorithm may be used not only as a classifier but also as a detector. In this more realistic scenario, the preeminence on the Siamese framework for one-shot learning with respect to conventional methods has been shown. A further improvement in performance has been achieved with an extension of the method previously proposed in \cite{droghini2018fewshot}. It is composed of 3 stages: log-mel feature extraction, metric learning employing a Siamese autoencoder neural network named SCAE and, in the end, a final decision stage base on \textit{knn} classifier. The network exploits the few information on the real fall by using a particular strategy of pairs generation for the SCAE training. In doing so, the system learns how to transform the available simulated human fall instances to create a more suitable set of templates that can be used to train the final classifier. 
+%we think that this system may be employed as starting point from a company for a real application. During the installation in a company only need to performs some acquisition of every-day object falls, background noises and just one human fall performed by an actor to fine tune the model for a particular ambient. The rest of the dataset can be collected in laboratory with the aid of a manikin to simulate different fall patterns. ...
+Although the system seems to be reliable because of the low miss rate, the false alarm rate, of just about 3 false alarms raised every 2 real human falls, may even so be annoying for some users. To reduce this problem, several techniques could be employed. For instance, the system could be extended to include algorithms for fall recovery recognition able to detect whether a person is continuing his normal activity or if he/she is still lying in the ground.

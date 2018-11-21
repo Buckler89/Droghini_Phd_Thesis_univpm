@@ -1,5 +1,19 @@
 \begin{thebibliography}{10}
 
+\bibitem{ducatel2001scenarios}
+K.~Ducatel, U.~europ{\'e}enne. Technologies de la soci{\'e}t{\'e}~de
+  l'information, U.~europ{\'e}enne. Institut d'{\'e}tudes de~prospectives
+  technologiques, and U.~europ{\'e}enne. Soci{\'e}t{\'e} de~l'information
+  conviviale,
+\newblock {\em Scenarios for ambient intelligence in 2010},
+\newblock Office for official publications of the European Communities
+  Luxembourg, 2001.
+
+\bibitem{weiser1991}
+M.~Weiser,
+\newblock ``The computer for the 21 st century,''
+\newblock {\em Scientific american}, vol. 265.3, pp. 94--105, 1991.
+
 \bibitem{eurostat}
 ``Eurostat statistic explained: Fertility statistics,'' March 2016.
 
@@ -463,6 +477,11 @@ X.~Glorot and Y.~Bengio,
   networks.,''
 \newblock in {\em Aistats}, 2010, vol.~9, pp. 249--256.
 
+\bibitem{zhou2017brief}
+Z.-H. Zhou,
+\newblock ``A brief introduction to weakly supervised learning,''
+\newblock {\em National Science Review}, vol. 5, no. 1, pp. 44--53, 2017.
+
 \bibitem{pimentel2014review}
 M.~A. Pimentel, D.~A. Clifton, L.~Clifton, and L.~Tarassenko,
 \newblock ``A review of novelty detection,''
@@ -541,5 +560,13 @@ M.~D. Smucker, J.~Allan, and B.~Carterette,
   retrieval evaluation,''
 \newblock in {\em Proceedings of the sixteenth ACM conference on Conference on
   information and knowledge management}. ACM, 2007, pp. 623--632.
+
+\bibitem{droghini2018fewshot}
+D.~Droghini, F.~Vesperini, E.~Principi, S.~Squartini, and F.~Piazza,
+\newblock ``Few-shot siamese neural networks employing audio features for
+  human-fall detection,''
+\newblock in {\em Proceedings of the International Conference on Pattern
+  Recognition and Artificial Intelligence}, New York, NY, USA, 2018, PRAI 2018,
+  pp. 63--69, ACM.
 
 \end{thebibliography}
