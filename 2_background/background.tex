@@ -1,7 +1,7 @@
 \chapter{Background}
 \label{ch:backg}
 In recent years, the IoT revolution has led to the creation of enormous amounts of data. The use of intelligent devices that can interface with cloud computing systems or perform complex calculations directly on board, in homes and cities, has allowed the affirmation of data-driven algorithms compared to other methodologies used so far. In fact, these approaches try to emulate the functioning of the human mind, enabling computers to perform tasks that are unthinkable until now. 
-In this chapter are resumed the data-driven and machine learning algorithms used for developing the proposed methodologies for fall classification systems.
+In this chapter are resumed the data-driven algorithms used for developing the proposed methodologies for fall classification systems.
 
 \section{Support Vector Machines}
 Support Vector Machines (SVM) \cite{cortes95} are one of the most popular classification algorithms and are well known for their strong theoretical foundations, generalization performance and ability to handle high dimensional data.
@@ -113,6 +113,7 @@ Up to now the SVM algorithm for binary classification has been described. This a
 
 
 \subsection{One-Class Support Vector Machines}
+\label{sec:ocsvm_theory}
 One-Class SVM (OCSVM) proposed by Sch{\"o}lkopf et al. \cite{scholkopf2000support} is the extension of the support vector machine to the case of unlabeled data that makes them useful for novelty detection problems. In the OCSVM, a new parameter $\nu$ 
 that controls the trade-off between maximizing the distance of the hyperplane from the origin and the number of data points contained by the hyperplane has been introduced. To separate the data from the origin, the following quadratic program has to be solved:
 \begin{equation}
@@ -152,16 +153,32 @@ which is satisfied for any $\lambda_i$ that is not at the upper or lower bound.
 
 \section{Gaussian Mixture Model} TODO CAMBIA/integra CON CIN
 https://pdfs.semanticscholar.org/734b/07b53c23f74a3b004d7fe341ae4fce462fc6.pdf
-A Gaussian Mixture Model (GMM) is a parametric probability density function represented as a weighted sum of Gaussian component densities. Generally, GMMs are used as a parametric model of the probability distribution of some features.  To estimate the parameter of GMM the algorithm Expectation-Maximization (EM) algorithm or Maximum A Posteriori (MAP)  are used starting from a well-trained prior model usually named Universal Background Model (UBM).
-A Gaussian mixture model is a weighted sum of M component Gaussian densities as given by the equation
-\begin{equation}
-p(\vec{x, \lambda}) = \sum_{i = 1}^{M} w_i g(\vec{x} |\vec{\mu}_i, \vec{\Sigma}_i)
+A Gaussian Mixture Model (GMM) is a parametric probability density function represented as a weighted sum of Gaussian component densities. Generally, GMMs are used as a parametric model of the probability distribution of some features and then are used to extract higher level features such Gaussian Mean Supervectors (GMS). GMSs are higher level features composed of the means of a Gaussian mixture model (GMM) adapted with maximum a posteriori (MAP) algorithm \cite{Kinnunen10,Campbell2006}. The GMM models a Universal Background Model (UBM) and is trained on a large set of audio data by using Expectation Maximization (EM) algorithm \cite{bilmes1998gentle}. Then, a GMS is calculated by adapting the GMM with the MAP algorithm \cite{Reynolds10} and concatenating the adapted GMM mean values.
+More in details, consider a sequence of  $L$ feature vectors $\mathbf{X}=\{\mathbf{x}_1,\mathbf{x}_2\ldots,\mathbf{x}_L\}$, where each $\mathbf{x}_l$  has size $D\times 1$. The GMM representing an UBM is given by
+\begin{equation}\label{eq:ubm}
+p(\mathbf{x}_l|\lambda) = \sum_{j=1}^{J}w_j p(\mathbf{x}_l|\boldsymbol{\mu}_j,\boldsymbol{\Sigma}_j),
 \end{equation}
-where $\vec{x}$ is a D-dimensional features vector, $g (\vec{x} |\vec{\mu}_i), \vec{\Sigma}_i)$ are the components of the mixture and $w_i$ are the weight of each component. Each component of the mixture is a D-variate Gaussian density function expressed as
+where $\lambda=\{w_j,\boldsymbol{\mu}_j,\boldsymbol{\Sigma}_j | j=1,2,\ldots,J\}$, $w_j$ are the mixture weights, and $p(\cdot|\boldsymbol{\mu}_j,\boldsymbol{\Sigma}_j)$ is a multivariate Gaussian distribution with $D\times 1$ mean vector $\boldsymbol{\mu}_j$ and $D \times D$ diagonal covariance matrix $\boldsymbol{\Sigma}_j$.
+
+The GMS $\mathbf{M}$ of the sequence $\mathbf{X}$ is obtained by adapting the means of the UBM model with maximum a posteriori (MAP) algorithm and then concatenating the mean vectors: 
 \begin{equation}
-a
+\mathbf{M} = [\boldsymbol{\mu}_1^T,\boldsymbol{\mu}_2^T,\cdots,\boldsymbol{\mu}_J^T]^T,
 \end{equation}
-\section{K-Nearest Neighbor}
+where $T$ denotes the transpose operator. Regardless the number of vectors in the sequence $\mathbf{X}$, $\mathbf{M}$ is a $DJ\times 1$ vector.
+
+The number of Gaussians $J$ are generally determined on a validation set.
+
+
+%To estimate the parameter of GMM the algorithm Expectation-Maximization (EM) algorithm or Maximum A Posteriori (MAP)  are used starting from a well-trained prior model usually named Universal Background Model (UBM).
+%A Gaussian mixture model is a weighted sum of M component Gaussian densities as given by the equation
+%\begin{equation}
+%p(\vec{x, \lambda}) = \sum_{i = 1}^{M} w_i g(\vec{x} |\vec{\mu}_i, \vec{\Sigma}_i)
+%\end{equation}
+%where $\vec{x}$ is a D-dimensional features vector, $g (\vec{x} |\vec{\mu}_i), \vec{\Sigma}_i)$ are the components of the mixture and $w_i$ are the weight of each component. Each component of the mixture is a D-variate Gaussian density function expressed as
+%\begin{equation}
+%a
+%\end{equation}
+%\section{K-Nearest Neighbor}
 
 
 
@@ -195,11 +212,12 @@ The Artificial Neural Networks are mathematical models that represent the interc
 A \textit{biological Neural Networks} is a big set of specialized cells (\textit{neurons}) connected among them, which memorize and process information, thus controlling the body activities they belong to.
 
 \begin{figure}[t]
-	\label{fig:brain}
+
 	\centering
 	\includegraphics[width=0.65\linewidth]{img/Brain}
 	\caption{The human brain.}
-	%\label{vv}
+	\label{fig:brain}
+
 \end{figure}
 
 The \textit{neuron} model is composed of:
@@ -215,7 +233,7 @@ The \textit{neuron} model is composed of:
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=0.4\linewidth]{img/neuron_model}
+	\includegraphics[width=\linewidth]{img/neuron_model}
 	\caption{The neuron model.}
 	%\label{aa}
 \end{figure}
@@ -233,12 +251,12 @@ The \textit{neuron} properties can be described in:
 
 The biological Neural Networks are able to solve very complex tasks in few time instants (like memorization, recognition, association, and so on.)
 
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=\textwidth]{img/ANN}
-	\caption{The Artificial Neural Network.}
-	%\label{aa}
-\end{figure}
+%\begin{figure}[t]
+%	\centering
+%	\includegraphics[width=\textwidth]{img/ANN}
+%	\caption{The Artificial Neural Network.}
+%	%\label{aa}
+%\end{figure}
 
 The \textit{Artificial Neural Networks} (ANNs) are defined as \textit{Massively parallel distributed processors made up of simple processing units having a natural propensity for storing experiential knowledge and making it available for use} (Haykin, 2008).
 
@@ -253,8 +271,16 @@ This model is constituted by a group of interconnections of information consisti
 In practical terms neural networks are non-linear structures of statistical data organized as modeling tools.
 They can be used to simulate the complex relationships between inputs and outputs that other analytic functions fail to represent.
 An artificial neural network receives external signals on a layer of nodes (processing unit) input, each of which is connected with a number of internal nodes, organized in several levels. Each node processes the received signals performing a very simple task  and transmits the result to subsequent nodes. 
+\begin{figure}[t]
 
-The artificial neuron is an information-processing unit that is fundamental to the operation of a neural network. The model of a neuron is composed of three basic elements, as shown in (\figref{fig:artificial_neuron}) 
+	\centering
+	\includegraphics[width=0.8\linewidth]{img/NeuronModel.jpg}
+	%\label{aa}
+	\caption{The artificial neuron model.}
+	\label{fig:artificial_neuron}
+\end{figure}
+
+The artificial neuron is an information-processing unit that is fundamental to the operation of a neural network. The model of a neuron is composed of three basic elements, as shown in \figref{fig:artificial_neuron}: 
 \begin{itemize}
 	\item a \textit{set of synapses}, or connecting links, each of which is characterized by a weight or strength of its own, $w_{km}$; The neural model also includes an externally applied \textit{bias}, denoted by $b_k$.
 	\item an \textit{adder} for summing the input signals, weighted by the respective synaptic strengths of the neuron; the operations described here constitute a linear combiner;
@@ -262,13 +288,7 @@ The artificial neuron is an information-processing unit that is fundamental to t
 \end{itemize}
 The neural model also includes an externally applied \textit{bias}, denoted by $b_k$.
 
-\begin{figure}[t]
-	\label{fig:artificial_neuron}
-	\centering
-	\includegraphics[width=0.8\linewidth]{img/NeuronModel.jpg}
-	%\label{aa}
-	\caption{The artificial neuron model.}
-\end{figure}
+
 
 Therefore, the mathematical description of neuron activity can be defined as:
 \begin{eqnarray}
@@ -406,9 +426,7 @@ The types of \textit{activation non-linear functions} $\varphi(x)$ are:
 
 % *********************************************************+
 
-The manner in which the neurons of a neural network are structured is intimately linked with the learning algorithm used to train the network. % Therefore, the learning algorithms (rules) used in the design of neural networks as being structured.
-There, the \textit{network architectures} (structures) is defined.
-In general, two different classes of network architectures are identified:
+In past years, many models of neurons and neural architectures have been proposed in the literature, each with its peculiarities. A brief description of the leading models used in the works described in the following chapters will now be given:
 \begin{enumerate}
 	
 	%\item \textit{Single-Layer Feedforward Networks} (SLFN):
@@ -485,12 +503,12 @@ In general, two different classes of network architectures are identified:
 	
 	%Matrix convolution: it is performed between a bigger matrix, which is the input, and a smaller matrix, the convolutional kernel.
 	
-	\begin{figure}[t]
-		\centering
-		\includegraphics[width=0.7\columnwidth]{img/convolution-calculate}
-		%		\label{ee}
-		\caption{The convolution operation.}
-	\end{figure}
+%	\begin{figure}[t]
+%		\centering
+%		\includegraphics[width=0.7\columnwidth]{img/convolution-calculate}
+%		%		\label{ee}
+%		\caption{The convolution operation.}
+%	\end{figure}
 	
 	
 	
@@ -504,12 +522,12 @@ In general, two different classes of network architectures are identified:
 	
 	Pooling layer just reduces the dimension of the matrix by a rule: a submatrix of the input is selected, and the output is the maximum value of this submatrix.
 	
-	\begin{figure}
-		\centering
-		\includegraphics[width=0.6\columnwidth]{img/maxpool.jpeg}
-		%		\label{rr}
-		\caption{The max-pooling layer.}
-	\end{figure}
+%	\begin{figure}
+%		\centering
+%		\includegraphics[width=0.6\columnwidth]{img/maxpool.jpeg}
+%		%		\label{rr}
+%		\caption{The max-pooling layer.}
+%	\end{figure}
 	
 	The pooling process introduces tolerance against shifts of the input patterns. Together with convolution layer it allows the CNN to detect if a particular event occurs, regardless its deformation or its position.
 	
@@ -605,7 +623,7 @@ where $\epsilon$ is the learning rate.
 
 
 \subsection{Autoencoder}
-
+\label{sec:autoencoder_theory}
 %\textbf{ndRob} to complete, 1-2 pages with figures
 %
 %\begin{itemize}

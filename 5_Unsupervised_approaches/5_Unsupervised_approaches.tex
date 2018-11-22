@@ -1,10 +1,9 @@
 \chapter{Unsupervised Approach}
 \label{ch:unsupervised_approaches}
 
-The problem with supervised approaches is that they require that each class of interest is represented in the training dataset. However, with real human falls the variability of the environmental conditions and of the subjects makes difficult or impossible to collect a sufficient number of examples that allow the algorithm to generalize well on unseen conditions \cite{Noury2007}. Unsupervised approaches tackle the problem as a novelty detection task \cite{markou2003novelty1,markou2003novelty2}, i.e., by learning a normality model from data not related to human falls.
+The problem with supervised approaches is that they require that each class of interest is represented in the training dataset. However, in some case the variability of the environmental conditions and of the subjects makes difficult or impossible to collect a sufficient number of examples that allow the algorithm to generalize well on unseen conditions \cite{Noury2007}. This is the case of human falls. Unsupervised approaches tackle the problem as a novelty detection task \cite{markou2003novelty1,markou2003novelty2}, i.e., by learning a normality model from data not related to human falls. In this Chapter two approaches are proposed. The fist (\secref{sec:ocsvm_approach}) in based on One-Class SVM \secref{sec:ocsvm_theory} trained with only background noises. The second \secref{sec:autoencoder} instead, approaches the problem from an end-to-end learning prospective by means of neural network autoencoder \secref{sec:autoencoder_theory} for novelty detection.
 
-
-da qui in poi si usa solo il FAS poerchè è stato appurato che è migliore dei microfoi aerei
+Since the previous results have shown the superiority of the FAS with respect to the standard microphone, in the next sections only the samples recorded with the FAS has been used, unless otherwise stated.
 
 \section{Novelty detection algorithm for human fall detection based on One-Class Support Vector Machine}
 \label{sec:ocsvm_approach}
@@ -219,8 +218,7 @@ where $tp$ is the number of correctly classified falls, $fn$ is the number of fa
 
 
 %\label{sec:ocsvm}}
-\section{End-To-End Unsupervised Approach employing Convolutional Neural Network
-Autoencoders for Human Fall Detection} 
+\section{End-To-End Unsupervised Approach employing Convolutional Neural Network Autoencoders for Human Fall Detection} 
 \label{sec:autoencoder}
 
 

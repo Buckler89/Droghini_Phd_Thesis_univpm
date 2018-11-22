@@ -251,6 +251,30 @@ S.~Boyd and L.~Vandenberghe,
 \newblock {\em Convex optimization},
 \newblock Cambridge University Press, 2004.
 
+\bibitem{Kinnunen10}
+T.~Kinnunen and H.~Li,
+\newblock ``An overview of text-independent speaker recognition: From features
+  to supervectors,''
+\newblock {\em Speech Communication}, vol. 52, no. 1, pp. 12--40, 2010.
+
+\bibitem{Campbell2006}
+W.~Campbell, D.~Sturim, and D.~Reynolds,
+\newblock ``Support vector machines using {GMM} supervectors for speaker
+  verification,''
+\newblock {\em IEEE Signal Processing Letters}, vol. 13, no. 5, pp. 308--311,
+  2006.
+
+\bibitem{bilmes1998gentle}
+J.~A. Bilmes,
+\newblock ``{A gentle tutorial of the EM algorithm and its application to
+  parameter estimation for Gaussian mixture and hidden Markov models},''
+\newblock Tech. {R}ep. ICSI-TR-97-021, University of Berkeley, 1997.
+
+\bibitem{Reynolds10}
+D.~Reynolds and T.~Quatieri,
+\newblock ``{Speaker verification using adapted gaussian mixture models},''
+\newblock {\em Digital Signal Process.}, vol. 10, no. 1, pp. 19--40, 2000.
+
 \bibitem{Rumelhart86-LRB}
 D.~E. {Rumelhart}, G.~E. {Hinton}, and R.~J. {Williams},
 \newblock ``Learning representations by back-propagating errors,''
@@ -329,33 +353,10 @@ A.~Temko, C.~Nadeu, D.~Macho, R.~Malkin, and M.~Omologo,
   W.~Waibel and R.~Stieflhagen, Eds., chapter~7, pp. 61--73. Springer-Verlag,
   Berlin, 2009.
 
-\bibitem{kinnunen10}
-T.~Kinnunen and H.~Li,
-\newblock ``An overview of text-independent speaker recognition: From features
-  to supervectors,''
-\newblock {\em Speech Communication}, vol. 52, no. 1, pp. 12--40, 2010.
-
-\bibitem{bilmes1998gentle}
-J.~A. Bilmes,
-\newblock ``{A gentle tutorial of the EM algorithm and its application to
-  parameter estimation for Gaussian mixture and hidden Markov models},''
-\newblock Tech. {R}ep. ICSI-TR-97-021, University of Berkeley, 1997.
-
-\bibitem{reynolds10}
-D.~Reynolds and T.~Quatieri,
-\newblock ``{Speaker verification using adapted gaussian mixture models},''
-\newblock {\em Digital Signal Process.}, vol. 10, no. 1, pp. 19--40, 2000.
-
 \bibitem{chang11}
 C.-C. Chang and C.-J. Lin,
 \newblock ``{LIBSVM: a library for support vector machines},''
 \newblock {\em ACM Trans. Intell. Syst. Technol.}, vol. 2, no. 3, pp. 27, 2011.
-
-\bibitem{Kim12}
-C.~Kim and R.~M. Stern,
-\newblock ``{Power-normalized coefficients (PNCC) for robust speech
-  recognition},''
-\newblock in {\em Proc. of ICASSP}, Kyoto, Japan, Mar. 2012, pp. 4101--4104.
 
 \bibitem{Davis80}
 S.~B. Davis and P.~Mermelstein,
@@ -375,20 +376,6 @@ A.~Martin, G.~Doddington, T.~Kamm, M.~Ordowski, and M.~Przybocki,
 \newblock ``The {DET} curve in assessment of detection task performance,''
 \newblock in {\em Proc. of the European Conference on Speech Communication and
   Technology}, 1997, pp. 1895--1898.
-
-\bibitem{Rotili08}
-R.~Rotili, S.~Cifani, E.~Principi, S.~Squartini, and F.~Piazza,
-\newblock ``A robust iterative inverse filtering approach for speech
-  dereverberation in presence of disturbances,''
-\newblock in {\em Proc. of IEEE Asia Pacific Conference on Circuits and Systems
-  (APCCAS)}, Macao, China, Nov. 30 - Dec. 3 2008, pp. 434--437.
-
-\bibitem{Cifani2008}
-S.~Cifani, E.~Principi, C.~Rocchi, S.~Squartini, and F.~Piazza,
-\newblock ``A multichannel noise reduction front-end based on psychoacoustics
-  for robust speech recognition in highly noisy environments,''
-\newblock in {\em Proc. of Hands-Free Speech Communication and Microphone
-  Arrays (HSCMA)}, Trento, Italy, May 6-8 2008, pp. 172--175.
 
 \bibitem{Noury2007}
 N.~Noury, A.~Fleury, P.~Rumeau, A.~Bourke, G.~Laighin, V.~Rialle, and J.~Lundy,
