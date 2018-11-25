@@ -1,59 +1,49 @@
 This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: PhDthesis_Droghini.aux
-Case mismatch error between cite keys kinnunen10 and Kinnunen10
----line 256 of file PhDthesis_Droghini.aux
- : \citation{kinnunen10
- :                     }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys reynolds10 and Reynolds10
----line 258 of file PhDthesis_Droghini.aux
- : \citation{reynolds10
- :                     }
-I'm skipping whatever remains of this command
 The style file: IEEEbib.bst
 Database file #1: IEEEabrv.bib
 Database file #2: 8_backMatter/refs.bib
 Warning--can't use both volume and number fields in lake2014one
-You've used 89 entries,
+You've used 87 entries,
             1838 wiz_defined-function locations,
-            1512 strings with 31936 characters,
-and the built_in function-call counts, 25408 in all, are:
-= -- 2295
-> -- 1147
-< -- 39
-+ -- 413
-- -- 324
-* -- 2020
-:= -- 3765
-add.period$ -- 104
-call.type$ -- 89
-change.case$ -- 86
+            1497 strings with 31386 characters,
+and the built_in function-call counts, 24796 in all, are:
+= -- 2242
+> -- 1113
+< -- 38
++ -- 401
+- -- 314
+* -- 1968
+:= -- 3670
+add.period$ -- 102
+call.type$ -- 87
+change.case$ -- 84
 chr.to.int$ -- 0
-cite$ -- 90
-duplicate$ -- 1130
-empty$ -- 2421
-format.name$ -- 324
-if$ -- 5895
+cite$ -- 88
+duplicate$ -- 1103
+empty$ -- 2367
+format.name$ -- 314
+if$ -- 5755
 int.to.chr$ -- 0
-int.to.str$ -- 89
-missing$ -- 86
-newline$ -- 442
-num.names$ -- 94
-pop$ -- 303
+int.to.str$ -- 87
+missing$ -- 84
+newline$ -- 432
+num.names$ -- 92
+pop$ -- 299
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 608
+skip$ -- 594
 stack$ -- 0
-substring$ -- 1878
-swap$ -- 416
-text.length$ -- 39
+substring$ -- 1839
+swap$ -- 407
+text.length$ -- 38
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 225
-width$ -- 91
-write$ -- 993
-(There were 2 error messages)
+while$ -- 219
+width$ -- 89
+write$ -- 968
+(There was 1 warning)

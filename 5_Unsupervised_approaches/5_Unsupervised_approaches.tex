@@ -1,7 +1,7 @@
 \chapter{Unsupervised Approach}
 \label{ch:unsupervised_approaches}
 
-The problem with supervised approaches is that they require that each class of interest is represented in the training dataset. However, in some case the variability of the environmental conditions and of the subjects makes difficult or impossible to collect a sufficient number of examples that allow the algorithm to generalize well on unseen conditions \cite{Noury2007}. This is the case of human falls. Unsupervised approaches tackle the problem as a novelty detection task \cite{markou2003novelty1,markou2003novelty2}, i.e., by learning a normality model from data not related to human falls. In this Chapter two approaches are proposed. The fist (\secref{sec:ocsvm_approach}) in based on One-Class SVM \secref{sec:ocsvm_theory} trained with only background noises. The second \secref{sec:autoencoder} instead, approaches the problem from an end-to-end learning prospective by means of neural network autoencoder \secref{sec:autoencoder_theory} for novelty detection.
+The problem with supervised approaches is that they require that each class of interest is well represented in the training dataset. However, in some case the variability of the environmental conditions and of the subjects makes difficult or impossible to collect a sufficient number of examples that allow the algorithm to generalize well on unseen conditions \cite{Noury2007}. This is the case of human falls. Unsupervised approaches tackle the problem as a novelty detection task \cite{markou2003novelty1,markou2003novelty2}, i.e., by learning a normality model from data not related to human falls. In this Chapter two approaches are proposed. The fist (\secref{sec:ocsvm_approach}) in based on One-Class SVM \secref{sec:ocsvm_theory} trained with only background noises. The second \secref{sec:autoencoder} instead, approaches the problem from an end-to-end learning prospective by means of neural network autoencoder \secref{sec:autoencoder_theory} for novelty detection.
 
 Since the previous results have shown the superiority of the FAS with respect to the standard microphone, in the next sections only the samples recorded with the FAS has been used, unless otherwise stated.
 
@@ -199,7 +199,7 @@ where $tp$ is the number of correctly classified falls, $fn$ is the number of fa
 \label{sec:ocsvm_results}
 \figref{fig:res_clean} shows the results in clean conditions obtained with the proposed method named ``OCSVM'' and the comparative method proposed in \cite{Popescu2009} denoted as ``Popescu (2009)''. Observing the figure, it is evident that in all the three cases the OCSVM approach is able to improve the performance with respect to ``Popescu (2009)'' \cite{Popescu2009}. In particular, in ``Set 1'', that comprises human falls, human activities and music, the performance improves by 16.73\% with respect to ``Popescu (2009)''. This case can be considered as the least challenging of the three, since non-falls events are considerably different from falls ones. Conversely, ``Set 2'' comprises both human falls and object falls, thus it includes abnormal events whose pattern is similar to the one of human falls. Indeed, the performance with respect to ``Set 1'' is 17.91\% lower, mostly due the increased false positives rate that goes from 13.64\% to 50.76\%. Regarding ``Popescu (2009)'' \cite{Popescu2009}, the F$_1$-Measure is below both OCSVM and the proposed approach, however it is less affected by the presence of object falls, since the F$_1$-Measure decreases only by 0.64\% . ``Set 3'' comprises human falls, human activities, music and object falls and represents the most realistic test condition of the three. The results obtained by using  the OCSVM classifier alone is 82.25\%. As expected, this result is lower than ``Set 1'', since object falls are also present, and higher than ``Set 2'', since human activities and music segments are easier to discriminate.  Differently, the approach by Popescu and Mahnot \cite{Popescu2009} degrades by 5.25\% with respect to ``Set 1'', and by 4.61\% with respect to ``Set 2'', demonstrating that it is less robust to the concurrent presence of object falls and daily human activities sounds. 
 
-\begin{figure}[t]
+\begin{figure}[htb]
 	\centering
 	\includegraphics[width=\columnwidth]{img/cin_only_ocsv/res_clean.pdf}
 	\caption{Results in \textit{clean} conditions for the three test cases. ``Set 1'' comprises human falls, human activities and music. ``Set 2'' comprises human falls and object falls. ``Set 3'' comprises human falls, object falls, human activities, and music.} \label{fig:res_clean}
@@ -208,7 +208,7 @@ where $tp$ is the number of correctly classified falls, $fn$ is the number of fa
 \figref{fig:res_noisy} shows the results obtained for the three cases in noisy conditions. As expected, the performance decreases in all the two evaluated methods. In ``Set 1'', the performance decrease is modest (2.32\% for the OCSVM and 1.44\% for ``Popescu (2009)''), demonstrating that the OCSVM is able to effectively reject non-fall events corrupted by music interference. In ``Set 2'', the presence object falls corrupted by music significantly decreases the performance of the OCSVM, reducing the F$_1$-Measure by 12.74\% with respect to the clean ``Set 2''. The method by Popescu and Mahnot \cite{Popescu2009} achieves the highest F$_1$-Measure in this case, confirming the good capabilities of rejecting dropping objects sound events observed in clean conditions. In ``Set 3'', the proposed approach improves the performance by 3.91\% with respect to ``Popescu (2009)'', confirming that it is able to achieve the highest performance in the most realistic scenario of the three.
 
 
-\begin{figure}[t]
+\begin{figure}[htb]
 	\centering
 	\includegraphics[width=\columnwidth]{img/cin_only_ocsv/res_noisy.pdf}
 	\caption{Results in noisy conditions for the three test cases. ``Set 1'' comprises human falls, human activities and music. ``Set 2'' comprises human falls and object falls. ``Set 3'' comprises human falls, object falls, human activities, and music.} \label{fig:res_noisy}
@@ -237,7 +237,7 @@ The contribution is a novel fall detection method which exploits the end-to-end 
 \section{Proposed Approach}
 \label{sec:proposedApproach}
 
-\begin{figure}[t]
+\begin{figure}[htb]
 	\centering
 	\includegraphics[width=\columnwidth]{img/wirn2017/approccioComplessivo.pdf}
 	\caption{The proposed approach scheme.}\label{fig:overall}
@@ -384,7 +384,7 @@ Furthermore other experiments were made up with a manual tuning of parameters. P
 %\textcolor{red}{per motivare che noisy is better than clean direi che è dovuto allla variabilità degli esperimenti (inizializzazioni varie ecc..) visto che cmq c'è lo scarto di un solo mezzo punto. Se ripetessimo gli esperimenti potremmo ottenere risultati leggermente diversi ( considerando anche che siamo anche in cross-validation) }
 
 
-\begin{figure}[t]
+\begin{figure}[htb]
 	\centering
 	\includegraphics[width=0.75\columnwidth]{img/wirn2017/grafTex/results.pdf}
 	\caption{Results in \textit{clean} and \textit{noisy} conditions for the three test cases.} 

@@ -251,7 +251,7 @@ S.~Boyd and L.~Vandenberghe,
 \newblock {\em Convex optimization},
 \newblock Cambridge University Press, 2004.
 
-\bibitem{Kinnunen10}
+\bibitem{kinnunen10}
 T.~Kinnunen and H.~Li,
 \newblock ``An overview of text-independent speaker recognition: From features
   to supervectors,''
@@ -270,7 +270,7 @@ J.~A. Bilmes,
   parameter estimation for Gaussian mixture and hidden Markov models},''
 \newblock Tech. {R}ep. ICSI-TR-97-021, University of Berkeley, 1997.
 
-\bibitem{Reynolds10}
+\bibitem{reynolds10}
 D.~Reynolds and T.~Quatieri,
 \newblock ``{Speaker verification using adapted gaussian mixture models},''
 \newblock {\em Digital Signal Process.}, vol. 10, no. 1, pp. 19--40, 2000.
@@ -530,12 +530,6 @@ A.~Mesaros, T.~Heittola, A.~Eronen, and T.~Virtanen,
 \newblock in {\em Signal Processing Conference, 2010 18th European}. IEEE,
   2010, pp. 1267--1271.
 
-\bibitem{Principi2016a}
-E.~Principi, D.~Droghini, S.~Squartini, P.~Olivetti, and F.~Piazza,
-\newblock ``Acoustic cues from the floor: a new approach for fall
-  classification,''
-\newblock {\em Expert Systems with Applications}, vol. 60, pp. 51--61, 2016.
-
 \bibitem{zeiler2012adadelta}
 M.~D. Zeiler,
 \newblock ``Adadelta: an adaptive learning rate method,''
@@ -547,13 +541,5 @@ M.~D. Smucker, J.~Allan, and B.~Carterette,
   retrieval evaluation,''
 \newblock in {\em Proceedings of the sixteenth ACM conference on Conference on
   information and knowledge management}. ACM, 2007, pp. 623--632.
-
-\bibitem{droghini2018fewshot}
-D.~Droghini, F.~Vesperini, E.~Principi, S.~Squartini, and F.~Piazza,
-\newblock ``Few-shot siamese neural networks employing audio features for
-  human-fall detection,''
-\newblock in {\em Proceedings of the International Conference on Pattern
-  Recognition and Artificial Intelligence}, New York, NY, USA, 2018, PRAI 2018,
-  pp. 63--69, ACM.
 
 \end{thebibliography}

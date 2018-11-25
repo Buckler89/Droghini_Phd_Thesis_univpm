@@ -15,42 +15,42 @@ In this Chapter, methods belogning to the first an second category are described
 
 
 
-\section{A Combined One-Class SVM and Template Matching Approach for User-Aided Human Fall Detection}
+\section[A Combined OCSVM and Template Matching User-Aided Approach]{A Combined One-Class SVM and Template Matching Approach for User-Aided Human Fall Detection}
 \label{sec:user_aided_cin}
 
 The approach proposed here, is the extension of the one presented in \secref{sec:ocsvm_approach} thus, consists of a combined One-Class Support Vector Machine (OCSVM) based method and template-matching classifier that operate in cascade. The template-matching classifier operates in a user-aided supervised manner and it is employed to reduce such errors by using a set of templates that represent these events. Templates are identified by the user that marks the occurrence of a false positive instead of a true human fall event. 
 As shown in the previous section, ``unsupervised methods'' are able to overcome the need of manual tuning of ``analytical methods'' and the necessity of a large labelled dataset of ``supervised methods''. In ``unsupervised methods'', falls are discriminated from non-falls based on a model of ``normality'' constructed from a large amount of non-fall events. However, certain events differ from the ``normality'' as human falls, and they may induce the classifier to produce false alarms. As an example, \figref{fig:time_ha} and \figref{fig:spec_ha} show respectively the waveform and the spectrogram of a segment of ``normal'' human activity (footsteps and speech) \figref{fig:time_hf} and \figref{fig:spec_hf} show the waveform and the spectrogram of a segment of human fall, and \figref{fig:time_bf} and \figref{fig:spec_bf} the waveform and the spectrogram of a book fall. The figures show clearly that both falls signals differ significantly from the human activity one, thus a classifier may be induced to consider the fall of a book as the fall of a person.
 
-\begin{figure}[htbp!]
+\begin{figure}[htbp]
 	\centering
-	\begin{subfigure}[ht]{0.5\columnwidth}
+	\begin{subfigure}[htb]{0.5\columnwidth}
 		\centering
 		\includegraphics[width=0.9\textwidth]{img/cin/ha_time_.pdf}
 		\caption{Normal human activity signal in the time domain.}\label{fig:time_ha}
 	\end{subfigure}%
-	\begin{subfigure}[ht]{0.5\columnwidth}
+	\begin{subfigure}[htb]{0.5\columnwidth}
 		\centering
 		\includegraphics[width=\textwidth]{img/cin/ha_freq_.pdf}
 		\caption{Normal human activity signal in the frequency domain.}\label{fig:spec_ha}
 	\end{subfigure}
 	
-	\begin{subfigure}[ht]{0.5\columnwidth}
+	\begin{subfigure}[htb]{0.5\columnwidth}
 		\centering
 		\includegraphics[width=0.9\textwidth]{img/cin/rndy_time_.pdf}
 		\caption{Human fall signal in the time domain.}\label{fig:time_hf}
 	\end{subfigure}%
-	\begin{subfigure}[ht]{0.5\columnwidth}
+	\begin{subfigure}[htb]{0.5\columnwidth}
 		\centering
 		\includegraphics[width=\textwidth]{img/cin/rndy_freq_.pdf}
 		\caption{Human fall signal in the frequency domain.}\label{fig:spec_hf}
 	\end{subfigure}
 	
-	\begin{subfigure}[ht]{0.5\columnwidth}
+	\begin{subfigure}[htb]{0.5\columnwidth}
 		\centering
 		\includegraphics[width=0.9\textwidth]{img/cin/book_time_.pdf}
 		\caption{Book fall signal in the time domain.}\label{fig:time_bf}
 	\end{subfigure}%
-	\begin{subfigure}[ht]{0.5\columnwidth}
+	\begin{subfigure}[htb]{0.5\columnwidth}
 		\centering
 		\includegraphics[width=\textwidth]{img/cin/book_freq_.pdf}
 		\caption{Book fall signal in the frequency domain.}\label{fig:spec_bf}
@@ -66,7 +66,7 @@ The proposed approach is composed of three stages \figref{fig:overall_ocsvm_user
 \subsubsection{Template Matching}
 The template-matching classifier operates on a set of templates, i.e., supervectors, that can be defined a-priori or selected by the user when the OCSVM detects an abnormal sound that is not a human fall. Denoting with $\mathbf{x}$ the supervector of the input signal and with $\mathcal{Y} = \{\mathbf{y}_1,\ldots,\mathbf{y}_N\}$ the set of templates, the algorithm operates by calculating the Euclidean distance $D^{(i)} = \| \mathbf{x} - \mathbf{y}_i \|$ between the supervector to be classified and all the templates in the set. Indicating with $D_{min} = \underset{i}{\min}\,\,D^{(i)}$, the supervector $\mathbf{x}$ is classified as a fall if $D_{min}>\beta$ and as non-fall otherwise. The threshold $\beta$ is a hyperparameter of the algorithm that can be determined on a validation set.
 
-\begin{figure}[ht]
+\begin{figure}[htb]
 	\centering
 	\includegraphics[width=0.95\columnwidth]{img/cin/approccioComplessivo.pdf}
 	\caption{The block scheme of the proposed approach.}\label{fig:overall_ocsvm_user_aided}
@@ -86,10 +86,10 @@ Training has been performed on the same set used for the OCSVM base algorithm pr
 \end{itemize}
 
 
-\begin{table}[ht]
+\begin{table}[htb]
 	\centering
 	\caption{Data used in ``Set 1''.}
-	\begin{subtable}[ht]{.6\textwidth}
+	\begin{subtable}[htb]{.6\textwidth}
 		\centering		
 		\caption{Composition  of ``Set 1''.}
 		\label{tab:set1Composition_} % è lo stesso del capitolo 5. Lo riporto qui per comodità di lettura
@@ -107,7 +107,7 @@ Training has been performed on the same set used for the OCSVM base algorithm pr
 			\end{tabular}			
 		\end{center}		
 	\end{subtable}%
-	\begin{subtable}[ht]{.6\textwidth}
+	\begin{subtable}[htb]{.6\textwidth}
 		\centering		
 		\caption{Templates of ``Set 1''.}\label{tab:set1Template}
 		\begin{center}
@@ -134,10 +134,10 @@ Training has been performed on the same set used for the OCSVM base algorithm pr
 	
 \end{table}
 
-\begin{table}[ht]
+\begin{table}[htb]
 	\centering
 	\caption{Data used in ``Set 2''.}
-	\begin{subtable}[ht]{.6\textwidth}
+	\begin{subtable}[htb]{.6\textwidth}
 		\centering
 		
 		\caption{Composition  of ``Set 2''.}
@@ -164,7 +164,7 @@ Training has been performed on the same set used for the OCSVM base algorithm pr
 		\end{center}
 		
 	\end{subtable}%
-	\begin{subtable}[ht]{.6\textwidth}
+	\begin{subtable}[htb]{.6\textwidth}
 		\centering
 		
 		\caption{Templates of ``Set 2''.}
@@ -198,10 +198,10 @@ Training has been performed on the same set used for the OCSVM base algorithm pr
 \end{table}
 
 
-\begin{table}[ht]
+\begin{table}[htb]
 	\centering
 	\caption{Data used in ``Set 3''.}
-	\begin{subtable}[ht]{.6\textwidth}
+	\begin{subtable}[htb]{.6\textwidth}
 		\centering
 		
 		\caption{Composition  of ``Set 3''.}
@@ -232,7 +232,7 @@ Training has been performed on the same set used for the OCSVM base algorithm pr
 		\end{center}
 		
 	\end{subtable}%
-	\begin{subtable}[ht]{.6\textwidth}
+	\begin{subtable}[htb]{.6\textwidth}
 		\centering
 		
 		\caption{Templates of ``Set 3''.}
@@ -269,7 +269,7 @@ The method employed for the template-matching decision threshold is explained in
 
 %\subsection{Comparative method}
 
-\begin{table}[ht]
+\begin{table}[htb]
 	\centering
 	\caption{Hyperparameters of the algorithm and search space explored in the validation phase. The search space of the template-matching threshold $\beta$ is not reported, since is determined with the procedure described in \secref{ssec:templateThreshold}. }
 	\label{tab:parameter}
@@ -296,12 +296,10 @@ The performance has been evaluated in terms of F$_1$-Measure \eqref{eq:f1}
 
 \subsection{Choice of the template-matching decision threshold}\label{ssec:templateThreshold}
 A key point of the proposed approach is the decision threshold $\beta$ in the template-matching stage. Choosing a too low value would result in a low number of false negatives and a high number of false positives. On the contrary, a too high value would result in a high number of false negatives and a low number of false positives. The choice of $\beta$ has been performed by calculating the minimum Euclidean distance between each fall and non-fall event in the validation set and the set of templates. \figref{fig:distr_clean} and \figref{fig:distr_noisy} show respectively the probability distributions for the three sets in clean and noisy conditions. The decision threshold $\beta$ has been chosen at the intersection point between the distribution of fall and non-fall distances. This choice represents a compromise that balances false positives and false negatives.
-
 Observing clean condition distributions, in ``Set 1'' the two density are considerably overlapped, while in ``Set 2'' the overlap is modest. It is expected that the possible improvement of the template-matching stage will be more consistent for ``Set 2'' respect to ``Set 1''. ``Set 3'' contains human activity and music occurrences as ``Set 1'' and object falls as ``Set 2'': indeed, the probability distributions (\figref{fig:distr_clean_set3}) are more distinct respect to the ones of ``Set 1'', but not so much as the ones of ``Set 2''.
-
 Noisy condition distributions, shown in \figref{fig:distr_noisy}, are in general less distinct compared to clean condition ones. The effect of noisy is to flatten the distances of the fall and non-fall classes, thus resulting in a less discriminative capabilities of the classifier. Thus, it is expected that the performance improvement in noisy conditions will be more modest respect to the one obtained in clean condition.
-
-\begin{figure}[ht]
+\vfill
+\begin{figure}[htbp]
 	\centering
 	\begin{subfigure}{0.9\columnwidth}
 		\centering
@@ -321,7 +319,7 @@ Noisy condition distributions, shown in \figref{fig:distr_noisy}, are in general
 	\caption{Probability distributions of the minimum Euclidean distances among the template sets, and human falls and non-falls in \textit{clean} acoustic condition.}\label{fig:distr_clean}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 	\centering
 	\begin{subfigure}{0.9\columnwidth}
 		\centering
@@ -344,7 +342,7 @@ Noisy condition distributions, shown in \figref{fig:distr_noisy}, are in general
 \subsection{Results}
 \figref{fig:res_clean_} shows the results in clean conditions obtained with and without the template-matching stage, respectively denoted as ``OCSVM+Template-Matching'' and ``OCSVM''. The results obtained with the method proposed in \cite{Popescu2009} are denoted with ``Popescu (2009)''. Observing the figure, it is evident that in all the three cases the template-matching approach is able to improve the performance with respect to ``Popescu (2009)'' \cite{Popescu2009} and the OCSVM only approach. In particular, in ``Set 1'', that comprises human falls, human activities and music, the performance improves by 2.03\% with respect to OCSVM and by 19.64\% with respect to ``Popescu (2009)''. This case can be considered as the least challenging of the three, since non-falls events are considerably different from falls ones. Conversely, ``Set 2'' comprises both human falls and object falls, thus it includes abnormal events whose pattern is similar to the one of human falls. The introduction of the template-matching stage considerably reduces the number of false positives, leading to an overall performance improvement of 20.76\%. ``Set 3'' comprises human falls, human activities, music and object falls and represents the most realistic test condition of the three. Introducing the template-matching stage, the performance improves by 7.64\%, leading to an F$_1$-Measure equal to 89.89\%. 
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\columnwidth]{img/cin/res_clean.pdf}
 	\caption{Results in \textit{clean} conditions for the three test cases. ``Set 1'' comprises human falls, human activities and music. ``Set 2'' comprises human falls and object falls. ``Set 3'' comprises human falls, object falls, human activities, and music.} \label{fig:res_clean_}
@@ -356,7 +354,7 @@ In summary, the results demonstrated that the introduction of a template-matchin
 
 Comparing the results in clean (\figref{fig:res_clean_}) and noisy (\figref{fig:res_noisy_}) conditions, it is evident that techniques for reducing the impact of additive noise are needed. Additionally, the proposed solution requires the intervention of the user for selecting the templates after the first classification stage performed by the OCSVM. This aspect will be addressed in next sections in order to make the algorithm completely independent of the user and using only few examples related to human fall.
 
-\begin{figure}[ht]
+\begin{figure}[htb]
 	\centering
 	\includegraphics[width=\columnwidth]{img/cin/res_noisy.pdf}
 	\caption{Results in noisy conditions for the three test cases. ``Set 1'' comprises human falls, human activities and music. ``Set 2'' comprises human falls and object falls. ``Set 3'' comprises human falls, object falls, human activities, and music.} \label{fig:res_noisy_}
@@ -429,7 +427,7 @@ See \secref{sec:Results} for details about the best performing network.
 All the instances related to the fall events of the R0 room (\secref{sec:dataset}) has been used in this work. In order to achieve a data augmentation, the instances recorded with all the microphones used during the creation of the dataset has been used:
 \begin{itemize}
 	\item one microphone array composed of 3 microphones (here taken as single microphones);
-	\item 2 prototype of Floor Acoustic Sensor: the first, from now on indicated with FAS, was widely described and used in previous works \cite{Principi2016a} (\figref{fig:FAS}). For the second the only difference is the microphone used inside\footnote{RODE Lavalier: http://en.rode.com/microphones/lavalier.} that is characterized by an omni-directional directivity pattern instead of hyper-cardioid pattern.
+	\item 2 prototype of Floor Acoustic Sensor: the first, from now on indicated with FAS, was widely described in \secref{sec:sensor}. For the second the only difference is the microphone used inside\footnote{RODE Lavalier: http://en.rode.com/microphones/lavalier.} that is characterized by an omni-directional directivity pattern instead of hyper-cardioid pattern.
 \end{itemize}
 
 \tableref{tab:numDataset_few_shot} shows the number of instances for each class used in this work considering only audio recorded with FAS. 
@@ -444,12 +442,12 @@ All the instances related to the fall events of the R0 room (\secref{sec:dataset
 %	\label{fig:mimikin_doll}
 %\end{figure}
 
-\begin{table}[ht]
+\begin{table}[htb]
 	\caption{Composition  of the dataset.}
 	\label{tab:numDataset_few_shot}
 	\begin{center}
-		%		\begin{tabular}[ht]{c>{\centering}m{5cm}c}
-		\begin{tabular}[ht]{c|c|c}	
+		%		\begin{tabular}[htb]{c>{\centering}m{5cm}c}
+		\begin{tabular}[htb]{c|c|c}	
 			\hline
 			\textbf{Class} & \textbf{Nr. of occurrences} & \textbf{Total length (s)} \\ %\cline{2-5} 
 			%& \hspace{8pt}Clean\hspace{8pt}  & \hspace{6pt}Clean\hspace{6pt}   \\ 
@@ -513,7 +511,7 @@ To optimize the hyper-parameters of the methods the following strategies have be
 For the Siamese network, a Glorot uniform weight initializer has been used for all layers. Adadelta has been used as optimizer algorithm with default initial parameters \cite{zeiler2012adadelta}. Different values of learning rate decay have been tried in the random-search.
 We trained the network for a maximum of 300 epochs, but an early stopping on the $ F_1 -Measure$ has been used to interrupt training if there were no improvements for 25 consecutive epochs. At the ends, the model corresponding to the epoch that gave the best result was selected for the evaluation on the test set.
 
-\begin{table}[ht]
+\begin{table}[htb]
 	\caption{Hyper-parameters optimized in the random-search phase, and their range.}\label{tab:random_search_params}
 	\centering
 	
@@ -568,7 +566,7 @@ Another consideration is about the generalization capacity of these 4 methods. \
 The trends show that while for the SVM there is always a set of hyper-parameter able to achieve a 100 $ F_1 -Measure$ in validation phase, this does not happen for the SVM-unbalanced due to the lack of human falls during the training phase. Moreover, the results of validation are not always similar to the test value. The OCSVM instead, have a stable performance in validation, but they drop during the test, showing the poor generalization capacity of the algorithm. 
 For the proposed method, instead, the trends in test follow closely the validation ones. This is highlighted in \figref{fig:diff_test_validation} where the trends of the differences in the results between the tests and validations score are shown.
 
-	\begin{figure}
+\begin{figure}[htb]
 	\includegraphics[width=\linewidth]{img/prai/results_f1/results_f1}
 	\caption{$ F_1 -Measure$, precision and recall: the metrics are referred to the human fall class}
 	\label{fig:results_f1}
@@ -578,12 +576,12 @@ For the proposed method, instead, the trends in test follow closely the validati
 	\caption{Miss and false alarm rate: the metrics are referred to the human fall class}
 	\label{fig:results_fn_fp}
 \end{figure}
-\begin{table}[ht]
+\begin{table}[htb]
 	\caption{Normalized confusion matrix of the SVM approach.}
 	\label{tab:cm_svm}
 	\begin{center}
 		
-		\begin{tabular}[ht]{c|c|c}	
+		\begin{tabular}[htb]{c|c|c}	
 			\hline
 			\textbf{\%} & \textbf{$\,$ Human Falls $\,$ } & \textbf{Objects} \\ %\cline{2-5} 
 			
@@ -594,12 +592,12 @@ For the proposed method, instead, the trends in test follow closely the validati
 		\end{tabular}
 	\end{center}
 \end{table}
-\begin{table}[ht]
+\begin{table}[htb]
 	\caption{Normalized confusion matrix of the SVM-unbalanced approach.}
 	\label{tab:cm_svmo}
 	\begin{center}
 		
-		\begin{tabular}[ht]{c|c|c}	
+		\begin{tabular}[htb]{c|c|c}	
 			\hline
 			\textbf{\%} & \textbf{$\,$ Human Falls $\,$ } & \textbf{Objects} \\ %\cline{2-5} 
 			
@@ -610,12 +608,12 @@ For the proposed method, instead, the trends in test follow closely the validati
 		\end{tabular}
 	\end{center}
 \end{table}
-\begin{table}[ht]
+\begin{table}[htb]
 	\caption{Normalized confusion matrix of the OCSVM approach.}
 	\label{tab:cm_ocsvm}
 	\begin{center}
 		
-		\begin{tabular}[ht]{c|c|c}	
+		\begin{tabular}[htb]{c|c|c}	
 			\hline
 			\textbf{\%} & \textbf{$\,$ Human Falls $\,$ } & \textbf{Objects} \\ %\cline{2-5} 
 			
@@ -626,11 +624,11 @@ For the proposed method, instead, the trends in test follow closely the validati
 		\end{tabular}
 	\end{center}
 \end{table}
-\begin{table}[ht]
+\begin{table}[htb]
 	\caption{Normalized confusion matrix of the Siamese Neural Network approach.}
 	\label{tab:cm_siamese}
 	\begin{center}
-		\begin{tabular}[ht]{c|c|c}	
+		\begin{tabular}[htb]{c|c|c}	
 			\hline
 			\textbf{\%} & \textbf{$\,$ Human Falls $\,$ } & \textbf{Objects} \\ %\cline{2-5} 
 			\hline
@@ -641,7 +639,7 @@ For the proposed method, instead, the trends in test follow closely the validati
 	\end{center}
 \end{table}
 
-\begin{figure}[ht]
+\begin{figure}[htb]
 	\centering
 	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
@@ -678,12 +676,13 @@ For the proposed method, instead, the trends in test follow closely the validati
 	{$ F_1 -Measure$ in validation and test achieved by the 4 methods in each folds} 
 	\label{fig:score_val_test}
 \end{figure}
-\begin{figure}
-	\includegraphics[width=\linewidth]{img/prai/diff_test_validation/diff_test_validation}
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.6\linewidth]{img/prai/diff_test_validation/diff_test_validation}
 	\caption{Absolute value of differences between the validation and test $ F_1 -Measure$ for each fold}
 	\label{fig:diff_test_validation}
 \end{figure}
-\begin{table}[ht]
+\begin{table}[htb]
 	%	\caption{Best hyper-parameters find in random-search phase for Siamese network\tablefootnote{Value in the square brackets represents the value adopted for each layer.}.}\label{tab:opt_hyperparam}
 	\caption{Best hyper-parameters find in random-search phase for Siamese network\protect\footnotemark[6].}\label{tab:opt_hyperparam}
 	\centering
@@ -733,7 +732,7 @@ Another interesting evaluation, as future work, could be to evaluate how the sys
 \section{Audio Metric Learning by using Siamese Autoencoders for One-Shot Human Fall Detection}
 \label{sec:siamese_one_shot}
 
-As aforementioned, the fall detection task is very challenging due to the difficulty in retrieving examples for human fall modeling. Falls simulated by using a dummy may not represent properly real human falls, because they can not recreate falls in which arms are used to mitigate the impact. Moreover, the use of protections, such as mattresses, knee pads or foam during the acquisitions of falls performed by volunteers, can significantly modify the samples, especially in the audio field. 
+As aforementioned, the fall detection task is very challenging due to the difficulty in retrieving examples for human fall modeling. Falls simulated by using a dummy may not represent properly real human falls (\textit{RHF}), because they can not recreate falls in which arms are used to mitigate the impact. Moreover, the use of protections, such as mattresses, knee pads or foam during the acquisitions of falls performed by volunteers, can significantly modify the samples, especially in the audio field. 
 We assess our proposed method in a complex scenario. The whole dataset described in \secref{sec:dataset} has been used.
 Moreover, an innovative Siamese approach for fall detection, that exploits the similarities between simulated and real human falls by using only one \textit{RHF} template per each room during training into a one-shot learning perspective is proposed.
 In order to do this, we used a Siamese Autoencoder (SAE) for metric learning. Selecting the pairs appropriately for training the SAE, the network learns how to map simulated falls to real falls applying a transformation directly into the embedding space. After that, we use the encoder part of the whole network to create new human fall templates by using simulated falls. Concluding, a classifier is trained by using the new synthetic templates in addiction with the real fall templates to discriminate between fall and non-fall event.
@@ -888,7 +887,7 @@ The results for these preliminary experiments are reported in \tableref{tab:prel
 		\end{tabular}
 	\end{center}
 \end{table}
-\begin{figure*}[h!]
+\begin{figure*}[H]
 	\centering
 	\begin{subfigure}[b]{0.475\textwidth}   
 		\centering 
@@ -909,7 +908,7 @@ The results for these preliminary experiments are reported in \tableref{tab:prel
 	{\small Two-dimensional embedding performed by the encoder function $S_e^w(\hat{x}_{p})$ with $\mathcal{P}$-$\mathcal{N}$-PAIRS strategy.} 
 	\label{fig:p-n-pairs}
 \end{figure*}
-\begin{figure*}[h!]
+\begin{figure*}[H]
 	\centering
 	\begin{subfigure}[b]{0.475\textwidth}   
 		\centering 
@@ -931,7 +930,7 @@ The results for these preliminary experiments are reported in \tableref{tab:prel
 	\label{fig:n-pairs}
 \end{figure*}
 
-\begin{figure*}[h!]
+\begin{figure*}[H]
 	\centering
 	\begin{subfigure}[b]{0.475\textwidth}
 		\centering
@@ -953,7 +952,7 @@ The results for these preliminary experiments are reported in \tableref{tab:prel
 	\label{fig:no-pairs}
 \end{figure*}
 
-\begin{figure*}[h!]
+\begin{figure*}[H]
 	\centering
 	\begin{subfigure}[b]{0.475\textwidth}   
 		\centering 
@@ -1010,7 +1009,7 @@ After observing the results of the preliminary experiments, a random-search of 5
 The best performing method is the SCAE that reaches a 93.58\% of F$_1$-Measure, outperforming the \textit{Original Siamese} of 3.25\%. The improvement was significant for p $<$ 0.002 according to one-tailed z-test \cite{smucker2007comparison}. The remarkable results obtained by both the \textit{Original Siamese} and SCAE methods show that the use of Siamese framework is very powerful in this type of scenario, where only a few data for the class of interest are available and possibly some additional simulated data.
 \begin{figure*}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{img/eeai/results_f1/results_f1}
+	\includegraphics[width=0.8\textwidth]{img/eeai/results_f1/results_f1}
 	\caption[]
 	{Results.} 
 	\label{fig:results}
@@ -1050,6 +1049,8 @@ In \tableref{tab:cm_prai} and \tableref{tab:cm_scae} the normalized confusion ma
 \end{table}
 
 \section{Remarks}
-In this work, previous work by the authors \cite{droghini2018fewshot} has been extended. First, a complete data set has been collected starting from the one used in the previous work. The recordings of A3Fall-v1.0 dataset have been extended with new events recorded in different environments and with different flooring. Moreover, in order to test the system, the dataset was augmented with 80 human falls performed by four actors. In this article, the authors have shown that the proposed method outperforms the other four comparative methods and that the same algorithm may be used not only as a classifier but also as a detector. In this more realistic scenario, the preeminence on the Siamese framework for one-shot learning with respect to conventional methods has been shown. A further improvement in performance has been achieved with an extension of the method previously proposed in \cite{droghini2018fewshot}. It is composed of 3 stages: log-mel feature extraction, metric learning employing a Siamese autoencoder neural network named SCAE and, in the end, a final decision stage base on \textit{knn} classifier. The network exploits the few information on the real fall by using a particular strategy of pairs generation for the SCAE training. In doing so, the system learns how to transform the available simulated human fall instances to create a more suitable set of templates that can be used to train the final classifier. 
+
+%In this work, previous work by the authors \cite{droghini2018fewshot} has been extended. First, a complete data set has been collected starting from the one used in the previous work. The recordings of A3Fall-v1.0 dataset have been extended with new events recorded in different environments and with different flooring. Moreover, in order to test the system, the dataset was augmented with 80 human falls performed by four actors. In this article, the authors have shown that the proposed method outperforms the other four comparative methods and that the same algorithm may be used not only as a classifier but also as a detector.
+ In this more realistic scenario, composed of sound events recorded in different environments and with different flooring and augmented with 80 human falls performed by four actors, the preeminence on the Siamese framework for one-shot learning with respect to conventional methods has been shown. A further improvement in performance has been achieved with an extension of the method previously proposed in \secref{sec:siamese_few_shot}. It is composed of 3 stages: log-mel feature extraction, metric learning employing a Siamese autoencoder neural network named SCAE and, in the end, a final decision stage base on \textit{knn} classifier. The network exploits the few information on the real fall by using a particular strategy of pairs generation for the SCAE training. In doing so, the system learns how to transform the available simulated human fall instances to create a more suitable set of templates that can be used to train the final classifier. 
 %we think that this system may be employed as starting point from a company for a real application. During the installation in a company only need to performs some acquisition of every-day object falls, background noises and just one human fall performed by an actor to fine tune the model for a particular ambient. The rest of the dataset can be collected in laboratory with the aid of a manikin to simulate different fall patterns. ...
 Although the system seems to be reliable because of the low miss rate, the false alarm rate, of just about 3 false alarms raised every 2 real human falls, may even so be annoying for some users. To reduce this problem, several techniques could be employed. For instance, the system could be extended to include algorithms for fall recovery recognition able to detect whether a person is continuing his normal activity or if he/she is still lying in the ground.

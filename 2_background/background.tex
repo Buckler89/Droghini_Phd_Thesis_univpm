@@ -151,9 +151,8 @@ which is satisfied for any $\lambda_i$ that is not at the upper or lower bound.
 
 
 
-\section{Gaussian Mixture Model} TODO CAMBIA/integra CON CIN
-https://pdfs.semanticscholar.org/734b/07b53c23f74a3b004d7fe341ae4fce462fc6.pdf
-A Gaussian Mixture Model (GMM) is a parametric probability density function represented as a weighted sum of Gaussian component densities. Generally, GMMs are used as a parametric model of the probability distribution of some features and then are used to extract higher level features such Gaussian Mean Supervectors (GMS). GMSs are higher level features composed of the means of a Gaussian mixture model (GMM) adapted with maximum a posteriori (MAP) algorithm \cite{Kinnunen10,Campbell2006}. The GMM models a Universal Background Model (UBM) and is trained on a large set of audio data by using Expectation Maximization (EM) algorithm \cite{bilmes1998gentle}. Then, a GMS is calculated by adapting the GMM with the MAP algorithm \cite{Reynolds10} and concatenating the adapted GMM mean values.
+\section{Gaussian Mixture Model}
+A Gaussian Mixture Model (GMM) is a parametric probability density function represented as a weighted sum of Gaussian component densities. Generally, GMMs are used as a parametric model of the probability distribution of some features and then are used to extract higher level features such Gaussian Mean Supervectors (GMS). GMSs are higher level features composed of the means of a Gaussian mixture model (GMM) adapted with maximum a posteriori (MAP) algorithm \cite{kinnunen10, Campbell2006}. The GMM models a Universal Background Model (UBM) and is trained on a large set of audio data by using Expectation Maximization (EM) algorithm \cite{bilmes1998gentle}. Then, a GMS is calculated by adapting the GMM with the MAP algorithm \cite{reynolds10} and concatenating the adapted GMM mean values.
 More in details, consider a sequence of  $L$ feature vectors $\mathbf{X}=\{\mathbf{x}_1,\mathbf{x}_2\ldots,\mathbf{x}_L\}$, where each $\mathbf{x}_l$  has size $D\times 1$. The GMM representing an UBM is given by
 \begin{equation}\label{eq:ubm}
 p(\mathbf{x}_l|\lambda) = \sum_{j=1}^{J}w_j p(\mathbf{x}_l|\boldsymbol{\mu}_j,\boldsymbol{\Sigma}_j),
@@ -658,7 +657,7 @@ Defining $M$ the number of hidden units, and $N$ the number of input units, outp
 
 \begin{figure}
 	\centering
-	\includegraphics[width=\columnwidth]{img/autoencoder}
+	\includegraphics[width=0.7\columnwidth]{img/autoencoder}
 	\caption{The different types of Autoencoders.}
 	\label{fig:backg:dnn:AE}
 \end{figure}
