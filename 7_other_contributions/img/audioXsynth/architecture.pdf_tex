@@ -1,0 +1,75 @@
+%% Creator: Inkscape inkscape 0.92.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file '7_other_contributions/img/audioXsynth/architecture.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1088.102952bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.40034174)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{7_other_contributions/img/audioXsynth/architecture.pdf}}%
+    \put(0.25800436,0.26570375){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{ }}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{7_other_contributions/img/audioXsynth/architecture.pdf}}%
+    \put(0.10518144,0.30311047){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny{DFT}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{7_other_contributions/img/audioXsynth/architecture.pdf}}%
+    \put(0.87035552,0.19723816){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny{IDFT}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{7_other_contributions/img/audioXsynth/architecture.pdf}}%
+    \put(0.382958,0.39028697){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\footnotesize Encoder}}}%
+    \put(0.54414123,0.38950077){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\footnotesize Decoder}}}%
+    \put(0.47934223,0.39028697){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\footnotesize Code}}}%
+        \put(0.46934223,0.36828697){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\footnotesize (LSTM)}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{7_other_contributions/img/audioXsynth/architecture.pdf}}%
+    \put(0.31218348,0.39028697){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\footnotesize{Input}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{7_other_contributions/img/audioXsynth/architecture.pdf}}%
+    \put(0.7489601,0.3898691){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\footnotesize Reconstruction}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{7_other_contributions/img/audioXsynth/architecture.pdf}}%
+    \put(0.10518144,0.20017901){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny{DFT}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{7_other_contributions/img/audioXsynth/architecture.pdf}}%
+    \put(0.10518144,0.09724758){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny{DFT}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{7_other_contributions/img/audioXsynth/architecture.pdf}}%
+    \put(0.63303451,0.39028697){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\footnotesize Output}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{7_other_contributions/img/audioXsynth/architecture.pdf}}%
+  \end{picture}%
+\endgroup%

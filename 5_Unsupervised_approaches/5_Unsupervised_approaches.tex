@@ -1,11 +1,11 @@
 \chapter{Unsupervised Approach}
 \label{ch:unsupervised_approaches}
 
-The problem with supervised approaches is that they require that each class of interest is well represented in the training dataset. However, in some case the variability of the environmental conditions and of the subjects makes difficult or impossible to collect a sufficient number of examples that allow the algorithm to generalize well on unseen conditions \cite{Noury2007}. This is the case of human falls. Unsupervised approaches tackle the problem as a novelty detection task \cite{markou2003novelty1,markou2003novelty2}, i.e., by learning a normality model from data not related to human falls. In this Chapter two approaches are proposed. The fist (\secref{sec:ocsvm_approach}) in based on One-Class SVM \secref{sec:ocsvm_theory} trained with only background noises. The second \secref{sec:autoencoder} instead, approaches the problem from an end-to-end learning prospective by means of neural network autoencoder \secref{sec:autoencoder_theory} for novelty detection.
+The problem with supervised approaches is that they require that each class of interest is well represented in the training dataset. However, in some case the variability of the environmental conditions or the subjects makes difficult or impossible to collect a sufficient number of examples that allow the algorithm to generalize well on unseen conditions \cite{Noury2007}. This is the case of human falls. Unsupervised approaches tackle the problem as a novelty detection task \cite{markou2003novelty1,markou2003novelty2}, i.e., by learning a normality model from data not related to human falls. In this chapter two approaches are proposed. The fist (\secref{sec:ocsvm_approach}) in based on One-Class SVM \secref{sec:ocsvm_theory} trained with only background noises. The second \secref{sec:autoencoder} instead, approaches the problem from an end-to-end learning prospective by means of neural network autoencoder \secref{sec:autoencoder_theory} for novelty detection.
 
-Since the previous results have shown the superiority of the FAS with respect to the standard microphone, in the next sections only the samples recorded with the FAS has been used, unless otherwise stated.
+Since the previous results have shown the superiority of the FAS with respect to the standard microphone, in the next sections only the samples recorded with the FAS has been used, unless otherwise specified.
 
-\section{Novelty detection algorithm for human fall detection based on One-Class Support Vector Machine}
+\section{Human fall detection algorithm based on One-Class Support Vector Machine}
 \label{sec:ocsvm_approach}
 
 The approach proposed in this section is based on a One-Class Support Vector Machine (OCSVM) \cite{scholkopf2000} to obtain an unsupervised framework for Fall Detection.
@@ -218,7 +218,7 @@ where $tp$ is the number of correctly classified falls, $fn$ is the number of fa
 
 
 %\label{sec:ocsvm}}
-\section{End-To-End Unsupervised Approach employing Convolutional Neural Network Autoencoders for Human Fall Detection} 
+\section[End-To-End Unsupervised Approach employing CNN-AE for Human Fall Detection]{End-To-End Unsupervised Approach employing Convolutional Neural Network Autoencoders for Human Fall Detection} 
 \label{sec:autoencoder}
 
 
@@ -234,7 +234,7 @@ Their convolutional neural networks trained on raw audio signals do not outperfo
 The contribution is a novel fall detection method which exploits the end-to-end approach, resulting in a reduction of the engineering effort needed to design the system, with respect to those method that used features extracted from input signals. Is also shown that it can achieve good performance, higher than two state-of-the-art systems chosen for a comparison.
 
 
-\section{Proposed Approach}
+\subsection{Proposed Approach}
 \label{sec:proposedApproach}
 
 \begin{figure}[htb]
@@ -267,11 +267,11 @@ According to the cosine definition, the value of the distance always has a value
 The added AWGN part of the spectrums was not considered to calculate the distance. The choice of this heuristic allowed to make distance measurements independents of the size of the initial spectrum.
 The structure of the autoencoder is not defined a priori, but it is chosen through a phase of cross-validation during which the network parameters are varied with a random search strategy.
 
-\section{Experiments}
+\subsection{Experiments}
 \label{sec:endtoend_experiments}
 In this section are described the composition of the dataset used in this work and the experimental set-up.
 
-\subsection{Dataset} 
+\subsubsection{Dataset} 
 
 The instances used in this approach are summarized in table \tableref{tab:endtoend_dataset}.
 It is composed of two type of sounds: the first, namely novelty, comprises several human fall sounds that have been simulated by means of a human-mimicking doll employed in water rescues. The doll has been dropped from upright position and from a chair, both forward and backward. The drops have been then repeated at three distances from the FAS, i.e., 2, 4 and 6 m, for a total of 44 events, all included in the “Human fall” class. The second type, i.e, the background, comprises sounds of normal activities (voices, footsteps, etc.) for a total of 1218 s, and three musical tracks\footnote{W. A. Mozart, ``Piano trio in C major''}\footnote{Led Zeppelin, ``Dazed and confused''}\footnote{Led Zeppelin, ``When the levee breaks''}, for a total of 1498 s, played from a loudspeaker and acquired back with the FAS.
@@ -300,7 +300,7 @@ The signals have been acquired with a sampling rate equal to 44.1 kHz and 32 bit
 	\end{center}
 \end{table}
 
-\subsection{Experimental Setup}
+\subsubsection{Experimental Setup}
 
 Since in this work a novelty approach is presented, the dataset has been divided in two groups: the former composed only of background sounds (i.e human activity sounds and musical background) used for the training; the latter composed of both background sound and novelty sounds, i.e, the human falls, used in development and test phase.
 In order to assess the classification accuracy in noisy conditions, a second version of human fall sounds were crated in which a musical background was recorded and then digitally added to the fall events.
@@ -316,6 +316,7 @@ At the end the final performance has been evaluated in term of  $ F_1 -Measure$ 
 	\caption{Hyper-parameters optimized in the random-search phase, and their range.}\label{tbl:hyper-params}
 	\centering
 	\footnotesize
+	\resizebox{\textwidth}{!}{
 	\begin{tabular} {|c | c | c|| c | c | c|}
 		\hline
 		Parameter 		& Range & Distribution &Parameter & Range & Distribution\\  
@@ -333,7 +334,7 @@ At the end the final performance has been evaluated in term of  $ F_1 -Measure$ 
 		Stride & [1x1-3x3]& uniform & Learning rate	&	[$10^{-4}$-$10^{-2}$]  & log-unifom\\
 		\hline
 		
-	\end{tabular}
+	\end{tabular}}
 \end{table}
 Since this approach share the same train-set (\tableref{tab:trainComposition}) and test-set (\secref{tab:set1Composition}) that has been used in \secref{sec:ocsvm_approach} for both the clean and noisy conditions, the results scored here were compared with those obtained showed in \figref{fig:res_clean} and related to Set 1.
 
@@ -345,31 +346,30 @@ Since this approach share the same train-set (\tableref{tab:trainComposition}) a
 			\hline
 			&\multicolumn{4}{|c||}{Clean}&\multicolumn{4}{c|}{Noisy}\\
 			\hline
-			Parameter		& Fold1 &Fold2 &Fold3 & Fold4  & Fold1 & Fold2 & Fold3 & Fold4\\
+			Parameter	                        & Fold1             &Fold2          &Fold3      & Fold4     & Fold1         & Fold2         & Fold3         & Fold4\\
 			\hline
-			Cnn layer Nr.	& 3 & 3 & 3 & 2 & 3 & 3 & 3 & 3\\
+			Cnn layer Nr.                       & 3                 & 3             & 3         & 2         & 3             & 3             & 3             & 3\\
 			\hline
-			Kernel shape 	& 8x8 & 7x7 & 5x5 & 8x8 & 8x8 & 7x7 & 8x8 & 8x8 \\
+			Kernel shape                        & 8x8               & 7x7           & 5x5       & 8x8       & 8x8           & 7x7           & 8x8           & 8x8 \\
 			\hline
-			Kernel Nr. 	& [16,16,8] & [32,16,16] & [8,8,8]& [32,16] & [32,32,8] &  [32,32,8] &  [32,32,32] & [8,8,8]\\
+			Kernel Nr. 	                        & [16,16,8]         & [32,16,16]    & [8,8,8]   & [32,16]   & [32,32,8]     &  [32,32,8]    &  [32,32,32]   & [8,8,8]\\
 			\hline
-			Max Pool Position		&only end &only end & all& all & only end & only end & all & only end\\
+			Max Pool Position	                &only end           &only end       & all       & all       & only end      & only end      & all           & only end\\
 			\hline
-			Max pool shape	& 5x5 & 3x3 & 5x5 & 4x4 & 3x3 & 5x5 & 5x5 & 3x3\\
+			Max pool shape	                    & 5x5               & 3x3           & 5x5       & 4x4       & 3x3           & 5x5           & 5x5           & 3x3\\
 			\hline
-			Stride	& 3x3 & 3x3 & 1x1 & 3x3 & 3x3 & 3x3 & 1x1 & 3x3\\
+			Stride	                            & 3x3               & 3x3           & 1x1       & 3x3       & 3x3           & 3x3           & 1x1           & 3x3\\
 			\hline
-			MLP layers Nr. & 2 & 1 & 1 & 1 & 2 & 2 & 1 & 3\\
+			MLP layers Nr.                      & 2                 & 1             & 1         & 1         & 2             & 2             & 1             & 3\\
 			\hline
-			MLP layers dim.	& [16,231] & 96 & 32 & 32  & [48,153] & [16,2084] & 128 & [48,1952,1952]\\
+			MLP layers dim.	                    & [16,231]          & 96            & 32        & 32        & [48,153]      & [16,2084]     & 128           & [48,1952,1952]\\
 			\hline
-			%Learning rate	&$\num{4.89e-4}$ &  $\num{0.408e-4}$ & $\num{1.509e-4}$ &  $\num{1.544e-4}$ & $\num{0.156e-4}$ &  $\num{0.446e-4}$ & $\num{0.101e-4}$ &  $\num{0.100e-4}$\\
-			Learning rate$(\times\num{e-4})$&4.89 &  4.08 & 15.09 &  15.44 & 1.56 &  4.46 & 1.01 &  1.00\\
+			Learning rate $(\times\num{e-4})$   &4.89               &  4.08         & 15.09     &  15.44    & 1.56          &  4.46         & 1.01          &  1.00\\
 			\hline
-			Batch size		& 11.26\% & 10.81\% & 13.59\% & 21.10\% & 20.06\% & 12.55\% & 13.51\% & 13.13\%  \\
+			Batch size		                    & 11.26\%           & 10.81\%       & 13.59\%   & 21.10\%   & 20.06\%       & 12.55\%       & 13.51\%       & 13.13\%  \\
 			\hline
-			Drop rate		&0.64 &0.57 & 0.53 & 0.55  & 0.58 &0.53 & 0.55 & 0.59\\	
-			\hline	
+			Drop rate		                    &0.64               &0.57           & 0.53      & 0.55      & 0.58          &0.53           & 0.55          & 0.59\\
+			\hline
 			
 	\end{tabular}}
 \end{table}

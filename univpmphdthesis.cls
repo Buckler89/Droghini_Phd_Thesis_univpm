@@ -292,8 +292,8 @@
       \textbf{\univpm@phdcoadvisor}\par
       \vspace{2em}
     \fi
-    \univpm@curriculumadvisorlabel\par
-  \textbf{\univpm@phdcurriculumadvisor}\par
+%    \univpm@curriculumadvisorlabel\par
+%  \textbf{\univpm@phdcurriculumadvisor}\par
   \end{minipage}
 
   \vspace{2em}

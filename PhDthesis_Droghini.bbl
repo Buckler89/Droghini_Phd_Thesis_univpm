@@ -542,4 +542,45 @@ M.~D. Smucker, J.~Allan, and B.~Carterette,
 \newblock in {\em Proceedings of the sixteenth ACM conference on Conference on
   information and knowledge management}. ACM, 2007, pp. 623--632.
 
+\bibitem{Goodfellow2016BookChap14}
+I.~Goodfellow, Y.~Bengio, and A.~Courville,
+\newblock ``Autoencoders,''
+\newblock in {\em Deep Learning}, chapter~14, pp. 502--525. MIT Press, 2016,
+\newblock \url{http://www.deeplearningbook.org}.
+
+\bibitem{Principi17a}
+E.~Principi, F.~Vesperini, S.~Squartini, and F.~Piazza,
+\newblock ``{Acoustic Novelty Detection with Adversarial Autoencoders},''
+\newblock in {\em Proc. of the International Joint Conference on Neural
+  Networks (IJCNN)}, Anchorage, AK, USA, May 14-19 2017, pp. 3324--3330.
+
+\bibitem{Hinton2006reducing}
+G.~E. Hinton and R.~R. Salakhutdinov,
+\newblock ``Reducing the dimensionality of data with neural networks,''
+\newblock {\em Science}, vol. 313, no. 5786, pp. 504--507, 2006.
+
+\bibitem{Lu2013speech}
+X.~Lu, Y.~Tsao, S.~Matsuda, and C.~Hori,
+\newblock ``Speech enhancement based on deep denoising autoencoder.,''
+\newblock in {\em Proc. of Interspeech}, Lyon, France, Aug. 25-29 2013, pp.
+  436--440.
+
+\bibitem{Cella2013advanced}
+C.~E. Cella and J.~J. Burred,
+\newblock ``Advanced sound hybridizations by means of the theory of
+  sound-types,''
+\newblock in {\em International Computer Music Conference}, 2013.
+
+\bibitem{Burred2014framework}
+J.~J. Burred,
+\newblock ``A framework for music analysis/resynthesis based on matrix
+  factorization,''
+\newblock in {\em International Computer Music Conference}, 2014.
+
+\bibitem{JOSbook2_SASP}
+J.~O. Smith,
+\newblock {\em Spectral Audio Signal Processing},
+\newblock Stanford University, CCRMA, 2010,
+\newblock (online book, last viewed 9/3/2011).
+
 \end{thebibliography}
