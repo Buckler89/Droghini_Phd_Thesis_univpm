@@ -884,7 +884,7 @@ The results for these preliminary experiments are reported in \tableref{tab:prel
 		\end{tabular}
 	\end{center}
 \end{table}
-\begin{figure*}[H]
+\begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{0.475\textwidth}   
 		\centering 
@@ -904,8 +904,8 @@ The results for these preliminary experiments are reported in \tableref{tab:prel
 	\caption[]
 	{\small Two-dimensional embedding performed by the encoder function $S_e^w(\hat{x}_{p})$ with $\mathcal{P}$-$\mathcal{N}$-PAIRS strategy.} 
 	\label{fig:p-n-pairs}
-\end{figure*}
-\begin{figure*}[H]
+\end{figure}
+\begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{0.475\textwidth}   
 		\centering 
@@ -925,9 +925,9 @@ The results for these preliminary experiments are reported in \tableref{tab:prel
 	\caption[]
 	{\small Two-dimensional embedding performed by the encoder function $S_e^w(\hat{x}_{p})$ with $\mathcal{N}$-PAIRS strategy} 
 	\label{fig:n-pairs}
-\end{figure*}
+\end{figure}
 
-\begin{figure*}[H]
+\begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{0.475\textwidth}
 		\centering
@@ -947,9 +947,9 @@ The results for these preliminary experiments are reported in \tableref{tab:prel
 	\caption[]
 	{\small Two-dimensional embedding performed by the encoder function $S_e^w(\hat{x}_{p})$ NO-PAIRS strategy.} 
 	\label{fig:no-pairs}
-\end{figure*}
+\end{figure}
 
-\begin{figure*}[H]
+\begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{0.475\textwidth}   
 		\centering 
@@ -969,7 +969,7 @@ The results for these preliminary experiments are reported in \tableref{tab:prel
 	\caption[]
 	{\small Two-dimensional embedding performed by the encoder function $S_e^w(\hat{x}_{p})$ with $\mathcal{P}$-PAIRS strategy.} 
 	\label{fig:p-pairs}
-\end{figure*}
+\end{figure}
 
 
 \subsection{Optimized results}
@@ -1004,13 +1004,13 @@ After observing the results of the preliminary experiments, a random-search of 5
 \end{table}																													
 \figref{fig:results} shows the results obtained for each approach. Regarding the completely supervised SVM method, although it is not directly comparable with the others due to different training and test set, it gives an idea of how much the task is hard also for such a system. Moreover, using an extremely unbalanced dataset for a supervised approach, as the same used for the Siamese network, leads to a very marked decrease in performance. In fact, the One-Shot SVM reaches an overall F$_1$-Measure of only 14.72\%. When having an extremely unbalanced dataset available is better to use a completely unsupervised method such as OCSVM, that achieves a score of about 72\%. 
 The best performing method is the SCAE that reaches a 93.58\% of F$_1$-Measure, outperforming the \textit{Original Siamese} of 3.25\%. The improvement was significant for p $<$ 0.002 according to one-tailed z-test \cite{smucker2007comparison}. The remarkable results obtained by both the \textit{Original Siamese} and SCAE methods show that the use of Siamese framework is very powerful in this type of scenario, where only a few data for the class of interest are available and possibly some additional simulated data.
-\begin{figure*}[h!]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{img/eeai/results_f1/results_f1}
 	\caption[]
 	{Results.} 
 	\label{fig:results}
-\end{figure*}
+\end{figure}
 In \tableref{tab:cm_prai} and \tableref{tab:cm_scae} the normalized confusion matrix for the Siamese based approach are reported. As can be seen, the miss rate of the proposed method is less than 4\% compared to the \textit{Original Siamese} method, without losing in term of false alarm rate that, instead, has increased by 1\%, resulting in good improvements regarding the reliability of the system. Since there are many instances of background noise in the dataset, the low number of false alarms indicates that this approach could also be used as a detection system.
 
 \begin{table}[t]
