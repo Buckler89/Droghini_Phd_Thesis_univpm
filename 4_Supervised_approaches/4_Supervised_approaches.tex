@@ -4,11 +4,11 @@ The supervised learning is the most used strategy in machine learning. It basica
 The supervised approaches are generally able to achieve better performance with respect to unsupervised or weakly-supervised systems because of the more precise knowledge with which they are trained. In this chapter, the supervised approach is used to work in favourable conditions in order to evaluate the quality of the created dataset as well as the performance of the FAS compared to standard aerial microphones. Below, a GMM-SVM based multi-class classifier able to discriminate which type of object has fallen to the ground in both clean and noisy sound conditions is presented first. Then the binary classifier counterpart of the previous one is tailored to discriminate a human fall with respect to other sounds
 
 
-\section{SVM based algorithm for fall classification}
+\section{SVM based algorithm for multi-class fall classification}
 \label{sec:algorithm_svm_multiclass}
 The fall detection task consists in recognize which object produced the pattern of a signal and it mainly consists of two subtasks: the location of the time boundaries of the fall event and the classification of that event. In this section, we concentrate on the second subtask, since the main objective is determining the performance of the FAS as compared to common aerial microphones. The entire falls detection activity will be addressed in the works presented below.
 
-\subsection{Porposed approach}
+\subsection{Proposed System}
 The fall classification algorithm is composed of a feature extraction stage and a classification stage. The first extracts MFCCs from the input audio signal, while the second classifies the audio event by means of Gaussian means supervectors and SVM. Following is a detailed description of the two stages.
 
 \subsubsection{Feature extraction}\label{ssec:fx}
@@ -60,20 +60,20 @@ Classification is performed by extracting the supervector from an input audio si
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=0.75\columnwidth]{img/gms_bn.pdf}
+	\includegraphics[width=\columnwidth]{img/gms_bn.pdf}
 	\caption{Block scheme for extracting a gaussian mean supervector from MFCCs and a trained UBM.} \label{fig:gms}
 \end{figure}
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=0.3334\columnwidth]{img/training_scheme.pdf}
+	\includegraphics[width=0.5\columnwidth]{img/training_scheme.pdf}
 	\caption{Block scheme for training the UBM and SVM models.}
 	\label{fig:training-scheme}
 \end{figure}
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=0.333\columnwidth]{img/scheme_classify_bn.pdf}
+	\includegraphics[width=0.5\columnwidth]{img/scheme_classify_bn.pdf}
 	\caption{Block-scheme of the fall classification phase.}
 	\label{fig:scheme-classify-color}
 \end{figure}
@@ -82,7 +82,7 @@ Classification is performed by extracting the supervector from an input audio si
 %
 %This section firstly presents presents which portion of the dataset described in \secref{sec:dataset} has been used in this work, then the classification performance of the algorithm. 
 
-\subsection{Dataset}
+\subsection{Data Used}
 \label{sec:dataset_svm_multiclass}
 All the experiments have been conducted data related to R0 room only. In particular, in order to compare the performance of the FAS with a standard aerial microphone, not all data concerning all the aerial microphones array have been used but only the one of the microphone closest to the wall (see \figref{fig:room}). Moreover, signals have been downsampled to 16\,kHz and the resolution has been reduced to 16\,bit. In order to obtain a balanced dataset, for each object and
 for each distance, 11 fall events have been randomly picked for a total of 44 events per
@@ -169,11 +169,11 @@ where $C=[C(i,j)]$ is the confusion matrix.
 
 \begin{figure}[t]
 	\centering
-	\begin{subfigure}[b]{0.6\textwidth}
+	\begin{subfigure}[b]{0.75\textwidth}
 		\includegraphics[width=\textwidth]{img/pgfsources/16_matched_clean/16_matched_CLEAN.pdf}
 		\caption{}\label{fig:results_match_clean}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.6\textwidth}
+	\begin{subfigure}[b]{0.75\textwidth}
 		\includegraphics[width=\textwidth]{img/pgfsources/16_matched_noisy/16_matched_NOISY.pdf}
 		\caption{}\label{fig:results_match_noisy}
 	\end{subfigure}
@@ -258,14 +258,14 @@ Regarding the sensor, the insertion of isolating material in the enclosure would
 
 The classification algorithm proposed here is based on the previous work (\secref{ch:supervised_approaches}). It employs both low-level features, i.e., MFCCs \cite{Davis80}, and high-level features, i.e., Gaussian Mean Supervectors which are then used by a Support Vector Machine to distinguish falls from no-falls. Despite MFCCs were originally developed for speech and speaker recognition tasks, they have been successfully applied also for acoustic event classification \cite{Temko06} and fall detection \cite{zigel2009method}. Differently from the algorithm presented in the previous section, where the algorithm discriminated falls of general objects, here the focus is specifically on the classification of human falls. The classifier, thus, has been designed to discriminate between two classes: human falls and generic sound events. In order to assess the performance of the approach, the dataset described in \secref{sec:dataset_svm_multiclass} has been augmented with instances of everyday sounds (speech, footsteps, etc.), thus making the task more challenging. As a reference, results employing the original dataset (\secref{sec:dataset_svm_multiclass}) are also reported.
 
-\subsection{Proposed approach}
+\subsection{Proposed System}
 The classification algorithm is composed of two main parts.
 The first is the features extraction phase where we have extract the Mel Frequency Cepstral Coefficients from all audio files that comprise the dataset. For doing this, the feature extraction pipeline is the same used in \secref{ssec:fx}. In particular, the signal is segmented in frames 16\,ms long overlapped by 8\,ms, the parameter $\alpha$ of the pre-emphasis filter has been set to 0.97 and the number of filters which compose the filterbank has been set to 29. At the end, after the Discrete Cosine Transform, 13 statics coefficients are extracted that, together with their first and second derivatives, form the final feature vector of a signal.
 The classification phase is similar to that one adopted in \secref{sec:svm_multi_classification}: first it uses a mixture of gaussians (GMM), trained on a large corpus of audio events with the Expectation Maximization algorithm to model the acoustic space (Universal Background Model, UBM). Then, for each audio segment, the Maximum a Posteriori (MAP) algorithm is used to calculate the Gaussian Mean Supervector (GMS) from the MFCCs. %The GMSs are then employed in validation phase to estimate the Support Vector Machine parameters.
 %a MAP algorithm is employed to model the acoustic space with Universal Background Model (UBM),  starting from the MFCCs.  calculate the Gaussian Mean Supervector (GMN) starting from the MFCC using the GMM-UBM paradigm, then estimate the SVM parameters. 
 In contrast with the previous work \secref{sec:svm_multi_classification}, where we used a multi-class approach, here we employ a binary SVM to discriminate the class ``fall'' from ``rest'' which allows to distinguish human falls from the other types of sounds. In addition, the class decision is usually performed by evaluating the sign of the SVM discriminative function, which ultimately consists in deciding whether in example belongs to a class by setting a threshold equal to zero. However, in a human fall classification task, it is important to minimize the probability of missing a fall event, i.e., false negatives. In order to push the system towards this direction, we decided to consider the entire value of the SVM discriminative function, and then to set an appropriate threshold in order to minimize the occurrence of false negatives.
 
-\subsection{Dataset}\label{sec:data_binary_svm}
+\subsection{Data Used}\label{sec:data_binary_svm}
 
 As can be seen in the \tableref{tab:binary_svm_dataset}, the dataset used for training and assess the proposed method is an enlarged version of the one used in \secref{sec:algorithm_svm_multiclass}. Moreover, in order to further stress the system, a 20 minutes long recording session in which 2 persons have produced everyday noises such as talking, walking, dragging chairs, and playing with the ball was used. Then this background recording has been divided in 665 sub-tracks. The lengths of these sub-tracks have been randomly generated with gaussian distribution. Mean value and standard deviation of this distribution have been calculated based on the lengths of the other files that form the dataset. 
 In addition to the clean dataset, a noisy version has been created to assess the performance in noisy condition. The noisy dataset consists in a musical background recorded with both sensors and digitally added to the clean events.

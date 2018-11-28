@@ -5,7 +5,7 @@ The problem with supervised approaches is that they require that each class of i
 
 Since the previous results have shown the superiority of the FAS with respect to the standard microphone, in the next sections only the samples recorded with the FAS has been used, unless otherwise specified.
 
-\section{Human fall detection algorithm based on One-Class Support Vector Machine}
+\section{One-Class Support Vector Machine based algorithm}
 \label{sec:ocsvm_approach}
 
 The approach proposed in this section is based on a One-Class Support Vector Machine (OCSVM) \cite{scholkopf2000} to obtain an unsupervised framework for Fall Detection.
@@ -15,7 +15,7 @@ Then, the GMS of each event is calculated by adapting the GMM with the MAP algor
 Abnormal acoustic events are discriminate from normal ones employing the OCSVM classifier.
 
 
-\subsection{Dataset}
+\subsection{Data Used}
 \label{sec:dataset_cin_ocsvm_only}
 The performance of the algorithm has been evaluated on a corpus containing sounds of human falls, falling objects, human activities, and music. In particular, from the dataset presented in \secref{sec:dataset}, have been used the samples reported in \tableref{tab:ocsvm_dataset}.
 
@@ -218,7 +218,7 @@ where $tp$ is the number of correctly classified falls, $fn$ is the number of fa
 
 
 %\label{sec:ocsvm}}
-\section[End-To-End Unsupervised Approach employing CNN-AE for Human Fall Detection]{End-To-End Unsupervised Approach employing Convolutional Neural Network Autoencoders for Human Fall Detection} 
+\section[End-To-End Unsupervised Approach employing CNN-AE]{End-To-End Unsupervised Approach employing Convolutional Neural Network Autoencoders} 
 \label{sec:autoencoder}
 
 
@@ -234,7 +234,7 @@ Their convolutional neural networks trained on raw audio signals do not outperfo
 The contribution is a novel fall detection method which exploits the end-to-end approach, resulting in a reduction of the engineering effort needed to design the system, with respect to those method that used features extracted from input signals. Is also shown that it can achieve good performance, higher than two state-of-the-art systems chosen for a comparison.
 
 
-\subsection{Proposed Approach}
+\subsection{Proposed System}
 \label{sec:proposedApproach}
 
 \begin{figure}[htb]
@@ -271,7 +271,7 @@ The structure of the autoencoder is not defined a priori, but it is chosen throu
 \label{sec:endtoend_experiments}
 In this section are described the composition of the dataset used in this work and the experimental set-up.
 
-\subsubsection{Dataset} 
+\subsubsection{Data Used} 
 
 The instances used in this approach are summarized in table \tableref{tab:endtoend_dataset}.
 It is composed of two type of sounds: the first, namely novelty, comprises several human fall sounds that have been simulated by means of a human-mimicking doll employed in water rescues. The doll has been dropped from upright position and from a chair, both forward and backward. The drops have been then repeated at three distances from the FAS, i.e., 2, 4 and 6 m, for a total of 44 events, all included in the “Human fall” class. The second type, i.e, the background, comprises sounds of normal activities (voices, footsteps, etc.) for a total of 1218 s, and three musical tracks\footnote{W. A. Mozart, ``Piano trio in C major''}\footnote{Led Zeppelin, ``Dazed and confused''}\footnote{Led Zeppelin, ``When the levee breaks''}, for a total of 1498 s, played from a loudspeaker and acquired back with the FAS.

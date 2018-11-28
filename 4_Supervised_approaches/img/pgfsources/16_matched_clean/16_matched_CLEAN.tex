@@ -3,6 +3,10 @@
 \usetikzlibrary{pgfplots.groupplots}
 \pgfplotsset{compat=1.7}
 
+\definecolor{rred}{RGB}{234,98,255}
+\definecolor{ccian}{RGB}{98,140,255}
+\definecolor{yyellow}{RGB}{255,205,98}
+
 \begin{document}
 	\thispagestyle{empty}
 	
@@ -35,9 +39,9 @@
 		%				Noisy   85.94	89.93	89.24
 		
 		
-		\addplot [color=black,fill=darkgray] coordinates {(Aerial,91.56) (FAS,98.04)  };
-		\addplot [color=black,fill=gray] coordinates {(Aerial,91.20) (FAS,95.42) };
-		\addplot [color=black,fill=lightgray] coordinates {(Aerial,91.16) (FAS,98.06) };		
+		\addplot [color=black,fill=rred] coordinates {(Aerial,91.56) (FAS,98.04)  };
+		\addplot [color=black,fill=ccian] coordinates {(Aerial,91.20) (FAS,95.42) };
+		\addplot [color=black,fill=yyellow] coordinates {(Aerial,91.16) (FAS,98.06) };		
 		
 		\legend{STD,NOPRE,NOPRELP}
 		\end{axis}
