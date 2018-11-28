@@ -195,6 +195,26 @@ X.~Zhuang, J.~Huang, G.~Potamianos, and M.~Hasegawa-Johnson,
 \newblock in {\em Proc. of ICASSP}, Taipei, Taiwan, Apr. 19-24 2009, pp.
   69--72.
 
+\bibitem{cheffena2016fall}
+M.~Cheffena,
+\newblock ``Fall detection using smartphone audio features,''
+\newblock {\em IEEE journal of biomedical and health informatics}, vol. 20, no.
+  4, pp. 1073--1080, 2016.
+
+\bibitem{collado2017machine}
+A.~Collado-Villaverde, M.~D. R-Moreno, D.~F. Barrero, and D.~Rodriguez,
+\newblock ``Machine learning approach to detect falls on elderly people using
+  sound,''
+\newblock in {\em International Conference on Industrial, Engineering and Other
+  Applications of Applied Intelligent Systems}. Springer, 2017, pp. 149--159.
+
+\bibitem{irtaza2017framework}
+A.~Irtaza, S.~M. Adnan, S.~Aziz, A.~Javed, M.~O. Ullah, and M.~T. Mahmood,
+\newblock ``A framework for fall detection of elderly people by analyzing
+  environmental sounds through acoustic local ternary patterns,''
+\newblock in {\em Systems, Man, and Cybernetics (SMC), 2017 IEEE International
+  Conference on}. IEEE, 2017, pp. 1558--1563.
+
 \bibitem{Liu2014}
 L.~Liu, M.~Popescu, M.~Skubic, and M.~Rantz,
 \newblock ``{An automatic fall detection framework using data fusion of Doppler
@@ -214,6 +234,12 @@ B.~Toreyin, A.~Soyer, I.~Onaran, and E.~Cetin,
 \newblock ``Falling person detection using multi-sensor signal processing,''
 \newblock {\em EURASIP Journal on Advances in Signal Processing}, vol. 2008,
   no. 1, pp. 7, 2008.
+
+\bibitem{er2018non}
+P.~V. Er and K.~K. Tan,
+\newblock ``Non-intrusive fall detection monitoring for the elderly based on
+  fuzzy logic,''
+\newblock {\em Measurement}, vol. 124, pp. 91--102, 2018.
 
 \bibitem{noury2007fall}
 N.~Noury, A.~Fleury, P.~Rumeau, A.~Bourke, G.~Laighin, V.~Rialle, and J.~Lundy,

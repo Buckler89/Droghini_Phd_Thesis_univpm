@@ -35,12 +35,31 @@ The performance of the floor acoustic sensor has been evaluated on a corpus of a
 Fall events have been recorded in 3 different rooms with the following characteristics:
 \begin{itemize}
 	\item The first, is a rectangular room, hereafter named R0, measuring about 7\,m\,$\times$\,2\,m (\figref{fig:room}). The room is particularly suitable for the propagation of acoustic waves through the floor since it is obtained from a cantilever beam. In addition, the considerable distance of the supporting pillars facilitates the transmission of a fall vibrations through the floor.
-	\item the second location for the recording was the university auditorium room (R1) in which the flooring is composed of fitted carpet. This makes it particularly suitable for evaluating system performance on surfaces with acoustical behavior that can mitigate the impact sound transmitted through the floor and in the air; all the recordings were performed near the auditorium stage in an area of 8$\times$3\,m.
-	\item a recording studio (R2) was selected as the third location for its particular characteristics. Here, it was possible to make the acquisitions by placing the sensors in the live room while the audio events were performed in the control room. In particular, the sensors were positioned immediately behind the soundproof wall with the window overlooking the live room. The size of the live room is 5$\times$7\,m, while the size of the control room is 3$\times$8\,m.
+	\item the second location for the recording was the university auditorium room (R1) in which the flooring is composed of fitted carpet (\figref{fig:room1}). This makes it particularly suitable for evaluating system performance on surfaces with acoustical behavior that can mitigate the impact sound transmitted through the floor and in the air; all the recordings were performed near the auditorium stage in an area of 8$\times$3\,m.
+	\item a recording studio (R2) was selected as the third location for its particular characteristics (\figref{fig:room2}). Here, it was possible to make the acquisitions by placing the sensors in the live room while the audio events were performed in the control room. In particular, the sensors were positioned immediately behind the soundproof wall with the window overlooking the live room. The size of the live room is 5$\times$7\,m, while the size of the control room is 3$\times$8\,m.
 \end{itemize}
 
   The recording equipment comprises the floor sensor, a linear array of three aerial microphones (the same AKG 400 BL included in the floor sensor) and a Presonus AudioBox 44VSL sound card connected to a laptop. The microphones of the array are separated by 4\,cm and positioned on a table 80\,cm high. Signals were sampled at 44.1\,kHz with a resolution of 32\,bits. Levels were calibrated to assure the maximum dynamic range at the smallest distance.
+  
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\columnwidth]{img/room_experiments.pdf}
+	\caption{The scheme the R0 room: the letters A, B, C and D indicate the positions of fall events.}
+	\label{fig:room}
+\end{figure}
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\columnwidth]{img/aula_magna}
+	\caption{The auditorium (R0): the fall events were carried out in front of the desk, under the stage, within 6 meters.}
+	\label{fig:room1}
+\end{figure}
 
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\columnwidth]{img/lolastudio}
+	\caption{The studio room (R2) of the LOw Latency LAboratory (LOLA): the fall events were carried out in front of the desk, while the sensors were placed beyond the windows, in the recording room.}
+	\label{fig:room2}
+\end{figure}
 \subsection{Description}
 In \tableref{tab:numDataset} the composition of the dataset is summarized.
 For the R0, the dataset comprises recordings of fall events related to everyday objects and to a human mimicking doll. The objects were chosen according to the recent literature on the topic \cite{alwan2006smart} and are the following: a ball, a metal basket, a book, a metal fork, a plastic chair, and a bag (\figref{fig:objects}). Objects have been dropped at four distances from the sensors, i.e., 1\,m, 2\,m, 4\,m, and 6\,m, and with various angles in order to reproduce realistically different fall patterns. With the exception of the chair and the basket, which have been overturned from their natural position, half of the falls has been performed at a height of 0.5\,m and the other half at 1\,m. For each object and for each distance, 16 fall events have been performed for a total of 64 events per object. Instead, the chair has been overturned 8 times for each side of fall (back, front, side) and for each distance, thus obtaining a total of 96 events.
@@ -81,7 +100,7 @@ For the R0, the dataset comprises recordings of fall events related to everyday 
 	\end{center}
 \end{table}
 
-\begin{figure}[t]
+\begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{img/objects_R1_R2.jpg}
 	\caption{Objects employed for creating the fall events dataset.}\label{fig:objects}
@@ -94,7 +113,7 @@ Normal activities sounds have been recorded while persons were performing common
 
 In R2 and R1 other every-days objects,in addition to those used in R0, have been recorded for a total of 12 different object fall classes and 1420 instances. While the manikin doll has been used only in R0, in R1 and R2 a total 80 human falls have been performed by 4 people. These falls were performed in different ways: forward, backward and on the side, trying to use the arms to cushion the fall and without any protections. As in R0, also in R2 and R2 all events were performed from 1, 2, 4 and 6 m away from the FAS.
 
-\begin{figure}[t]
+\begin{figure}[htb]
 	\centering
 	\begin{subfigure}[b]{0.48\textwidth}
 		\includegraphics[width=\textwidth]{img/impalcatura.jpg}
@@ -104,15 +123,10 @@ In R2 and R1 other every-days objects,in addition to those used in R0, have been
 		\includegraphics[width=\textwidth]{img/rndy_caduta_sedia.jpg}
 		\caption{Fall from the chair.}\label{fig:randy_chair}
 	\end{subfigure}
-	\caption{Falls of the ``Rescue Randy'' doll from upright position (a) and from the chair (b).}\label{fig:randy}
+	\caption{Falls of the ``Rescue Randy'' doll from upright position (a) and from the chair (b). carried out in the R0 room}\label{fig:randy}
 \end{figure}
 
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=\columnwidth]{img/room_experiments.pdf}
-	\caption{The recording room: the letters A, B, C and D indicate the positions of fall events.}
-	\label{fig:room}
-\end{figure}
+
 
 As shown in \tableref{tab:numDataset} background noises have been recorded also in R1 and R2 rooms rooms, which include: human activities noise as, i.e., footsteps, human and phone conversation, dragging objects and so on; classic, rock and pop music played from loudspeakers; TV shows like newscast and satiric.
 
@@ -124,7 +138,7 @@ The signal related to the same fall event acquired with the floor sensor and wit
 
 This is even more evident by plotting the values of the mel coefficients (\figref{fig:mel}): the first and second mel channels of the FAS, corresponding to the frequency bands 0--128.10\,Hz and 61.30-200.60\,Hz, are higher respect to the aerial microphone. Channels 3 to 7, respectively corresponding to bands 128.10--279.50\,Hz and 458.70--670.70\,Hz, are almost equivalent, while from channel 8 (560.30--790.80\,Hz) to 29 (6654.60--8000.00\,kHz) the aerial microphone mels are greater.
 
-\begin{figure}[t]
+\begin{figure}[htb]
 	\centering
 	\begin{subfigure}[b]{0.9\textwidth}
 		\includegraphics[width=\textwidth]{img/spettro_fas}
@@ -140,13 +154,13 @@ This is even more evident by plotting the values of the mel coefficients (\figre
 	\caption{Frequency content of the same fall event (file ``rndy\_d2st\_bar\_0.wav'') acquired with the FAS (a) and with the aerial microphone (b).}\label{fig:spectrograms}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[htb]
 	\centering
 	\includegraphics[width=0.75\textwidth]{img/mel_dB}
 	\caption{Average value of the mel channels.} \label{fig:mel}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[htb]
 	\centering
 	\includegraphics[width=0.75\textwidth]{img/SNR_mel_channel}
 	\caption{Average value of the SNR for each mel channel.} \label{fig:noisymel}
