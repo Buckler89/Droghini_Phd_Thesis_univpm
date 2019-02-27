@@ -1,0 +1,1881 @@
+% !TeX spellcheck = en_US
+\documentclass{beamer}
+\usepackage{appendixnumberbeamer}
+
+\usepackage[latin1]{inputenc}
+\usepackage[tight]{subfigure}
+\usepackage{eurosym}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{nth,soul}
+\graphicspath {{Images/}}
+\usepackage{tikz}
+%\usetikzlibrary{calc,shapes,arrows,chains,shadows,arrows,fit,positioning,backgrounds,spy}
+\usetikzlibrary{shadows,backgrounds,matrix,chains,positioning,decorations.pathreplacing,arrows,fit,shapes,calc,decorations.markings,spy}
+
+\usetheme[pageofpages=of,% String used between the current page and the
+                         % total page count.
+          bullet=circle,% Use circles instead of squares for bullets.
+          titleline=true,% Show a line below the frame title.
+          alternativetitlepage=true,% Use the fancy title page.
+          titlepagelogo=logo_univpm_white.png,% Logo for the first page.
+          %watermark=brando1,% Watermark used in every page.
+          %watermarkheight=20px,% Height of the watermark.
+          %watermarkheightmult=5,% The watermark image is 4 times bigger
+                                % than watermarkheight.
+          ]{Torino}
+
+\setbeamertemplate{background}{
+\tikz[overlay,remember picture] 
+	\node[at=(current page.north east),anchor=north east,inner sep=15pt] {\includegraphics[height=1cm, keepaspectratio]{logo_univpm_scritta.png}};
+}
+
+\author{\textbf{Student:}\\Marco Fagiani}
+%\title{Relazione Attività 2014\\}
+\title{\textbf{Advanced Computational Intelligence\vspace{2mm}\newline for Smart Water and Gas Grids}}
+\subtitle{\vspace{1mm}Scuola di Dottorato in Ingegneria dell'Informazione, XV Ciclo} %XV Ciclo n.s., 3° anno di corso (2015/2016)}
+\institute{Università Politecnica delle Marche\\ \textbf{Progetto Eureka}}
+\date{}
+
+\definecolor{darkgray}{RGB}{50,50,50}
+
+\setbeamercolor{section in toc}{fg=black}
+\setbeamercolor{subsection in toc}{fg=darkgray}
+\setbeamerfont{subsection in toc}{size=\small}
+\setbeamertemplate{section in toc}[ball unnumbered] %[sections numbered]
+%\setbeamertemplate{subsection in toc}[subsections numbered]
+
+\begin{document}
+
+{
+\usebackgroundtemplate{}
+\begin{frame}[t, plain]
+%\titlepage
+\vspace{1.8mm}
+\begin{beamercolorbox}[wd=0.95\paperwidth,ht=.92\paperheight,center]{title page header}
+
+  %\vbox{}
+  %\vfill
+\vspace{4mm}
+\begin{figure}
+\begin{centering}
+	\includegraphics[height=.2\paperheight,keepaspectratio]{logo_univpm_white.png}
+\end{centering}
+\end{figure}
+
+%\vspace{-4mm}
+
+\begin{columns}
+
+\begin{column}{.40\textwidth}
+
+\end{column}
+\begin{column}{.50\textwidth}
+
+%{\Huge{\_}}\\
+{\large{Facoltà di Ingegneria}}
+
+\vspace{4mm}
+
+{\large{\textbf{Marco Fagiani}}}
+
+{\small{\textit{Advanced Computational Intelligence for Smart Water and Gas Grids}}}
+
+\vspace{5mm}
+
+{\footnotesize{Dottorato in Ingegneria dell'Informazione\\
+\hspace{5mm} 23-24 Marzo 2017, www.univpm.it}}
+
+\end{column}
+\end{columns}
+\vspace{8mm}
+%\vfill
+\end{beamercolorbox}    
+\end{frame}
+}
+
+
+\begin{frame}{\textbf{Outline}}
+\tableofcontents
+% You might wish to add the option [pausesections]
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}{Introduction}
+%Manca una slide di presentazione generale dell?attività di ricerca, in cui puoi inserire anche le collaborazioni con MarcoS e Roberto.
+%Poi passi a descrivere le problematiche e le attività di studio
+
+
+%Advanced Computational Intelligence for Smart Water and Gas Grids with focus on Forecasting and Leakage Detection applications.
+
+Shot/medium-term Forecasting and Leakage Detection solutions for Smart Water and Gas Grids.
+
+%Topics:
+%\begin{itemize}
+%\item Shot/medium-term Forecasting.
+%\item Leakage Detection.
+%\end{itemize}
+%
+%Aims:
+\begin{itemize}
+
+% proporre soluzione avanzate di CI per 
+
+%\item 
+%\item Focus on Forecasting and Leakage Detection application %Sviluppo soluzioni di \textit{\textbf{Computational Intelligence}} per la realizzazione della \textit{\textbf{Smart Grid}} in ambito \textbf{acqua e gas}. %e implementazione 
+
+%main efforts have been focused on energy fields, leaving aside water and natural gas fields.
+
+
+%\begin{itemize}
+\item Reduce the wide gap between energy and water and gas fields.
+\item Exploit the smart metering systems already present, thus low computational burden solution, and low data rates as well. 
+\item Residential, office building, city and states scenarios.
+%\item Residential and office building scenarios, where smart metering systems are already present. 
+%negli \textbf{scenari residenziali e uffici}, sfruttando le soluzioni di \textit{smart metering}.   
+
+%\item Low computational burden solution, as well as low data rates. %, and active monitoring.  %bassa complessità computazionale, low data rate, active monitoring.
+
+%\end{itemize}
+
+%\item Cross-fertilization with Energy solutions: collaboration with PhD Students Marco Severini and Roberto Bonfigli.%Collaborazioni con dottorandi Marco Severini e Roberto Bonfigli per gli aspetti energy.
+
+\end{itemize}
+
+
+Cross-fertilization with Smart Energy Grid solutions. %: collaboration with PhD students Marco Severini and Roberto Bonfigli.%Collaborazioni con dottorandi Marco Severini e Roberto Bonfigli per gli aspetti energy.
+
+
+\end{frame}
+
+%Research Activity
+%Exam supervision and Integrative teaching for Electrical
+% 
+
+%\begin{frame}{Introduction}
+%
+%Investigation and analysis of the \textbf{State of the Art}:%Ricerca e analisi dello \textbf{stato dell'arte}: % relativo a tecniche di \textbf{predizione consumi}:
+%\begin{itemize}
+%%\scriptsize
+%\item Research of suitable and available \textbf{databases}. %Ricerca \textbf{database} idonei e verifica disponibilità.
+%\item Short/medium-term \textbf{load forecasting} approaches. %Tecniche di \textbf{predizione consumi} a breve e medio termine.
+%\item \textbf{Leakage detection} and grid monitoring solutions. %Tecniche di \textbf{rilevamento predite} e monitoraggio stato della rete.
+%
+%\end{itemize}
+%
+%
+%%\vspace{3mm}
+%%\item Scenari di interesse: consumi acqua e gas in ambito residenziale/domestico, uffici (edifici), \textbf{micro grid}.
+%
+%
+%%\vspace{3mm}
+%%\item Publicly available databases:
+%%\begin{itemize}
+%%%\scriptsize
+%%\item \textbf{AMPds}: 2 year of single house consumption, power, water, and gas, at 1 minute of resolution. %consumi singola abitazione di acqua, gas, elettricità con 1 minuto intervallo, 2 anno.
+%%\item \textbf{DFID}: water and gas consumption of the U.K. Department for International Development, 30 minute of resolution from 2011. %consumi acqua e gas uffici Dipartimento dello Sviluppo Internazionale, 30 minuti, storicizzati e disponibili dal 2011. % U.K.  Department for International Development
+%%\item \textbf{Teheran}: monthly water consumption, about 10 years. % consumi mensili acqua per 10 anni.
+%%\item \textbf{EIA}: U.S. states monthly gas consumption, about 25 years.%consumi mensili gas US, 25 anni.	% U.S. Energy Information Administration
+%%\end{itemize}
+%
+%%\item Problematiche stato dell'arte: % POCHI DATABASE DISPONIBILI e DATI NON APPROPRIATI
+%%\begin{itemize}
+%%%\scriptsize
+%%\item Pochi \textbf{database} disponibili e/o dati non appropriati.
+%%\item Impossibilità di \textbf{confronto} appropriato tra approcci:
+%%\begin{itemize}
+%%\scriptsize
+%%	\item Tecniche testate con differenti database.
+%%	\item Criteri di valutazione non omogenei.
+%%\end{itemize}
+%%\item Rilevamento perdite diffuso in \textbf{ambito industriale} previa approcci invasivi, necessità di operatori qualificati, con alta complessità computazionale (alte risoluzioni). % altro?
+%%\item Ambito residenziale/domestico problematiche metodologiche. % classificazioni sbilanciate, soglie calcolate su abitudini di nazioni, etc
+%%\end{itemize}
+%%\end{itemize}
+%
+%\end{frame}
+
+
+\AtBeginSection[]
+{
+   \begin{frame}
+       \frametitle{\textbf{Contents}}
+       %\frametitle{\textbf{Outline for Section \thesection}}
+       \tableofcontents[
+    currentsection,
+    subsubsectionstyle=show/shaded, 
+    %subsubsectionstyle=hide, 
+    ]
+   \end{frame}
+}
+
+
+\section{State of the Art} % Smart Water and Gas Grids
+
+\subsection{Databases}
+
+\begin{frame}{Databases}
+\tiny
+\centering
+\begin{tabular}{|ccccc|}
+\hline
+Contr.				& Res.	& Time Period				& Samples 			& Availability	\\
+\hline\hline
+\cite{Boracchi2014} \rule{0pt}{10pt}	& W		& 82 days per 10 time series& $118,080$			& \textbf{publicly avail.}	\\
+\cite{Ji2014}		& W		& Jun 2012 -- May 2013	 	& $8,736$			& --	\\ % just requested
+\cite{Quevedo2013}	& W		& --						& --				& not public	\\
+\cite{Cardell2013}	& W 	& 35,000 days				& -- 				& not public	\\
+\cite{Makonin2016}	& WGE	& Apr 2012 -- Mar 2013		& $524\,k$			& \textbf{publicly avail.}	\\
+%\hline\hline
+%\multicolumn{5}{l}{datasets used in forecasting contributions.}					\\
+%\hline\hline
+\cite{Bakker2013}	& W		& 2006 -- 2011				& $210,336$			& not public	\\
+\cite{Boracchi2013}	& W		& 11 Nov -- 22 Dec, 2012	& --				& not public	\\
+\cite{Zhu2012,Zhu2013} 		& W 	& Apr -- Jul, 2010			& --		& not public	\\
+\cite{Nasseri2011} 	& W 	& May 1992 -- Dec 2002		& $125$		 		& \textbf{publicly avail.}		\\
+\cite{Liu2010}		& W		& 1990 -- 2000				& $10$				& not public	\\
+\cite{Tabesh2009}	& W		& 1991 -- 2003				& $\sim 4,380$		& not public	\\
+\cite{DFIDsite}	& WG	& 2011 -- today				& $\sim 10\,k$		& \textbf{publicly avail.}
+\\
+\hline
+\cite{EIAsite} \rule{0pt}{6pt} 	& G		& 1973/1989 -- 2013			& $492/300$			& \textbf{publicly avail.} \\
+\cite{Azari2012}	& G		& Mar 2001 -- Aug 2005		& $\sim 1,611$		& not public	\\
+\cite{Pang2012}		& G		& Jun 1996 -- Mar 2012 		& $\sim 5,752$		& not public	\\
+\hline %\hline
+%\multicolumn{4}{|l}{*: samples for each measured resource.} & \rule{0pt}{10pt} \\
+%\hline
+%\multicolumn{5}{l}{W: water G: natural gas} \\
+\end{tabular}
+
+%\vspace{3mm}
+%\item Publicly available databases:
+\begin{itemize}
+\scriptsize
+\item \textbf{AMPds}: 2 year of single house consumption, power, water, and gas, at 1 minute of resolution. %consumi singola abitazione di acqua, gas, elettricità con 1 minuto intervallo, 2 anno.
+\item \textbf{DFID}: water and gas consumption of the U.K. Department for International Development, 30 minute of resolution from 2011. %consumi acqua e gas uffici Dipartimento dello Sviluppo Internazionale, 30 minuti, storicizzati e disponibili dal 2011. % U.K.  Department for International Development
+\item \textbf{Teheran}: monthly water consumption, about 10 years. % consumi mensili acqua per 10 anni.
+\item \textbf{EIA}: U.S. states monthly gas consumption, about 25 years.%consumi mensili gas US, 25 anni.	% U.S. Energy Information Administration
+\end{itemize}
+
+\end{frame}
+
+%\begin{frame}[t]{Study Activity}
+%
+%\textbf{Forecasting:}
+%
+%\begin{itemize}
+%\item State of the Art shortcomings:
+%% problematiche stato dlel'arte
+%\begin{itemize}
+%\scriptsize
+%\item Lack of short-term predictions for residential and office building solutions.
+%\item Few evaluations with heterogeneous data.
+%\item Different evaluation criteria, different databases, no objective comparison. %Impossibilità di \textbf{confronto} appropriato tra approcci
+%\end{itemize}
+%
+%\item Study of prediction techniques: %Studio tecniche per \textbf{predizione}:
+%\begin{itemize}
+%\scriptsize
+%\item Genetic Programming and Extended Kalman Filter.
+%\item Support Vector Regression.
+%\item Extreme Learning Machine.
+%\item Artificial Neural Network: Feed-forward, Echo State Network, Deep Belief Network.
+%\end{itemize}
+%
+%\item Research of suitable evaluation criteria.
+%
+%%\item Studio tecniche di \textit{Novelty Detection} per \textbf{rilevamento perdite}:
+%%\begin{itemize}
+%%\scriptsize
+%%\item Gaussian Mixture Model.
+%%\item Hidden Markov Model.
+%%\item One-Class Support Vector Machine
+%%\item Auto-encoder: Feed-forward, LSTM e BLSTM.
+%%\end{itemize}
+%
+%%\item Studio e ricerca delle \textit{features} idonee per la rappresentazione dei consumi per \textbf{rilevamento perdite}.
+%
+%%\item Studio tool EPANET per la rappresentazione rete idrica e simulazione perdite.
+%
+%\end{itemize}
+%\end{frame}
+
+\subsection{Load Forecasting}
+
+\begin{frame}[t]{Load Forecasting}
+
+\tiny
+\centering
+\tabcolsep=0.10cm
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Water contr.:} & Technique 	& Evaluation Criteria 			& Performance	\\
+\hline\hline
+\cite{Shabri2014}		& EMD-ANN		& RMSE - MAE - R$^{2}$ 			& $2.71, 1.86, 0.54$ \rule{0pt}{10pt}	\\
+\cite{Akpinar2013}		& ARIMA-RC		& RAE - MAPE - RMSE - PE		& $ -, 8.70\%, -, - $	\\
+\cite{Ji2014}			& ATLBO-LSSVM	& MRE							& $0.41\%$	\\
+\cite{Bakker2013}*		& Adaptive		& MAPE - RRMSE - R$^{2}$ 		& $2.91\%,4.35\%,0.750$***		\\
+\cite{Bakker2013}**		& Adaptive		& MAPE - RRMSE - R$^{2}$ 		& $6.19\%,9.63\%,0.957$***		\\
+\cite{Zhu2013} 			& PQPSO-LSSVM	& RE - MRE 						& $1.76\%$				\\
+\cite{Zhu2012} 			& QPSO-RBF ANN	& RE - MSRE 					& $2.14\%$				\\
+\cite{Nasseri2011} 		& EKF-GP		& NMSE - R$^{2}$				& $0.23$, $0.76$		\\
+\cite{Liu2010}			& GM(1,1)		& Max RE - MRE					& $-19.50\%, 13.85\%$	\\
+\cite{Liu2010}			& RBF ANN		& Max RE - MRE					& $2.29\%, 2.01\%$		\\
+\cite{Tabesh2009}		& Fuzzy			& MSE - NMSE - R$^{2}$ - MAPE 	& $0.042, 0.465, 0.760, 7.63\%$ \\
+\cite{Tabesh2009}		& Neuro-Fuzzy	& MSE - NMSE - R$^{2}$ - MAPE 	& $0.008, 0.069, 0.931, 2.85\%$	\\
+\hline
+%\multicolumn{2}{l}{*: 24-h time step.} & \multicolumn{1}{l}{**: 15-min time step.} & \multicolumn{1}{l}{***: average values.} \rule{0pt}{10pt} \\
+\multicolumn{4}{c}{}\\
+\hline
+\textbf{Gas contr.:}	& Technique 	& Evaluation Criteria 			& Performance	 \\
+\hline\hline
+\cite{Wan2014}			& GM-Mc			& Raw values and their difference	& $-, -$ \rule{0pt}{10pt} \\
+\cite{Wang2014a}		& Step-DE-GM	& PE - MAPE						& $6.35, 2.28$ \\
+\cite{Wang2014b}		& GM-BPNN		& PE - MAPE						& $2.7, 0.55$ \\
+\cite{Chen2014}			& GD-FNN		& RE							& $-$ \\
+\cite{Azari2012}$^+$	& ANN			& RE							& $1.5\%-6.8\%$				\\ 
+\cite{Azari2012}$^{++}$	& ANN			& RE							& $0.33\%-1.86\%$				\\
+\cite{Pang2012}			& MWS			& RMSE - MAPE - wMAPE			&	--					\\
+\hline
+%\multicolumn{2}{l}{$^{+}$: daily prediction.} & \multicolumn{2}{l}{$^{++}$: monthly prediction.} \rule{0pt}{10pt}\\
+\end{tabular}
+
+\end{frame}
+
+\begin{frame}{Load Forecasting}
+
+%\begin{itemize}
+%\item State of the Art shortcomings:
+\textbf{Shortcomings}:
+% problematiche stato dlel'arte
+\begin{itemize}
+\small
+\item Different evaluation criteria, different databases, no objective comparison. %Impossibilità di \textbf{confronto} appropriato tra approcci
+\item Few evaluations with heterogeneous data.
+\item Lack of short-term predictions for residential and office building solutions.
+\end{itemize}
+
+%\item Study of prediction techniques: %Studio tecniche per \textbf{predizione}:
+%\begin{itemize}
+%\scriptsize
+%\item Genetic Programming and Extended Kalman Filter.
+%\item Support Vector Regression.
+%\item Extreme Learning Machine.
+%\item Artificial Neural Network: Feed-forward, Echo State Network, Deep Belief Network.
+%\end{itemize}
+%
+%\item Research of suitable evaluation criteria.
+
+\vspace{5mm}
+\textbf{Research goals}:
+\begin{itemize}
+\small
+\item Study of prediction techniques.
+\item Research of suitable evaluation criteria.
+\item Homogeneous evaluation among the different approaches and scenarios.
+\item Evaluations with heterogeneous data.
+\end{itemize}
+
+%\item Studio tecniche di \textit{Novelty Detection} per \textbf{rilevamento perdite}:
+%\begin{itemize}
+%\scriptsize
+%\item Gaussian Mixture Model.
+%\item Hidden Markov Model.
+%\item One-Class Support Vector Machine
+%\item Auto-encoder: Feed-forward, LSTM e BLSTM.
+%\end{itemize}
+
+%\item Studio e ricerca delle \textit{features} idonee per la rappresentazione dei consumi per \textbf{rilevamento perdite}.
+
+%\item Studio tool EPANET per la rappresentazione rete idrica e simulazione perdite.
+
+%\end{itemize}
+\end{frame}
+
+
+
+%\begin{frame}[t]{Study Activity}
+%
+%\textbf{Leakage Detection:}
+%
+%\begin{itemize}
+%\footnotesize
+%\item State of the Art shortcomings:
+%\begin{itemize}
+%\scriptsize
+%%Industrial solutions: 
+%\item Industrial solutions: high sample rates and computational burden, invasive approaches, operator supervision. % spesso usano onde acustiche o ultrasuoni %Rilevamento perdite diffuso in \textbf{ambito industriale} previa approcci invasivi, necessità di operatori qualificati, con alta complessità computazionale (alte risoluzioni). % altro?
+%%\item Ambito residenziale/domestico problematiche metodologiche. % classificazioni sbilanciate, soglie calcolate su abitudini di nazioni, etc
+%\item Shortcomings from the experimental methodology standpoint. %Shortcomings from the computational approach and the experimental methodology standpoint.
+%\item Available databases without suitable data. % @NOTA: molti dei dataset disponibili non rpesentano dati adeguati q	uindi non utilizzabili
+%\item Different evaluation criteria, different databases, no objective comparison.
+%\item Novelty Detection paradigm never considered.
+%\end{itemize}
+%
+%%\item Statistical approaches are widely adopted in order to resolve the novelty detection issue in several fields
+%
+%\item Study of Novelty Detection techniques:
+%\begin{itemize}
+%\scriptsize
+%\item Gaussian Mixture Model.
+%\item Hidden Markov Model.
+%\item One-Class Support Vector Machine
+%\item Autoencoder: Feed-forward, LSTM e BLSTM.
+%\end{itemize}
+%
+%\item Study of suitable features for leakage detection. % @NOTA: far notare che non ci son mlte features
+%\begin{itemize}
+%\scriptsize
+%\item Few features available, developed for industrial scenarios.
+%\end{itemize}
+%\item EPANET tool models water distribution piping systems.
+%
+%%\item Studio e ricerca delle \textit{features} idonee per la rappresentazione dei consumi per \textbf{rilevamento perdite}.
+%
+%%\item Studio tool EPANET per la rappresentazione rete idrica e simulazione perdite.
+%
+%\end{itemize}
+%
+%%\begin{itemize}
+%%\footnotesize
+%%\item Database:
+%%\begin{itemize}
+%%\scriptsize
+%%\item \textbf{AMPds}: consumi singola abitazione di acqua, gas, elettricità con 1 minuto intervallo, 2 anno.
+%%\item \textbf{EIA}: consumi mensili gas US, 25 anni.	% U.S. Energy Information Administration
+%%\item \textbf{Teheran}:  consumi mensili acqua per 10 anni.
+%%\item \textbf{DFID}: consumi acqua e gas uffici Dipartimento dello Sviluppo Internazionale, 30 minuti, storicizzati e disponibili dal 2011. % U.K.  Department for International Development
+%%\end{itemize}
+%%\vspace{3mm}
+%%\item Collaborazioni:
+%%\begin{itemize}
+%%\scriptsize
+%%\item Tecniche di ottimizzazione della gestione di risorse ed energia in ambiente microgrid. \hfill\textit{[Marco Severini]} %(dottorando Marco Severini).
+%%\vspace{3mm}
+%%\item Tecniche per il NILM e simulazioni con Artificial Neural Network di tipo Convolutional e Feed-forward. \hfill\textit{[Roberto Bonfigli]} % sisteamre
+%%\end{itemize}
+%%\end{itemize}
+%
+%\end{frame}
+
+\subsection{Leakage Detection}
+
+\begin{frame}[t]{Leakage Detection}
+
+\tiny
+\centering
+\tabcolsep=0.10cm
+\begin{tabular}{|c|c|c|c|c|p{4cm}|}
+\hline
+\textbf{Contr.} 		& \textbf{Target }& \textbf{Data} & \textbf{Resource} & \textbf{Technique} & \textbf{Main features} \\ % Main Issues
+\hline
+\cite{Salam2014}	& D & P 	& W & SVM & 44 junction sensors\newline No novelty approach \\
+\hline
+\cite{Boracchi2014} & D & F 	& W & ICI-CDT & High delay\newline Change detection approach \\
+\hline
+\cite{Alkasseh2013}	& D & F \& P& W & MNF-MLR
+ & Indirect detection\newline 2 sensors\newline No novelty approach\\
+\hline
+\cite{Gamboa2014}	& - & P 	& W & C4.5 & Laboratory circuit\newline 15 sensors\newline No novelty approach\\
+\hline
+\cite{Mounce2011}	& D & F \& P& W & SVR & Anomalies detection\\
+\hline
+\cite{Nasir2014}	& R & F \& P& W & SVM and ANN & No real data\newline 6 sensors\newline No novelty approach\\
+\hline
+\cite{Oren2013} 	& R & F 	& W & Heuristic & Ad hoc constraints\newline No validation\\
+\hline
+\cite{Sanz2012} 	& D & F 	& W & Fuzzy logic & 2 sensors\newline No novelty approach\\
+\hline
+\cite{Wan2012}		& -	& F \& P& G	& SVM	& 5 acoustic and pressure sensors\newline High-pressure pipe\newline No novelty approach\\
+\hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}{Leakage Detection}
+
+\textbf{Shortcomings:}
+
+\begin{itemize}
+\small
+\item Industrial solutions: high sample rates and computational burden, invasive approaches, operator supervision. % spesso usano onde acustiche o ultrasuoni %Rilevamento perdite diffuso in \textbf{ambito industriale} previa approcci invasivi, necessità di operatori qualificati, con alta complessità computazionale (alte risoluzioni). % altro?
+%\item Ambito residenziale/domestico problematiche metodologiche. % classificazioni sbilanciate, soglie calcolate su abitudini di nazioni, etc
+\item Shortcomings from the experimental methodology standpoint. %Shortcomings from the computational approach and the experimental methodology standpoint.
+\item Available databases without suitable data. % @NOTA: molti dei dataset disponibili non rpesentano dati adeguati q	uindi non utilizzabili
+\item Different evaluation criteria, different databases, no objective comparison.
+\item Novelty Detection paradigm never considered.
+\end{itemize}
+
+%\item Statistical approaches are widely adopted in order to resolve the novelty detection issue in several fields
+
+\textbf{Research goals}:
+
+%\item Study of Novelty Detection techniques:
+\begin{itemize}
+\small
+\item Study and evaluation of Novelty Detection techniques.
+\item Study and evaluation of suitable features for leakage detection (few features available, developed for industrial scenarios.). % @NOTA: far notare che non ci son mlte features
+%\item Few features available, developed for industrial scenarios.
+\item EPANET tool models water distribution piping systems.
+%\item Gaussian Mixture Model.
+%\item Hidden Markov Model.
+%\item One-Class Support Vector Machine
+%\item Autoencoder: Feed-forward, LSTM e BLSTM.
+\end{itemize}
+
+%\item Study of suitable features for leakage detection. % @NOTA: far notare che non ci son mlte features
+%\begin{itemize}
+%\scriptsize
+%\item Few features available, developed for industrial scenarios.
+%\end{itemize}
+%\item EPANET tool models water distribution piping systems.
+
+%\item Studio e ricerca delle \textit{features} idonee per la rappresentazione dei consumi per \textbf{rilevamento perdite}.
+
+%\item Studio tool EPANET per la rappresentazione rete idrica e simulazione perdite.
+
+%\end{itemize}
+
+%\begin{itemize}
+%\footnotesize
+%\item Database:
+%\begin{itemize}
+%\scriptsize
+%\item \textbf{AMPds}: consumi singola abitazione di acqua, gas, elettricità con 1 minuto intervallo, 2 anno.
+%\item \textbf{EIA}: consumi mensili gas US, 25 anni.	% U.S. Energy Information Administration
+%\item \textbf{Teheran}:  consumi mensili acqua per 10 anni.
+%\item \textbf{DFID}: consumi acqua e gas uffici Dipartimento dello Sviluppo Internazionale, 30 minuti, storicizzati e disponibili dal 2011. % U.K.  Department for International Development
+%\end{itemize}
+%\vspace{3mm}
+%\item Collaborazioni:
+%\begin{itemize}
+%\scriptsize
+%\item Tecniche di ottimizzazione della gestione di risorse ed energia in ambiente microgrid. \hfill\textit{[Marco Severini]} %(dottorando Marco Severini).
+%\vspace{3mm}
+%\item Tecniche per il NILM e simulazioni con Artificial Neural Network di tipo Convolutional e Feed-forward. \hfill\textit{[Roberto Bonfigli]} % sisteamre
+%\end{itemize}
+%\end{itemize}
+
+\end{frame}
+
+\section{Load Forecasting}
+
+\begin{frame}[t]{Load Forecasting}
+
+%\textbf{Forecasting:} %\textbf{Predizione consumi:}
+
+
+\begin{itemize}
+\footnotesize
+%\vspace{3mm}
+
+\item Definition of proper comparative evaluation criteria: %of state-of-the-art forecasting techniques.
+\begin{itemize}
+\scriptsize
+\item $NMSE$, $R^2$, $MSE$, $MAPE$, $RRMSE$.
+%\item $NMSE$ - nornalized mean square error;
+%\item $R^2$ - determination coefficient;
+%\item $MSE$ - mean square error;
+%\item $MAPE$ - mean absolute percentage error;
+%\item $RRMSE$ - relative root mean square error.
+\end{itemize}
+%Introduce \textbf{heterogeneous data}, composed of different resource types.
+%Provide a \textbf{proper comparative evaluation} of state-of-the-art forecasting techniques.
+%\item Investigate Computational Intelligence approaches for load forecasting in \textbf{different operative contexts}.
+
+\item Development and simulation of algorithms for each studied approaches:
+\begin{itemize}
+\scriptsize
+\item GP, GP+EKF, SVR, ELM, ANN, DBN, ESN. 
+\end{itemize}
+\item Investigated approaches for load forecasting in all the operative contexts available.
+%\end{itemize}
+% insert table
+
+%\item Research and analysis of the best parameters:
+%\begin{itemize}
+%\scriptsize
+%\item Input lags and resolution.
+%\item NN: optimal learning rate, layers and neurons number.
+%\item SVR: optimal C and $\gamma$.
+%\item GP: number of generations and individuals, levels of crossover and mutations.
+%\end{itemize}
+%
+%\item Evaluation of heterogeneous data, composed of different resource types and temperature.
+%
+%%\item Sviluppo e simulazione algoritmi per previsione a breve e medio termine basati sulle tecniche studiate e utilizzano i database pubblicamente reperibili.
+%%\item Analisi problematiche e ricerca parametri ottimali. % come lunghezza della predizione e numero di lag
+%%\item Simulazioni con combinazioni dati eterogenei: acqua, gas, elettricità e temperatura.
+%%\item Definizione di un set di indici standard per una omogenea valutazione delle prestazioni tra i differenti approcci valutati. % con l'utilizzo di medesimi database.
+%\end{itemize}
+
+%\begin{itemize}
+%\footnotesize
+\item Research and analysis of the best parameters: %@NOTA: "best"
+\begin{itemize}
+\scriptsize
+\item Input lags and resolutions.
+\item NN: optimal learning rate, layers and neurons number.
+\item SVR: optimal C and $\gamma$.
+\item GP: number of generations and individuals, levels of crossover and mutations.
+\end{itemize}
+\end{itemize}
+
+%\begin{table}[h]
+%\centering
+%%\tabcolsep=0.20cm
+%%\renewcommand{\arraystretch}{1.2}
+%\begin{tiny}
+%\begin{tabular}{|l||c|c|c|c|c|l|}
+%\hline
+%\rule{0pt}{8pt} \textbf{Tehran} & NMSE & R$^2$ & MSE & MAPE(\%) & RRMSE(\%) & \multicolumn{1}{c|}{Parameters}\\ %[1.5ex]
+%\hline\hline
+%ARIMA\rule{0pt}{8pt}	& 0.360	& 0.630	& 0.0187	& 19.75 & 24.85 & 3 - 0 - 3	\\
+%%ANN						& 0.175	& 0.820 & 0.0080	& 15.41	& 22.34 & 5 - 7 \\
+%\textbf{ANN}			& \textbf{0.136}	& \textbf{0.860} & \textbf{0.0086}	& \textbf{12.64}	& \textbf{18.54} & \textbf{5 - 7} \\
+%DBN						& 0.266 & 0.727	& 0.0138	& 17.62	& 21.35 & 3 - 3 - 500 -100\\
+%%ESN						& 0.239	& 0.754 & 0.0128	& 19.02	& 22.72	& 5 - 25 - 10 - 1/3 - 1e-2 \\
+%ESN						& 0.209	& 0.785 & 0.0112	& 17.68	& 21.26	& 5 - 30 - 10 - 1 - 1e-2 \\
+%SVR						& 0.148 & 0.849 & 0.0079	& 15.13	& 17.85 & 5 - 2$^{13}$ - 2$^{-3}$ \\
+%GP						& 0.240	& 0.753 & 0.0128	& 19.52	& 22.77 & 5 - 15 \\
+%EKF-GP					& 0.240	& 0.753 & 0.0128	& 19.40	& 22.78 & 5 - 15\\
+%\hline
+%\end{tabular}
+%\end{tiny}
+%\end{table}
+
+\end{frame}
+
+
+\subsection{Evaluations}
+
+\begin{frame}{Evaluations}
+
+\centering
+\tiny
+%\tabcolsep=0.20cm
+%\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|l||c|c|c|c|c|l|}
+\hline
+\rule{0pt}{8pt} \textbf{Tehran} & NMSE & R$^2$ & MSE & MAPE(\%) & RRMSE(\%) & \multicolumn{1}{c|}{Parameters}\\ %[1.5ex]
+\hline\hline
+\textbf{ANN}\rule{0pt}{6pt}	& \textbf{0.136}	& \textbf{0.860} & \textbf{8.615E-3}	& \textbf{12.638}	& \textbf{18.540} & \textbf{5-7} \\
+
+DBN						& 0.266 & 0.727	& 1.384E-2	& 17.620	& 21.352 & 3-3-500-100\\
+
+ESN						& 0.209	& 0.785 & 1.119E-2	& 17.675	& 21.260	& 5-30-10-1-1E-2 \\
+
+SVR						& 0.148 & 0.849 & 7.893E-3	& 15.131	& 17.854 & 5-2$^{13}$-2$^{-3}$ \\
+
+GP						& 0.208	& 0.786 & 1.112E-2	& 17.430	& 21.192 & 5-20 \\
+
+EKF-GP					& 0.240	& 0.753 & 1.285E-2	& 19.402	& 22.780 & 5-15\\
+
+ELM-LIN 				& 0.293 & 0.699 & 1.564E-2 & 20.804 & 25.129 & 5-$2^3$ \\
+
+ELM-RBF 				& 0.152 & 0.843 & 8.139E-3 & 14.729 & 18.130 & 5-$2^{15}$-$2^3$ \\
+
+\hline
+%\end{tabular}
+%
+%\tabcolsep=0.13cm
+%\begin{tabular}{|l||c|c|c|c|c|l|}
+\hline
+\rule{0pt}{8pt}\textbf{DFID} & NMSE & R$^2$ & MSE & MAPE(\%) & RRMSE(\%) & \multicolumn{1}{c|}{Parameters}\\
+\hline\hline
+%\rule{0pt}{9pt}	& \multicolumn{6}{c|}{\textbf{Overall Gas}} \\
+%\hline
+
+%ARIMA\rule{0pt}{8pt}& 0.354 & 0.646 & 4.000E-3 & 73.986 & 119.99 & 2-0-1 \\
+
+\textbf{ANN}\rule{0pt}{6pt} & \textbf{0.266} & \textbf{0.734}	& \textbf{3.041E-3}	& \textbf{48.868}	& \textbf{103.980}	& \textbf{5-13} \\
+
+DBN				& 0.509	& 0.491	& 5.766E-3	& 82.521 & 145.530	& 3-1-2-500-10-8 \\
+
+ESN				& 0.395 & 0.605	& 4.391E-3	& 65.309 & 128.750	& 5-25-1-0.5-0.01 \\
+
+SVR				& 0.274	& 0.726	& 3.048E-3	& 47.551 & 107.270	& 5-0.5-8 \\
+
+ELM-LIN			& 0.510	& 0.490	& 5.784E-3	& 66.951	& 145.770	& 3-2 \\
+
+ELM-RBF			& 0.267	& 0.733	& 2.969E-3	& 49.088	& 105.860	& 5-8-0.125 \\
+
+GP				& 0.457	& 0.543	& 5.080E-3	& 53.283	& 138.480	& 5-20-1 \\
+
+\hline
+\end{tabular}
+
+
+
+%\begin{itemize}
+%%\footnotesize
+%%\item Research and analysis of the best parameters: %@NOTA: "best"
+%%\begin{itemize}
+%%\scriptsize
+%%\item Input lags and resolutions.
+%%\item NN: optimal learning rate, layers and neurons number.
+%%\item SVR: optimal C and $\gamma$.
+%%\item GP: number of generations and individuals, levels of crossover and mutations.
+%%\end{itemize}
+%
+%\item Evaluation of heterogeneous data, composed of different resource types and temperature.
+%
+%%\item Sviluppo e simulazione algoritmi per previsione a breve e medio termine basati sulle tecniche studiate e utilizzano i database pubblicamente reperibili.
+%%\item Analisi problematiche e ricerca parametri ottimali. % come lunghezza della predizione e numero di lag
+%%\item Simulazioni con combinazioni dati eterogenei: acqua, gas, elettricità e temperatura.
+%%\item Definizione di un set di indici standard per una omogenea valutazione delle prestazioni tra i differenti approcci valutati. % con l'utilizzo di medesimi database.
+%\end{itemize}
+
+%\vspace{-5mm}
+%\begin{table}[t]
+%\centering
+%\begin{tiny}
+%\tabcolsep=0.10cm
+%%\renewcommand{\arraystretch}{1.2}
+%\begin{tabular}{|l|c|c|c||c|c|c||c|c|c||c|c|c|}
+%\hline
+%\rule{0pt}{6pt} \textbf{AMPds}	& \multicolumn{3}{c||}{1\,h}	& \multicolumn{3}{c||}{6\,h} & \multicolumn{3}{c||}{12\,h} & \multicolumn{3}{c|}{24\,h}	\\
+%\cline{2-13}
+%\rule{0pt}{7pt}	& NMSE & R$^2$ & Comb. & NMSE & R$^2$ & Comb. & NMSE & R$^2$ & Comb. & NMSE & R$^2$ & Comb. \\ %[1.5ex]
+%\cline{2-13}
+%%\rule{0pt}{6pt}	& \multicolumn{12}{c|}{\textbf{Natural Gas Forecast}}	\\ %- 2 years
+%\hline
+%ANN\rule{0pt}{6pt}	& \textbf{0.619} & \textbf{0.381} & \textbf{WGT} & 0.182 & 0.818 & GET & 0.170 & 0.830 & GET & \textbf{0.153} & \textbf{0.847} & \textbf{GT} \\
+%DBN	& 0.723	& 0.277 & WGET & 0.238 & 0.762 & WGET & 0.185 & 0.815 & GET & 0.188 & 0.812 & GET \\
+%ESN	& 0.695	& 0.305 & WGET & 0.247 & 0.753 & GET & 0.176 & 0.823 & GET & 0.188	& 0.811 & GT \\
+%SVR	& 0.644	& 0.356 & WGET & 0.182 & 0.818 & WGET & \textbf{0.145} & \textbf{0.854} & \textbf{WGT} & 0.178 & 0.821 & GT \\
+%ELM	& 0.620 & 0.380 & WGET & \textbf{0.180} & \textbf{0.820} & \textbf{WGET} & 0.147 & 0.853 & WGT & 0.176 & 0.823 & GT \\
+%GP	& 0.753	& 0.247 & WGET & 0.273 & 0.728 & GET & 0.186 & 0.813 & GT & 0.204 & 0.795 &	WGT	\\
+%\hline
+%\end{tabular}
+%\end{tiny}
+%\end{table}
+
+\end{frame}
+
+\begin{frame}{Evaluations}
+\small
+\vspace{-3mm}
+Evaluation of heterogeneous data, composed of different resource types and temperature.
+%\vspace{2mm}
+\begin{center}
+\tabcolsep=0.08cm
+%\renewcommand{\arraystretch}{1.2}
+\begin{tiny}
+\begin{tabular}{|l||c|c|c||c|c|c||c|c|c||c|c|c|}
+\hline
+\multirow{4}{*}{\textbf{AMPds}}\rule{0pt}{7pt} & \multicolumn{3}{c||}{\textbf{$1\,h$}}	& \multicolumn{3}{c||}{\textbf{$6\,h$}} & \multicolumn{3}{c||}{\textbf{$12\,h$}} & \multicolumn{3}{c|}{\textbf{$24\,h$}}	\\
+
+\cline{2-13}
+
+\rule{0pt}{8pt}	& \scalebox{.8}{NMSE} &  \scalebox{.8}{RRMSE} & Comb. &  \scalebox{.8}{NMSE} &  \scalebox{.8}{RRMSE} & Comb. &  \scalebox{.8}{NMSE} &  \scalebox{.8}{RRMSE} & Comb. &  \scalebox{.8}{NMSE} &  \scalebox{.8}{RRMSE} & Comb.\\
+
+\cline{2-13}
+\rule{0pt}{7pt}	& \multicolumn{12}{c|}{\textbf{Natural Gas Prediction - 2 years}}	\\
+\hline
+
+%ARIMA\rule{0pt}{7pt}& 0.872 & 135.2 & G & 0.953 & 96.7 & G & 0.374 & 51.8 & G & 0.232& 34.4 & G\\
+
+ANN\rule{0pt}{7pt} & \textbf{0.619} & \textbf{116.5} & \textbf{WGT} & 0.182 & 42.7 & GET & 0.170 & 25.5 & GET & \textbf{0.153} & \textbf{28.9} & \textbf{GT} \\
+
+DBN					& 0.723	& 125.2 & WGET & 0.238 & 48.3 & WGET & 0.185 & 38.3 & GET & 0.188 & 31.9 & GET \\
+
+ESN					& 0.695	& 122.8 & WGET & 0.247 & 49.2 & GET & 0.176 & 37.3 & GET & 0.188 & 31.0 & GT \\
+
+SVR					& 0.644	& 118.1 & WGET & 0.182 & 42.3 & WGET & \textbf{0.145} & \textbf{33.9} & \textbf{WGT} & 0.178 & 30.2 & GT \\
+
+ELM-LIN 			& 0.828 & 127.2 & WGET & 0.405 & 50.0 & WET & 0.579 & 39.0 & WGT & 0.428 & 33.2 & WT \\
+
+ELM-RBF				& 0.620 & 115.9 & WGET & \textbf{0.180} & \textbf{42.0} & \textbf{WGET} & 0.147 & 34.1 & WGT & 0.176 & 30.0 & GT \\
+
+GP					& 0.740	& 126.6 & GT & 0.250 & 49.5 & WGT & 0.177 & 37.5 & GET & 0.190 & 31.1 &	WGT	\\
+
+\hline
+\rule{0pt}{7pt}	& \multicolumn{12}{c|}{\textbf{Water Prediction - 2 years}}	\\
+\hline
+
+%ARIMA\rule{0pt}{7pt}& 0.908 & 158.8 & W & 1.003 & 94.0 & W & 0.632 & 57.5 & W & 0.896 & 29.7 & W\\
+
+ANN\rule{0pt}{7pt} & 0.790	& 152.9 & WET & 0.319 & 54.1 &	W & \textbf{0.223} & \textbf{34.2} & \textbf{W} & \textbf{0.550} & \textbf{23.6} & \textbf{W} \\
+
+DBN				& 0.867	& 149.8 & WGET & 0.407 & 57.8 & WGET & 0.317 & 40.8 & WGET & 0.607 & 26.3 & WE \\
+
+ESN				& 0.818	& 141.9 & WGET & 0.413 & 58.1 & WGET & 0.308 & 41.5 & W & 0.581 & 25.7 & W \\
+
+SVR				& 0.806	& 140.8 & WGE & \textbf{0.316} & \textbf{50.9} & \textbf{WGET} & 0.269 & 36.0 & W & 0.581 & 25.7 & W \\
+
+ELM-LIN 		& 0.837 & 143.5 & WGET & 0.419 & 58.6 & WGET & 0.314 & 40.5 & WGT & 0.628 & 26.7 & WE \\
+
+ELM-RBF			& \textbf{0.765} & \textbf{140.7} & \textbf{WGET} & 0.319 & 51.1 & WGET & 0.279 & 38.2 & WET & 0.575 & 25.6 & W \\
+
+GP				& 0.890	& 151.8 & WGET & 0.361 & 54.3 & WT & 0.272 & 36.2 & W & 0.567 & 25.4 &	W \\
+
+\hline
+
+\end{tabular}
+\end{tiny}
+\end{center}
+
+\end{frame}
+
+%\begin{frame}{Attività di Ricerca}
+%\vspace{-3mm}
+%\fontsize{2}{5}\selectfont{
+%\begin{table}[t]
+%\centering
+%\tabcolsep=0.15cm
+%%\renewcommand{\arraystretch}{1.2}
+%\begin{tabular}{|l|c|c|c||c|c|c||c|c|c||c|c|c|}
+%\hline
+%\rule{0pt}{6pt} \textbf{AMPds}	& \multicolumn{3}{c||}{1\,h}	& \multicolumn{3}{c||}{6\,h} & \multicolumn{3}{c||}{12\,h} & \multicolumn{3}{c|}{24\,h}	\\
+%\cline{2-13}
+%\rule{0pt}{7pt}	& NMSE & R$^2$ & Comb. & NMSE & R$^2$ & Comb. & NMSE & R$^2$ & Comb. & NMSE & R$^2$ & Comb. \\ %[1.5ex]
+%\cline{2-13}
+%\rule{0pt}{6pt}	& \multicolumn{12}{c|}{\textbf{Natural Gas Forecast}}	\\ %- 2 years
+%\hline
+%ANN\rule{0pt}{6pt}	& \textbf{0.619} & \textbf{0.381} & \textbf{WGT} & 0.182 & 0.818 & GET & 0.170 & 0.830 & GET & \textbf{0.153} & \textbf{0.847} & \textbf{GT} \\
+%DBN	& 0.723	& 0.277 & WGET & 0.238 & 0.762 & WGET & 0.185 & 0.815 & GET & 0.188 & 0.812 & GET \\
+%ESN	& 0.695	& 0.305 & WGET & 0.247 & 0.753 & GET & 0.176 & 0.823 & GET & 0.188	& 0.811 & GT \\
+%SVR	& 0.644	& 0.356 & WGET & 0.182 & 0.818 & WGET & \textbf{0.145} & \textbf{0.854} & \textbf{WGT} & 0.178 & 0.821 & GT \\
+%ELM	& 0.620 & 0.380 & WGET & \textbf{0.180} & \textbf{0.820} & \textbf{WGET} & 0.147 & 0.853 & WGT & 0.176 & 0.823 & GT \\
+%GP	& 0.753	& 0.247 & WGET & 0.273 & 0.728 & GET & 0.186 & 0.813 & GT & 0.204 & 0.795 &	WGT	\\
+%\hline\hline
+%\rule{0pt}{6pt}	& \multicolumn{12}{c|}{\textbf{Water Forecast}}	\\ % - 2 years
+%\hline
+%ANN\rule{0pt}{6pt}	& 0.790	& 0.253 & WET & 0.319 & 0.680 &	W & \textbf{0.223} & \textbf{0.777} & \textbf{W} & \textbf{0.550} & \textbf{0.448} & \textbf{W} \\
+%DBN	& 0.867	& 0.133 & WGET & 0.407 & 0.592 & WGET & 0.317 & 0.682 & WGET & 0.607 & 0.390 & WE \\
+%ESN	& 0.818	& 0.181 & WGET & 0.413 & 0.587 & WGET & 0.308 & 0.691 & W & 0.581 & 0.417 & W \\
+%SVR	& 0.806	& 0.194 & WGE & \textbf{0.316} & \textbf{0.683} & \textbf{WGET} & 0.269 & 0.730 & W & 0.581 & 0.416 & W \\
+%ELM & \textbf{0.765} & \textbf{0.235} & \textbf{WGET} & 0.319 & 0.681 & WGET & 0.279 & 0.720 & WET & 0.575 & 0.422 & W \\
+%GP	& 0.912	& 0.088 & WGET & 0.365 & 0.636 & W & 0.297 & 0.702 & WGET & 0.617 & 0.380 &	WGT \\
+%\hline
+%\multicolumn{13}{|l|}{\rule{0pt}{6pt}W = water\hfil G = natural gas\hfil E = electric power\hfil T = temperature}	\\
+%\hline
+%\end{tabular}
+%\end{table}
+%\vspace{-5mm}
+%\begin{table}[t]
+%\centering
+%\tabcolsep=0.08cm
+%%\renewcommand{\arraystretch}{1.2}
+%\begin{tabular}{|l|c|c|l||c|c|l||c|c|l||c|c|l|}
+%\hline
+%\rule{0pt}{6pt} \textbf{DFID}	& \multicolumn{3}{c||}{\textbf{Overall}}	& \multicolumn{3}{c||}{\textbf{Abercrombie House}} & \multicolumn{3}{c||}{\textbf{Abercrombie House}} & \multicolumn{3}{c|}{\textbf{Whitehall}}	\\
+%\rule{0pt}{6pt}	& \multicolumn{3}{c||}{\textbf{GAS}}	& \multicolumn{3}{c||}{\textbf{GAS}} & \multicolumn{3}{c||}{\textbf{WATER}} & \multicolumn{3}{c|}{\textbf{WATER}}	\\
+%\cline{2-13}
+%\rule{0pt}{7pt}	& NMSE & R$^2$ & Param. & NMSE & R$^2$ & Param. & NMSE & R$^2$ & Param. & NMSE & R$^2$ & Param. \\ %[1.5ex]
+%\hline
+%ANN\rule{0pt}{6pt} & \textbf{0.266} & \textbf{0.734} & \textbf{5-13} & \textbf{0.275} & \textbf{0.725} & \textbf{5-13} & \textbf{0.676} & \textbf{0.324} & \textbf{5-13} & \textbf{0.121} & \textbf{0.879} & \textbf{5-6} \\
+%DBN	& 0.509 & 0.491 & 3-1-2-500-10 & 0.493 & 0.507 & 5-1-2-500-10 & 0.844 & 0.156 & 2-1-2-100-100 & 0.578 & 0.422 & 2-1-2-100-100 \\
+%ESN	& 0.395 & 0.605 & 5-25-1-1/2-1e-2 & 0.396 & 0.604 & 5-25-1-1/2-1e-2 & 0.750 & 0.250 & 5-40-5-1/2-1e-2 & 0.367 & 0.633 & 5-40-10-1/4-1e-13 \\
+%SVR	& 0.274 & 0.726 & 5-$2^{-1}$-$2^3$ & 0.298 & 0.702 & 5-$2^{-1}$-$2^3$ & 0.753 & 0.247 & 5-$2^{9}$-2 & 0.150 & 0.850 & 5-$2^{5}$-$2^3$ \\
+%ELM & 0.267 & 0.733 & 5-$2^3$-$2^3$ & 0.286 & 0.714 & 5-$2^3$-$2^3$ & 0.686 & 0.314 & 5-$2^{7}$-$2^3$ & 0.143 & 0.857 & 5-$2^{13}$-$2^3$ \\
+%GP	& 0.457 & 0.543 & 5-20 & 0.535 & 0.465 & 5-20 & 0.891 & 0.108 & 5-10 & 0.343 & 0.657 & 5-20 \\
+%\hline
+%\end{tabular}
+%\end{table}
+%}
+%\end{frame}
+
+\section{Leakage Detection}
+
+\begin{frame}{Leakage Detection}
+
+%\textbf{Leakage Detection:}
+\begin{itemize}
+
+\item Novelty Detection, simulations adopting normality models, representing the normal condition: % Development and simulation %Sviluppo e simulazione algoritmi basati sui dei modelli di background (rappresentativi della condizione di normalità):
+\begin{itemize}
+\item GMM, HMM, One-Class SVM, Autoencoder NN.
+%\item GMM: number of Gaussian. % numero gaussiane.
+%\item HMM: State and Gaussian number. %numero stati e gaussiane.
+%\item One-Class SVM (RBF kernel): $\gamma$.
+%\item Autoencoder: learning rate, layers and neurons number, neuron types.
+\end{itemize}
+\item Research and development of new features.
+\begin{itemize}
+\item A standard set of features is actually missing in the related literature.%Simulazioni con \textit{features} individuate in letteratura e sviluppo di nuove \textit{features}.
+\end{itemize} 
+\item Development of an ad hoc Sequential Feature Selection, to identify the best features combination.
+%\item Simulations adopting normality models, representing the normal condition: % Development and simulation %Sviluppo e simulazione algoritmi basati sui dei modelli di background (rappresentativi della condizione di normalità):
+%\begin{itemize}
+%\scriptsize
+%\item GMM, HMM, One-Class SVM, Autoencoder.
+%%\item GMM: number of Gaussian. % numero gaussiane.
+%%\item HMM: State and Gaussian number. %numero stati e gaussiane.
+%%\item One-Class SVM (RBF kernel): $\gamma$.
+%%\item Autoencoder: learning rate, layers and neurons number, neuron types.
+%\end{itemize}
+%\item Sviluppo variante della \textit{Sequential Feature Selection} per la selezione della migliore combinazioni di feature.
+\item Residential and office building scenarios.
+
+%\item Analisi variabilità prestazioni e simulazioni per cluster temporali.
+%\item Introduzione informazioni temporali e dati di pressione per il caso idrico, uso EPANET, introducendo un nuovo set di \textit{features}.
+\end{itemize}
+
+%\begin{table}[h]
+%\centering
+%\begin{tiny}
+%\tabcolsep=0.08cm
+%\begin{tabular}{|c|p{3.5cm}|c|c|c|r|}
+%\hline
+%\multicolumn{6}{|c|}{\textbf{Flow Data}} \rule{0pt}{6pt}\\
+%\hline
+%Res.\rule{0pt}{8pt} & Features comb. & AUC ($\%$) & SD & Model & Param. \\
+%\hline
+%1\rule{0pt}{6pt}	& MA+ENE & $81.03$ & $10.51$ & GMM & 128 \\
+%1 					& MA+ENE+WPEC & $\textbf{85.89}$ & $11.39$ & HMM & 4-64 \\
+%1					& MA+WDE & $60.43$ & $19.02$ & OC-SVM & $2^{-7}$ \\
+%\hline
+%10\rule{0pt}{6pt}	& DATA+dWPEC & $66.99$ & $12.45$ & GMM & 256 \\
+%10 					& DATA+WPEC+dWPEC & $\textbf{78.55}$ & $15.01$ & HMM & 4-256 \\
+%10					& DATA+MA & $65.55$ & $27.76$ & OC-SVM & $2^{-9}$ \\
+%\hline
+%30\rule{0pt}{6pt}	& WPEC+MA & $63.80$ & $13.18$ & GMM & 256 \\
+%30 					& MA+WPEC & $\textbf{73.69}$ & $17.89$ & HMM & 4-256 \\
+%30					& DATA+dWDE & $68.39$ & $20.86$ & OC-SVM & $2^{3}$ \\
+%\hline
+%\end{tabular}
+%\end{tiny}
+%\end{table}
+
+\end{frame}
+
+\subsection{Framework}
+
+\begin{frame}{Framework}
+	\tikzstyle{bk} = [draw, fill=gray!40, text centered, minimum height=2em, text width=12em, minimum width=6em, minimum height=3em, rounded corners, drop shadow]
+			\tikzstyle{bkFull} = [draw, fill=gray!40, text centered, minimum height=2em, text width=20em, minimum width=20em, minimum height=3em, rounded corners, drop shadow,dashed]
+			\tikzstyle{bkDec} = [draw, fill=red!40, text centered, minimum height=2em, text width=7em, minimum width=15em, minimum height=3em, rounded corners, drop shadow] %gray!80
+			\tikzstyle{cy} = [draw, fill=gray!40, text centered, minimum height=3em, text width=7em, minimum width=2em, cylinder, shape border rotate=90, shape aspect=0.1, drop shadow]
+			\tikzstyle{cyFull} = [draw, fill=gray!40, text centered, minimum height=3em, text width=7em, minimum width=10em, cylinder, shape border rotate=90, shape aspect=0.1, drop shadow, dashed]
+			\tikzstyle{bg}=[rectangle,fill=gray!40,inner sep=0.2cm,rounded corners,draw=black!50, dashed]
+			\tikzstyle{input} = [coordinate]
+			
+			\tikzset{
+			myarrow/.style={
+			  draw,thick,
+			  single arrow,
+			  %text width=1cm,
+			  minimum height=1cm,
+			  %anchor=west,
+			  %fill=white
+			  },
+			}
+			
+			\tikzstyle{vecArrow} = [thick, decoration={markings,mark=at position 1 with {\arrow[semithick]{open triangle 60}}},
+			   double distance=1.4pt, shorten >= 5.5pt, preaction = {decorate}, postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
+			   
+			\tikzstyle{innerWhite} = [semithick, white,line width=1.6pt, shorten >= 4.5pt]
+		\centering
+		\begin{tikzpicture}[transform shape,scale=0.5]
+		
+			\path node (A1) [cy] {Training Set};
+			\path (A1)+(6.8,0.0 )node (A2) [cy] {Validation Set};
+			\path (A1)+(3.4,-2.175) node (B1) [bkFull,minimum width=30.8em] {Features Extraction\\\textit{Da, dDa, Ma, dMa, En, dEn, We, dWe, Lw, dLw, Hr, Dy, Wk}};
+			\path (A1)+(0.0,-4.445) node (C1) [bk] {\textit{GMM/HMM/SVM/ANN}\\Training Algorithm};
+			\path (A1)+(0.0,-6.6) node (D1) [cyFull] {Normality\\Model $\lambda$};
+		 	\path (A2)+(0.0,-6.6) node (E1) [bk] {Log-likelihoods/\\Distances/Errors\\Computation};
+		 	\path (A2)+(0.0,-8.65) node (E2) [cy] {Thresholds $\epsilon$};
+			\path (E1)+(0.0,-4.05) node (F1) [bk,fill=red!40] {\textbf{Decision}};
+			
+			\node[myarrow,rotate=-90,anchor=west,minimum height=0.90cm] at (A1.south){};
+			\node[myarrow,rotate=-90,anchor=west,minimum height=0.90cm] at (A2.south){};
+			\node[myarrow,rotate=-90,anchor=east,minimum height=0.90cm] at (C1.north){};
+			\node[myarrow,rotate=-90,anchor=west,minimum height=0.90cm] at (C1.south){};
+			\node[myarrow,rotate=-90,anchor=west,minimum height=2.80cm] at ([yshift=2.87cm]E1.north){};
+			\node[myarrow,anchor=east,minimum height=2.43cm] at (E1.west){};
+			
+			%\node[myarrow,anchor=west] at (E1.east){};
+			\node[myarrow,rotate=-90,anchor=west,minimum height=0.70cm] at (E1.south){};
+			\node[myarrow,rotate=-90,anchor=west,minimum height=0.90cm] at (E2.south){};
+			
+			%\path (A1.south)+(0.0,-7.8) node (a) {\textbf{a)}};
+			%\path (F1.south)+(0.0,-0.8) node (b) {\textbf{b)}};
+			
+			\begin{pgfonlayer}{background}
+				% Left-top corner of the background rectangle
+				    \path (A1.west |- A1.north)+(-1.7,0.4) node (a1) {};
+				    % Right-bottom corner of the background rectanle
+				    \path (C1.east |- C1.south)+(+0.7,-2.8) node (a2) {};
+				    % Draw the background
+				    \path[fill=blue!20,rounded corners, draw=black!50, dashed] (a1) rectangle (a2); %gray!10
+				    \path (a1.east |- a1.south)+(0.8,-0.3) node (u1){\hspace*{\fill}~};
+				%\node [bg,fit=(A)(D),minimum height = 20mm] {\hspace*{\fill}~};
+				
+				\path (A2.west |- A2.north)+(-2.0,0.4) node (a1) {};
+				\path (F1.east |- F1.south)+(+1.0,-0.4) node (a2) {};
+				\path[fill=red!20,rounded corners, draw=black!50, dashed] (a1) rectangle (a2); % gray!10
+				\path (a1.east |- a1.south)+(0.8,-0.3) node (u1){\hspace*{\fill}~};
+			\end{pgfonlayer}
+			\end{tikzpicture}
+
+\end{frame}
+
+
+%\subsection{Features}
+\begin{frame}[t]{Features}
+\small
+ \vspace{-3mm}
+\begin{itemize}
+\item $Da$: raw data ``as is''. %in each frame,
+\item $Ma$: average of the data.
+\item $En$: energy $(\sum_{i=1}^{N} x_{i}^{2})$.
+\item $We$: distribution of energy in the components of the wavelet decomposition of order 3 (\textit{db}2) \cite{Gamboa2014}, thus one approximation and three detail sequences.%$C = [A_3, D_3, D_2, D_1]$. The $i$-th element of the feature is defined as: $\textit{WDE}_{i} = 100 \cdot \frac{E_i}{E_T}$.
+\vspace{-4mm}
+\begin{equation}
+\scriptsize
+\textit{We} = \frac{100}{E_C} \cdot [E_{A_3} , E_{D_3}, E_{D_2}, E_{D_1}]\nonumber
+\vspace{-1mm}
+\end{equation}
+\item $Lw$: logarithmic energy in the components of wavelet decomposition. %$\textit{LWE}_i = log(E_i + 1)$.
+\vspace{-2mm}
+\begin{equation}
+\scriptsize
+\textit{Lw} = log([E_{A_3} , E_{D_3}, E_{D_2}, E_{D_1}] + 1)\nonumber
+\vspace{-2mm}
+\end{equation}
+\item Additionally, \textit{first order positive differences} ($d$F), for a total of 10 features.
+\end{itemize}
+\vspace{-4mm}
+\end{frame}
+
+
+\begin{frame}{Decision}
+\scriptsize
+%\begin{figure}\centering
+%\includegraphics[width=\textwidth]{features_example-eps-converted-to.pdf}
+%\end{figure}
+%\end{frame}
+%Gaussian distribution:
+%
+%\begin{equation}
+%\small
+%\mathcal{N} (x|\mu, \sigma^2) = \frac{1}{(2 \pi \sigma^2)^{(1/2)}} \exp \left\lbrace - \frac{1}{2 \sigma^2} (x - \mu)^2 \right\rbrace ,\nonumber
+%\end{equation}
+
+\textbf{GMM:}
+\vspace{-2mm}
+\begin{equation}
+p(\mathbf{x}|\boldsymbol\lambda) = \sum_{g=1}^{Ng} w_g\  \mathcal{N}(\mathbf{x}|\boldsymbol\mu_g,\boldsymbol\varSigma_g),\qquad \mathcal{N} (x|\mu, \sigma^2) = \frac{1}{(2 \pi \sigma^2)^{(1/2)}} \exp \left\lbrace - \frac{1}{2 \sigma^2} (x - \mu)^2 \right\rbrace. \nonumber
+\end{equation}
+
+\textbf{HMM:}
+%\vspace{-3mm}
+\begin{columns}
+\begin{column}{0.55\textwidth}
+%\begin{equation}
+%\begin{aligned}
+%& P(O|\lambda) = \alpha_T(q_F) = \sum_{s=1}^{Ns} \alpha_T(s)a_{s,F}\ .\nonumber
+%\end{aligned}
+%\end{equation}
+\tiny
+\begin{equation}
+\begin{aligned}
+&\alpha_1(n) = a_{0,n}b_n(o_1)\ , \qquad\qquad\qquad 1 \leq n \leq Ns \\
+&\alpha_t(n) = \sum_{s=1}^{Ns}\alpha_{t-1}(s)a_{s,n}b_n(o_t)\ , 1 \leq n \leq Ns, 1 \leq t \leq T\\
+& P(O|\lambda) = \alpha_T(q_F) = \sum_{s=1}^{Ns} \alpha_T(s)a_{s,F}\ .\nonumber
+\end{aligned}
+\end{equation}
+
+\end{column}
+\begin{column}{0.45\textwidth}
+\includegraphics[width=\textwidth]{example_hmm.png}
+\end{column}
+\end{columns}
+
+\textbf{OC-SVM:}
+\begin{equation}
+f(\mathbf{x}) = \mathop{\mathrm{sgn}} \left( \sum_{i} \alpha_i \cdot k(\mathbf{x}_i,\mathbf{x}) - \rho\right)\ .\nonumber
+\end{equation}
+
+\textbf{AE-NN:}
+\begin{equation}
+ \mathbf{x} = \mathbf{y}, \qquad \mathbf{z} = f(\mathbf{W} \mathbf{x} + \mathbf{b}), \qquad \mathbf{y} = f(\mathbf{W'} \mathbf{z} + \mathbf{b'}). \nonumber
+\end{equation}
+
+\end{frame}
+
+\begin{frame}{Decision}
+
+\includegraphics[width=\textwidth]{log_likelihood_example.pdf}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\tiny
+\vspace{10mm}
+\begin{equation}
+\begin{aligned}
+TDR =& \frac{no.\ of\ abnormal\ events\ detected\ as\ abnormal}{no.\ of\ abnormal\ events},\\[0.5em]
+FDR =& \frac{no.\ of\ normal\ events\ detected\ as\ abnormal}{no.\ of\ normal\ events}. \nonumber
+\end{aligned}
+\end{equation}
+\end{column}
+\begin{column}{0.4\textwidth}
+%\includegraphics[width=0.9\textwidth]{example_ROC_2.pdf}
+\end{column}
+\end{columns}
+
+\vspace{-30mm}
+\begin{figure}
+	\begin{center}
+	\subfigure{%
+	%\includegraphics[width=0.42\textwidth]{example_ROC_1.pdf}
+	}
+	\hfill
+	\subfigure{%
+		\includegraphics[width=0.45\textwidth]{example_ROC_2.pdf}
+		}
+	\end{center}
+\end{figure}
+
+\end{frame}
+
+
+%\begin{frame}[t]{Attività di Ricerca}
+%\vspace{-7mm}
+%\begin{figure}\centering
+%\begin{tikzpicture}[spy using outlines={circle,dashed,red,magnification=7.5,size=2cm, connect spies}]
+%    \node {\includegraphics[width=\textwidth]{leak_example.pdf}};
+%    \spy on (0.64,-1.05) in node [fill=white,left] at (4,0);
+%\end{tikzpicture}
+%%\end{figure}
+%%\begin{figure}\centering
+%%\includegraphics[width=\textwidth]{log_likelihood_example.eps}
+%\begin{tikzpicture}[spy using outlines={circle,dashed,red,magnification=10,size=1.5cm, connect spies}]
+%    \node {\hspace*{-2px}\includegraphics[width=\textwidth]{log_likelihood_example.pdf}};
+%    \spy on (-0.24,-0.63) in node [fill=white,left] at (-2,0.8);
+%    \spy on (0.65,-0.63) in node [fill=white,left] at (4,-0.8);
+%\end{tikzpicture}
+%\end{figure}
+%\end{frame}
+
+\subsection{Evaluations}
+
+\begin{frame}{Offset Leakage}
+\footnotesize
+
+\begin{itemize}
+\item The leakage duration is randomly selected in a range between a minimum of 5 and a maximum of $10\,h$.
+\item The starting point of the leakage is also randomly selected.
+\item  In a real life environment \cite{Britton2013}, the most common leakage rates are $20\,l/h$ and $10\,l/h$,  whereas the $49\%$ of leakages are at most equal to $20\,l/h$.
+\end{itemize}
+
+\textbf{Offset Leakage}:
+
+\begin{equation}\label{eq:leak}
+\footnotesize
+v(i_v) = 
+\begin{cases}
+v(i_v) + \beta \cdot l_k,	& if\ {i_v}^{(i)} \geq n \geq {i_v}^{(f)}\\
+v(i_v),						& otherwise
+\end{cases} \nonumber
+\end{equation}
+
+\includegraphics[width=0.99\textwidth]{features_example_fig1.eps}
+
+
+%The correctness of the modelled leakages records has been confirmed in a comparison against the ones collected in a real-life case environment \cite{Britton2013}. In a residential scenario, and based on AMPds values, a leakage value spanning from $25\%$ to $50\%$ of the average consumption levels, corresponds to $7.76\,L/h$ to $15.53\,L/h$. In a real life environment, the most common leakage rates are $20\,L/h$ and $10\,L/h$, whereas the $49\%$ of leakages are at most equal to $20\,L/h$, thus proving the correctness of the modelling criteria. To further improve the model, the leakage size, as well as the duration and the starting point, have been randomly selected. Specifically, a limited duration of the leakages has been chosen in order to simulate the correct detection of the anomaly and consequent restoration of standard operating conditions within the same observation window.
+
+%The leakage duration is randomly selected in a range between a minimum of 5 and a maximum of $10\,h$, which corresponds to $300$ and $600$ samples, respectively, for 1 minute resolution, to $30$ and $60$ samples, respectively, for $10\,min$ resolution, and $10$ and $20$ samples, respectively, for $30\,min$ resolution. Furthermore, the starting point of the leakage is randomly selected over a span between the $10\%$ and $90\%$ of the validation set length. An example of leakage induced in the data, together with a subset of features extracted from the corresponding data, is shown in \figref{fig:feats_example}.
+%A partial sequence (10 days) extracted from the dataset, that shows the effect of the leakage introduction, is illustrated in \figref{fig:leak}.
+
+\end{frame}
+
+%\begin{frame}{Simulated Leakage}
+%\small
+%
+%\textbf{Simulated Leakage}:
+%
+%\begin{equation}
+%Q = C \cdot {P}^{\,g}, \nonumber
+%\end{equation}
+%
+%\includegraphics[width=0.99\textwidth]{leak_example.eps}
+%
+%\end{frame}
+
+\begin{frame}{Offset Leakage Evaluations}
+\tiny
+\centering
+\tabcolsep=0.09cm
+\begin{tabular}{|ccccccl|} %p{2.5cm}|c|c|c|c|l|}
+\hline
+\textbf{Resource}\rule{0pt}{8pt} & \textbf{Res.} &\boldmath\textbf{AUC} & \textbf{SD} & \textbf{Model} & \textbf{Par.} & \textbf{Features Combination}\\
+\hline
+%\multicolumn{7}{c}{\textbf{Without Temporal Features}}\rule{0pt}{8pt}\\
+\hline
+Water\rule{0pt}{8pt}& 1 & $81.94$ & $10.21$ & GMM & 128 	& \textit{Ma+En}	\\
+Water 				& 1 & $\textbf{86.36}$ & $10.54$ & HMM & 4--64 	& \textit{Ma+En} 	\\
+Water				& 1 & $54.50$ & $16.66$ & OC-SVM & $2^{3}$& \textit{dWe+dEn}	\\
+\hline
+Water\rule{0pt}{8pt}& 10 & $68.70$ & $12.83$ & GMM & 256 	& \textit{Da+dLw+Lw+dEn+dMa} 	\\
+Water 				& 10 & $\textbf{78.55}$ & $14.98$ & HMM & 4--256 	& \textit{Lw+Da+dLw} 			\\
+Water 				& 10 & $62.90$ & $14.30$ & OC-SVM & $2^{3}$ & \textit{dWe+dEn}				\\
+\hline
+Water\rule{0pt}{8pt}& 30 & $66.94$ & $15.29$ & GMM & 256 	& \textit{Lw+Ma+En+dMa+dLw+Da+dEn} 	\\
+Water 				& 30 & $\textbf{74.21}$ & $17.79$ & HMM & 4--256	& \textit{Ma+Lw+En} 			\\
+Water 				& 30 & $65.48$ & $12.24$ & OC-SVM & $2^{3}$ & \textit{We+dEn} 	\\
+\hline
+\hline
+Gas\rule{0pt}{8pt} 	& 1 & $\textbf{88.82}$ & $9.83$ & GMM & 256 	& \textit{Ma+En} 	\\
+Gas 				& 1 & $88.68$ & $9.72$ & HMM & 1--256 	& \textit{Ma+En}	\\
+Gas					& 1 & $54.97$ & $19.27$ & OC-SVM & $2^{3}$ & \textit{dWe+We} \\
+\hline
+Gas\rule{0pt}{8pt}	& 10 & $76.33$ & $14.07$ & GMM & 128 	& \textit{Ma+En} 	\\
+Gas					& 10 & $\textbf{77.45}$ & $15.56$ & HMM & 3--256 	& \textit{Ma+En} 	\\
+Gas 				& 10 & $57.29$ & $17.55$ & OC-SVM & $2$ 	& \textit{dWe+dLw}	\\
+\hline
+Gas\rule{0pt}{8pt}	& 30 & $71.75$ & $15.03$ & GMM & 128 	& \textit{Ma+En}		\\
+Gas					& 30 & $\textbf{72.76}$ & $17.13$ & HMM & 3--256	& \textit{Ma+En} 	\\
+Gas 				& 30 & $60.11$ & $15.65$ & OC-SVM & $2$ 	& \textit{dWe+dLw}	\\
+\hline
+\end{tabular}
+
+\end{frame}
+
+
+\newcommand\tabrule{6pt}
+\begin{frame}[t]{Further Evaluations}
+
+\begin{itemize}
+\footnotesize
+\item Sensitivity analysis: leakage dimension, position, and duration. %Analisi variabilità prestazioni e simulazioni per cluster temporali.
+\item Evaluations assuming temporal cluster: i.e., low and high consumption.
+\item Development and simulations with ad hoc temporal features.%Introduzione informazioni temporali e dati di pressione per il caso idrico, uso EPANET, introducendo un nuovo set di \textit{features}.
+\item Adoption of the EPANET tool to extract pressure data and simulate more realistic leakages.
+\end{itemize}
+
+\vspace{5mm}
+\centering
+\begin{tiny}
+\tabcolsep=0.10cm
+\begin{tabular}{|cc|cc|cc|cc|} %p{2.5cm}|c|c|c|c|l|}
+\hline
+\multirow{2}{*}{\vspace{-4pt}\textbf{Resource}}\rule{0pt}{8pt} &\multirow{2}{*}{\vspace{-4pt}\textbf{ Model }}& \multicolumn{2}{c|}{\textbf{Leakage Starting Point}} & \multicolumn{2}{c|}{\textbf{Leakage Size}} & \multicolumn{2}{c|}{\textbf{Leakage Duration}} \\
+%\cmidrule{3-4}\cmidrule{5-6}\cmidrule{7-8}
+\cline{3-8}
+\rule{0pt}{9pt}& & \boldmath\textbf{AUC (\%)} & \textbf{SD} & \boldmath\textbf{AUC (\%)} & \textbf{SD} & \boldmath\textbf{AUC (\%)} & \textbf{SD} \\
+\hline
+Gas\rule{0pt}{9pt} & GMM & $89.09$ & $9.48$ & $87.88$ & $3.39$ & $88.57$ & $1.41$ \\ 
+Gas & HMM & $89.10$ & $9.67$ & $87.49$ & $3.64$ & $88.20$ & $1.44$ \\ 
+Gas & OC-SVM & $54.75$ & $20.07$ & $69.20$ & $0.16$ & $70.75$ & $1.76$ \\ 
+\hline
+Water\rule{0pt}{9pt} & GMM & $83.36$ & $8.33$ & $90.13$ & $7.11$ & $89.68$ & $2.15$ \\ 
+Water & HMM & $89.90$ & $9.58$ & $94.46$ & $4.88$ & $94.84$ & $2.85$ \\ 
+Water & OC-SVM & $54.99$ & $16.10$ & $50.09$ & $0.16$ & $53.17$ & $2.17$ \\ 
+\hline
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+\begin{frame}{Simulated Leakage}
+\footnotesize
+\textbf{Simulated Leakage}:
+
+\begin{equation}
+Q = C \cdot {P}^{\,g} \nonumber
+\end{equation}
+
+\includegraphics[width=0.99\textwidth]{leak_example.eps}
+
+%\begin{table}[h]
+%\centering
+%\begin{tiny}
+%\tabcolsep=0.08cm
+%\begin{tabular}{|c|p{3.5cm}|c|c|c|r|}
+%\hline
+%\multicolumn{6}{|c|}{\textbf{Flow Data}} \rule{0pt}{8pt}\\
+%\hline
+%1\rule{0pt}{8pt}	& MA+ENE & $81.03$ & $10.51$ & GMM & 128 \\
+%1 					& MA+ENE+WPEC & $\textbf{85.89}$ & $11.39$ & HMM & 4-64 \\
+%1					& Ma+WDE & $60.43$ & $19.02$ & OC-SVM & $2^{-7}$ \\
+%\hline
+%10\rule{0pt}{8pt}	& DATA+dWPEC & $66.99$ & $12.45$ & GMM & 256 \\
+%10 					& DATA+WPEC+dWPEC & $\textbf{78.55}$ & $15.01$ & HMM & 4-256 \\
+%10					& DATA+MA & $65.55$ & $27.76$ & OC-SVM & $2^{-9}$ \\
+%\hline
+%30\rule{0pt}{8pt}	& WPEC+MA & $63.80$ & $13.18$ & GMM & 256 \\
+%30 					& MA+WPEC & $\textbf{73.69}$ & $17.89$ & HMM & 4-256 \\
+%30					& DATA+dWDE & $68.39$ & $20.86$ & OC-SVM & $2^{3}$ \\
+%\hline
+%\end{tabular}
+%\end{tiny}
+%\end{table}
+
+%\begin{table}[h]
+%\centering
+%\begin{tiny}
+%\tabcolsep=0.08cm
+%\begin{tabular}{|c|p{3.5cm}|c|c|c|r|}
+%\hline
+%Res.\rule{0pt}{\tabrule} & Features comb. & AUC ($\%$) & SD & Model & Param. \\
+%\hline
+%\multicolumn{6}{|c|}{\textbf{Flow\&Pressure Data}} \rule{0pt}{\tabrule}\\
+%\hline
+%1\rule{0pt}{\tabrule}	& MAf+ENEp+MAp & 86.03 & 8.40 & GMM & 32\\
+%1 						& MAf+ENEf+ENEp & \textbf{87.87} & 9.35 & HMM & 3-256 \\
+%1						& MAf+WDEf & 60.43 & 19.02 & OC-SVM & $2^{-7}$ \\
+%\hline
+%10\rule{0pt}{\tabrule}	& MAf+MAp+ENEp+dMAp & 86.12 & 8.40 & GMM & 32 \\
+%10 						& MAf+ENEp+MAp & \textbf{87.47} & 8.81 & HMM & 3-64 \\
+%10						& DATAf+MAf & 65.55 & 27.26 & OC-SVM & $2^{-9}$ \\
+%\hline
+%30\rule{0pt}{\tabrule}	& MAf+ENEp+MAp+dENEp & 86.34 & 9.14 & GMM & 32 \\
+%30 						& MAf+ENEp+MAp & \textbf{88.51} & 9.20 & HMM & 3-64 \\
+%30						& DATAf+dWDEf & 68.39 & 20.86 & OC-SVM & $2^{3}$ \\
+%\hline %\hline
+%\multicolumn{6}{|c|}{\textbf{FPW Temporal Features}} \rule{0pt}{\tabrule}\\
+%\hline
+%1\rule{0pt}{\tabrule}	& MAf+ENEp+MAp+dMAp+dENEp & 85.95 & 8.62 & GMM & 32 \\
+%1 						& MAf+ENEf+MAp & \textbf{87.70} & 9.54 & HMM & 3-256 \\
+%1						& WDEf+dWPECp & 61.29 & 18.75 & OC-SVM & $2^{-15}$ \\
+%\hline
+%10\rule{0pt}{\tabrule}	& MAf+ENEp+MAp+dENEp+ dMAp & 86.25 & 8.55 & GMM & 32 \\
+%10						& MAf+ENEp+MAp & \textbf{87.64} & 8.94 & HMM & 3-64 \\
+%10						& MAf+DATAf+dMAp & 65.59 & 27.23 & OC-SVM & $2^{-7}$ \\
+%\hline
+%30\rule{0pt}{\tabrule}	& MAf+MAp+ENEp+dENEp & 86.61 & 8.86 & GMM & 32 \\
+%30						& MAf+ENEp+MAp & \textbf{88.06} & 9.35 & HMM & 3-64 \\
+%30						& DATAf+dWDEf & 67.52 & 20.75 & OC-SVM & $2^{3}$ \\
+%\hline\hline
+%\multicolumn{6}{|c|}{\textbf{TWE Temporal Features}} \rule{0pt}{\tabrule}\\
+%\hline
+%1\rule{0pt}{\tabrule}	& MAf+MAp+ENEp+dMAp	& 86.04 & 8.80 & GMM & 32 \\
+%1 						& MAf+ENEf+ENEp+MAp & \textbf{87.73} & 9.34 & HMM & 3-64 \\
+%1						& MAf+WDEf & 60.43 & 19.02 & OC-SVM & $2^{-7}$ \\
+%\hline
+%10\rule{0pt}{\tabrule} 	& MAf+MAp+ENEp+dENEp+ dMAp & 86.26 & 8.58 & GMM & 32 \\
+%10						& MAf+ENEp+MAp & \textbf{87.29} & 9.36 & HMM &	3-128 \\
+%10						& DATAf+MAf & 65.55 & 27.26 & OC-SVM & $2^{-9}$ \\
+%\hline
+%30\rule{0pt}{\tabrule}	& MAf+ENEp+MAp+dMAp & 86.68 & 9.07 & GMM & 32 \\
+%30						& MAf+ENEp+MAp & \textbf{87.34} & 8.90 & HMM & 1-128 \\
+%30						& DATAf+dWDEf & 68.39 & 20.86 & OC-SVM & $2^{3}$ \\
+%\hline
+%\end{tabular}
+%\end{tiny}
+%\end{table}
+
+%}
+%\end{column}
+%\begin{column}{0.5\textwidth} 
+%    \begin{itemize}
+%	    \item GMM performance close to the HMM ones %GMM performance are non longer worse than HMM ones
+%	    \item The flow\&pressure data produce overall better performance than the flow one.
+%	    \item Significant SD reduction respect to flow and pressure data alone.
+%		\item Good performance for all the resolutions. %No trend for different resolutions, constant
+%	    \item FPW and TWE temporal features do not present a significant contribution.
+%    \end{itemize}
+%\end{column}
+%\end{columns}
+\end{frame}
+
+\begin{frame}{Simulated Leakage Evaluations}
+\tiny
+\centering
+
+\begin{tabular}{|c|c|c|c|c|l|}
+\hline
+Res.\rule{0pt}{7pt} & AUC ($\%$) & STD & Model & Par. & Features comb.\\
+\hline
+\multicolumn{6}{|c|}{\textbf{Flow Data\&Temporal Features}} \rule{0pt}{7pt}\\
+\hline
+1\rule{0pt}{7pt}	& $80.83$ & $10.43$ & GMM & 64 & \textit{Ma+En} \\
+1 					& $\textbf{85.54}$ & $11.74$ & HMM & 4-128 & \textit{Ma+En+Lw} \\
+1					& $60.43$ & $19.02$ & OC-SVM & $2^{-7}$ & \textit{Ma+We}  \\
+\hline
+10\rule{0pt}{7pt}	& $69.82$ & $16.48$ & GMM &	256 & \textit{Ma+Hr+dMa} \\
+10 					& $\textbf{79.40}$ & $15.11$ & HMM & 4-256 & \textit{Da+Lw+Hr+dLw+Wk+Ma}  \\
+10					& $65.55$ & $27.26$ & OC-SVM & $2^{-9}$ & \textit{Da+Ma} \\
+\hline
+30\rule{0pt}{7pt}	& $71.94$ & $14.44$ & GMM & 256 & \textit{Da+Hr+dMa+Ma}  \\
+30 					& $\textbf{79.64}$ & $14.85$ & HMM & 4-256 & \textit{Da+Hr+Wk} \\
+30					& $68.39$ & $20.86$ & OC-SVM & $2^{3}$ & \textit{Da+dWe}  \\
+\hline\hline
+\multicolumn{6}{|c|}{\textbf{Flow\&Pressure Data}} \rule{0pt}{7pt}\\
+\hline
+1\rule{0pt}{7pt}	& $86.04$ & $8.80$ & GMM & 32 & \textit{MaF+MaP+EnP+dMaP}	\\
+1 					& $\textbf{87.73}$ & $9.34$ & HMM & 3-64 & \textit{MaF+EnF+EnP+MaP} \\
+1					& $60.43$ & $19.02$ & OC-SVM & $2^{-7}$ & \textit{MaF+WeF} \\
+\hline
+10\rule{0pt}{7pt} 	& $86.26$ & $8.58$ & GMM & 32 & \textit{MaF+MaP+EnP+dEnP+dMaP} \\
+10					& $\textbf{87.29}$ & $9.36$ & HMM &	3-128 & \textit{MaF+EnP+MaP} \\
+10					& $65.55$ & $27.26$ & OC-SVM & $2^{-9}$ & \textit{DaF+MaF} \\
+\hline
+30\rule{0pt}{7pt}	& $86.68$ & $9.07$ & GMM & 32 & \textit{MaF+EnP+MaP+dMaP} \\
+30					& $\textbf{87.34}$ & $8.90$ & HMM & 1-128 & \textit{MaF+EnP+MaP} \\
+30					& $68.39$ & $20.86$ & OC-SVM & $2^{3}$ & \textit{DaF+dWeF} \\
+\hline
+\end{tabular}
+
+\end{frame}
+
+
+%\begin{frame}
+%\textbf{Energy Management}
+%\begin{figure}
+%	\begin{center}
+%	\includegraphics[width=\textwidth]{device_model-build}
+%	\end{center}
+%\end{figure}
+%\end{frame}
+
+%\begin{frame}[t]{Attività di Ricerca}
+%\textbf{Neural NILN}
+%\begin{figure}
+%\centering
+%\includegraphics[width=\textwidth]{nilm_nn}
+%\end{figure}
+%\end{frame}
+
+\section{Smart Electrical Grid} % Advancement in the Smart Electrical Grid Field
+
+%\begin{frame}{Smart Electrical Grid}
+%
+%\begin{itemize}
+%
+%\item Energy Management: techniques for the optimal resources and energy management in micro-grids.
+%
+%\item Non-Intrusive Load Monitoring: techniques for NILM and disaggrgation simulations with Neural Networks (CNN autoencoder).
+%
+%%\begin{itemize}
+%%\item Techniques for the optimal resources and energy management in micro-grids.
+%%%Tecniche di ottimizzazione della gestione di risorse ed energia in ambiente microgrid. \hfill\textit{[Marco Severini]} %(dottorando Marco Severini).
+%%
+%%\item Techniques for NILM and disaggregation simulations with Neural Networks (CNN autoencoder).%Tecniche per il NILM e simulazioni con Artificial Neural Network di tipo Convolutional e Feed-forward. \hfill\textit{[Roberto Bonfigli]} % sisteamre
+%%\end{itemize}
+%
+%%\vspace{3mm}
+%%\item Research and experimentation of a ultrasound sensor (non-invasive) for residential gas smart-metering.%Ricerca e sperimentazione di un sensore a ultrasuoni (non invasivo) per \textit{smart metering} residenziale. % Sistemico
+%%
+%%\item Development of IoT software using FIWARE enablers.%Implementazione moduli (\textit{enabler}) \textit{FIWARE} e sviluppo software per applicazione IoT.
+%%
+%%\item Support to documenting and EMS software development within the SHELL project.%Supporto redazione della documentazione e sviluppo software dell'EMS nell'ambito del progetto SHELL.
+%
+%\end{itemize}
+%\end{frame}
+
+\subsection{Energy Management}
+
+\begin{frame}[t]{Energy Management}
+
+Energy cost based on historical data and two tiered tariff.
+\vspace{10mm}
+
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|llc|rrrrrrrr|}
+\hline
+%\noalign{\smallskip}
+\rule{0pt}{12pt}& & & \multicolumn{8}{c|}{Configurations} \\
+%\noalign{\smallskip}
+\cline{4-11}
+%\noalign{\smallskip}
+\rule{0pt}{12pt}& &  & 1 & 2  & 3 & 4 & 5 & 6 & 7 & 8 \\ 
+%\noalign{\smallskip}
+\hline
+%\noalign{\smallskip}
+\multirow{3}{*}{Hourly management} \rule{0pt}{12pt}
+& Cost due to electrical blocks &(\euro)& 618.85 &  618.85  & 488.50 &  488.50 &  429.27 &    429.27  &  599.02 & 562.96 \\ 
+& Cost due to thermal blocks   &(\euro)&  1356.69 & 1349.79 & 1356.69 & 1349.79 &  1349.79  &   830.59  &  430.56 & 443.86\\ 
+%\noalign{\smallskip}
+& Overall cost                  &(\euro)& 1975.54 &  1968.64 & 1845.19 &  1838.29 & 1779.06 &  1259.86 & 1029.58 & 1006.82\\ 
+%\noalign{\smallskip}
+\hline 
+%\noalign{\smallskip}
+\multirow{3}{*}{Daily management} \rule{0pt}{12pt}
+& Cost due to electrical blocks &(\euro)&   618.85 &   618.85  &   474.38 &   474.41 &   426.51 &    426.51  &  479.04 & 427.89 \\ 
+& Cost due to thermal blocks   &(\euro)&  1356.69 & 1354.73 & 1356.69 & 1306.28 &  1306.28 &   804.05  &  377.04 & 390.41\\ 
+%\noalign{\smallskip}
+& Overall cost                 &(\euro)& 1975.54 &  1973.58 & 1830.57 &  1780.69 & 1732.79 &  1230.56 & 856.08 & 818.30\\  
+%\noalign{\smallskip}
+\hline 
+%\noalign{\smallskip}
+\rule{0pt}{12pt}& Overall cost difference      &(\euro)&   - &   -4.94  &   14.62 & 57.60 &   46.27 &   29.30  &  173.5 & 188.52 \\ 
+%\noalign{\smallskip}
+\hline 
+\end{tabular}}
+\end{frame}
+
+\subsection{NILM}
+
+\begin{frame}[t]{Non-Intrusive Load Monitoring}
+
+NILM simulations with Neural Networks (CNN autoencoder).
+\centering
+\includegraphics[width=0.9\textwidth, height=0.35\textwidth]{dnn_ae2.pdf}
+\vfill
+
+\tabcolsep=0.13cm
+\begin{tiny}
+\begin{tabular}{|c|ccccc|c|}
+\hline
+Metric\rule{0pt}{10pt}		& Kettle & Wash  &	Dish  &	Fridge &	Microwave & AVG\\
+\hline
+Precision\rule{0pt}{10pt}	& 0,748	 & 0,431 &	0,666 &	0,798  &	0,362     &	0,601\\
+Recall						& 0,865	 & 0,375 &	0,431 &	0,604  &	0,587	  & 0,572\\
+$F$ score					& \textbf{0,802}	 & \textbf{0,401} &	0,523 &	\textbf{0,688}  &	0,448  & 0,572\\
+\hline
+Best net\rule{0pt}{10pt}	& 32-4-512 & 16-16-256 & 16-16-1024 & 32-16-2048 & 64-16-1024 &\\
+\hline
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+
+\section{Conclusions}
+
+\begin{frame}{Conclusions}
+
+Computational Intelligence approaches for the improvement of the water and natural gas grids, to be regarded as Smart Grids, have been studied.
+
+
+%In this dissertation, the Computational Intelligence approaches for the improvement of the water and natural gas grids, to be regarded as Smart Grids, have been studied. Specifically, the approaches have concerned the consumption forecasting and the leakage detection in different grid scenarios. The forecasting tests have been focused on homogeneous evaluation criteria among the different techniques, and the application of heterogeneous information. The evaluated scenarios have gone from the residential scale grids to their national counterparts. Concerning the leakage detection experiments, the novelty detection paradigm has been exploited, and evaluations with different techniques have been executed. In addition, in order to identify a suitable set of features, a SFS has been proposed and performed during the evaluation. The target scenarios have been limited to the residential and the office building one.
+
+\begin{itemize}
+\small
+\item Load forecasting and leakage detection in different grid scenarios.
+\item Homogeneous evaluation among the different techniques.
+\item Application of heterogeneous information.
+%In Leakage Detection the 
+\item Novelty detection paradigm has been exploited.
+\item Proposed a SFS technique to identify a suitable set of features.
+\end{itemize}
+
+Finally, advancements in two specific applications for Smart Electrical Grids have been also proposed.
+% in accordance with the methodologies adopted in the investigations conducted for smart water and natural gas grids solutions.
+
+\end{frame}
+
+
+%\begin{frame}[t]{Activities and Stays Abroad}
+%
+%\textbf{International Conference:}
+%\vspace{2mm}
+%\begin{itemize}
+%\footnotesize
+%\itemsep2em
+%
+%\item IEEE World Congress on Computational Intelligence, IEEE WCCI2016, Vancouver (Canada), 24-29 July 2016. \hfill\textit{\tiny[2 oral presentation, 1 poster]}
+%
+%\item The International Joint Conference on Neural Networks, IJCNN 2015, Killarney (Ireland), 12-17 July 2015. \hfill\textit{\tiny[1 oral presentation]}
+%
+%\item 15\textsuperscript{th} IEEE International Conference on Environment and Electrical Engineering, EEEIC2015, Rome, 10-13 June 2015. \hfill\textit{\tiny[1 oral presentation]}
+%\end{itemize}
+%\end{frame}
+
+%\begin{frame}[t,allowframebreaks]{Training Activity}
+%\textbf{Courses}:
+%\begin{itemize}
+%\footnotesize
+%\item ``\textit{Progettare la ricerca: i progetti europei}'', Prof. Nicola Paone.
+%\item ``\textit{Metodi e strumenti di rappresentazione e gestione di processi}'', Prof. Ferruccio Mandorli.
+%\end{itemize}
+%
+%\textbf{Seminars}:
+%\begin{itemize}
+%\footnotesize
+%\item ``\textit{Il `Metodo Scientifico' per la conoscenza delle leggi della Natura (secondo un fisico sperimentale)}'', Prof. Gaetano Cannelli.
+%\item Ciclo di ``\textit{Seminari di Epistemologia}'', Prof. Giancarlo Galeazzi.
+%\item ``\textit{Software Defined Networking with Applications in 5G Networks}'', Dr. Chirag Warty.
+%\item ``\textit{LINUX Embedded \& RealTime}'', Ing. Ginaluigi Biancucci.
+%\item ``\textit{Creative applications of airborne ultrasound}'', Dr. Miha Ciglar.
+%\item ``\textit{Tecniche di Elaborazione Numerica dei Segnali Applicata alla Sintesi della Canna d'Organo}'', Ing. Carlo Zinato.
+%\item ``\textit{Situational Intelligence for Utility Power System and Micro-Grid Operations}'', Prof. Kumar Venayagamoorthy.
+%\end{itemize}
+%
+%\textbf{Other}:
+%\begin{itemize}
+%\footnotesize
+%\item Ciclo di incontri ``4EUREKA''.
+%\item Reviewer for international journals (\textit{Special Issue of Neurocomputing} and \textit{Hindawi}), and international conferences (\textit{IJCNN 2015}, \textit{WIRN2015}, IEEE-EEEIC2016 and \textit{IEEE WCCI2016}).
+%\item \textit{ISCRA: Class C Project Proposal}, granted 9-months access with $120.000 Core Hours$ available at CINECA-HPC GALILEO.
+%%HPC - high performace computing
+%\item \textit{NVIDIA Grant Proposal}, granted video card GTX TITAN X (3072 Cuda Cores, 12GB GDDR5)
+%\end{itemize}
+%
+%\end{frame}
+
+
+
+%\begin{frame}[t]{Tutoring Activity}
+%\begin{itemize}
+%\item Exam supervision and integrative teaching for Circuit Theory (Elettrotecnica).%Attività di sorveglianza esami e didattica integrativa per Elettrotecnica.
+%\item Exam supervision and integrative teaching for CAES - Circuiti e Algoritmi per l'Elaborazione dei Segnali.%Attività di sorveglianza esami e didattica integrativa per Circuiti Algoritmi Elaborazione Segnali.
+%\item Tutoring activity for CAES 2 - Circuiti e Algoritmi per l'Elaborazione dei Segnali 2.%Attività di supporto per studenti triennali e magistrali per tesi e tesine di Circuiti Algoritmi Elaborazione Segnali 2.
+%\item Exam supervision and integrative teaching for MRE - Macchine e Reti Elettriche.%Attività di sorveglianza esami e didattica integrativa per Macchine e Reti Elettriche.
+%\end{itemize}
+%
+%\end{frame}
+
+%\begin{frame}[t,allowframebreaks]{Lista Pubblicazioni}
+%
+%\scriptsize
+%
+%International Journal: \hfill{\tiny{[3 articles, 3 first author]}}
+%
+%\begin{enumerate}
+%\tiny
+%\bibitem{fagiani2016b}
+%\textbf{M.~Fagiani}, S.~Squartini, L.~Gabrielli, M.~Severini, and F.~Piazza, ``A
+%  statistical framework for automatic leakage detection in smart water and gas
+%  grids,'' {\em Energies}, vol.~9, no.~9, p.~665, 2016.
+%
+%\bibitem{fagiani2015c}
+%\textbf{M.~Fagiani}, S.~Squartini, L.~Gabrielli, S.~Spinsante, and F.~Piazza, ``A review
+%  of datasets and load forecasting techniques for smart natural gas and water
+%  grids: Analysis and experiments,'' {\em Neurocomputing}, vol.~170, pp.~448 --
+%  465, 2015.
+%
+%\bibitem{fagiani2015b}
+%\textbf{M.~Fagiani}, E.~Principi, S.~Squartini, and F.~Piazza, ``Signer independent
+%  isolated italian sign recognition based on hidden markov models,'' {\em
+%  Pattern Analysis and Applications}, vol.~18, no.~2, pp.~385--402, 2015.
+%\end{enumerate}
+%
+%International Conference: \hfill{\tiny{[11 articles, 6 first author]}}
+%\begin{enumerate}
+%\tiny
+%\setcounter{enumi}{3}
+%
+%\bibitem{bonfigli2016b}
+%R.~Bonfigli, E.~Principi, S.~Squartini, \textbf{M.~Fagiani}, M.~Severini, and F.~Piazza,
+%  ``{User-aided Footprint Extraction for Appliance Modelling in Non-Intrusive
+%  Load Monitoring},'' in {\em 2016 IEEE Symposium Series on Computational
+%  Intelligence (SSCI)}, December 2016. \textit{Accepted}.
+%
+%\bibitem{fagiani2016a}
+%\textbf{M.~Fagiani}, S.~Squartini, R.~Bonfigli, M.~Severini, and F.~Piazza,
+%  ``{Exploiting Temporal Features and Pressure Data for Automatic Leakage
+%  Detection in Smart Water Grids},'' in {\em 2016 IEEE World Congress on
+%  Computational Intelligence (WCCI)}, July 2016. \textit{To appear.}
+%
+%\bibitem{bonfigli2016}
+%R.~Bonfigli, M.~Severini, S.~Squartini, \textbf{M.~Fagiani}, and F.~Piazza, ``{Improving
+%  the performance of the AFAMAP algorithm for Non-Intrusive Load Monitoring},''
+%  in {\em 2016 IEEE World Congress on Computational Intelligence (WCCI)}, July
+%  2016. \textit{To appear.}
+%
+%\bibitem{severini2016}
+%M.~Severini, A.~Scorrano, S.~Squartini, \textbf{M.~Fagiani}, and F.~Piazza, ``{SW
+%  Framework for simulation and evaluation of partial shading effects in
+%  configurable PV systems},'' in {\em Environment and Electrical Engineering
+%  (EEEIC), 2016 IEEE 16th International Conference on}, June 2016. \textit{To appear.}
+%
+%\bibitem{fagiani2015e}
+%\textbf{M.~Fagiani}, S.~Squartini, M.~Severini, and F.~Piazza, ``{A novelty detection
+%  approach to identify the occurrence of leakage in smart gas and water
+%  grids},'' in {\em 2015 International Joint Conference on Neural Networks
+%  (IJCNN)}, pp.~1--8, July 2015.
+%
+%\bibitem{severini2015}
+%M.~Severini, S.~Squartini, \textbf{M.~Fagiani}, and F.~Piazza, ``{Energy management with
+%  the support of dynamic pricing strategies in real micro-grid scenarios},'' in
+%  {\em 2015 International Joint Conference on Neural Networks (IJCNN)},
+%  pp.~1--8, July 2015.
+%
+%\bibitem{bonfigli2015}
+%R.~Bonfigli, S.~Squartini, \textbf{M.~Fagiani}, and F.~Piazza, ``Unsupervised algorithms
+%  for non-intrusive load monitoring: An up-to-date overview,'' in {\em
+%  Environment and Electrical Engineering (EEEIC), 2015 IEEE 15th International
+%  Conference on}, pp.~1175--1180, June 2015.
+%
+%\bibitem{fagiani2015d}
+%\textbf{M.~Fagiani}, S.~Squartini, R.~Bonfigli, and F.~Piazza, ``Short-term load
+%  forecasting for smart water and gas grids: A comparative evaluation,'' in
+%  {\em Environment and Electrical Engineering (EEEIC), 2015 IEEE 15th
+%  International Conference on}, pp.~1198--1203, June 2015.
+%
+%\bibitem{fagiani2015a}
+%\textbf{M.~Fagiani}, S.~Squartini, L.~Gabrielli, S.~Spinsante, and F.~Piazza, ``Domestic
+%  water and natural gas demand forecasting by using heterogeneous data: A
+%  preliminary study,'' {\em Smart Innovation, Systems and Technologies},
+%  vol.~37, pp.~185--194, 2015.
+%
+%\bibitem{fagiani2014}
+%\textbf{M.~Fagiani}, S.~Squartini, L.~Gabrielli, M.~Pizzichini, and S.~Spinsante,
+%  ``Computational intelligence in smart water and gas grids: An up-to-date
+%  overview,'' in {\em Neural Networks (IJCNN), 2014 International Joint
+%  Conference on}, pp.~921--926, July 2014.
+%
+%\bibitem{fagiani2013}
+%\textbf{M.~Fagiani}, E.~Principi, S.~Squartini, and F.~Piazza, ``A new system for
+%  automatic recognition of italian sign language,'' in {\em Neural Nets and
+%  Surroundings} (B.~Apolloni, S.~Bassis, A.~Esposito, and F.~C. Morabito,
+%  eds.), vol.~19 of {\em Smart Innovation, Systems and Technologies},
+%  pp.~69--79, Springer Berlin Heidelberg, 2013.
+%\end{enumerate}
+%
+%
+%\end{frame}
+
+%\begin{frame}
+%\centering
+%\textbf{Thank for your attention!}
+%
+%\begin{figure}
+%\includegraphics[width=\textwidth]{pipe-water-leak-detection.jpg}
+%\end{figure}
+%
+%\end{frame}
+
+\appendix
+
+\newcounter{nodecount}
+% Command for making a new node and naming it according to the nodecount counter
+\newcommand\tabnode[1]{\addtocounter{nodecount}{1}\tikz \node (\arabic{nodecount}) {#1};}
+
+\tikzstyle{every picture}+=[remember picture,baseline]
+\tikzstyle{every node}+=[inner sep=0pt,anchor=base,align=center,text depth=.25ex,outer sep=1.5pt]
+\tikzstyle{every path}+=[thick, rounded corners]
+
+\begin{frame}{Leakage Detection - SFS}
+\footnotesize
+% Introduce a new counter for counting the nodes needed for circling
+
+\centering
+%\renewcommand{\arraystretch}{1.0}
+\tabcolsep=0.18cm
+\begin{tabular}{c||c||c||c c c||c||c||c}
+\multicolumn{4}{c}{\textbf{Standard SFS}} & & \multicolumn{4}{c}{\textbf{Proposed SFS}} \\
+\nth{1} & \nth{2} & \nth{3} & n-th & \quad\quad & \nth{1} & \nth{2} & \nth{3} & n-th \\
+\cline{1-4} \cline{6-9}
+\multirow{5}{*}{$F_1$} 	& \multirow{6}{*}{$F_2,F_1$} & \multirow{7}{*}{\textcolor{black}{$F_2,F_3,F_1$}} & \multirow{9}{*}{$\dots$} & &
+\multirow{5}{*}{$F_1$} & \tabnode{$F_2,F_1$} & \textcolor{black}{\multirow{7}{*}{$F_3,F_1,F_2$}} & \multirow{9}{*}{$\dots$} \rule{0pt}{11pt}\\ 
+\multirow{5}{*}{\textcolor{black}{$F_2$}} & \multirow{6}{*}{\textcolor{black}{$F_2,F_3$}} & \multirow{7}{*}{$\vdots$} & & &
+\multirow{5}{*}{\textcolor{black}{$F_2$}} & $\vdots$ & \multirow{7}{*}{$\vdots$} & \\ 
+\multirow{5}{*}{$F_3$} & \multirow{6}{*}{$\vdots$} & \multirow{7}{*}{$F_2,F_3,F_n$} & & &
+\multirow{5}{*}{\textcolor{black}{$F_3$}} & \tabnode{$F_2,F_n$} & \multirow{7}{*}{$F_3,F_1,F_n$} & \\
+\multirow{5}{*}{$\vdots$} & \multirow{6}{*}{$F_2,F_n$} & & & &
+\multirow{5}{*}{$\vdots$} & \tabnode{\textcolor{black}{$F_3,F_1$}} & & \\
+\multirow{5}{*}{$F_n$} & & & & &
+\multirow{5}{*}{\textcolor{black}{$F_n$}} & $\vdots$ & & \\
+& & & & &
+ & \tabnode{$F_3,F_n$} & & \\
+& & & & &
+ & \tabnode{$F_n,F_1$} & & \\
+& & & & &
+ & $\vdots$ & & \\ 
+& & & & &
+ & \tabnode{$F_n,F_{n-1}$} & & \\
+\end{tabular}
+
+\begin{tikzpicture}[overlay]
+\draw [red] ([xshift=-2mm]1.north west) -- ([xshift=2mm]1.north east) -- ([xshift=2mm]2.south east) -- ([xshift=-2mm]2.south west) -- cycle;
+\draw [red] ([xshift=-2mm]3.north west) -- ([xshift=2mm]3.north east) -- ([xshift=2mm]4.south east) -- ([xshift=-2mm]4.south west) -- cycle;
+\draw [red] ([xshift=-2mm]5.north west) -- ([xshift=2mm]5.north east) -- ([xshift=0.5mm]6.south east) -- ([xshift=-0.5mm]6.south west) -- cycle;
+\end{tikzpicture}
+
+\end{frame}
+
+%\begin{frame}{Leakage Detection Algorithm}
+%Insert here algorithm image
+%\end{frame}
+
+\begin{frame}{Leakage Detection Evaluation Criteria}
+%\scriptsize
+%\begin{equation}
+%\begin{aligned}
+%TDR =& \frac{no.\ of\ abnormal\ events\ detected\ as\ abnormal}{no.\ of\ abnormal\ events},\\[0.5em]
+%FDR =& \frac{no.\ of\ normal\ events\ detected\ as\ abnormal}{no.\ of\ normal\ events}. \nonumber
+%\end{aligned}
+%\end{equation}
+
+%\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{example_ROC_AUC.eps}
+%\caption{Examples of the ROC and AUC relations.}
+%\label{fig:example_roc}
+%\end{figure}
+
+\end{frame}
+
+\begin{frame}{Leakage Detection Features}
+\tiny
+\centering
+
+\begin{tabular}{|c|c|c|c|} %p{2.5cm}|c|c|c|c|l|}
+\hline
+\textbf{Index} \rule{0pt}{8pt} & \textbf{Name} & \textbf{Feature Size} & \textbf{Acronym} \\
+\hline
+1\rule{0pt}{8pt}& Data				& Number of samples & \textit{Da} \\
+2 & Energy 							& 1 			& \textit{En} \\
+3 & Moving Average					& 1				& \textit{Ma} \\
+4 & Wavelet Decomposition Energy 	& 4				& \textit{We} \\
+5 & Logarithmic Wavelet Energy 		& 4				& \textit{Lw} \\
+6 & Hourly Window			 		& 1				& \textit{Hr} \\
+7 & Daily Window			 		& 1				& \textit{Dy} \\
+8 & Weekly Window 					& 1				& \textit{Wk} \\
+\hline
+\end{tabular}
+
+\includegraphics[width=\textwidth]{temporal_feats.eps}
+
+\end{frame}
+
+\begin{frame}{Leakage Detection AE-NN}
+
+\begin{table}[h!]
+\centering
+\begin{scriptsize}
+%\caption{AMPds, Natural Gas and Water resource best results with AE.}
+%\label{tab:ae_amp}
+%\tabcolsep=0.08cm
+\begin{tabular}{|c|c|c|l|c|}
+\hline
+Res.\rule{0pt}{8pt} & AUC ($\%$) & STD & Features comb. & Param.\\
+
+\hline\hline
+\multicolumn{5}{|c|}{\textbf{Natural Gas}} \rule{0pt}{8pt}\\
+\hline
+
+1\rule{0pt}{8pt}	& $83.38$ & $13.71$ & \textit{Ma+En} & 2-1 \\
+10 					& $69.98$ & $13.05$ & \textit{Ma+En} & 2-1 \\
+30					& $66.92$ & $13.17$ & \textit{Ma+En} & 2-1 \\
+
+\hline\hline
+\multicolumn{5}{|c|}{\textbf{Water}} \rule{0pt}{8pt}\\
+\hline
+
+1\rule{0pt}{8pt} 	& $74.18$ & $18.80$ & \textit{Ma+En} & 2-1 \\
+10 					& $70.45$ & $14.23$ & \textit{Da+dLw+Lw+dEn+dMa } & 2-2 \\
+30					& $63.29$ & $11.46$ & \textit{Ma+Lw+En} & 2-2 \\				
+
+\hline
+\end{tabular}
+\end{scriptsize}
+\end{table}
+
+\end{frame}
+
+\begin{frame}{Forecasting Evaluatoin Criteria}
+\small
+%For that reason, a set of evaluation criteria to adopt for each experiment has been selected, in order to facilitate the comparison and the analysis of the methods. With reference to Bennett \textit{et al.} \cite{Bennett2013} report, the criteria taken into account are the normalized mean square error (NMSE), the determination coefficient (R$^2$), the mean square error (MSE), the mean absolute percentage error (MAPE) and the relative root mean square error (RRMSE). The corresponding formulas are:
+
+%The authors select the evaluation criteria to adopt for each experiment, in order to facilitate the comparison and the analysis of the methods. So, the normalized mean square error (NMSE), the determination coefficient (R$^2$, commonly known as Nash-Sutcliffe efficiency coefficient \cite{Bennett2013}), the mean square error (MSE), the mean absolute percentage error (MAPE) and the relative root mean square error (RRMSE) have been taken into account. The corresponding formulas are:
+
+\begin{align}
+& \text{NMSE} = \frac{\frac{1}{N}\sum\limits^{N} (y_n - \tilde{y}_n)^{2}}{\sigma^{2}_{y}}\ ,& \text{R$^{2}$} = 1 - \frac{\frac{1}{N} \sum\limits^{N} (y_n - \tilde{y}_n)^{2}}{\frac{1}{N} \sum\limits^{N} (y_n - \bar{y})^{2}}\ ,\nonumber	\\%\cdot 100\% 
+& \text{MSE} = \frac{1}{N} \sum\limits^{N} (y_n - \tilde{y}_n)^{2}\ , & \text{MAPE} = \frac{\frac{100}{N} \sum\limits^{N} \mid y_n - \tilde{y}_n\mid }{\bar{y}}\ ,\nonumber\\
+& \text{RRMSE} = 100 \cdot \frac{\sqrt{\frac{1}{N} \sum\limits^{N} (y_n - \tilde{y}_n)^{2}}}{\bar{y}}\ .\nonumber
+\end{align}
+%where $y_n$ is the $n$-th observed value, $\tilde{y}_n$ the corresponding $n$-th forecast value, $\bar{y}$ and $\sigma^{2}_y$ the average and the variance of the $N$ observed values, respectively.
+
+\end{frame}
+
+\begin{frame}[t, allowframebreaks]
+\frametitle<presentation>{References}
+
+\bibliographystyle{IEEEbib}
+\fontsize{5}{6}\selectfont{
+\bibliography{IEEEabrv,bibliography}
+}
+\end{frame}
+
+\end{document}

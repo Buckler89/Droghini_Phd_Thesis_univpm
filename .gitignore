@@ -14,3 +14,19 @@ PhDthesis_Droghini\.aux
 PhDthesis_Droghini\.lof
 
 PhDthesis_Droghini\.lot
+
+*.out
+
+*.aux
+
+*.gz
+
+*.xmpi
+
+*.ps
+
+*.dvi
+
+*.snm
+
+*.toc

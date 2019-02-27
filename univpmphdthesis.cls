@@ -154,7 +154,7 @@
 \authorlabelEN{Ph.D. Dissertation of:}
 \advisorlabelEN{Advisor:}
 \coadvisorlabelEN{Coadvisor:}
-\curriculumadvisorlabelEN{Curriculum Supervisor:}
+\curriculumadvisorlabelEN{Ph.D. School Supervisor:}
 \directorlabelEN{Ph.D. School Supervisor:}
 \cyclelabelEN{edition - new series}
 

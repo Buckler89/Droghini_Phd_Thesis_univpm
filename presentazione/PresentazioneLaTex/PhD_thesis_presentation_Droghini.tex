@@ -1,0 +1,362 @@
+% !TeX spellcheck = it_IT
+\documentclass{beamer}
+
+\usepackage[latin1]{inputenc}
+\usepackage[tight]{subfigure}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{threeparttable}
+\usepackage{booktabs}
+
+\graphicspath {{Images/}}
+\usepackage{tikz}
+\usetikzlibrary{calc,shapes,arrows,chains,shadows,arrows,fit,positioning,backgrounds,spy}
+
+\usetheme[pageofpages=of,% String used between the current page and the
+% total page count.
+bullet=circle,% Use circles instead of squares for bullets.
+titleline=true,% Show a line below the frame title.
+alternativetitlepage=true,% Use the fancy title page.
+titlepagelogo=logo_univpm.png,% Logo for the first page.
+%watermark=brando1,% Watermark used in every page.
+%watermarkheight=20px,% Height of the watermark.
+%watermarkheightmult=5,% The watermark image is 4 times bigger
+% than watermarkheight.
+]{Torino}
+
+\setbeamertemplate{background}{
+	\tikz[overlay,remember picture] 
+	\node[at=(current page.north east),anchor=north east,inner sep=15pt] {\includegraphics[height=1cm, keepaspectratio]{logo_univpm_scritta.png}};
+}
+
+\author{\textbf{Studente:}Diego Droghini}
+\title{Scuola di Dottorato in Ingegneria dell'Informazione}
+\subtitle{XVII Ciclo n.s., 3° anno di corso (2017/2018)}
+\institute{Università Politecnica delle Marche\\ \textbf{Progetto Eureka}}
+\date{}
+
+\definecolor{darkgray}{RGB}{50,50,50}
+
+\setbeamercolor{section in toc}{fg=black}
+\setbeamercolor{subsection in toc}{fg=darkgray}
+\setbeamerfont{subsection in toc}{size=\small}
+\setbeamertemplate{section in toc}[ball unnumbered] %[sections numbered]
+%\setbeamertemplate{subsection in toc}[subsections numbered]
+
+
+\begin{document}
+
+\begin{frame}[t,plain]
+\titlepage
+\end{frame}
+
+\begin{frame}[t]{PhD Thesis}
+	\vspace{1.5cm}
+	\centering
+	\huge
+	\textbf{Ambient Intelligence:
+\\
+	Computational Audio Processing
+	For Human Fall Detection}
+\end{frame}
+
+%\begin{frame}{Overview}
+%	\tableofcontents
+%	% You might wish to add the option [pausesections]
+%\end{frame}
+\begin{frame}
+	\frametitle{Outline}
+	\begin{columns}[t]
+		\begin{column}{.5\textwidth}
+			\tableofcontents[sections={1-4}]
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\tableofcontents[sections={5-8}]
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\AtBeginSubsection[]{%
+	\begin{frame}<beamer>{Index}
+		\tableofcontents[currentsection,currentsubsection]
+	\end{frame}
+}
+\AtBeginSubsection[]{%
+	\begin{frame}<beamer>{Index}
+			\begin{columns}[t]
+				\begin{column}{.5\textwidth}
+					\tableofcontents[sections={1-4}, currentsection,currentsubsection]
+				\end{column}
+				\begin{column}{.5\textwidth}
+					\tableofcontents[sections={5-8},currentsection,currentsubsection]
+				\end{column}
+			\end{columns}
+		\end{frame}
+
+}
+\section{Introduction}		
+\begin{frame}[t]{Fall Detection Systems}
+
+
+\end{frame}
+
+\begin{frame}[t]{State-Of-The-Art}
+	
+	
+\end{frame}
+
+\begin{frame}[t]{Motivations and Contributions}
+	
+	
+\end{frame}
+
+\section{Dataset}
+\subsection{FAS}
+\begin{frame}[t]{The floor acoustic sensor}
+	
+	
+\end{frame}
+\subsection{A3FALL Dataset}
+\begin{frame}[t]{The fall events dataset: A3Fall}
+	
+	
+\end{frame}
+
+\begin{frame}[t]{The recording setup}
+	
+	
+\end{frame}
+
+\begin{frame}[t]{Description}
+
+
+\end{frame}
+\begin{frame}[t]{Signal analysis}
+	
+	
+\end{frame}
+\section{Supervised Approaches}
+\subsection{Multi-class SVM}
+\subsection{Binary SVM}
+\section{Unsupervised Approach}
+\subsection{OCSVM}
+\subsection{End-To-End CNN-AE}
+\section{Weakly-supervised Approach}
+\subsection{OCSVM + Template Matching User-Aided}
+\subsection{Few-shot Siamese Neural Networks}
+\subsection{OneShot Siamese Autoencoders}	
+\section{Other Contributions}
+
+\begin{frame}{End-to-End Unsupervised Network for Audio Timbre Transfer}
+
+\end{frame}
+\section{Conclusions}
+\begin{frame}{Conclusions}
+	
+\end{frame}
+
+\begin{frame}[t]{Conferences and Workshop}
+
+\begin{itemize}
+\item \textbf{WIRN 2016}: 26th Italian Workshop on Neural Networks, May 18-20 2016, Vietri sul Mare, Salerno, Italy \hfill\textit{\scriptsize[1 oral presentation]}	
+
+\item \textbf{EUSIPCO 2017}: 25th European Signal Processing Conference, 28 Ago.-2 Sept. 2017, Kos Island, Greece \textit{\scriptsize[1 oral presentation]}	
+
+\item \textbf{WIRN 2018}: 28th Italian Workshop on Neural Networks, 13-15 June 2018, Vietri sul Mare, Salerno, Italy \hfill\textit{\scriptsize[1 oral presentation]}	
+
+\item \textbf{EUSIPCO 2018}: 28th edition of the European Signal Processing Conference, Sept. 3-7 2018, Rome, Italy \hfill\textit{\scriptsize[1 poster]}	
+\end{itemize}
+
+\small
+In addition:
+\begin{itemize}
+\item Speaker: ``Le nuove applicazioni dell'Intelligenza Artificiale in ambito musicale'', workshop at \textbf{Acusmatiq XII} - international festival of electronic, electro-acoustic and experimental music, 28 - 30 July 2017, Ancona, Italy 
+\end{itemize}
+\end{frame}
+
+\section{Ditattica}
+
+\begin{frame}[t]{Training Activity} 
+\begin{itemize}
+	\item\textbf{Courses}:
+	\begin{itemize}
+		\item ``Progettare la ricerca: i progetti europei'', Prof. Nicola Paone
+		\item ``Economia e Management del Trasferimento Tecnologico'', Prof. Donato Iacobucci
+	\end{itemize}
+	\item \textbf{Seminars}:
+	\begin{itemize}
+	\item ``Automated Prominent Nucleoli Detection in Cancer Cells'', Dr. Hwee Kuan Lee
+	\item ``Tecniche di Elaborazione Numerica dei Segnali Applicata alla Sintesi della Canna d'Organo'', Ing. Carlo Zinato
+	\item ``Robustness Analysis of Binaural Loudspeaker Reproduction'', Prof. Risheng Xia - Feb. 21 2017
+	\item ``From signal representations to musical creation: a geometric approach'', Dott. Carmine Cella - Mar. 16 2017
+	\item ``Tecnologie Elettroniche nei Centri Dati di Google'', Dott. Anthony Tonizzo - May 17 2017
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[t]{Training Activity} 
+
+\textbf{Other}:
+
+\begin{itemize}
+	\item Corso di Perfezionamento post laurea in \textit{Computer Music Production} organized by \textit{UnivPm } - \textbf{Awarded Certificate}
+
+	\vspace{2mm}
+
+	\item Integrative activity organized by the ``Contamination LAB'' concerning self-entrepreneurship - \textbf{Best Pitch Winner} (Team)
+	
+	\vspace{2mm}
+	
+	\item Reviewer for international journals (IEEE Transactions on Emerging Topics in Computational Intelligence, Information Processing in Agriculture) and international conferences (WIRN2016, IJCNN 2017, IJCNN 2018, ICONIP 2018).	
+	
+	
+\end{itemize}
+
+\end{frame}
+
+
+
+
+\begin{frame}[t]{Support Teaching Activity}
+
+\begin{itemize}
+\item Exam supervision for ``Macchine e Reti Elettriche'' - (C.d.L. Ing. Meccanica) 
+\item Exam supervision and teaching material for ``Circuiti ed Algoritmi per Digital Signal Processing'' (C.d.L. Ing. Elettronica) and ``Digital Adaptive Circuits and Learning Systems'' (DAC-LS) (C.d.LM. Ing. Elettronica) 
+\item Tutoring activity for master thesis projects - DAC-LS students
+\item Lectures on ``Computational Audio Processing'' at DAC-LS and post-graduate course on ``Tecnico per l'applicazione di tecnologie domotiche per gli ambienti di vita''
+
+\end{itemize}
+
+
+
+\end{frame}
+
+\section{Elenco Pubblicazioni}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[allowframebreaks]
+\scriptsize
+\frametitle{Publications List} 
+\vspace{-4mm}
+\textbf{International Journal}: \hfill \textit{\scriptsize[3 articles, 2 first author]}
+\begin{thebibliography}{9}
+\bibitem{marchideep}[1]
+E.~Marchi, F.~Vesperini, S.~Squartini, and B.~Schuller,
+\newblock ``Deep recurrent neural network-based autoencoders for acoustic novelty detection,'' 
+\newblock {\em Computational Intelligence and Neuroscience}, 2016.
+
+\bibitem{vesperini2017speaker}[2]
+F.~Vesperini, P.~Vecchiotti, E.~Principi, S.~Squartini, and F.~Piazza,
+\newblock ``Localizing speakers in multiple rooms by using deep neural
+networks,'' \newblock {\em Computer Speech and Language}, 2017.
+\end{thebibliography}
+\vspace{2mm}
+\textbf{International Journal (submitted)}: \hfill \textit{\scriptsize[1 article, 1 first author]}
+
+\begin{thebibliography}{9}
+\bibitem{vesperini2018polyphonic}[1]
+F.~Vesperini, L.~Gabrielli, E.~Principi, and S.~Squartini,
+\newblock ``Polyphonic sound event detection by using capsule neural
+networks,''
+\newblock {\em Journal of Selected Topics in Signal Processing}, 2018, submitted.
+\end{thebibliography}
+
+\vspace{4mm}
+
+\textbf{International Conference}: \hfill \textit{\scriptsize[14 articles, 5 first author]}
+\begin{thebibliography}{9}
+\bibitem{Marchi15-ANA}[1]
+E.~Marchi, F.~Vesperini, F.~Eyben, S.~Squartini, and B.~Schuller,
+\newblock ``{A Novel Approach for Automatic Acoustic Novelty Detection Using a Denoising Autoencoder with Bidirectional LSTM Neural Networks},''
+\newblock in {\em Proc. of ICASSP}, Brisbane, Australia, 19-24 Apr. 2015, IEEE.
+
+\bibitem{Marchi15-NPW}[2]
+E.~Marchi, F.~Vesperini, F.~Weninger, F.~Eyben, S.~Squartini, and B.~Schuller,
+\newblock ``{Non-Linear Prediction with LSTM Recurrent Neural Networks for Acoustic Novelty Detection},'' \newblock in {\em Proc. of IJCNN}, Killarney, Ireland, 12-16 Jul. 2015, IEEE.
+
+\bibitem{ijcnn2016-vad}[3]
+F.~Vesperini, P.~Vecchiotti, E.~Principi, S.~Squartini, and F.~Piazza,
+\newblock ``Deep neural networks for multi-room voice activity detection: Advancements and comparative evaluation,''
+\newblock in {\em Proc. of IJCNN}, Vancouver, Canada, 24-29 Jul. 2016, IEEE, pp. 3391--3398.
+
+\bibitem{gasparini2016combining}[4]
+M.~Gasparini, F.~Vesperini, S.~Cecchi, S.~Squartini, F.~Piazza, and R.~Toppi,
+\newblock ``Combining evolution strategies and neural network procedures for compression driver design,'' \newblock in {\em Proc. of IJCNN}, Vancouver, Canada, 24-29 Jul. 2016, IEEE,
+pp. 3385--3390.
+
+\bibitem{vecchiotti2018convolutional}[5]
+P.~Vecchiotti, F.~Vesperini, E.~Principi, S.~Squartini, and F.~Piazza,
+\newblock ``Convolutional neural networks with 3-{D} kernels for voice activity detection in a multiroom environment,'' 
+\newblock in {\em Multidisciplinary Approaches to Neural Computing}, pp. 161--170. Springer, 2018.
+
+\bibitem{mlsp2016-sloc}[6]
+F.~Vesperini, P.~Vecchiotti, E.~Principi, S.~Squartini, and F.~Piazza,
+\newblock ``A neural network based algorithm for speaker localization in a multi-room environment,''
+\newblock in {\em Machine Learning for Signal Processing (MLSP), 2016 IEEE 26th International Workshop on}. IEEE, 2016, pp. 1--6.
+
+\bibitem{principi2017acoustic}[7]
+E.~Principi, F.~Vesperini, S.~Squartini, and F.~Piazza,
+\newblock ``Acoustic novelty detection with adversarial autoencoders,''
+\newblock in {\em Proc. of IJCNN}, Anchorage, Alaska, 14-19 May 2017, IEEE, pp.
+3324--3330.
+
+\bibitem{valenti2017sound}[8]
+M.~Valenti, D.~Tonelli, F.~Vesperini, E.~Principi, and S.~Squartini,
+\newblock ``A neural network approach for sound event detection in real life audio,''
+\newblock in {\em Proc. of EUSIPCO}, Kos, Greece, Sept. 2017, IEEE.
+
+\bibitem{gabrielli2018deep}[9]
+L.~Gabrielli, C.~E. Cella, F.~Vesperini, D.~Droghini, E.~Principi, and S.~Squartini,
+\newblock ``Deep learning for timbre modification and transfer: An evaluation study,''
+\newblock in {\em Proc. of 144th AES}, Milan, Italy, 24-26 May 2018, Audio
+Engineering Society.
+
+\bibitem{ambrosini2018deep}[10]
+L.~Ambrosini, L.~Gabrielli, F.~Vesperini, S.~Squartini, and L.~Cattani,
+\newblock ``Deep neural networks for road surface roughness classification from acoustic signals,''
+\newblock in {\em Proc. of 144th AES}, Milan, Italy, 24-26 May 2018, Audio
+Engineering Society.
+
+\bibitem{vesperini2018snoring}[11]
+F.~Vesperini, A.~Galli, L.~Gabrielli, E.~Principi, and S.~Squartini,
+\newblock ``Snore sounds excitation localization by using scattering transform and deep neural networks,''
+\newblock in {\em Proc. of IJCNN}, Rio de Janeiro, Brasil, 8-13 Jul. 2018, IEEE.
+
+\bibitem{vesperini2018hierarchic}[12]
+F.~Vesperini, D.~Droghini, E.~Principi, L.~Gabrielli, and S.~Squartini,
+\newblock ``Hierarchic {C}onv{N}ets framework for rare sound event detection,''
+\newblock in {\em Proc. of EUSIPCO}. IEEE, Sept. 3-7 2018.
+
+\bibitem{vesperini2018wirn}[13]
+F.~Vesperini, L.~Romeo, E.~Principi, A.~Monteri\`{u}, and S.~Squartini,
+\newblock ``Convolutional recurrent neural networks and acoustic data augmentation for snore detection,''
+\newblock in {\em Proc. of WIRN}, Vietri sul Mare, Italy, 13-15 Jun. 2018.
+
+\bibitem{Droghini2018}[14]
+D.~Droghini, F.~Vesperini, E.~Principi, S.~Squartini, and F.~Piazza,
+\newblock ``Few-shot siamese neural networks employing audio features for human-fall detection,''
+\newblock in {\em Proc. of The International Conference on Pattern Recognition and Artificial Intelligence}, Union, NJ, USA, Aug. 15-17 2018.
+\end{thebibliography}
+
+\textbf{Others}:
+\begin{thebibliography}{9}
+
+\bibitem{vesperinihierarchic}
+F.~Vesperini, D.~Droghini, D.~Ferretti, E.~Principi, L.~Gabrielli, S.~Squartini, and F.~Piazza,
+\newblock ``A hierarchic multi-scaled approach for rare sound event detection,''
+\newblock Ancona, Italy, 2017, {DCASE} {T}ech. {R}eport. {C}opyright-free.
+
+\bibitem{vesperini2018capsule}
+F.~Vesperini, L.~Gabrielli, E.~Principi, and S.~Squartini,
+\newblock ``A capsule neural networks based approach for bird audio detection,''
+\newblock Ancona, Italy, 2018, {DCASE} {T}ech. {R}eport. {C}opyright-free.
+
+\bibitem{gabrielli2018rima}
+L.~Gabrielli, F.~Vesperini, D.~Droghini, and S.~Squartini,
+\newblock ``Rima {G}lottidis: Experimenting generative raw audio synthesis for a sound installation,''
+\newblock in {\em XXII Colloquium of Musical Informatics}, Udine, Italy, 20-23 Nov. 2018.
+\end{thebibliography}
+\end{frame}
+
+\end{document}
