@@ -8,7 +8,7 @@
 \usepackage{threeparttable}
 \usepackage{booktabs}
 
-\graphicspath {{Images/}}
+\graphicspath {{imgs/}}
 \usepackage{tikz}
 \usetikzlibrary{calc,shapes,arrows,chains,shadows,arrows,fit,positioning,backgrounds,spy}
 
@@ -94,50 +94,207 @@ titlepagelogo=logo_univpm.png,% Logo for the first page.
 		\end{frame}
 
 }
+
+
+
 \section{Introduction}		
-\begin{frame}[t]{Fall Detection Systems}
-
-
+\begin{frame}{Human fall: a real problem for society}
+	%			"And why do we fall, Bruce? So we can learn to pick ourselves up" cit. Batman Begins
+	\begin{block}{"And why do we fall, Bruce? So we can learn to pick ourselves up" cit. Batman Begins}
+		
+		\begin{itemize}
+			\item 62\% of injury-related hospitalizations for the
+			people over 65 years are the result of a fall \cite{gurley1996persons}
+			\item main cause of death due to accidents for people
+			over 65 \cite{mubashir2013survey}
+			\item can lead to psychophysical repercussions on people \cite{abbate2010monitoring}
+		\end{itemize}
+	\end{block}
+	\begin{block}{What can be done whit FCS}
+		
+		\begin{itemize}
+			\item Monitoring of the elderly or people who live alone
+			\item Assistance time reduction
+		\end{itemize}
+		
+	\end{block}
+	
 \end{frame}
-
-\begin{frame}[t]{State-Of-The-Art}
+\begin{frame}{Fall Classification System Challenge \cite{khan2017review}}
+	
+	\begin{itemize}
+		\item Try to collect sufficient human fall data 
+		\begin{itemize}
+			\item Supervised methods (SVM): HF in training 
+			
+			\begin{itemize}
+				\item difficulty in retrieving examples that
+				represent human falls
+			\end{itemize}	
+		\end{itemize}
+		\item Deal with no human fall data
+		\begin{itemize}
+			\item Novelty detection approach (OCSVM) 
+			\begin{itemize}
+				\item good description of "normality"
+				
+			\end{itemize}	
+		\end{itemize}
+	\end{itemize}
 	
 	
+	\begin{minipage}[c]{0.48\textwidth}
+		
+		\begin{block}{Related Work}	
+			\begin{itemize}
+				\item Wearable
+				\begin{itemize}
+					\item Accelerometers
+					\item Gyroscopes 	
+				\end{itemize}
+				\item Ambient 
+				\begin{itemize}
+					\item Vision System
+					\item Audio microphone
+					\item Radar doppler 	
+				\end{itemize}				
+			\end{itemize}
+		\end{block}
+		
+	\end{minipage}
+	\hfill%
+	\begin{minipage}[c]{0.48\textwidth}
+		
+		\centering
+		\hspace{0.8cm}\alert{Fall Event} \\
+		\vspace{0.5cm}
+		\hspace{0.8cm}\includegraphics[width=0.5\textwidth]{imgs/slip_and_fall}\\
+		
+	\end{minipage}%
 \end{frame}
+
 
 \begin{frame}[t]{Motivations and Contributions}
-	
+%	analytical methods distinguish between fall and nonfall events by applying a threshold directly on the acquired signals or on the
+%	features sequences extracted from them.  These methods are generally built
+%	exploiting some a priori knowledge to operate in a specific scenario and needs
+%	manual tuning of the hyperparameters of the algorithm. For these reasons,
+%	the ?analytical methods? can hardly perform when the operating conditions
+%	and the subjects are variable. In ?machine learning? methods, the algorithm
+%	learns from the data how to discriminate falls from non-falls.
+%	The main contribution is to demonstrate that the audio human fall detection is a reliable
+%	solution and not only the mainstream systems based on vision or wearable sensors can be used for this kind of problem. A particular acoustic sensor specially
+%	designed for the fall detection task is proposed and evaluated. Moreover, the
+%	dataset used to assess all the proposed methods has been created by the same
+%	authors and made available by the scientific community
 	
 \end{frame}
 
 \section{Dataset}
 \subsection{FAS}
-\begin{frame}[t]{The floor acoustic sensor}
+		\begin{frame}{Floor Acoustic Sensor\cite{Principi2016a}}%\footnotemark}
 	
+	\begin{minipage}[c]{0.5\textwidth}
+		\begin{enumerate}
+			\item The outer container
+			\item The inner container
+			\item The microphone slot
+			\item The membrane touching the floor
+		\end{enumerate}
+	\end{minipage}%
+	\hfill%
+	\begin{minipage}[c]{0.5\textwidth}
+		\centering
+		
+		\includegraphics[width=1\textwidth]{imgs/AcousticSensor}\\
+		
+	\end{minipage} 
+	\begin{block}{Advantage}
+		\begin{itemize}
+			\item Easily integrated into the environment
+			\item More sensitive to signals related to falls
+		\end{itemize}
+	\end{block}
+	%\vspace{0.5cm}
+	\begin{columns}[c]
+		\begin{column}[c]{0.5\textwidth}
+			\hspace{1.5cm}\vspace{0.2cm}
+			3D printed prototype 	
+		\end{column}
+		\begin{column}[c]{0.5\textwidth}
+			\hspace{1cm}\vspace{.2cm}				
+			\includegraphics[width=0.6\textwidth]{imgs/FAS_front_little.jpg}
+		\end{column}
+	\end{columns}
 	
+	%\footnotetext[1]{Patent AN2013A000056, 18/03/2013, Paolo Olivetti}
 \end{frame}
+	
+	
+
 \subsection{A3FALL Dataset}
 \begin{frame}[t]{The fall events dataset: A3Fall}
 	
-	
+motivazione: mancaza di dataset audio adeguati
+descrizione generale: descrizione 3 stanze 
 \end{frame}
 
 \begin{frame}[t]{The recording setup}
-	
-	
+	strumentazione: microfoni (fas e aerei + randy + sceda audio + marche microfoni)
 \end{frame}
 
 \begin{frame}[t]{Description}
-
+	aggingere qualcosa sulla sinistra
+\tiny
+\begin{table}[t]
+%	\caption{Composition of the A3Fall-v2.0 dataset.}
+	\label{tab:numDataset}
+	\begin{center}
+		\begin{tabular}[t]{c|ccc}
+			
+			\hline
+			\textbf{Class} & \textbf{R0} & \textbf{R1} & \textbf{R2} \\ %\cline{2-5} 
+			%& \hspace{8pt}Clean\hspace{8pt}  & \hspace{6pt}Clean\hspace{6pt}   \\ 
+			\hline
+			&\multicolumn{3}{c}{Nr. of occurrences}\\
+			Basket      			& 64    &   40 	&   40    	\\
+			Fork        			& 64    &   40 	&   40     	\\
+			Ball       				& 64    &   40	&   40    	\\
+			Book        			& 64    &   40	&   40    	\\
+			Bag         			& 64    &   30 	&   40    	\\
+			Chair       			& 96    &   40 	&   40    	\\
+			Table       			& 0   	&   40 	&   40    	\\
+			Guitar Slide       		& 0   	&   40 	&   40    	\\
+			Nipper       			& 0    	&   40 	&   40    	\\
+			Keys       				& 0    	&   40 	&   40    	\\
+			Hook       				& 0    	&   40 	&   40    	\\
+			Coat Hook       		& 0    	&   40 	&   40    	\\
+			$\,$ Manikin Doll $\,$ 	& 44    &   0 	&   0    	\\
+			$\,$ Human Fall $\,$ 	& 0    	&   40 	&   40    	\\
+			\hline
+			&\multicolumn{3}{c}{Total length (s)}\\			
+			%			Human Activity  		& 1135  &   3050&   580   	\\
+			%			Music					& 1395  &	4330&   3345  	\\
+			%			Television				& 0   	&	1675&   1625  	\\
+			Background  			& 2530  &   9055&   5550   	\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
 
 \end{frame}
 \begin{frame}[t]{Signal analysis}
-	
+	confronto mel channel e SNR tra fas e aereal
 	
 \end{frame}
 \section{Supervised Approaches}
-\subsection{Multi-class SVM}
-\subsection{Binary SVM}
+%\subsection{Multi-class SVM}
+%\subsection{Binary SVM}
+\begin{frame}[t]{Supervised Approaches}
+	 unire multi e binary SVM 
+	
+\end{frame}
+
 \section{Unsupervised Approach}
 \subsection{OCSVM}
 \subsection{End-To-End CNN-AE}
@@ -174,7 +331,7 @@ In addition:
 \end{itemize}
 \end{frame}
 
-\section{Ditattica}
+
 
 \begin{frame}[t]{Training Activity} 
 \begin{itemize}
@@ -215,21 +372,13 @@ In addition:
 
 \end{frame}
 
-
-
-
-\begin{frame}[t]{Support Teaching Activity}
-
-\begin{itemize}
-\item Exam supervision for ``Macchine e Reti Elettriche'' - (C.d.L. Ing. Meccanica) 
-\item Exam supervision and teaching material for ``Circuiti ed Algoritmi per Digital Signal Processing'' (C.d.L. Ing. Elettronica) and ``Digital Adaptive Circuits and Learning Systems'' (DAC-LS) (C.d.LM. Ing. Elettronica) 
-\item Tutoring activity for master thesis projects - DAC-LS students
-\item Lectures on ``Computational Audio Processing'' at DAC-LS and post-graduate course on ``Tecnico per l'applicazione di tecnologie domotiche per gli ambienti di vita''
-
-\end{itemize}
-
-
-
+\section{References}
+\begin{frame}[allowframebreaks]
+	\scriptsize
+	\frametitle{References} 
+	\nocite{*} 
+	\bibliographystyle{IEEEbib} 
+	\bibliography{mybib} 
 \end{frame}
 
 \section{Elenco Pubblicazioni}

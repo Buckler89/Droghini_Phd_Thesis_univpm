@@ -1,0 +1,66 @@
+\begin{thebibliography}{10}
+
+\bibitem{gurley1996persons}
+R.~J. Gurley, N.~Lum, M.~Sande, B.~Lo, and M.~H. Katz,
+\newblock ``Persons found in their homes helpless or dead,''
+\newblock {\em New England Journal of Medicine}, vol. 334, no. 26, pp.
+  1710--1716, 1996.
+
+\bibitem{mubashir2013survey}
+M.~Mubashir, L.~Shao, and L.~Seed,
+\newblock ``A survey on fall detection: Principles and approaches,''
+\newblock {\em Neurocomputing}, vol. 100, pp. 144--152, 2013.
+
+\bibitem{abbate2010monitoring}
+S.~Abbate, M.~Avvenuti, P.~Corsini, J.~Light, and A.~Vecchio,
+\newblock ``Monitoring of human movements for fall detection and activities
+  recognition in elderly care using wireless sensor network: a survey,''
+\newblock in {\em Wireless Sensor Networks: Application-Centric Design}.
+  InTech, 2010.
+
+\bibitem{khan2017review}
+S.~S. Khan and J.~Hoey,
+\newblock ``Review of fall detection techniques: A data availability
+  perspective,''
+\newblock {\em Medical engineering and physics}, vol. 39, pp. 12--22, 2017.
+
+\bibitem{Principi2016a}
+E.~Principi, D.~Droghini, S.~Squartini, P.~Olivetti, and F.~Piazza,
+\newblock ``Acoustic cues from the floor: a new approach for fall
+  classification,''
+\newblock {\em Expert Systems with Applications}, vol. 60, pp. 51--61, 2016.
+
+\bibitem{chopra2005learning}
+S.~Chopra, R.~Hadsell, and Y.~LeCun,
+\newblock ``Learning a similarity metric discriminatively, with application to
+  face verification,''
+\newblock in {\em Computer Vision and Pattern Recognition, 2005. CVPR 2005.
+  IEEE Computer Society Conference on}. IEEE, 2005, vol.~1, pp. 539--546.
+
+\bibitem{wirn2016-fall}
+D.~Droghini, E.~Principi, S.~Squartini, P.~Olivetti, and P.~F.,
+\newblock ``Human fall detection by using an innovative floor acoustic
+  sensor,''
+\newblock in {\em Proc. of WIRN}. Vietri sul Mare, Italy, May, 18-20 2016,
+\newblock (8 pages), to appear.
+
+\bibitem{bromley1994signature}
+J.~Bromley, I.~Guyon, Y.~LeCun, E.~S{\"a}ckinger, and R.~Shah,
+\newblock ``Signature verification using a" siamese" time delay neural
+  network,''
+\newblock in {\em Advances in Neural Information Processing Systems}, 1994, pp.
+  737--744.
+
+\bibitem{koch2015siamese}
+G.~Koch, R.~Zemel, and R.~Salakhutdinov,
+\newblock ``Siamese neural networks for one-shot image recognition,''
+\newblock in {\em ICML Deep Learning Workshop}, 2015, vol.~2.
+
+\bibitem{droghiniCin1017}
+D.~Droghini, D.~Ferretti, E.~Principi, S.~Squartini, and F.~Piazza,
+\newblock ``A combined one-class svm and template matching approach for
+  user-aided human fall detection by means of floor acoustic features,''
+\newblock {\em Computational Intelligence and Neuroscience}, vol. 2017, 2017,
+\newblock {Article ID 1512670}.
+
+\end{thebibliography}
