@@ -10,6 +10,8 @@
 
 \graphicspath {{imgs/}}
 \usepackage{tikz}
+
+
 \usetikzlibrary{calc,shapes,arrows,chains,shadows,arrows,fit,positioning,backgrounds,spy}
 \newcommand\norm[1]{\left\lVert#1\right\rVert}
 \usetheme[pageofpages=of,% String used between the current page and the
@@ -45,20 +47,66 @@ titlepagelogo=logo_univpm.png,% Logo for the first page.
 
 
 \begin{document}
+{
+	\usebackgroundtemplate{}
+	\begin{frame}[t, plain, noframenumbering]
+		%\titlepage
+		\vspace{1.8mm}
+		\begin{beamercolorbox}[wd=0.95\paperwidth,ht=.92\paperheight,center]{title page header}
+			
+			%\vbox{}
+			%\vfill
+			\vspace{4mm}
+			\begin{figure}
+				\begin{centering}
+					\includegraphics[height=.2\paperheight,keepaspectratio]{logo_univpm_white.png}
+				\end{centering}
+			\end{figure}
+			
+			%\vspace{-4mm}
+			
+			\begin{columns}
+				
+				\begin{column}{.40\textwidth}
+					
+				\end{column}
+				\begin{column}{.50\textwidth}
+					
+					%{\Huge{\_}}\\
+					{\large{Facoltà di Ingegneria}}
+					
+					\vspace{4mm}
+					
+					{\large{\textbf{Diego Droghini}}}
+					
+					{\small{\textit{Ambient Intelligence: Computational Audio Processing
+								For Human Fall Detection}}}
+					
+					\vspace{5mm}
+					
+					{\footnotesize{Dottorato in Ingegneria dell'Informazione\\Progetto Eureka\\
+							\hspace{5mm} 13-14 Marzo 2019, www.univpm.it}}
+					
+				\end{column}
+			\end{columns}
+			\vspace{8mm}
+			%\vfill
+		\end{beamercolorbox}    
+	\end{frame}
+}
+%\begin{frame}[t,plain]
+%\titlepage
+%\end{frame}
 
-\begin{frame}[t,plain]
-\titlepage
-\end{frame}
-
-\begin{frame}[t]{PhD Thesis}
-	\vspace{1.5cm}
-	\centering
-	\huge
-	\textbf{Ambient Intelligence:
-\\
-	Computational Audio Processing
-	For Human Fall Detection}
-\end{frame}
+%\begin{frame}[t]{PhD Thesis}
+%	\vspace{1.5cm}
+%	\centering
+%	\huge
+%	\textbf{Ambient Intelligence:
+%\\
+%	Computational Audio Processing
+%	For Human Fall Detection}
+%\end{frame}
 
 %\begin{frame}{Overview}
 %	\tableofcontents
@@ -98,7 +146,38 @@ titlepagelogo=logo_univpm.png,% Logo for the first page.
 
 
 \section{Introduction}	
-\subsection{Fall Detection System and Challange}	
+\begin{frame}[t]{Where we are going: \\Ambient Intelligance (AmI)}
+	\vspace{-0.3cm}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{block}{Capabilities}
+			
+				\begin{itemize}
+					\item integrated into the environment
+					\item context-aware
+					\item tailored to the user need
+					\item able to adapt actions in new scenarios
+					\item minimal userintervention
+				\end{itemize}
+			\end{block}
+			A digital environment that proactively, but sensibly, supports people in
+			their daily lives.
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{block}{Requirement}
+				\begin{itemize}
+					\item Sensor interaction and interoperability
+					\item Pervasive Ubiquitous Computing 
+					\item Artificial Intelligence
+				\end{itemize}
+			\end{block}
+\vspace{2cm}
+		\end{column}
+	\end{columns}
+
+	
+\end{frame}
+\subsection{-Fall Detection System and Challange}	
 \begin{frame}{Human fall: a real problem for society}
 	%			"And why do we fall, Bruce? So we can learn to pick ourselves up" cit. Batman Begins
 	\begin{block}{"And why do we fall, Bruce? So we can learn to pick ourselves up" cit. Alfred - Batman Begins}
@@ -111,7 +190,7 @@ titlepagelogo=logo_univpm.png,% Logo for the first page.
 			\item can lead to psychophysical repercussions on people \cite{abbate2010monitoring}
 		\end{itemize}
 	\end{block}
-	\begin{block}{What can be done whit FCS}
+	\begin{block}{We can introduce an FCS system in an AmI to: }%What can be done whit FCS}
 		
 		\begin{itemize}
 			\item Monitoring of the elderly or people who live alone
@@ -147,7 +226,7 @@ titlepagelogo=logo_univpm.png,% Logo for the first page.
 					\item \textbf{Accelerometers}
 					\item Gyroscopes 	
 				\end{itemize}
-				\item Ambient 
+				\item Environmental 
 				\begin{itemize}
 					\item \textbf{Vision System}
 					\item Audio microphone
@@ -176,7 +255,7 @@ titlepagelogo=logo_univpm.png,% Logo for the first page.
 	\end{minipage}%
 \end{frame}
 
-\subsection{Motivations and Contributions}	
+\subsection{-Motivations and Contributions}	
 \begin{frame}[t]{Motivations and Contributions}
 	\footnotesize
 	\begin{minipage}[t]{0.45\textwidth}
@@ -223,8 +302,81 @@ titlepagelogo=logo_univpm.png,% Logo for the first page.
 \end{frame}
 
 \section{Dataset}
-\subsection{FAS}
-		\begin{frame}{Floor Acoustic Sensor\cite{Principi2016a}}%\footnotemark}
+
+	
+	
+
+\subsection{-A3FALL Dataset}
+\begin{frame}[t]{The fall events dataset: A3Fall}
+	
+	%motivazione: mancaza di dataset audio adeguati
+	%descrizione generale: descrizione 3 stanze 
+%	\begin{block}{Motivation}
+%		\begin{itemize}
+%			\item The lack of available audio datasets;
+%			\item Use of the dedicated FAS sensor.
+%		\end{itemize}
+%	
+%	\end{block}
+	\begin{block}{Recording Rooms}
+		\begin{itemize}
+			\vspace{0.5cm}
+			\item R0 - rectangular room particularly suitable for the propagation of acoustic waves through the floor;
+			\vspace{0.5cm}
+			\item R1 - university auditorium room in which the flooring is composed of fitted carpet;
+			\vspace{0.5cm}
+			\item R2 - a recording studio
+			\begin{itemize}
+				\item sensors placed in the live room;
+				\item audio events performed in the control room.
+			\end{itemize}
+			
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+
+\begin{frame}[t]{Recording set-up}
+%			strumentazione: microfoni (fas e aerei + randy + sceda audio + marche microfoni)
+	\vspace*{-2em}
+	\begin{columns}[t]
+		
+		\centering
+		\begin{column}{0.3\textwidth}
+			\begin{block}{Sampling}
+				\begin{itemize}
+					\item Sample Rate: 44.1 kHz
+					\item Bit-depth: \\24 bit
+				\end{itemize}
+			\end{block}
+			
+			%				\centering	
+			\vspace{0.5cm}
+			Used sensors:
+			\begin{itemize}
+				\item Mic. array (3)\footnotemark[1]
+				\item \textbf{FAS v1}\footnotemark[1]
+%				\item FA	S v2\footnotemark	
+			\end{itemize}
+			%				{\small	The microphone used in both sensors:\\ \emph{AKG C400 BL}}
+		\end{column}
+		
+		\begin{column}{0.7\textwidth}	
+			\begin{block}{The recording room}
+				%					\vspace{0.2cm}
+				\centering
+				\includegraphics[width=\textwidth]{imgs/room_experiments_one_aerial.pdf}
+				%\\The letters A, B, C and D indicate the positions of fall events
+				
+			\end{block}
+			
+		\end{column}
+	\end{columns}
+	\footnotetext[1]{AKG C400 BLT.}
+%	\footnotetext[2]{RODE Lavalier.}
+\end{frame}
+\subsection{-FAS}
+\begin{frame}{Floor Acoustic Sensor\cite{Principi2016a}}%\footnotemark}
 	
 	\begin{minipage}[c]{0.5\textwidth}
 		\begin{enumerate}
@@ -261,76 +413,6 @@ titlepagelogo=logo_univpm.png,% Logo for the first page.
 	
 	%\footnotetext[1]{Patent AN2013A000056, 18/03/2013, Paolo Olivetti}
 \end{frame}
-	
-	
-
-\subsection{A3FALL Dataset}
-\begin{frame}[t]{The fall events dataset: A3Fall}
-	
-	%motivazione: mancaza di dataset audio adeguati
-	%descrizione generale: descrizione 3 stanze 
-%	\begin{block}{Motivation}
-%		\begin{itemize}
-%			\item The lack of available audio datasets;
-%			\item Use of the dedicated FAS sensor.
-%		\end{itemize}
-%	
-%	\end{block}
-	\begin{block}{Recording Rooms}
-		\begin{itemize}
-			\item R0 - rectangular room particularly suitable for the propagation of acoustic waves through the floor;
-			\item R1 - university auditorium room in which the flooring is composed of fitted carpet;
-			\item R2 - a recording studio
-			\begin{itemize}
-				\item sensors placed in the live room;
-				\item audio events performed in the control room.
-			\end{itemize}
-			
-		\end{itemize}
-	\end{block}
-\end{frame}
-
-
-\begin{frame}[t]{Recording set-up}
-%			strumentazione: microfoni (fas e aerei + randy + sceda audio + marche microfoni)
-	\vspace*{-2em}
-	\begin{columns}[t]
-		
-		\centering
-		\begin{column}{0.3\textwidth}
-			\begin{block}{Sampling}
-				\begin{itemize}
-					\item Sample Rate: 44.1 kHz
-					\item Bit-depth: \\24 bit
-				\end{itemize}
-			\end{block}
-			
-			%				\centering	
-			\vspace{0.5cm}
-			Used sensors:
-			\begin{itemize}
-				\item Mic. array (3)\footnotemark[1]
-				\item FAS v1\footnotemark[1]
-				\item FAS v2\footnotemark	
-			\end{itemize}
-			%				{\small	The microphone used in both sensors:\\ \emph{AKG C400 BL}}
-		\end{column}
-		
-		\begin{column}{0.7\textwidth}	
-			\begin{block}{The recording room}
-				%					\vspace{0.2cm}
-				\centering
-				\includegraphics[width=\textwidth]{imgs/room_experiments_one_aerial.pdf}
-				%\\The letters A, B, C and D indicate the positions of fall events
-				
-			\end{block}
-			
-		\end{column}
-	\end{columns}
-	\footnotetext[1]{AKG C400 BLT.}
-	\footnotetext[2]{RODE Lavalier.}
-\end{frame}
-
 \begin{frame}[t]{Description}
 %	aggingere qualcosa sulla sinistra
 	\vspace*{-1cm}
@@ -412,7 +494,7 @@ titlepagelogo=logo_univpm.png,% Logo for the first page.
 	\end{block}	
 \end{frame}
 \section{Supervised Approaches}
-%\subsection{Multi-class SVM}
+\subsection{-SVM based apprach}
 %\subsection{Binary SVM}
 \begin{frame}[t]{Supervised Approaches: SVM based}
 	\begin{columns}[T] % align columns
@@ -464,16 +546,18 @@ titlepagelogo=logo_univpm.png,% Logo for the first page.
 
 \section{Unsupervised Approach}
 
-\subsection{OCSVM}
-\subsection{End-To-End CNN-AE}
+%\subsection{OCSVM}
+\subsection{-End-To-End CNN-AE}
 	\begin{frame}[t]{Unsupervised Approach}
 		%	\textbf{An End-To-End Unsupervised Approach employing
 		%		CNN Autoencoders}
-		\begin{figure}
-			\includegraphics[width=\textwidth]{imgs/WIRN_2017_approccioComplessivo}\\
-
-		\end{figure}
-		
+		\begin{block}{End-To-End Convolutional Autoencoder}
+			\vspace{0.5cm}
+			\begin{figure}
+				\includegraphics[width=\textwidth]{imgs/WIRN_2017_approccioComplessivo}\\
+	
+			\end{figure}
+		\end{block}
 	\end{frame}
 
 
@@ -483,9 +567,10 @@ titlepagelogo=logo_univpm.png,% Logo for the first page.
 		
 		\begin{columns}[T] % align columns
 			\begin{column}{.4\textwidth}
-				\vspace{1cm}
+				\vspace{0.5cm}
 				\begin{itemize}
 					\item Trained with background sounds only
+					\vspace{0.5cm}
 					\item Tested with:
 					\begin{itemize}
 						\item background 
@@ -503,7 +588,7 @@ titlepagelogo=logo_univpm.png,% Logo for the first page.
 		\end{columns}
 	\end{frame}
 \section{Weakly-supervised Approach}
-\subsection{OCSVM + Template Matching User-Aided}
+\subsection{-OCSVM + User-Aided Template Matching}
 	\begin{frame}[t]{OCSVM user-aided}
 		%	\centerin
 		%	\textbf{A Combined One-Class SVM and Template
@@ -514,7 +599,7 @@ titlepagelogo=logo_univpm.png,% Logo for the first page.
 				\begin{itemize}
 					\item 1° Stage: OCSVM
 					\begin{itemize}
-						\item trained with non-fall event
+						\item trained with non-fall events (background noises)
 					\end{itemize}
 					\item 2° Stage: template matching 
 					\begin{itemize}
@@ -575,8 +660,8 @@ titlepagelogo=logo_univpm.png,% Logo for the first page.
 
 		\vfill
 	\end{frame}
-\subsection{Few-shot Siamese Neural Networks}
-	\begin{frame}[t]{Few-shot Siamese Neural Networks}
+\subsection{-Few-shot Siamese Neural Networks}
+	\begin{frame}[t]{Few-shot Siamese Neural Networks\footnotemark[1]}
 		%	\textbf{Few-shot Siamese Neural Networks employing Audio features
 		%		for Human-Fall Detection}
 		\begin{figure}
@@ -585,6 +670,9 @@ titlepagelogo=logo_univpm.png,% Logo for the first page.
 		\end{figure}
 		\centering
 		$Loss = (1 - Y)\frac{1}{2}(E_w)^2 + (Y)\frac{1}{2}\{(max(0, m - E_w)\}^2 $
+		
+		\footnotetext[1]{{Best Presentation @ International Conference
+				on Pattern Recognition and Artificial Intelligence (PRAI2018) Kean University, Union, NJ, USA}}
 	\end{frame}
 
 	\begin{frame}[t]{Training Phase}
@@ -615,15 +703,22 @@ titlepagelogo=logo_univpm.png,% Logo for the first page.
 	\begin{frame}{Results}
 
 		\begin{columns}[T] % align columns
-			\begin{column}{.4\textwidth}
-				\vspace{1cm}
+			\begin{column}{.35\textwidth}
+%				\vspace{0.5cm}
 				\begin{itemize}
-					\item Data augmentation
+%					\item Data augmentation
+					\vspace{0.5cm}
 					\item Trained:
 					\begin{itemize}
 						\item objects fall
 						\item 1 human fall
 					\end{itemize}
+					\item Validation:
+					\begin{itemize}
+						\item objects fall
+						\item few human fall
+					\end{itemize}
+					\vspace{0.5cm}
 					\item Tested with:
 					\begin{itemize}
 						\item objects fall 
@@ -631,37 +726,38 @@ titlepagelogo=logo_univpm.png,% Logo for the first page.
 					\end{itemize}
 				\end{itemize}	
 			\end{column}%
-			\begin{column}{.6\textwidth}
+			\begin{column}{.65\textwidth}
 				\begin{figure}
 					\includegraphics[width=\textwidth]{imgs/prai2018_results_f1}\\
-					
+%					SVM unbalanced precision alta -> flasi allarmi bassi ma miss rate alta
+%					Siamese recall alta -> miss rate bassi ma false allarm rate alta
 				\end{figure}
 				
 			\end{column}%
 		\end{columns}
 	\end{frame}
-\subsection{OneShot Siamese Autoencoders}	
-	\begin{frame}[t]{OneShot Siamese Autoencoders}
+\subsection{-Robust Metric Learning with Siamese Autoencoders}	
+	\begin{frame}[t]{Robust Metric Learning with SCAE}
 		%	\textbf{Robust Feature Representation by using Siamese Autoencoders for One-Shot Audio Fall Detection}
 		\begin{figure}
-			\includegraphics[width=0.9\textwidth]{imgs/SCANN_approach.pdf}\\
+			\includegraphics[width=0.9\textwidth]{imgs/SCANN_approach_.pdf}\\
 		\end{figure}
 		
 	\end{frame}
 	\begin{frame}[t]{Training procedure}
 		
 		\begin{itemize}
-			\item Contrastive loss of latent spaces
-			\item Contrastive loss of reconstructions
-			\item Recostruction loss (mse) of latent spaces
-			\item To exploit the few human fall samples available a smart selection of the train pairs has been done:
+			\item contrastive loss of latent spaces
+			\item contrastive loss of reconstructions
+			\item recostruction loss (mse) of latent spaces
+			\item to exploit the few human fall samples available a smart selection of the train pairs has been done:
 			\begin{itemize}
-				\item Neither the real falls nor the simulated falls were coupled with the falls of the objects
-				\item Simulated and real falls were coupled together
+				\item neither the real falls nor the simulated falls were coupled with the falls of the objects
+				\item simulated and real falls were coupled together
 			\end{itemize}
 			\item induces the network to make a transformation in the latent layer
 			\item simulated human fall can be used as real human fall template in the final classifier 
-			\item KNN classifier
+			\item KNN classifier trained with extracted feat. from the \textbf{Encoder}
 		\end{itemize}
 		
 	\end{frame}
@@ -689,9 +785,9 @@ titlepagelogo=logo_univpm.png,% Logo for the first page.
 	\begin{frame}[t]{Results}
 		%	\textbf{Robust Feature Representation by using Siamese Autoencoders for One-Shot Audio Fall Detection}
 		
-		\begin{columns}[T] % align columns
+		\begin{columns}[t] % align columns
 			\begin{column}{.4\textwidth}
-				\vspace{1cm}
+				\vspace{0.8cm}
 				\begin{itemize}
 					\item Trained (3 room):
 					\begin{itemize}
@@ -700,6 +796,7 @@ titlepagelogo=logo_univpm.png,% Logo for the first page.
 						\item manikin doll falls
 						\item 1 human fall per room
 					\end{itemize}
+					\vspace{0.5cm}
 					\item Testset composed of:
 					\begin{itemize}
 						\item objects fall 
@@ -716,20 +813,46 @@ titlepagelogo=logo_univpm.png,% Logo for the first page.
 			\end{column}%
 		\end{columns}
 	\end{frame}
-\section{Other Contributions}
-
-\begin{frame}{Audio Timbre Transfer}
-
-\end{frame}
+%\section{Other Contributions}
+%
+%\begin{frame}{Audio Timbre Transfer}
+%
+%\end{frame}
 \section{Conclusions}
-\begin{frame}{Conclusions}
+	\begin{frame}{Conclusions}
+
+			\begin{itemize}
+				\item FAS sensor proposed and evaluated
+				\item A3FALL dataset with real human falls 
+				\begin{itemize}
+					\item real human falls 
+					\item different floor types
+					\item different rooms
+					
+				\end{itemize}
+				\item different scenarios explored from a data availability prospective
+				\begin{itemize}
+					\item supervised
+					\item unsupervised
+					\item weakly-supervised
+				\end{itemize}
+				
+			\end{itemize}
+		\begin{block}{Future works}
+			\begin{itemize}
+				\item data fusion (different type of sensors)
+				\item approach fusion
+				\item exploit the AmI ecosystem (different algorithms)
+			\end{itemize}
+		\end{block}
 	
+	\end{frame}
+
+\begin{frame}[c]
+	\centering
+	\Huge
+	\textbf{Thanks for your attention}
 \end{frame}
-
-
-
-
-
 \section{References}
 \begin{frame}[allowframebreaks]
 	\scriptsize
@@ -739,7 +862,7 @@ titlepagelogo=logo_univpm.png,% Logo for the first page.
 	\bibliography{mybib} 
 \end{frame}
 
-\section{Elenco Pubblicazioni}
+\section{Publications list}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[allowframebreaks]
@@ -807,5 +930,217 @@ L.~Gabrielli, F.~Vesperini, D.~Droghini, and S.~Squartini,
 
 \end{thebibliography}
 \end{frame}
+
+
+\begin{frame}[t,noframenumbering]{MFCC pipelines used}
+	
+	%			\large
+	%			\centering
+	\begin{itemize}
+		\item STD: MFCC calculated as described above
+		\vspace{0.3cm}
+		\item NOPRE: no pre-emphasis filter
+		\begin{itemize}
+			\large
+			%\item evitare di enfatizzare le alte frequenze
+			\item to reduce the high frequencies emphasis
+		\end{itemize}
+		\includegraphics[width=0.9\textwidth]{imgs/mfcc_NOPRE.pdf}
+		%				\begin{picture}(10,10)(10,120)
+		%					\includegraphics[width=\textwidth]{imgs/mfcc_NOPRE.pdf}
+		%					%\put(-70,70){\color{red}\circle{10}}
+		%				\end{picture}
+	\end{itemize}
+	
+	%Audio downsampled at 8 kHz, Bit-depth reduced to 16 bit
+\end{frame}
+\begin{frame}[t,noframenumbering]{SVM based methods optimization}
+	%			\vspace{0.5cm}
+	\begin{block}{SVM and USVM Gridsearch}
+		\begin{columns}[t]
+			\begin{column}{0.5\textwidth}	
+				\hspace{1cm}
+				GMM
+				\begin{itemize}
+					\item number of gaussians:\\ %$[1-2-4-8-16-32-64]$
+					$[2^0, 2^1, ... , 2^6]$
+				\end{itemize}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\hspace{1cm}
+				SVM
+				\begin{itemize}
+					\item $C: [2^{-5}, 2^{-3},. . . , 2^{15}]$
+					\item $\gamma: [2^{-15} , 2^{-13},. . . , 2^{3}]$
+				\end{itemize}	
+			\end{column}			
+		\end{columns}
+	\end{block}	
+	%			\vspace{1cm}
+	\begin{block}{OCSVM Gridsearch}
+		\begin{columns}[t]
+			\begin{column}{0.5\textwidth}	
+				\hspace{1cm}
+				GMM
+				\begin{itemize}
+					\item number of gaussians:\\ %$[1-2-4-8-16-32-64]$
+					$[2^0, 2^1, ... , 2^6]$
+				\end{itemize}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\hspace{1cm}
+				SVM
+				\begin{itemize}
+					\item $\nu: 2^{-5}, 2^{-3},. . . , 2^{15}]$
+					\item $\gamma: [2^{-15} , 2^{-13},. . . , 2^{3}]$
+				\end{itemize}	
+			\end{column}			
+		\end{columns}
+	\end{block}	
+	\centering
+	For all the methods the $F_1 Measure $ ware used for the optimization.
+	\begin{equation*}
+	F_1 = 2 \cdot \dfrac{precision \cdot recall}{precision + recall}
+	\end{equation*}
+	
+\end{frame}
+
+\begin{frame}[t, noframenumbering]{Acoustic Scenarios for SVM based approaches}
+	
+The experiments have been conducted with a 4-fold cross-validation strategy and a three-way data split in three different operating conditions:
+\begin{itemize}
+	\item matched, where the training, validation and test sets share the same acoustic condition, i.e., clean or noisy;
+	\item mismatched, where the training set is composed of clean signals while the validation and test sets are composed of noisy signals;
+	\item multicondition, where the training, validation and test sets contain both clean and noisy data. In this case the sets have been divided so that they contain 1/3 of clean data and 2/3 of noisy data.
+\end{itemize}
+		
+\end{frame}
+
+\begin{frame}[noframenumbering]{Binary-SVM Multicondition DET plot}
+	\vspace{-0.5cm}	
+	\begin{picture}(10,10)(15,125)
+%	\visible<1->{
+		\includegraphics[width=1\textwidth,height=0.85\textheight]{imgs/DET_8_bck_multicondition.pdf}
+%	}
+%	\visible<2-2>{
+%		\put(-140,46){$6.9\%$}
+%		\put(-141,45){\color{blue}\vector(1,0){27}}
+%		\put(-141,45){\color{blue}\vector(-1,0){27}}
+%	}
+	%\put(-70,70){\color{red}\circle{10}}
+	\end{picture}
+	
+\end{frame}
+\begin{frame}[noframenumbering]{Optimization of the \\End-to-End Autoencoder}
+	\begin{table}[t]
+		\caption{Hyper-parameters optimized in the random-search phase, and their range.}\label{tbl:hyper-params}
+		\centering
+		\tiny
+		\begin{tabular} {|c | c | c|| c | c | c|}
+			\hline
+			Parameter 		& Range & Distribution &Parameter & Range & Distribution\\  
+			\hline\hline
+			Cnn layer Nr. 	& [1-3]& uniform & Batch size	&	[10\%-25\%] & log-uniform\\
+			\hline
+			Kernel shape 	& [3x3-8x8]& uniform & Max pool shape & [1x1-5x5] & uniform \\
+			\hline									
+			Kernel Nr. 		& [4-64]& log-uniform & Max Pool & All-Only end& uniform \\
+			\hline                                     
+			MLP layers Nr. 	&	[1-3]& uniform & Dropout & [Yes-No] & uniform\\% dense-layer da uno a tre perchè quello interno ci sta sempre + da 0 a 2 di quelli messi dopo 
+			\hline
+			MLP layers dim.	&	[128-4096]& log-unifom & Drop rate	&	[0.5-0.6] & normal\\
+			\hline
+			Stride & [1x1-3x3]& uniform & Learning rate	&	[$10^{-4}$-$10^{-2}$]  & log-unifom\\
+			\hline
+			
+		\end{tabular}
+	\end{table}
+\end{frame}
+
+\begin{frame}[noframenumbering]{Template-matching decision threshold\\ in clean condition}
+
+%		\begin{columns}[t]
+%			\begin{column}{0.5\textwidth}	
+%				\includegraphics[width=0.45\textwidth]{imgs/distribuzione_Caso1_Clean.pdf}
+%			\end{column}
+%			\begin{column}{0.5\textwidth}	
+%				\includegraphics[width=0.45\textwidth]{imgs/distribuzione_Caso2_Clean.pdf}
+%			\end{column}
+%		\end{columns}
+%			\includegraphics[width=0.45\columnwidth]{imgs/distribuzione_Caso3_Clean.pdf}
+	\begin{columns}[t]
+		\begin{column}{.5\textwidth}
+			\centering
+			Set 1
+			\includegraphics[width=1\textwidth]{imgs/distribuzione_Caso1_Clean.pdf}\\
+			Set 3
+			\includegraphics[width=1\columnwidth]{imgs/distribuzione_Caso3_Clean.pdf}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\centering
+			Set 2
+			\includegraphics[width=1\textwidth]{imgs/distribuzione_Caso2_Clean.pdf}\\
+
+			The choice of $\beta$ has been performed by calculating the minimum Euclidean
+			distance between each fall and non-fall event in the validation set and the set
+			of templates
+
+		\end{column}
+	\end{columns}
+\end{frame}
+\begin{frame}[noframenumbering]{OCSVM Template Matching \\Results in Noisy condition}
+	\begin{figure}[t]
+		\centering
+		\includegraphics[width=\columnwidth]{imgs/res_noisy.pdf}
+		\caption{Results in noisy conditions for the three test cases. ``Set 1'' comprises human falls, human activities and music. ``Set 2'' comprises human falls and object falls. ``Set 3'' comprises human falls, object falls, human activities, and music.} \label{fig:res_noisy}
+	\end{figure}
+\end{frame}
+\begin{frame}[noframenumbering]{Preliminary results for SCAE approach }
+	\begin{table}[t]
+		\caption{Preliminary result for different pairs generation strategies.}
+		\label{tab:preliminary_resuts}
+		\begin{center}
+			\begin{tabular}[t]{|c||c|c|c|}
+				
+				\hline
+				\textbf{Technique} & \textbf{Result in R1} & \textbf{Result in R2} & \textbf{Overall} \\ %\cline{2-5} 
+				\hline
+				$\mathcal{P}$-$\mathcal{N}$-PAIRS      				& 55.17\%    &   64.74\% 	&   60.13\%   	\\
+				$\mathcal{N}$-PAIRS       			& 76.20\%    &   67.53\% 	&   72.05\%     \\
+				NO-PAIRS     				& 91.71\%    &   89.88\%	&   90.97\%    	\\
+				$\boldsymbol{\mathcal{P}}$\textbf{-PAIRS}       	& 92.54\%    &   92.54\%	&   \textbf{92.54\%}    	\\
+				\hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+\end{frame}
+\begin{frame}[noframenumbering]{Hyper-parameters optimized for SCAE approach}
+	\begin{table}[t]
+		\caption{Hyper-parameters optimized in the random-search phase and their range.}
+
+		\centering
+		\footnotesize
+		\begin{tabular} {|c | c | c|}
+			\hline
+			Parameter 		& Range & Distribution \\  
+			\hline\hline
+			Cnn layer Nr. 	& [1-3]& Uniform \\
+			\hline
+			Kernel shape 	& [1x1-8x8]& Uniform  \\
+			\hline									
+			Kernel Nr. 		& [1-32]& Uniform \\
+			\hline                                     
+			MLP layers Nr. 	&	[1-2]& Uniform \\
+			\hline
+			MLP layers dim.	&[1-4096]\% & Log-uniform \\
+			\hline
+			Max pool shape & [0x0-3x3] & Uniform\\
+			\hline
+			Drop rate &	[0-0.2]\% & Uniform	 \\
+			\hline
+		\end{tabular}
+	\end{table}	
+\end{frame}
+
 
 \end{document}
